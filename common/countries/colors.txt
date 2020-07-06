@@ -159,7 +159,6 @@ MEC = {
 
 HRE = {
 	color = rgb { 141 141 141 }
-	color_ui = rgb { 141 141 141 }
 }
 
 BAV = {
@@ -728,5 +727,9 @@ D14 = {
 }
 D15 = {
 	color = rgb { 194 140 86 }
+	color_ui = rgb { 252 182 112 }
+}
+WUR = {
+	color = rgb { 137 90 44 }
 	color_ui = rgb { 252 182 112 }
 }
