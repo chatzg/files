@@ -964,7 +964,7 @@ focus = {
 
 focus = {
 	id = SWE_keep_denmark_occupied
-	icon = GFX_goal_generic_demand_territory
+	icon = GFX_focus_spr_masters_of_our_own_fate
 	prerequisite = { focus = SWE_rally_around_the_flag }
 	mutually_exclusive = { focus = SWE_union_sweden_norway }
 	x = 1
@@ -983,6 +983,7 @@ focus = {
 	}
 	
 	completion_reward = {
+		add_ideas = SWE_occupation_of_denmark
 	}
 }
 
@@ -1019,6 +1020,7 @@ focus = {
 	x = 4
 	y = 1
 	cost = 10
+	mutually_exclusive = { focus = SWE_strike_at_denmark }
 	relative_position_id = SWE_all_parties_must_end
 
 	available = {
@@ -1071,6 +1073,7 @@ focus = {
 	}
 
 	completion_reward = {
+		add_ideas = SWE_preparing_closer_union
 	}
 }
 
@@ -1090,14 +1093,103 @@ focus = {
 
 focus = {
 	id = SWE_restore_the_kalmar_union
-	icon = GFX_goal_generic_demand_territory
+	icon = GFX_goal_anschluss
 	prerequisite = { focus = SWE_prepare_closer_union focus = SWE_keep_denmark_occupied }
 	x = -2
 	y = 3
 	cost = 10
 	relative_position_id = SWE_mend_danish_ties
 
+	available = {
+		OR = {
+			DEN = { 
+				has_autonomy_state = autonomy_integrated_puppet 
+				is_subject_of = SWE
+			}
+			AND = {
+				AND = {
+					has_full_control_of_state  = 110
+					OR = {
+						110 = { compliance > 50 }
+						110 = { is_core_of = SWE }
+					}
+				}
+
+				AND = {
+					has_full_control_of_state  = 142
+					OR = {
+						142 = { compliance > 50 }
+						142 = { is_core_of = SWE }
+					}
+				}
+
+				AND = {
+					has_full_control_of_state  = 143
+					OR = {
+						143 = { compliance > 50 }
+						143 = { is_core_of = SWE }
+					}
+				}
+
+				AND = {
+					has_full_control_of_state  = 144
+					OR = {
+						144 = { compliance > 50 }
+						144 = { is_core_of = SWE }
+					}
+				}
+
+				AND = {
+					has_full_control_of_state  = 138
+					OR = {
+						138 = { compliance > 50 }
+						138 = { is_core_of = SWE }
+					}
+				}
+
+				AND = {
+					has_full_control_of_state  = 37
+					OR = {
+						37 = { compliance > 50 }
+						37 = { is_core_of = SWE }
+					}
+				}
+
+				AND = {
+					has_full_control_of_state  = 99
+					OR = {
+						99 = { compliance > 50 }
+						99 = { is_core_of = SWE }
+					}
+				}
+			}		
+		}
+	}
+
 	completion_reward = {
+		limit = {
+			IF = { has_idea = SWE_occupation_of_denmark }
+			remove_ideas = SWE_occupation_of_denmark
+		}
+		limit = {
+			IF = { has_idea = SWE_preparing_closer_union }
+			remove_ideas = SWE_preparing_closer_union
+		}
+		set_cosmetic_tag = SCA_UNIFIED
+		custom_effect_tooltip = form_country_norway_coring_states_tt
+		hidden_effect = {
+			110 = { add_core_of = ROOT }
+			142 = { add_core_of = ROOT }
+			143 = { add_core_of = ROOT }
+			144 = { add_core_of = ROOT }
+		}
+		custom_effect_tooltip = form_scandinavia_denmark_coring_states_tt
+		hidden_effect = {
+			37 = { add_core_of = ROOT }
+			99 = { add_core_of = ROOT }
+		}
+		add_political_power = 150
+		add_stability = 0.05
 	}
 }
 
@@ -1184,7 +1276,7 @@ focus = {
 }
 
 focus = {
-	id = SWE_intervene_against_england
+	id = SWE_intervene_against_austria
 	icon = GFX_goal_generic_demand_territory
 	x = -3
 	y = 3
@@ -1205,7 +1297,7 @@ focus = {
 	cost = 10
 	prerequisite = { focus = SWE_intervene_in_western_europe }
 	relative_position_id = SWE_we_stand_victorious
-	mutually_exclusive = { focus = SWE_intervene_against_england }
+	mutually_exclusive = { focus = SWE_intervene_against_austria }
 
 	completion_reward = {
 	}

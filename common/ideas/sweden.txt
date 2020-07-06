@@ -2,19 +2,54 @@
 ideas = {
 	hidden_ideas = {
 	    SWE_is_op = {
-	      	targeted_modifier = {
-				tag = SOV
-				attack_bonus_against = 1
-				defense_bonus_against = 1
-			}
+	      	#targeted_modifier = {
+			#	tag = SOV
+			#	attack_bonus_against = 1
+			#	defense_bonus_against = 1
+			#}
 	       	targeted_modifier = {
 				tag = POL
-				attack_bonus_against = 1
-				defense_bonus_against = 1
+				attack_bonus_against = 2
+				defense_bonus_against = 2
 			}
 	  	}
 	}
 	country = {
+		SWE_occupation_of_denmark = {
+
+			picture = HUN_treaty_of_triannon
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			#picture= 
+			
+			modifier = {
+				political_power_gain = -0.15
+				resistance_target = -0.15
+				compliance_gain = 0.10
+			}
+		}
+
+		SWE_preparing_closer_union = {
+
+			picture = HUN_treaty_of_triannon
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			#picture= 
+			
+			modifier = {
+				subjects_autonomy_gain = -2
+			}
+		}
 		
 		SOUND_TOLL = {
 

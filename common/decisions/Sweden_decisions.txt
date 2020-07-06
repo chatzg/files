@@ -1,19 +1,56 @@
+
+political_actions = {
+	SWE_arange_an_accident_for_frederick = {
+
+		icon = generic_prepare_civil_war
 	
+		allowed = {
+			tag = SWE
+		}
+
+		days_remove = 70
+
+		modifier = {
+			political_power_gain = -0.15
+		}
+		
+		available = {
+			has_completed_focus = SWE_the_royal_marriage
+			has_idea = SWE_royal_marriage
+		}
+		visible = {
+			has_completed_focus = SWE_the_royal_marriage
+			has_idea = SWE_royal_marriage
+		}
+		
+		remove_effect = {
+			SWE = { country_event = denmark.2 }
+			DEN = { country_event = denmark.2 }
+			hidden_effect = {
+				news_event = { id = mod.21 days = 1 }
+			}
+		}
+		
+
+		cost = 150
+	}
+}
+
 SWE_cossack_aid = {
 	SWE_Cossack_equipment = {
 
-			icon = generic_prepare_civil_war
+		icon = generic_prepare_civil_war
 
-			available = {
-			has_completed_focus = swedish_politics_14
-			}
-			visible = {
-			has_completed_focus = swedish_politics_14
-			}
+		available = {
+		has_completed_focus = swedish_politics_14
+		}
+		visible = {
+		has_completed_focus = swedish_politics_14
+		}
 
-			complete_effect = {	
-				ZAP = { country_event = cossack.1 } 
-			}
+		complete_effect = {	
+			ZAP = { country_event = cossack.1 } 
+		}
 
 		cost = 25
 		days_re_enable = 60

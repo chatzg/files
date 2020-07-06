@@ -461,5 +461,8 @@ country_event = { #Ai Receive Massive buff
 
 	option = { 
 		name = sweden.666.a
+		add_ideas = SWE_is_op
+		add_manpower = 200000
+		load_oob = "SWE_extra_troops"
 	}
 }

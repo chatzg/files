@@ -23,6 +23,12 @@ burghers_estate = {
 		fire_only_once = no
 		days_re_enable = 180
 
+		available = {
+			any_state = {
+				is_coastal = yes
+			}
+		}
+
 		complete_effect = {
 			navy_experience = 20
 		}
@@ -31,6 +37,35 @@ burghers_estate = {
 				ideology = democratic
 				popularity = 0.05
 			} 
+		}
+	}
+
+	attract_investors = {
+		cost = 50
+		fire_only_once = no
+		days_re_enable = 180
+
+		complete_effect = {	
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			} 
+			random_owned_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					is_owned_by = ROOT
+            		free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+				    type = industrial_complex
+				    level = 1
+				    instant_build = yes
+				}
+			}
 		}
 	}
 }
@@ -82,7 +117,7 @@ nobility_estate = {
 		days_remove = 90
 		days_re_enable = 180
 
-		cost = 150
+		cost = 100
 
 		modifier = {
 			war_support_weekly = 0.01
@@ -132,6 +167,28 @@ clergy_estate = {
 				ideology = fascism
 				popularity = 0.05
 			} 
+		}
+	}
+	usage_of_church_lands = { 
+		cost = 50
+		fire_only_once = no
+		days_re_enable = 360
+
+		ai_will_do = {
+			base = 1
+		}
+		complete_effect = {
+			random_owned_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					is_owned_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
 		}
 	}
 

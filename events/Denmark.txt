@@ -30,7 +30,38 @@ country_event = {
 			news_event = { id = mod.4 days = 1 }
 		}
 
-	}
+	}	
+}
 
-	
+country_event = {
+	id = denmark.2
+	title = denmark.2.t
+	desc = denmark.2.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = denmark.2.a
+		trigger = {
+			original_tag = DEN
+		}
+		create_country_leader = {
+			name = "Sophia Hedwig"
+			desc = "SOPHIA_HEDWIG_DESC"
+			picture = "sophia_hedwig.dds"
+			ideology = despotism
+			traits = {
+			}
+		}
+	}
+	option = {
+		name = denmark.2.b
+		trigger = {
+			original_tag = SWE
+		}
+		puppet = DEN
+	}	
 }

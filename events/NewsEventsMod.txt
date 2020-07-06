@@ -406,3 +406,18 @@ news_event = {
 		name = "Good luck to him!"
 	}
 }
+
+news_event = {
+	id = mod.21
+	title = mod.21.t
+	desc = mod.21.d
+	picture = GFX
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "What a coincidence!"
+	}
+}
