@@ -1,0 +1,312 @@
+ideas = {
+	country = {
+		HOL_voc_funding = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_foreign_capital
+			
+			modifier = {
+				political_power_gain = 0.10
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		HOL_voc_funding2 = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_foreign_capital
+			
+			modifier = {
+				political_power_gain = 0.20
+				consumer_goods_factor = -0.10
+			}
+		}
+		
+		HOL_voc_integration = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = hol_oranje_boven
+			
+			modifier = {
+				autonomy_gain = -2
+			}
+		}
+		HOL_spice_trade_profits = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = spices
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		HOL_spice_trade_profits2 = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = spices
+			
+			modifier = {
+				consumer_goods_factor = -0.10
+			}
+		}
+		HOL_balanced_budget = {
+
+			picture = chi_hyper_inflation
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+
+			}
+		}
+		HOL_inflation_1 = {
+
+			picture = chi_hyper_inflation
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				industrial_capacity_factory = -0.05
+			}
+		}	
+		HOL_inflation_2 = {
+
+			picture = chi_hyper_inflation2
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.10
+				industrial_capacity_factory = -0.10
+			}
+		}
+		HOL_inflation_3 = {
+
+			picture = chi_hyper_inflation3
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.15
+				industrial_capacity_factory = -0.15
+			}
+		}
+		HOL_inflation_4 = {
+
+			picture = chi_hyper_inflation4
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.20
+				industrial_capacity_factory = -0.20
+			}
+		}
+		HOL_inflation_5 = {
+
+			picture = chi_hyper_inflation5
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.25
+				industrial_capacity_factory = -0.25
+			}
+		}
+		HOL_declared_bankruptcy= {
+
+			picture = usa_great_depression_2
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.40
+				industrial_capacity_factory = -0.35
+				army_morale_factor = -0.2
+				stability_factor = -0.20
+			}
+		}
+	}
+
+	political_advisor = {
+
+		HOL_financial_expert = {
+
+			picture = master_of_mint
+
+			available = {
+				has_completed_focus = hol_hire_financial_experts
+				original_tag = HOL
+			}
+
+			visible = {
+				original_tag = HOL
+			}
+			
+			traits = { financial_expert }
+		}
+
+		HOL_republicanist = {
+
+			picture = artist
+
+			allowed = {
+				original_tag = HOL
+			}
+
+			traits = { democratic_reformer }
+		}
+
+		HOL_industrialist = {
+
+			picture = statesman
+
+			allowed = {
+				original_tag = HOL
+			}
+			
+			traits = { captain_of_industry }
+		}
+
+		HOL_prince_of_terror = {
+
+			picture = inquisitor
+				
+			allowed = {
+				original_tag = HOL
+			}
+			
+			traits = { prince_of_terror }
+		}
+
+		HOL_dunno = {
+
+			picture = artist
+			
+			allowed = {
+				original_tag = HOL
+			}
+
+			available = {
+				OR = {
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+			
+			traits = { genial_anti_revolutionary }
+		}
+
+		HOL_war_industrialist = {
+
+			picture = spymaster
+			
+			allowed = {
+				original_tag = HOL
+			}
+			
+			traits = { war_industrialist }
+		}
+
+		HOL_trader = {
+
+			picture = trader
+			
+			allowed = {
+				original_tag = HOL
+				has_dlc = "Man the Guns"
+			}
+			
+			traits = { resistance_banker }
+		}
+
+		HOL_daredevil = {
+
+			picture = generic_political_advisor_europe_4
+
+			cost = 100
+			
+			allowed = {
+				original_tag = HOL
+				has_dlc = "Man the Guns"
+			}
+			
+			traits = { adventurous_daredevil }
+
+		}
+	}
+}
+

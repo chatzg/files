@@ -1,0 +1,33 @@
+
+state={
+	id=887
+	name="STATE_887"
+	resources={
+		tungsten=30
+	}
+
+	history={
+		owner = TRR
+		add_core_of = TRR
+		victory_points = {
+			11435 1 
+		}
+		victory_points = {
+			9575 5 
+		}
+		buildings = {
+			infrastructure = 5
+			arms_factory = 1
+			industrial_complex = 1
+
+		}
+
+	}
+
+	provinces={
+		3423 9575 11435 11470 11494 
+	}
+	manpower=356797
+	buildings_max_level_factor=1.000
+	state_category=town
+}

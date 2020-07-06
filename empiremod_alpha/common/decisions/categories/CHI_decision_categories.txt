@@ -1,0 +1,7 @@
+
+CHI_army_reform = {
+	icon = army_reform
+
+	visible = {
+	}
+}

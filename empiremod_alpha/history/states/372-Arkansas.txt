@@ -1,0 +1,28 @@
+
+state={
+	id=372
+	name="STATE_372"
+	resources={
+		aluminium=14.000
+	}
+
+	history={
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+
+		}
+		owner = UNC
+		victory_points = {
+			12489 1 
+		}
+
+	}
+
+	provinces={
+		4567 4597 7485 7586 10477 12458 12489 12778 
+	}
+	manpower=1854481
+	buildings_max_level_factor=1.000
+	state_category=town
+}

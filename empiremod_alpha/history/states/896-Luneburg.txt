@@ -1,0 +1,18 @@
+state={
+	id=896
+	name="STATE_896"
+	provinces={
+		6218 6263 6298 9238 9264 9375 
+	}
+	history={
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 2
+		}
+		owner = LUN
+		add_core_of = LUN
+	}
+	manpower=68874
+	buildings_max_level_factor=1.000
+	state_category=city
+}

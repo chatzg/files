@@ -1,0 +1,25 @@
+
+state={
+	id=823
+	name="STATE_823"
+
+	history={
+		owner = IRO
+		add_core_of = IRO
+		buildings = {
+			infrastructure = 2
+
+		}
+		victory_points = {
+			11654 3 
+		}
+
+	}
+
+	provinces={
+		734 9664 11654 
+	}
+	manpower=7148
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

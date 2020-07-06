@@ -1,0 +1,23 @@
+
+state={
+	id=806
+	name="STATE_806"
+
+	history={
+		buildings = {
+			infrastructure = 1
+
+		}
+		victory_points = {
+			12384 10 
+		}
+		owner = CRE
+	}
+
+	provinces={
+		638 968 5090 7643 7791 8014 9949 9967 9996 10909 12384 
+	}
+	manpower=11250
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

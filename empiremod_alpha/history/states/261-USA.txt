@@ -1,0 +1,36 @@
+
+state={
+	id=261
+	name="STATE_261"
+	resources={
+		steel=28.000
+		aluminium=9.000
+	}
+
+	history={
+		owner = LOU
+		buildings = {
+			infrastructure = 1
+
+		}
+		add_core_of = LOU
+		victory_points = {
+			6890 10 
+		}
+		1939.1.1 = {
+			buildings = {
+				industrial_complex = 7
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		659 689 882 3685 3687 3872 6707 6890 9825 11791 13154 
+	}
+	manpower=100
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

@@ -1,0 +1,280 @@
+PRS_expansion = {
+	PRS_clash_over_niederlausitz = {
+		icon = border_war
+		days_re_enable = 70
+		cost = 50
+		available = {
+			owns_state = 64
+			NOT = {
+				owns_state = 884
+			}	
+		}
+
+		visible = {
+			has_completed_focus = PRS_german_borderclashes
+			NOT = {
+				owns_state = 884
+			}
+		}
+		complete_effect = {
+			start_border_war = {
+			change_state_after_war = no
+			    attacker = {
+			        state = 64
+			        num_provinces = 2
+			        on_win = wtt_border_conflict_won_attacker.1
+       				on_lose = wtt_border_conflict_lost_attacker.1
+			    }
+							
+			    defender = {
+			        state = 884
+			        num_provinces = 2
+			        on_win = wtt_border_conflict_won_defender.1
+   					on_lose = wtt_border_conflict_lost_defender.1
+			    }
+			}
+		}
+	}
+	PRS_clash_over_lubeck = {
+		icon = border_war
+		days_re_enable = 70
+		cost = 50
+		available = {
+			owns_state = 61
+		}
+
+		visible = {
+			always = yes
+			NOT = {
+				owns_state = 899
+			}
+			has_completed_focus = PRS_german_borderclashes
+		}
+		complete_effect = {
+			start_border_war = {
+				change_state_after_war = no
+			    attacker = {
+			        state = 61
+			        num_provinces = 1
+			        on_win = wtt_border_conflict_won_attacker.1
+       				on_lose = wtt_border_conflict_lost_attacker.1
+			    }
+							
+			    defender = {
+			        state = 899
+			        num_provinces = 1
+			        on_win = wtt_border_conflict_won_defender.1
+   					on_lose = wtt_border_conflict_lost_defender.1
+			    }
+			}
+		}
+
+	}
+	PRS_clash_over_braunschweig = {
+		icon = border_war
+		days_re_enable = 70
+		cost = 50
+		available = {
+			owns_state = 64
+		}
+
+		visible = {
+			always = yes
+			NOT = {
+				owns_state = 892
+			}
+			has_completed_focus = PRS_german_borderclashes
+		}
+		complete_effect = {
+			start_border_war = {
+				change_state_after_war = no
+			    attacker = {
+			        state = 64
+			        num_provinces = 1
+			        on_win = wtt_border_conflict_won_attacker.1
+       				on_lose = wtt_border_conflict_lost_attacker.1
+			    }
+							
+			    defender = {
+			        state = 892
+			        num_provinces = 1
+			        on_win = wtt_border_conflict_won_defender.1
+   					on_lose = wtt_border_conflict_lost_defender.1
+			    }
+			}
+		}
+
+	}
+	PRS_clash_over_luneburg = {
+		icon = border_war
+		days_re_enable = 70
+		cost = 50
+		available = {
+			owns_state = 64
+		}
+
+		visible = {
+			always = yes
+			NOT = {
+				owns_state = 896
+			}
+			has_completed_focus = PRS_german_borderclashes
+		}
+		complete_effect = {
+			start_border_war = {
+			change_state_after_war = no
+			    attacker = {
+			        state = 64
+			        num_provinces = 2
+			        on_win = wtt_border_conflict_won_attacker.1
+       				on_lose = wtt_border_conflict_lost_attacker.1
+			    }
+							
+			    defender = {
+			        state = 896
+			        num_provinces = 2
+			        on_win = wtt_border_conflict_won_defender.1
+   					on_lose = wtt_border_conflict_lost_defender.1
+			    }
+			}
+		}
+	}
+	PRS_clash_over_hamburg = {
+		icon = border_war
+		days_re_enable = 70
+		cost = 50
+		available = {
+			owns_state = 896
+		}
+
+		visible = {
+			always = yes
+			NOT = {
+				owns_state = 882
+			}
+			has_completed_focus = PRS_german_borderclashes
+		}
+		complete_effect = {
+			start_border_war = {
+			change_state_after_war = no
+			    attacker = {
+			        state = 896
+			        num_provinces = 1
+			        on_win = wtt_border_conflict_won_attacker.1
+       				on_lose = wtt_border_conflict_lost_attacker.1
+			    }
+							
+			    defender = {
+			        state = 882
+			        num_provinces = 1
+			        on_win = wtt_border_conflict_won_defender.1
+   					on_lose = wtt_border_conflict_lost_defender.1
+			    }
+			}
+		}
+	}
+	PRS_clash_over_lower_silezia = {
+		icon = border_war
+		days_re_enable = 70
+		cost = 50
+		available = {
+			owns_state = 68
+		}
+
+		visible = {
+			always = yes
+			NOT = {
+				owns_state = 66
+			}
+			has_completed_focus = PRS_claim_silezia
+		}
+		complete_effect = {
+			start_border_war = {
+				change_state_after_war = no
+			    attacker = {
+			        state = 68
+			        num_provinces = 1
+			        on_win = wtt_border_conflict_won_attacker.1
+       				on_lose = wtt_border_conflict_lost_attacker.1
+			    }
+							
+			    defender = {
+			        state = 66
+			        num_provinces = 1
+			        on_win = wtt_border_conflict_won_defender.1
+   					on_lose = wtt_border_conflict_lost_defender.1
+			    }
+			}
+		}
+	}
+
+	PRS_clash_over_upper_silezia = {
+		icon = border_war
+		days_re_enable = 70
+		cost = 50
+		available = {
+			owns_state = 66
+		}
+
+		visible = {
+			always = yes
+			NOT = {
+				owns_state = 67
+			}
+			has_completed_focus = PRS_claim_silezia
+		}
+		complete_effect = {
+			start_border_war = {
+				change_state_after_war = no
+			    attacker = {
+			        state = 66
+			        num_provinces = 1
+			        on_win = wtt_border_conflict_won_attacker.1
+       				on_lose = wtt_border_conflict_lost_attacker.1
+			    }
+							
+			    defender = {
+			        state = 67
+			        num_provinces = 1
+			        on_win = wtt_border_conflict_won_defender.1
+   					on_lose = wtt_border_conflict_lost_defender.1
+			    }
+			}
+		}
+	}
+
+	PRS_clash_over_katowice = {
+		icon = border_war
+		days_re_enable = 70
+		cost = 50
+		available = {
+			owns_state = 67
+		}
+
+		visible = {
+			always = yes
+			NOT = {
+				owns_state = 762
+			}
+			has_completed_focus = PRS_claim_silezia
+		}
+		complete_effect = {
+			start_border_war = {
+				change_state_after_war = no
+			    attacker = {
+			        state = 67
+			        num_provinces = 3
+			        on_win = wtt_border_conflict_won_attacker.1
+       				on_lose = wtt_border_conflict_lost_attacker.1
+			    }
+							
+			    defender = {
+			        state = 762
+			        num_provinces = 2
+			        on_win = wtt_border_conflict_won_defender.1
+   					on_lose = wtt_border_conflict_lost_defender.1
+			    }
+			}
+		}
+	}
+}

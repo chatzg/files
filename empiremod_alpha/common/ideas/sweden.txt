@@ -1,0 +1,625 @@
+
+ideas = {
+	hidden_ideas = {
+	    SWE_is_op = {
+	      	targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 1
+				defense_bonus_against = 1
+			}
+	       	targeted_modifier = {
+				tag = POL
+				attack_bonus_against = 1
+				defense_bonus_against = 1
+			}
+	  	}
+	}
+	country = {
+		
+		SOUND_TOLL = {
+
+			picture = HUN_treaty_of_triannon
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			#picture= 
+			
+			modifier = {
+				consumer_goods_factor = -0.10
+			}
+		}
+
+		SWE_allotmentsystem = {
+
+			picture = HUN_secret_rearmament
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			modifier = {
+				training_time_factor = -0.25
+				conscription = 0.005
+			}
+		}
+
+		SWE_compulsory_service = {
+
+			picture = generic_manpower_bonus
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			modifier = {
+				conscription = 0.05
+			}
+		}
+
+		SWE_Carolean_army = {
+					allowed = {
+				always = no
+			}
+
+			picture = generic_manpower_bonus
+
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.1
+			}
+		}
+
+		SWE_gustavian_army = {
+					allowed = {
+				always = no
+			}
+
+			picture = generic_manpower_bonus
+
+			removal_cost = -1
+			modifier = {
+				army_org_factor = 0.15
+			}
+		}
+
+		SWE_legacy_of_gustavus_adolphus = {
+					allowed = {
+				always = no
+			}
+
+			picture = generic_manpower_bonus
+
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.10
+				army_core_defence_factor = 0.25
+			}
+		}
+
+		SWE_focus_on_commonwealth = {
+			allowed = {
+				always = no
+			}
+
+			picture = CHI_wargaming_division
+
+		targeted_modifier = {
+			tag = POL
+			attack_bonus_against = 0.1
+			defense_bonus_against = 0.1
+			}
+		}
+
+		SWE_focus_on_Russia = {
+					allowed = {
+				always = no
+			}
+
+		targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+
+		SWE_march_on_moscow = {
+					allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				army_speed_factor = 0.05
+				attrition = -0.02
+			}
+		}	
+		SWE_influencing_sejm = {
+			allowed = {
+			 always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				stability_weekly = -0.001
+				war_support_weekly = -0.001
+			}
+		}
+
+		SWE_on_the_defensive = {
+			allowed = {
+			 always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				defence = 0.1
+			}
+		}
+		
+		SWE_partisan_resistance = {
+			allowed = {
+			 always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				resistance_damage_to_garrison_on_our_occupied_states = 0.15
+			}
+		}
+
+		SWE_last_stand = {
+					allowed = {
+				always = no
+			}
+
+			picture = generic_manpower_bonus
+
+			removal_cost = -1
+			modifier = {
+				army_core_defence_factor = 0.25
+			}
+		}
+
+		SWE_large_dowry_receiver = {
+			allowed = {
+				always = no
+			}
+
+			picture = SPR_seize_the_gold_reserves
+
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.20
+			}
+		}
+		SWE_large_dowry = {
+			allowed = {
+				always = no
+			}
+
+			picture = SPR_seize_the_gold_reserves
+
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.20
+			}
+		}
+
+		SWE_royal_marriage = {
+			allowed = {
+				always = no
+			}
+
+			picture = air_support_focus
+
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.15
+			}
+		}
+	}
+
+	political_advisor = {
+
+		SWE_diplomat = {
+
+			picture = diplomat
+			
+			allowed = {
+				original_tag = SWE
+			}
+			
+			traits = { compassionate_gentleman }
+		}
+
+		SWE_statesman = {
+
+			picture = statesman
+
+			allowed = {
+				original_tag = SWE
+			}
+			
+			traits = { silent_workhorse }
+		}
+
+		SWE_treasurer = {
+
+			picture = treasurer
+			
+			allowed = {
+				original_tag = SWE
+			}
+			
+			traits = { captain_of_industry }
+		}
+	}
+
+	theorist = {
+
+		SWE_military_theorist  = {
+					
+					
+			allowed = {
+				original_tag = SWE
+			}
+			
+			picture = army_reformer
+			
+			research_bonus = {
+				land_doctrine = 0.10
+			}
+			
+			traits = { military_theorist }
+		}
+
+		SWE_naval_reformer = {
+					
+					
+			allowed = {
+				original_tag = SWE
+			}
+			
+			picture = naval_reformer
+			
+			research_bonus = {
+				naval_doctrine = 0.10
+			}
+			
+			traits = { naval_theorist }
+		}
+	}
+	# MILITARY
+	army_chief = {
+
+		SWE_commander = {
+			
+			picture = commander
+			
+			allowed = {
+				original_tag = SWE
+			}
+			
+
+			
+			traits = { army_chief_old_guard }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		SWE_ivar_holmquist = {
+			
+			picture = captain
+			
+			allowed = {
+				original_tag = SWE
+			}
+			
+
+			
+			traits = { army_chief_organizational_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		SWE_per_sylvan = {
+			
+			picture = fortification_expert
+			
+			allowed = {
+				original_tag = SWE
+			}
+			
+
+			
+			traits = { army_chief_defensive_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		SWE_oscar_nygren = {
+			
+			picture = quartermaster
+			
+			allowed = {
+				original_tag = SWE
+			}
+			
+
+			
+			traits = { army_chief_drill_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	navy_chief = {
+
+		SWE_gosta_ehrensvard = {
+			
+			picture = navigator
+			
+			allowed = {
+				original_tag = SWE
+			}
+			
+
+			
+			traits = { navy_chief_commerce_raiding_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		SWE_fabian_tamm = {
+			
+			picture = captain
+			
+			allowed = {
+				original_tag = SWE
+			}
+			
+
+			
+			traits = { navy_chief_reform_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		SWE_charles_de_champs = {
+			
+			picture = quartermaster
+			
+			allowed = {
+				original_tag = SWE
+			}
+			
+
+			
+			traits = { navy_chief_decisive_battle_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+	}
+
+	high_command = {
+
+		SWE_axel_rappe = {
+			
+			picture = scientist
+			
+			allowed = {
+				original_tag = SWE
+			}
+			
+
+			
+			traits = { army_artillery_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	
+		SWE_archibald_douglas = {
+			
+			picture = army_organiser
+
+			allowed = {
+				original_tag = SWE
+			}
+			
+
+			
+			traits = { army_infantry_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+
+		SWE_helge_stromback = {
+			
+			picture = captain
+			
+			allowed = {
+				original_tag = SWE
+			}
+			
+
+			
+			traits = { navy_fleet_logistics_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	naval_manufacturer = { 
+			
+		designer = yes
+		
+		marinvarkstaderna = { #Karlskrona
+			
+			picture = generic_naval_manufacturer_1
+
+			
+			allowed = {
+				original_tag = SWE
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			equipment_bonus = {
+				# mer research
+			}
+			
+			traits = { coastal_defence_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+
+		gotaverken = {
+			
+			picture = generic_naval_manufacturer_2
+
+			
+			allowed = {
+				original_tag = SWE
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			equipment_bonus = {
+				# worlds biggest shipyard by launched gross tonnes
+			}
+			
+			traits = { atlantic_fleet_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+
+		kockums = {
+			
+			picture = generic_naval_manufacturer_3
+
+			
+			allowed = {
+				original_tag = SWE
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			 
+			equipment_bonus = {
+				# submarines and battleships
+			}
+			
+			traits = { raiding_fleet_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+	}
+
+
+	materiel_manufacturer = {
+		
+		designer = yes
+	
+		bofors = {
+			
+			picture = generic_artillery_manufacturer_1
+
+			
+			allowed = {
+				original_tag = SWE
+			}
+			
+			research_bonus = {
+				artillery = 0.15
+			}
+			
+			equipment_bonus = {
+				artillery = {
+					reliability = 0.20
+				}
+			}
+			
+			traits = { artillery_manufacturer }
+			
+			modifier = {
+			}
+		}
+	
+		husqvarna = {
+			
+			picture = generic_infantry_equipment_manufacturer_2
+
+			
+			allowed = {
+				original_tag = SWE
+			}
+			
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			
+			equipment_bonus = {
+				# rifles and pistols
+			}
+			
+			traits = { infantry_equipment_manufacturer }
+			
+			modifier = {
+			}
+		}
+		scania = {
+			
+
+			
+			allowed = {
+				original_tag = SWE
+			}
+			
+			research_bonus = {
+				motorized_equipment = 0.15
+			}
+			
+			traits = { motorized_equipment_manufacturer }
+			
+			modifier = {
+				# more info
+			}
+		}
+		
+	}
+}

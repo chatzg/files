@@ -1,0 +1,29 @@
+state={
+	id=824
+	name="STATE_824"
+	provinces={
+		2042 4884 6785 6987 10337 12369 12410 
+	}
+	history={
+		owner = MEX
+		add_core_of = MEX
+		buildings = {
+			infrastructure = 2
+
+			10337 = {
+				naval_base = 3
+
+			}
+			6785 = {
+				naval_base = 1
+
+			}
+		}
+		victory_points = {
+			10337 10 
+		}
+	}
+	manpower=23059
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

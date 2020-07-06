@@ -1,0 +1,34 @@
+state=
+{
+	id=8
+	name="STATE_8"
+	
+	state_category = town
+	
+	manpower = 125058
+	resources={
+		steel=5 # was: 8
+	}
+
+	history=
+	{
+		owner = BEL
+		add_core_of = BEL
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+			6583 = {
+				bunker = 4
+
+			}
+		}
+		victory_points = { 6583 3 }
+		add_core_of = LUX
+
+		
+	}
+
+	provinces=
+	{
+6583 	}
+}

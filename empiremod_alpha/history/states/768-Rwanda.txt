@@ -1,0 +1,17 @@
+state={
+	id=768
+	name="STATE_768" # Rwanda
+	
+	state_category = pastoral
+
+	impassable = yes
+
+	provinces={
+		9962
+	}
+	history={
+	owner = UNC
+	}
+	manpower=1716564
+	buildings_max_level_factor=1.000
+}

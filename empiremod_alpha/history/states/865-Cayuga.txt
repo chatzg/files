@@ -1,0 +1,18 @@
+state={
+	id=865
+	name="STATE_865"
+	provinces={
+		3733 11680 
+	}
+	history={
+		owner = IRO
+		add_core_of = IRO
+		buildings = {
+			infrastructure = 1
+
+		}
+	}
+	manpower=4272
+	buildings_max_level_factor=1.000
+	state_category = pastoral
+}

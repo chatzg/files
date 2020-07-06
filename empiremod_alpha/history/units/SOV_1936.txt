@@ -1,0 +1,447 @@
+﻿
+division_template = {
+	name = "Streltsy Unit"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	
+	support = {
+        engineer = { x = 0 y = 0 }
+        artillery = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Russian Frontiersmen"
+	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	priority = 0
+}
+division_template = {
+	name = "Cossack Unit"
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+        light_armor = { x = 0 y = 1 }
+        light_armor = { x = 0 y = 2 }
+        light_armor = { x = 0 y = 3 }
+        light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1 }
+		light_armor = { x = 1 y = 2 }
+		light_armor = { x = 1 y = 3 }
+	}
+	support = {
+	    recon = { x = 0 y = 0 }
+	    artillery = { x = 0 y = 1 }
+	}
+}
+
+units = {
+
+##### MOSCOW ####
+
+	division= {
+		name = "Streltsy Unit"
+		location = 6380
+		division_template = "Streltsy Unit"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Streltsy Unit"
+		location = 6380
+		division_template = "Streltsy Unit"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Cossack Unit"
+		location = 6380
+		division_template = "Cossack Unit"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+
+## NOVGOROD
+
+	division= {
+		name = "Streltsy Unit"
+		location = 117
+		division_template = "Streltsy Unit"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Streltsy Unit"
+		location = 117
+		division_template = "Streltsy Unit"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Cossack Unit"
+		location = 117
+		division_template = "Cossack Unit"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+
+##VOLKHOV
+
+	division= {
+		name = "Streltsy Unit"
+		location = 9197
+		division_template = "Streltsy Unit"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Streltsy Unit"
+		location = 9197
+		division_template = "Streltsy Unit"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+##PSKOV 11202
+
+	division= {
+		name = "Streltsy Unit"
+		location = 11202
+		division_template = "Streltsy Unit"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Cossack Unit"
+		location = 11202
+		division_template = "Cossack Unit"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Cossack Unit"
+		location = 11202
+		division_template = "Cossack Unit"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Streltsy Unit"
+		location = 11202
+		division_template = "Streltsy Unit"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+
+#LUKI
+
+	division= {
+		name = "Streltsy Unit"
+		location = 11234
+		division_template = "Streltsy Unit"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Streltsy Unit"
+		location = 11234
+		division_template = "Streltsy Unit"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Streltsy Unit"
+		location = 11234
+		division_template = "Streltsy Unit"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Cossack Unit"
+		location = 11234
+		division_template = "Cossack Unit"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+
+## SMOLENSK 306
+
+	division= {
+		name = "Streltsy Unit"
+		location = 306
+		division_template = "Streltsy Unit"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Streltsy Unit"
+		location = 306
+		division_template = "Streltsy Unit"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Streltsy Unit"
+		location = 306
+		division_template = "Streltsy Unit"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Streltsy Unit"
+		location = 306
+		division_template = "Streltsy Unit"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+
+##KIEV 525
+
+	division= {
+		name = "Streltsy Unit"
+		location = 525
+		division_template = "Streltsy Unit"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Streltsy Unit"
+		location = 525
+		division_template = "Streltsy Unit"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Cossack Unit"
+		location = 525
+		division_template = "Cossack Unit"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+
+#Border Ottomans
+
+	division= {
+		name = "Streltsy Unit"
+		location = 453
+		division_template = "Streltsy Unit"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Streltsy Unit"
+		location = 472
+		division_template = "Streltsy Unit"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Streltsy Unit"
+		location = 486
+		division_template = "Streltsy Unit"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Cossack Unit"
+		location = 3466
+		division_template = "Cossack Unit"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Cossack Unit"
+		location = 3466
+		division_template = "Cossack Unit"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Streltsy Unit"
+		location = 3479
+		division_template = "Streltsy Unit"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Streltsy Unit"
+		location = 6505
+		division_template = "Streltsy Unit"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Streltsy Unit"
+		location = 9446
+		division_template = "Streltsy Unit"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Streltsy Unit"
+		location = 9430
+		division_template = "Streltsy Unit"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Streltsy Unit"
+		location = 11559
+		division_template = "Streltsy Unit"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Streltsy Unit"
+		location = 585
+		division_template = "Streltsy Unit"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Streltsy Unit"
+		location = 11418
+		division_template = "Streltsy Unit"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division= {
+		name = "Cossack Unit"
+		location = 449
+		division_template = "Cossack Unit"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		name = "Streltsy Unit"
+		location = 3464
+		division_template = "Streltsy Unit"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Streltsy Unit"
+		location = 3417
+		division_template = "Streltsy Unit"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		name = "Cossack Unit"
+		location = 3779
+		division_template = "Cossack Unit"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+
+#Rostov 9417
+
+	division= {
+		name = "Streltsy Unit"
+		location = 9417
+		division_template = "Streltsy Unit"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		name = "Streltsy Unit"
+		location = 9417
+		division_template = "Streltsy Unit"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Cossack Unit"
+		location = 9417
+		division_template = "Cossack Unit"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+
+### FRONTIERSMEN
+
+	division= {
+		name = "Russian Frontiersmen"
+		location = 9292
+		division_template = "Russian Frontiersmen"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "Russian Frontiersmen"
+		location = 9292
+		division_template = "Russian Frontiersmen"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "Russian Frontiersmen"
+		location = 9292
+		division_template = "Russian Frontiersmen"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "Russian Frontiersmen"
+		location = 12536
+		division_template = "Russian Frontiersmen"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "Russian Frontiersmen"
+		location = 12536
+		division_template = "Russian Frontiersmen"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "Russian Frontiersmen"
+		location = 4810
+		division_template = "Russian Frontiersmen"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "Russian Frontiersmen"
+		location = 4810
+		division_template = "Russian Frontiersmen"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "Russian Frontiersmen"
+		location = 4810
+		division_template = "Russian Frontiersmen"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "Russian Frontiersmen"
+		location = 4810
+		division_template = "Russian Frontiersmen"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "Russian Frontiersmen"
+		location = 10540
+		division_template = "Russian Frontiersmen"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.4
+	}

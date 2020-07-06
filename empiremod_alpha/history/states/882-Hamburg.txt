@@ -1,0 +1,32 @@
+
+state={
+	id=882
+	name="STATE_882"
+
+	history={
+		victory_points = {
+			9347 20 
+		}
+		buildings = {
+			infrastructure = 8
+			arms_factory = 1
+			industrial_complex = 1
+			dockyard = 6
+			9347 = {
+				naval_base = 5
+
+			}
+
+		}
+		owner = IFC
+		add_core_of = IFC
+
+	}
+
+	provinces={
+		6325 9347 
+	}
+	manpower=69078
+	buildings_max_level_factor=1.000
+	state_category=town
+}

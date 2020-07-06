@@ -1,0 +1,524 @@
+﻿division_template = {
+	name = "Regiment d'Infanterie"		
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Garrison"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+	}
+	priority = 0
+}
+
+division_template = {
+	name = "Regiment d'Infanterie Alpine"
+	# Note: trimmed to 3x Rgts w/ arty bn added, 1939
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }	
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+		mountaineers = { x = 2 y = 0 }	
+		mountaineers = { x = 2 y = 1 }	
+		mountaineers = { x = 2 y = 2 }		
+	}
+}
+
+division_template = {
+	name = "Regiment de Marines"
+	# Note: trimmed to 3x Rgts w/ arty bn added, 1939
+
+	regiments = {
+		marine = { x = 0 y = 0 }
+		marine = { x = 0 y = 1 }
+		marine = { x = 0 y = 2 }	
+		marine = { x = 1 y = 0 }
+		marine = { x = 1 y = 1 }
+		marine = { x = 1 y = 2 }	
+	}
+}
+
+division_template = {
+	name = "Regiment de Cavalry Légère" 		
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }		
+		light_armor = { x = 0 y = 1 }		
+	}
+	support = {
+		recon = { x = 0 y = 0 }    
+	}
+}
+division_template = {
+	name = "Regiment de Cavalry Légère 2"
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1 }
+	}
+}
+
+##### OOB #####
+units = {
+	division= {
+		location = 575
+		division_template = "Regiment de Marines"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 11483
+		division_template = "Regiment d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 11483
+		division_template = "Regiment d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 11606
+		division_template = "Regiment de Cavalry Légère"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 11606
+		division_template = "Regiment de Cavalry Légère"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 3447
+		division_template = "Regiment d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 3447
+		division_template = "Regiment d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 3447
+		division_template = "Regiment d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 9472
+		division_template = "Regiment d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 3560
+		division_template = "Regiment d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 3560
+		division_template = "Regiment d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 5291
+		division_template = "Regiment de Cavalry Légère"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 5291
+		division_template = "Regiment de Cavalry Légère"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 9559
+		division_template = "Regiment d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 9559
+		division_template = "Regiment d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 9559
+		division_template = "Regiment d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 11502
+		division_template = "Regiment d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 3629
+		division_template = "Regiment d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 3629
+		division_template = "Regiment d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 549
+		division_template = "Regiment d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 549
+		division_template = "Regiment d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 512
+		division_template = "Regiment de Cavalry Légère"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 512
+		division_template = "Regiment de Cavalry Légère"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 512
+		division_template = "Regiment d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 6529
+		division_template = "Regiment d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 6529
+		division_template = "Regiment d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 678
+		division_template = "Regiment d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 678
+		division_template = "Regiment de Cavalry Légère 2"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 678
+		division_template = "Regiment de Cavalry Légère 2"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 698
+		division_template = "Regiment d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 698
+		division_template = "Regiment d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 698
+		division_template = "Regiment d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 3666
+		division_template = "Regiment d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 3666
+		division_template = "Regiment d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 3646
+		division_template = "Regiment de Cavalry Légère"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 3646
+		division_template = "Regiment de Cavalry Légère"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 6668
+		division_template = "Regiment d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 6668
+		division_template = "Regiment de Cavalry Légère"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 6639
+		division_template = "Regiment d'Infanterie Alpine"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 6784
+		division_template = "Regiment d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 6784
+		division_template = "Regiment d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 6784
+		division_template = "Regiment d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 3768
+		division_template = "Regiment d'Infanterie Alpine"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 9736
+		division_template = "Regiment d'Infanterie Alpine"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 6975
+		division_template = "Regiment d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 6975
+		division_template = "Regiment d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 3961
+		division_template = "Regiment d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 956
+		division_template = "Regiment d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 956
+		division_template = "Regiment d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 956
+		division_template = "Regiment d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 3928
+		division_template = "Regiment d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 9853
+		division_template = "Regiment de Cavalry Légère"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 6915
+		division_template = "Regiment d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 6915
+		division_template = "Regiment d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 11697
+		division_template = "Regiment d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 743
+		division_template = "Regiment d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 11506
+		division_template = "Garrison"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 11506
+		division_template = "Garrison"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 9495
+		division_template = "Garrison"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 9495
+		division_template = "Garrison"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 11465
+		division_template = "Garrison"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 9737
+		division_template = "Garrison"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 9737
+		division_template = "Garrison"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 6766
+		division_template = "Garrison"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 6766
+		division_template = "Garrison"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 6613
+		division_template = "Garrison"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 6613
+		division_template = "Garrison"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 9898
+		division_template = "Garrison"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 9898
+		division_template = "Garrison"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 9490
+		division_template = "Garrison"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 9490
+		division_template = "Garrison"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 11834
+		division_template = "Regiment de Marines"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		location = 9737
+		division_template = "Regiment de Marines"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+}

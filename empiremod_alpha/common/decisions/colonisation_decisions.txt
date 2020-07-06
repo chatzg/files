@@ -1,0 +1,1299 @@
+colonisation = {
+
+#Patagonia
+
+	colonize_rio_negro = { #832
+		
+		icon = colony
+
+		allowed = {
+			OR = {
+    			original_tag = ARG
+    			original_tag = SPR
+			}
+		}
+
+		highlight_states = {
+			state = 832
+		}
+
+		fire_only_once = no
+		days_re_enable = 5
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+		}
+
+		fixed_random_seed = no
+
+		visible = {
+			has_completed_focus = SPR_patagonian_expedition
+			832 = { is_owned_by = UNC }
+		}
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = { 
+			random_list = {
+				80 = {
+					ARG = {
+					transfer_state = 832
+					add_state_core = 832
+					}
+				}
+				20 = {}
+			}
+		}
+	}	
+
+	colonize_neuquen = { #834
+		
+		icon = colony
+
+		allowed = {
+			OR = {
+    			original_tag = ARG
+    			original_tag = SPR
+			}
+		}
+
+		fire_only_once = no
+		days_re_enable = 5
+
+		highlight_states = {
+			state = 834
+		}
+
+		fixed_random_seed = no
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			
+		}
+
+		visible = {
+			has_completed_focus = SPR_patagonian_expedition
+			834 = { is_owned_by = UNC }
+		}
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = { 
+			random_list = {
+				80 = {
+					ARG = {
+					transfer_state = 834
+					add_state_core = 834
+					}
+				}
+				20 = {}
+			}
+		}
+	}	
+
+	colonize_magallanes = { #507
+		
+		icon = colony
+
+		allowed = {
+			OR = {
+    			original_tag = ARG
+    			original_tag = SPR
+			}
+		}
+
+		fire_only_once = no
+		days_re_enable = 5
+
+		highlight_states = {
+			state = 507
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			
+		}
+
+		fixed_random_seed = no
+
+		visible = {
+			has_completed_focus = SPR_patagonian_expedition
+			507 = { is_owned_by = UNC }
+		}
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = { 
+			random_list = {
+				80 = {
+					ARG = {
+					transfer_state = 507
+					add_state_core = 507
+					}
+				}
+				20 = {}
+			}
+		}
+	}
+
+	colonize_santa_cruz = { #512
+		
+		icon = colony
+
+		allowed = {
+			OR = {
+    			original_tag = ARG
+    			original_tag = SPR
+			}
+		}
+
+		fire_only_once = no
+		days_re_enable = 5
+
+		highlight_states = {
+			state = 512
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			
+		}
+
+		fixed_random_seed = no
+
+		visible = {
+			has_completed_focus = SPR_patagonian_expedition
+			512 = { is_owned_by = UNC }
+		}
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = { 
+			random_list = {
+				80 = {
+					ARG = {
+					transfer_state = 512
+					add_state_core = 512
+					}
+				}
+				20 = {}
+			}
+		}
+	}
+
+	colonize_chubut = { #833
+		
+		icon = colony
+
+		allowed = {
+			OR = {
+    			original_tag = ARG
+    			original_tag = SPR
+			}
+		}
+
+		fire_only_once = no
+		days_re_enable = 5
+
+		highlight_states = {
+			state = 833
+		}
+
+		fixed_random_seed = no
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			
+		}
+
+		visible = {
+			has_completed_focus = SPR_patagonian_expedition
+			833 = { is_owned_by = UNC }
+		}
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = { 
+			random_list = {
+				80 = {
+					ARG = {
+					transfer_state = 833
+					add_state_core = 833
+					}
+				}
+				20 = {}
+			}
+		}
+	}
+
+	colonize_terra_del_fuego = { #835
+		
+		icon = colony
+
+		allowed = {
+			OR = {
+    			original_tag = ARG
+    			original_tag = SPR
+			}
+		}
+
+		highlight_states = {
+			state = 835
+		}
+
+		fixed_random_seed = no
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			
+		}
+
+		visible = {
+			has_completed_focus = SPR_patagonian_expedition
+			835 = { is_owned_by = UNC }
+		}
+
+		fire_only_once = no
+		days_re_enable = 5
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = { 
+			random_list = {
+				80 = {
+					ARG = {
+					transfer_state = 835
+					add_state_core = 835
+					}
+				}
+				20 = {}
+			}
+		}
+	}
+
+	colonize_falklands = { #299
+		
+		icon = colony
+
+		allowed = {
+			OR = {
+    			original_tag = ARG
+    			original_tag = SPR
+			}
+		}
+
+		fire_only_once = no
+		days_re_enable = 5
+
+		highlight_states = {
+			state = 299
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+		}
+
+		fixed_random_seed = no
+
+		visible = {
+			has_completed_focus = SPR_patagonian_expedition
+			299 = { is_owned_by = UNC }
+		}
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = { 
+			random_list = {
+				80 = {
+					ARG = {
+					transfer_state = 299
+					add_state_core = 299
+					}
+				}
+				20 = {}
+			}
+		}
+	}
+
+	#Mexico
+
+	colonize_east_sonora = { #826
+		
+		icon = colony
+
+		allowed = {
+			OR = {
+    			original_tag = MEX
+    			original_tag = SPR
+			}
+		}
+
+		fire_only_once = no
+		days_re_enable = 5
+
+		highlight_states = {
+			state = 826
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+		}
+
+		fixed_random_seed = no
+
+		visible = {
+			has_completed_focus = SPR_push_further_north
+			826 = { is_owned_by = UNC }
+		}
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = { 
+			random_list = {
+				80 = {
+					ARG = {
+					transfer_state = 826
+					add_state_core = 826
+					}
+				}
+				20 = {}
+			}
+		}
+	}
+
+	colonize_south_texas = { #837
+		
+		icon = colony
+
+		allowed = {
+			OR = {
+    			original_tag = MEX
+    			original_tag = SPR
+			}
+		}
+
+		fire_only_once = no
+		days_re_enable = 5
+
+		highlight_states = {
+			state = 837
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+		}
+
+		fixed_random_seed = no
+
+		visible = {
+			has_completed_focus = SPR_push_further_north
+			837 = { is_owned_by = UNC }
+		}
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = { 
+			random_list = {
+				80 = {
+					ARG = {
+					transfer_state = 837
+					add_state_core = 837
+					}
+				}
+				20 = {}
+			}
+		}
+	}
+
+	colonize_southern_california = { #840
+		
+		icon = colony
+
+		allowed = {
+			OR = {
+    			original_tag = MEX
+    			original_tag = SPR
+			}
+		}
+
+		fire_only_once = no
+		days_re_enable = 5
+
+		highlight_states = {
+			state = 840
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+		}
+
+		fixed_random_seed = no
+
+		visible = {
+			has_completed_focus = SPR_push_further_north
+			840 = { is_owned_by = UNC }
+		}
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = { 
+			random_list = {
+				80 = {
+					ARG = {
+					transfer_state = 840
+					add_state_core = 840
+					}
+				}
+				20 = {}
+			}
+		}
+	}
+
+	colonize_california_desert = { #841
+		
+		icon = colony
+
+		allowed = {
+			OR = {
+    			original_tag = MEX
+    			original_tag = SPR
+			}
+		}
+
+		fire_only_once = no
+		days_re_enable = 5
+
+		highlight_states = {
+			state = 841
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+		}
+
+		fixed_random_seed = no
+
+		visible = {
+			has_completed_focus = SPR_push_further_north
+			841 = { is_owned_by = UNC }
+		}
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = { 
+			random_list = {
+				80 = {
+					ARG = {
+					transfer_state = 841
+					add_state_core = 841
+					}
+				}
+				20 = {}
+			}
+		}
+	}
+
+	colonize_south_arizona = { #838
+		
+		icon = colony
+
+		allowed = {
+			OR = {
+    			original_tag = MEX
+    			original_tag = SPR
+			}
+		}
+
+		fire_only_once = no
+		days_re_enable = 5
+
+		highlight_states = {
+			state = 838
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+		}
+
+		fixed_random_seed = no
+
+		visible = {
+			has_completed_focus = SPR_push_further_north
+			838 = { is_owned_by = UNC }
+		}
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = { 
+			random_list = {
+				80 = {
+					ARG = {
+					transfer_state = 838
+					add_state_core = 838
+					}
+				}
+				20 = {}
+			}
+		}
+	}
+
+	colonize_pineywoods = { #845
+		
+		icon = colony
+
+		allowed = {
+			OR = {
+    			original_tag = MEX
+    			original_tag = SPR
+			}
+		}
+
+		fire_only_once = no
+		days_re_enable = 5
+
+		highlight_states = {
+			state = 845
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+		}
+
+		fixed_random_seed = no
+
+		visible = {
+			has_completed_focus = SPR_push_further_north
+			845 = { is_owned_by = UNC }
+		}
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = { 
+			random_list = {
+				80 = {
+					ARG = {
+					transfer_state = 845
+					add_state_core = 845
+					}
+				}
+				20 = {}
+			}
+		}
+	}
+
+	## INDONESIE ##
+
+	colonize_middle_java = { #857
+		
+		icon = colony
+
+		allowed = {
+			OR = {
+    			original_tag = HOL
+    			original_tag = INS
+			}
+		}
+
+		fire_only_once = no
+		days_re_enable = 5
+
+		highlight_states = {
+			state = 857
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+		}
+
+		fixed_random_seed = no
+
+		visible = {
+			has_completed_focus = HOL_expand_spice_trade
+			857 = { is_owned_by = UNC }
+		}
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = { 
+			random_list = {
+				80 = {
+					INS = {
+					transfer_state = 857
+					}
+				}
+				20 = {}
+			}
+		}
+	}
+
+	colonize_west_java = { #858
+		
+		icon = colony
+
+		allowed = {
+			OR = {
+    			original_tag = HOL
+    			original_tag = INS
+			}
+		}
+
+		fire_only_once = no
+		days_re_enable = 5
+
+		highlight_states = {
+			state = 858
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+		}
+
+		fixed_random_seed = no
+
+		visible = {
+			has_completed_focus = HOL_expand_spice_trade
+			858 = { is_owned_by = UNC }
+		}
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = { 
+			random_list = {
+				80 = {
+					INS = {
+					transfer_state = 858
+					}
+				}
+				20 = {}
+			}
+		}
+	}
+
+	claim_sumatra = {
+		
+		icon = colony
+
+		allowed = {
+			OR = {
+    			original_tag = HOL
+    			original_tag = INS
+			}
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = HOL_expand_spice_trade
+		}
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 1
+		}
+		complete_effect = { 
+			add_state_claim = 849  
+			add_state_claim = 852
+			add_state_claim = 856
+			add_state_claim = 853
+			add_state_claim = 854 
+			add_state_claim = 672
+			add_state_claim = 848
+			add_state_claim = 850
+			set_country_flag = claimed_sumatra
+		}
+	}
+
+	colonize_south_sumatra = { #672
+		
+		icon = colony
+
+		allowed = {
+			OR = {
+    			original_tag = HOL
+    			original_tag = INS
+			}
+		}
+
+		fire_only_once = no
+		days_re_enable = 5
+
+		highlight_states = {
+			state = 672
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+		}
+
+		fixed_random_seed = no
+
+		visible = {
+			has_completed_focus = HOL_expand_spice_trade
+			672 = { is_owned_by = UNC }
+			has_country_flag = claimed_sumatra
+		}
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = { 
+			random_list = {
+				80 = {
+					INS = {
+					transfer_state = 672
+					}
+				}
+				20 = {}
+			}
+		}
+	}
+
+	colonize_banka_billiton = { #848
+		
+		icon = colony
+
+		allowed = {
+			OR = {
+    			original_tag = HOL
+    			original_tag = INS
+			}
+		}
+
+		fire_only_once = no
+		days_re_enable = 5
+
+		highlight_states = {
+			state = 848
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+		}
+
+		fixed_random_seed = no
+
+		visible = {
+			has_completed_focus = HOL_expand_spice_trade
+			848 = { is_owned_by = UNC }
+			has_country_flag = claimed_sumatra
+		}
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = { 
+			random_list = {
+				80 = {
+					INS = {
+					transfer_state = 848
+					}
+				}
+				20 = {}
+			}
+		}
+	}
+
+	colonize_jambi = { #855
+		
+		icon = colony
+
+		allowed = {
+			OR = {
+    			original_tag = HOL
+    			original_tag = INS
+			}
+		}
+
+		fire_only_once = no
+		days_re_enable = 5
+
+		highlight_states = {
+			state = 855
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+		}
+
+		fixed_random_seed = no
+
+		visible = {
+			has_completed_focus = HOL_expand_spice_trade
+			855 = { is_owned_by = UNC }
+			has_country_flag = claimed_sumatra
+		}
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = { 
+			random_list = {
+				80 = {
+					INS = {
+					transfer_state = 855
+					}
+				}
+				20 = {}
+			}
+		}
+	}
+
+	colonize_bengkulu = { #850
+		
+		icon = colony
+
+		allowed = {
+			OR = {
+    			original_tag = HOL
+    			original_tag = INS
+			}
+		}
+
+		fire_only_once = no
+		days_re_enable = 5
+
+		highlight_states = {
+			state = 850
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+		}
+
+		fixed_random_seed = no
+
+		visible = {
+			has_completed_focus = HOL_expand_spice_trade
+			850 = { is_owned_by = UNC }
+			has_country_flag = claimed_sumatra
+		}
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = { 
+			random_list = {
+				80 = {
+					INS = {
+					transfer_state = 850
+					}
+				}
+				20 = {}
+			}
+		}
+	}
+
+	colonize_west_sumatra = { #854
+		
+		icon = colony
+
+		allowed = {
+			OR = {
+    			original_tag = HOL
+    			original_tag = INS
+			}
+		}
+
+		fire_only_once = no
+		days_re_enable = 5
+
+		highlight_states = {
+			state = 854
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+		}
+
+		fixed_random_seed = no
+
+		visible = {
+			has_completed_focus = HOL_expand_spice_trade
+			854 = { is_owned_by = UNC }
+			has_country_flag = claimed_sumatra
+		}
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = { 
+			random_list = {
+				80 = {
+					INS = {
+					transfer_state = 854
+					}
+				}
+				20 = {}
+			}
+		}
+	}
+
+	colonize_riau = { #853
+		
+		icon = colony
+
+		allowed = {
+			OR = {
+    			original_tag = HOL
+    			original_tag = INS
+			}
+		}
+
+		fire_only_once = no
+		days_re_enable = 5
+
+		highlight_states = {
+			state = 853
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+		}
+
+		fixed_random_seed = no
+
+		visible = {
+			has_completed_focus = HOL_expand_spice_trade
+			853 = { is_owned_by = UNC }
+			has_country_flag = claimed_sumatra
+		}
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = { 
+			random_list = {
+				80 = {
+					INS = {
+					transfer_state = 853
+					}
+				}
+				20 = {}
+			}
+		}
+	}
+
+	colonize_north_sumatra = { #852
+		
+		icon = colony
+
+		allowed = {
+			OR = {
+    			original_tag = HOL
+    			original_tag = INS
+			}
+		}
+
+		fire_only_once = no
+		days_re_enable = 5
+
+		highlight_states = {
+			state = 852
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+		}
+
+		fixed_random_seed = no
+
+		visible = {
+			has_completed_focus = HOL_expand_spice_trade
+			852 = { is_owned_by = UNC }
+			has_country_flag = claimed_sumatra
+		}
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = { 
+			random_list = {
+				80 = {
+					INS = {
+					transfer_state = 852
+					}
+				}
+				20 = {}
+			}
+		}
+	}
+
+	colonize_mentawei = { #856
+		
+		icon = colony
+
+		allowed = {
+			OR = {
+    			original_tag = HOL
+    			original_tag = INS
+			}
+		}
+
+		fire_only_once = no
+		days_re_enable = 5
+
+		highlight_states = {
+			state = 856
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+		}
+
+		fixed_random_seed = no
+
+		visible = {
+			has_completed_focus = HOL_expand_spice_trade
+			856 = { is_owned_by = UNC }
+			has_country_flag = claimed_sumatra
+		}
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = { 
+			random_list = {
+				80 = {
+					INS = {
+					transfer_state = 856
+					}
+				}
+				20 = {}
+			}
+		}
+	}
+
+	colonize_ajteh = { #849
+		
+		icon = colony
+
+		allowed = {
+			OR = {
+    			original_tag = HOL
+    			original_tag = INS
+			}
+		}
+
+		fire_only_once = no
+		days_re_enable = 5
+
+		highlight_states = {
+			state = 849
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+		}
+
+		fixed_random_seed = no
+
+		visible = {
+			has_completed_focus = HOL_expand_spice_trade
+			849 = { is_owned_by = UNC }
+			has_country_flag = claimed_sumatra
+		}
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = { 
+			random_list = {
+				80 = {
+					INS = {
+					transfer_state = 849
+					}
+				}
+				20 = {}
+			}
+		}
+	}
+
+
+
+
+
+}

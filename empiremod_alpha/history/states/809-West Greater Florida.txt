@@ -1,0 +1,18 @@
+state={
+	id=809
+	name="STATE_809"
+	provinces={
+		492 860 7640 10520 11942 
+	}
+	history={
+		owner = MEX
+		add_core_of = MEX
+		buildings = {
+			infrastructure = 1
+		}
+
+	}
+	manpower=1547
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

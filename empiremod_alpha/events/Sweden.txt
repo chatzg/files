@@ -1,0 +1,465 @@
+﻿############
+#Sweden Events
+###########
+
+add_namespace = sweden
+
+#peace with anti-swedish pact
+
+country_event = {
+	id = sweden.1
+	title = sweden.1.t
+	desc = sweden.1.d
+	picture = GFX_report_event_degaulle_churchill
+
+	fire_only_once = no
+	trigger = {
+		tag = SOV
+		has_war_with = SWE
+		SWE = { surrender_progress > 0.4 }
+		NOT = {
+			has_country_flag = kill_sweden_whole
+		}
+	}
+
+	mean_time_to_happen = { days = 60 }
+
+	option = { #take historical provinces
+		name = sweden.1.a
+		SWE = {
+			country_event = {
+				id = sweden.2
+				days = 2
+			}
+		}
+		ai_chance = {
+			factor = 75
+		}
+	}
+	option = { #take all of finland
+		name = sweden.1.b
+		SWE = {
+			country_event = {
+				id = sweden.3
+				days = 2
+			}
+		}
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = { #no scripted deal
+		name = sweden.1.c
+		add_political_power = -100
+		ai_chance = {
+			factor = 0
+		}
+		set_country_flag = kill_sweden_whole
+	}
+}
+
+country_event = {
+	id = sweden.2
+	title = sweden.2.t
+	desc = sweden.2.d
+	picture = GFX_report_event_degaulle_churchill
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { 
+		name = sweden.2.a
+		SOV = {
+			set_state_owner = 195
+			set_state_owner = 208
+			set_state_owner = 191
+			set_state_owner = 13
+			set_state_owner = 12
+			set_state_owner = 146
+			set_state_owner = 147
+			set_state_owner = 722
+		}
+		ai_chance = {
+			factor = 75
+		}
+		SOV = {
+			country_event = {
+				id = sweden.4
+				days = 2
+			}
+		}
+	}
+	option = { #refuse
+		name = sweden.2.b
+		add_stability = -0.05
+		add_war_support = -0.05
+		ai_chance = {
+			factor = 25
+		}
+		SOV = {
+			country_event = {
+				id = sweden.5
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = {
+	id = sweden.3
+	title = sweden.3.t
+	desc = sweden.3.d
+	picture = GFX_report_event_degaulle_churchill
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { 
+		name = sweden.3.a
+		SOV = {
+			set_state_owner = 195
+			set_state_owner = 208
+			set_state_owner = 191
+			set_state_owner = 13
+			set_state_owner = 12
+			set_state_owner = 146
+			set_state_owner = 147
+			set_state_owner = 722
+			set_state_owner = 111
+			set_state_owner = 148
+			set_state_owner = 149
+			set_state_owner = 150
+		}
+		ai_chance = {
+			factor = 40
+		}
+		SOV = {
+			country_event = {
+				id = sweden.4
+				days = 2
+			}
+		}
+	}
+	option = { #refuse
+		name = sweden.3.b
+		add_stability = -0.01
+		add_war_support = -0.01
+		ai_chance = {
+			factor = 60
+		}
+		SOV = {
+			country_event = {
+				id = sweden.5
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = {
+	id = sweden.4
+	title = sweden.4.t
+	desc = sweden.4.d
+	picture = GFX_report_event_degaulle_churchill
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { 
+		name = sweden.4.a
+	}
+}
+
+country_event = {
+	id = sweden.5
+	title = sweden.5.t
+	desc = sweden.5.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { 
+		name = sweden.5.a
+	}
+}
+
+country_event = {
+	id = sweden.6
+	title = sweden.6.t
+	desc = sweden.6.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { 
+		name = sweden.6.a
+		remove_opinion_modifier = {
+		    target = SWE
+		    modifier = rivalry
+		}
+		transfer_state = 138
+		SOV = {
+			diplomatic_relation = {
+			    country = DEN
+			    relation = guarantee
+			    active = no
+			}
+		}
+		SWE = { country_event = sweden.7 }
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+	option = { 
+		name = sweden.6.b
+		add_political_power = 100
+		SOV = { add_to_faction = DEN }
+		SWE = { country_event = sweden.8 }
+		ai_chance = {
+			factor = 5
+		}
+	}
+}
+
+country_event = {
+	id = sweden.7
+	title = sweden.7.t
+	desc = sweden.7.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { 
+		name = sweden.7.a
+		remove_opinion_modifier = {
+		    target = DEN
+		    modifier = rivalry
+		}
+		add_to_faction = DEN
+	}
+}
+
+country_event = {
+	id = sweden.8
+	title = sweden.8.t
+	desc = sweden.8.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { 
+		name = sweden.8.a
+		unlock_national_focus = SWE_strike_at_denmark
+	}
+}
+
+country_event = {
+	id = sweden.9
+	title = sweden.9.t
+	desc = sweden.9.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { 
+		name = sweden.9.a
+		add_political_power = -150
+		set_country_flag = SWE_made_large_effort
+		DEN = {
+			country_event = {
+			    id = sweden.10
+			    days = 3
+			}
+		}
+	}
+	option = { 
+		name = sweden.9.b
+		set_country_flag = SWE_massive_dowry
+		DEN = {
+			country_event = {
+			    id = sweden.10
+			    days = 3
+			}
+		}
+	}
+	option = { 
+		name = sweden.9.c
+		add_political_power = -150
+		set_country_flag = SWE_massive_dowry_and_effort
+		DEN = {
+			country_event = {
+			    id = sweden.10
+			    days = 3
+			}
+		}
+	}
+	option = { 
+		name = sweden.9.e
+		DEN = {
+			country_event = {
+			    id = sweden.10
+			    days = 3
+			}
+		}
+	}
+}
+
+country_event = {
+	id = sweden.10
+	title = sweden.10.t
+	desc = sweden.10.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { 
+		name = sweden.10.a
+		trigger = {
+			NOT = {
+				OR = {
+					SWE = { has_country_flag = SWE_made_large_effort }
+					SWE = { has_country_flag = SWE_massive_dowry }
+					SWE = { has_country_flag = SWE_massive_dowry_and_effort }
+				}
+			}
+		}
+		SWE = {
+			country_event = {
+			    id = sweden.11
+			    days = 3
+			}
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = { 
+		name = sweden.10.b
+		add_political_power = 50
+		trigger = {
+			SWE = { has_country_flag = SWE_made_large_effort }
+		}
+		SWE = {
+			country_event = {
+			    id = sweden.11
+			    days = 3
+			}
+		}
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = { 
+		name = sweden.10.c
+		add_timed_idea = {
+		    idea = SWE_large_dowry_receiver
+		    days = 180
+		}
+		SWE = {
+			add_timed_idea = {
+			    idea = SWE_large_dowry
+			    days = 180
+			}
+		}
+		trigger = {
+			SWE = { has_country_flag = SWE_massive_dowry }
+		}
+		SWE = {
+			country_event = {
+			    id = sweden.11
+			    days = 3
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+	option = { 
+		name = sweden.10.e
+		add_political_power = 50
+		add_timed_idea = {
+		    idea = SWE_large_dowry_receiver
+		    days = 180
+		}
+		SWE = {
+			add_timed_idea = {
+			    idea = SWE_large_dowry
+			    days = 180
+			}
+		}
+		trigger = {
+			SWE = { has_country_flag = SWE_massive_dowry_and_effort }
+		}
+		SWE = {
+			country_event = {
+			    id = sweden.11
+			    days = 3
+			}
+		}
+		ai_chance = {
+			factor = 400
+		}
+	}
+	option = { 
+		name = sweden.10.f
+		SWE = {
+			country_event = {
+			    id = sweden.12
+			    days = 3
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+country_event = {
+	id = sweden.11
+	title = sweden.11.t
+	desc = sweden.11.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { 
+		name = sweden.11.a
+		add_ideas = SWE_royal_marriage
+		DEN = {
+			add_ideas = SWE_royal_marriage
+		}
+	}
+}
+
+country_event = {
+	id = sweden.12
+	title = sweden.12.t
+	desc = sweden.12.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { 
+		name = sweden.12.a
+	}
+}
+
+
+country_event = { #Ai Receive Massive buff
+	id = sweden.666
+	title = sweden.666.t
+	desc = sweden.666.d
+
+	fire_only_once = yes
+	trigger = {
+		tag = SWE
+		has_war_with = SOV
+		is_ai = yes
+		
+	}
+
+	option = { 
+		name = sweden.666.a
+	}
+}

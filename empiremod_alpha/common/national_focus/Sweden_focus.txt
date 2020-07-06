@@ -1,0 +1,1775 @@
+focus_tree = {
+	id = sweden_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 20
+			tag = SWE
+		}
+	}
+	
+	default = no
+
+#########
+
+focus = {
+	id = SWE_strenghten_legitimacy
+	icon = GFX_focus_hun_elect_a_king
+	x = 23
+	y = 0
+	cost = 5
+
+	completion_reward = {
+		add_stability = 0.05
+		add_popularity = {
+		    ideology = neutrality
+		    popularity = 0.15
+		}
+	}
+	ai_will_do = { 
+		factor = 4000
+	}
+}
+
+focus = {
+	id = SWE_all_parties_must_end
+	icon = GFX_focus_rom_parties_end
+	x = 0
+	y = 1
+	cost = 5
+
+	prerequisite = { focus = SWE_strenghten_legitimacy }
+	prerequisite = { focus = swedish_politics_1 }
+	relative_position_id = SWE_strenghten_legitimacy
+
+	completion_reward = {
+		remove_country_leader_trait = inexperienced_monarch
+	}
+	ai_will_do = { 
+		factor = 10
+	}
+}
+
+##### prep for war
+
+focus = {
+	id = swedish_politics_1
+	icon = GFX_focus_eng_expose_the_belly_of_the_bear
+	x = 11
+	y = 0
+	cost = 5
+
+	ai_will_do = { 
+		factor = 4000
+	}
+
+	completion_reward = {
+	add_war_support = 0.10
+		}
+}
+
+####
+
+focus = {
+	id = SWE_military_might
+	icon = GFX_goal_generic_small_arms
+	prerequisite = { focus = swedish_politics_1 }
+	x = 0
+	y = 1
+	cost = 5
+	relative_position_id = swedish_politics_1
+
+	ai_will_do = { 
+		factor = 4000
+	}
+
+	#add modifier alotment system: -25% training time
+
+	completion_reward = { 
+		add_tech_bonus = {
+			name = land_doc_bonus
+			bonus = 1.0
+			uses = 1
+			category = land_doctrine
+		}
+	}
+}
+
+focus = {
+	id = swedish_politics_2
+	icon = GFX_goal_generic_small_arms
+	prerequisite = { focus = SWE_military_might }
+	x = -1
+	y = 1
+	cost = 5
+	relative_position_id = SWE_military_might
+
+	ai_will_do = { 
+		factor = 4000
+	}
+
+	#add modifier alotment system: -25% training time
+
+	completion_reward = { 
+		add_ideas = {
+			SWE_allotmentsystem
+		}
+	}
+}
+
+#########
+
+focus = {
+	id = swedish_politics_3
+	icon = GFX_focus_generic_little_entente
+	prerequisite = { focus = SWE_military_might }
+	x = 1
+	y = 1
+	cost = 5
+	relative_position_id = SWE_military_might
+
+	ai_will_do = { 
+		factor = 4000
+	}
+
+	completion_reward = { 
+		add_ideas = SWE_compulsory_service
+	}
+}
+
+#########
+
+focus = {
+	id = swedish_politics_4
+	icon = GFX_focus_generic_industry_3
+	prerequisite = { focus = swedish_politics_1 }
+	x = 6
+	y = 1
+	cost = 10
+
+	ai_will_do = { 
+		factor = 4000
+	}
+
+	completion_reward = { 
+		add_ideas = war_economy
+	}
+}
+
+######## build defenses
+
+focus = {
+	id = swedish_politics_5
+	icon = GFX_goal_generic_construct_military
+	x = 6
+	y = 3
+	cost = 10
+	prerequisite = { focus = swedish_infrastructure }
+
+completion_reward = {
+	custom_effect_tooltip = SWE_forts
+	hidden_effect = {
+			12 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 9340
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 10323
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 7482
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 310
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 6459
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 7482
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 9275
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 222
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 319
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+########## INDUSTRIAL EFFORT
+
+
+focus = {
+	id = swedish_industry_1
+	icon = GFX_goal_generic_production 
+	x = 2
+	y = 0
+	cost = 10
+
+completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+		}
+}
+#############
+
+focus = {
+		id = swedish_industry_2
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = swedish_industry_1}
+		x = 0
+		y = 1
+		cost = 10
+
+
+	completion_reward = {
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = industrial_complex
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+
+#############
+
+focus = {
+		id = swedish_industry_3
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = swedish_industry_2}
+		x = 0
+		y = 2
+		cost = 10
+
+
+	completion_reward = {
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = industrial_complex
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+
+##################
+
+focus = {
+		id = SWE_steel_mines
+		icon = GFX_focus_generic_steel
+		prerequisite = { focus = swedish_industry_1 }
+		x = 4
+		y = 1
+		cost = 10
+
+
+	completion_reward = {
+		add_resource = {
+		    type = steel
+		    amount = 24
+		    state = 38
+		}		
+	}
+}
+
+focus = {
+		id = swedish_industry_4
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = swedish_politics_4}
+		prerequisite = { focus = SWE_steel_mines }
+		x = 4
+		y = 2
+		cost = 10
+
+
+	completion_reward = {
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+
+################
+
+focus = {
+		id = swedish_industry_5
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = swedish_industry_4}
+		x = 4
+		y = 3
+		cost = 10
+
+
+	completion_reward = {
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+
+focus = {
+		id = swedish_infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = swedish_politics_4}
+		x = 6
+		y = 2
+		cost = 10
+
+
+	completion_reward = {
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = infrastructure
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = infrastructure
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = infrastructure
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = infrastructure
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+##################
+
+focus = {
+		id = swedish_industry_6
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = swedish_industry_1}
+		x = 2
+		y = 1
+		cost = 10
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = secret_bonus
+			bonus = 1.0
+			uses = 2
+			category = electronics
+		}
+	}
+}
+
+###############
+
+focus = {
+		id = swedish_industry_7
+		icon = GFX_focus_research
+		prerequisite = { focus = swedish_industry_6}
+		x = 2
+		y = 2
+		cost = 10
+	
+	completion_reward = {
+		add_research_slot = 1
+	}
+}
+
+############
+
+focus = {
+		id = swedish_army_1
+		icon = GFX_goal_generic_army_doctrines
+		x = 11
+		y = 3
+		cost = 5
+		prerequisite = { focus = swedish_politics_2}
+		prerequisite = { focus = swedish_politics_3}
+	
+	completion_reward = {
+		army_experience = 5
+		add_tech_bonus = {
+			name = land_doc_bonus
+			bonus = 1.0
+			uses = 1
+			category = land_doctrine
+		}
+	}
+}
+
+###########
+
+focus = {
+		id = swedish_army_2
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = swedish_army_1 }
+		mutually_exclusive = { focus = swedish_army_3 }
+		x = -3
+		y = 1
+		cost = 5
+		relative_position_id = swedish_army_1
+	
+	completion_reward = {
+		add_tech_bonus = {
+			name = land_doc_bonus
+			bonus = 1.0
+			uses = 1
+			category = land_doctrine
+		}
+	}
+}
+####
+
+focus = {
+		id = SWE_gustavian_infantry
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus =swedish_army_2 }
+		x = -3
+		y = 2
+		cost = 5
+		relative_position_id = swedish_army_1
+	
+	completion_reward = {
+		add_ideas = SWE_gustavian_army
+	}
+}
+
+####
+
+focus = {
+		id = SWE_legacy_of_gustavus_adolphus
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = SWE_gustavian_infantry }
+		x = -3
+		y = 3
+		cost = 5
+		relative_position_id = swedish_army_1
+	
+	completion_reward = {
+		add_ideas = SWE_legacy_of_gustavus_adolphus
+	}
+}
+
+#####
+
+focus = {
+		id = swedish_army_3
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = swedish_army_1 }
+		mutually_exclusive = { focus = swedish_army_2 }
+		x = 3
+		y = 1
+		cost = 5
+		relative_position_id = swedish_army_1
+	
+	completion_reward = {
+		add_tech_bonus = {
+			name = land_doc_bonus
+			bonus = 1.0
+			uses = 1
+			category = land_doctrine
+		}
+	}
+}
+
+######
+
+focus = {
+		id = swedish_army_4
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = swedish_army_2 focus = swedish_army_3}
+		x = -1
+		y = 2
+		cost = 5
+		relative_position_id = swedish_army_1
+	
+	completion_reward = {
+		add_tech_bonus = {
+			name = infantry_bonus
+			bonus = 1.0
+			uses = 1
+			category = infantry_weapons
+		}
+	}
+}
+
+#########
+
+focus = {
+		id = swedish_army_6
+		icon = GFX_field_gun
+		prerequisite = { focus = swedish_army_2 focus = swedish_army_3}
+		x = 1
+		y = 2
+		cost = 5
+		relative_position_id = swedish_army_1
+	
+	completion_reward = {
+		add_tech_bonus = {
+			name = artillery_bonus
+			bonus = 1.0
+			uses = 1
+			category = artillery
+		}
+	}
+}
+
+############
+
+focus = {
+		id = swedish_army_8
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = swedish_army_4 focus = swedish_army_6 }
+		x = 0
+		y = 3
+		cost = 5
+		relative_position_id = swedish_army_1
+	
+	completion_reward = {
+		add_tech_bonus = {
+			name = armor_bonus
+			bonus = 1.0
+			uses = 2
+			category = armor
+		}
+	}
+}
+
+#########
+
+focus = {
+		id = swedish_army_10
+		icon = GFX_focus_chi_army_reform
+		prerequisite = { focus = swedish_army_3 }
+		x = 3
+		y = 2
+		cost = 5
+		relative_position_id = swedish_army_1
+	
+	completion_reward = {
+		add_ideas = {
+		SWE_Carolean_army
+		}
+	}
+}
+
+focus = {
+		id = SWE_carolus_rex
+		icon = GFX_focus_chi_army_reform
+		prerequisite = { focus = swedish_army_10 }
+		x = 3
+		y = 3
+		cost = 5
+		relative_position_id = swedish_army_1
+	
+	completion_reward = {
+		add_country_leader_trait = great_war_hero
+	}
+}
+
+############ WAR FOCUSES ################
+
+### War time Diplomacy
+
+focus = {
+	id = swedish_politics_7
+	icon = GFX_goal_generic_demand_territory
+	prerequisite = { focus = SWE_all_parties_must_end }
+	x = -5
+	y = 1
+	cost = 1
+	relative_position_id = SWE_all_parties_must_end
+
+	available = {
+		has_war = yes
+	}
+	
+	completion_reward = {
+		add_political_power = 80
+	}
+}
+
+######## Focus on Commonwealth
+
+focus = {
+	id = SWE_home_defence
+	icon = GFX_goal_generic_defence
+	prerequisite = { focus = swedish_politics_7 }
+	x = -2
+	y = 1
+	cost = 10
+	relative_position_id = swedish_politics_7
+
+	available = {
+		surrender_progress > 0.05
+	}
+	
+	completion_reward = {
+		add_ideas = SWE_on_the_defensive
+	}
+}
+
+focus = {
+	id = SWE_organise_resistance
+	icon = GFX_focus_prc_infiltration
+	prerequisite = { focus = SWE_home_defence }
+	x = -2
+	y = 2
+	cost = 10
+	relative_position_id = swedish_politics_7
+
+	available = {
+		surrender_progress > 0.15
+	}
+	
+	completion_reward = {
+		add_ideas = SWE_partisan_resistance
+	}
+}
+
+focus = {
+	id = SWE_last_stand
+	icon = GFX_goal_generic_build_tank
+	prerequisite = { focus = SWE_organise_resistance }
+	x = -2
+	y = 3
+	cost = 10
+	relative_position_id = swedish_politics_7
+
+	available = {
+		surrender_progress > 0.35
+	}
+	
+	completion_reward = {
+		add_timed_idea = {
+			idea = SWE_last_stand
+			days = 140
+		}
+	}
+}
+
+focus = {
+		id = swedish_politics_13
+		icon = GFX_POL_regency_council_focus
+		prerequisite = { focus = swedish_politics_7 }
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = swedish_politics_7
+
+	available = {
+		has_war_with = POL
+	}
+	
+	completion_reward = {
+	add_timed_idea = {
+		idea = SWE_focus_on_commonwealth
+		days = 720
+		}
+	}
+}
+
+##### Influence Sejm
+
+focus = {
+		id = swedish_politics_8
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = swedish_politics_13 }
+		x = 0
+		y = 2
+		cost = 10
+		relative_position_id = swedish_politics_7
+
+	# idea: "influencing Sejm"; daily pp -.25; poland weekly stab -.05 and WS -.05"
+
+	available = {
+		has_war_with = POL
+		POL = {
+			has_idea = POL_sejm
+		}
+	}
+	
+	completion_reward = {
+	add_political_power = -50
+	POL = { add_timed_idea = {
+			idea = SWE_influencing_sejm
+			days = 365
+			}
+		}
+	}
+}
+
+######### Focus on Russia
+
+focus = {
+	id = swedish_politics_10
+		icon = GFX_goal_generic_military_deal
+		prerequisite = { focus = swedish_politics_7 }
+		x = 2
+		y = 1
+		cost = 10
+		relative_position_id = swedish_politics_7
+
+		available = {
+			has_war_with = SOV
+		}
+
+		completion_reward = {
+			SWE = {
+				add_state_claim = 213
+				add_state_claim = 215
+				add_state_claim = 216
+			}
+			add_timed_idea = {
+				idea = SWE_focus_on_russia
+				days = 720
+			}
+		}
+}
+
+####### Great march north
+
+focus = {
+	id = swedish_politics_11
+		icon = GFX_focus_ger_strike_at_the_source
+		prerequisite = { focus = swedish_politics_10 }
+		x = 2
+		y = 2
+		cost = 10
+		relative_position_id = swedish_politics_7
+
+	completion_reward = {
+	add_timed_idea = {
+		idea = SWE_march_on_moscow
+		days = 720
+		}
+	}
+}
+
+###### Seek Ottoman Aid
+
+focus = {
+	id = swedish_politics_12
+		icon = GFX_OTT_Military_Mission
+		prerequisite = { focus = swedish_politics_11 }
+		x = 1
+		y = 3
+		cost = 10
+		relative_position_id = swedish_politics_7
+
+		
+
+		available = {
+			has_war_with = SOV
+		}
+
+	
+	completion_reward = {
+		custom_effect_tooltip = ottoman_aid
+	}
+}
+
+##### Seek Cossack Aid
+
+focus = {
+	id = swedish_politics_14
+		icon = GFX_goal_generic_military_deal
+		prerequisite = { focus = swedish_politics_11 }
+		x = 3
+		y = 3
+		cost = 10
+		relative_position_id = swedish_politics_7
+
+		available = {
+			has_war_with = SOV
+		}
+
+		completion_reward = {
+		custom_effect_tooltip = cossack_aid
+	}
+	
+}
+
+focus = {
+	id = SWE_deal_with_occupation
+	icon = GFX_goal_generic_more_territorial_claims
+	prerequisite = { focus = swedish_politics_14 focus = swedish_politics_12 }
+	x = 2
+	y = 4
+	cost = 10
+	relative_position_id = swedish_politics_7
+
+	available = {
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = SWE_strike_at_denmark
+	icon = GFX_focus_generic_strike_at_democracy2
+	prerequisite = { focus = SWE_all_parties_must_end }
+	x = 0
+	y = 1
+	cost = 10
+	relative_position_id = SWE_all_parties_must_end
+	mutually_exclusive = { focus = SWE_mend_danish_ties }
+
+	available = {
+		has_war = no
+	}
+	
+	completion_reward = {
+		add_war_support = 0.05
+		create_wargoal = {
+		    type = annex_everything
+		    target = DEN
+		}
+	}
+}
+
+focus = {
+		id = SWE_rally_around_the_flag
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = SWE_strike_at_denmark }
+		x = 0
+		y = 2
+		cost = 10
+		relative_position_id = SWE_all_parties_must_end
+	
+	completion_reward = {
+		add_war_support = 0.05
+		add_stability= 0.05
+	}
+}
+
+focus = {
+	id = SWE_keep_denmark_occupied
+	icon = GFX_goal_generic_demand_territory
+	prerequisite = { focus = SWE_rally_around_the_flag }
+	mutually_exclusive = { focus = SWE_union_sweden_norway }
+	x = 1
+	y = 3
+	cost = 10
+	relative_position_id = SWE_all_parties_must_end
+
+	available = {
+		has_war_with = DEN
+		DEN = { has_capitulated = yes }
+	}
+
+	bypass = {
+		DEN = { exists = no }
+		DEN = { is_puppet_of = SWE }
+	}
+	
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = SWE_union_sweden_norway
+	icon = GFX_goal_generic_demand_territory
+	prerequisite = { focus = SWE_rally_around_the_flag }
+	mutually_exclusive = { focus = SWE_keep_denmark_occupied }
+	x = -1
+	y = 3
+	cost = 10
+	relative_position_id = SWE_all_parties_must_end
+
+	available = {
+		has_full_control_of_state  = 110
+		has_full_control_of_state  = 142
+		has_full_control_of_state  = 143
+		has_full_control_of_state  = 144
+	}
+	
+	completion_reward = {
+		add_state_core = 110
+		add_state_core = 142
+		add_state_core = 143
+		add_state_core = 144
+		set_cosmetic_tag = SWE_NOR
+	}
+}
+
+focus = {
+	id = SWE_mend_danish_ties
+	icon = GFX_DEN_alliance
+	prerequisite = { focus = SWE_all_parties_must_end }
+	x = 4
+	y = 1
+	cost = 10
+	relative_position_id = SWE_all_parties_must_end
+
+	available = {
+		has_war = no
+	}
+
+	ai_will_do = {
+		factor = 0
+	}
+
+	completion_reward = {
+		DEN = {
+			country_event = {
+			    id = sweden.6
+			    days = 2
+			}
+		}
+	}
+}
+
+focus = {
+	id = SWE_the_royal_marriage # event chain which leads to chance of puppet
+	icon = GFX_goal_generic_demand_territory
+	prerequisite = { focus = SWE_mend_danish_ties }
+	x = 0
+	y = 1
+	cost = 10
+	relative_position_id = SWE_mend_danish_ties
+
+	completion_reward = {
+		country_event = {
+		    id = sweden.9
+		    days = 2
+		}
+	}
+}
+
+focus = {
+	id = SWE_prepare_closer_union
+	icon = GFX_goal_generic_demand_territory
+	prerequisite = { focus = SWE_the_royal_marriage }
+	mutually_exclusive = { focus = SWE_economic_cooperation }
+	x = -1
+	y = 2
+	cost = 10
+	relative_position_id = SWE_mend_danish_ties
+
+	available = {
+		DEN = { is_puppet_of = SWE }
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = SWE_economic_cooperation
+	icon = GFX_goal_generic_demand_territory
+	prerequisite = { focus = SWE_the_royal_marriage }
+	mutually_exclusive = { focus = SWE_prepare_closer_union }
+	x = 1
+	y = 2
+	cost = 10
+	relative_position_id = SWE_mend_danish_ties
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = SWE_restore_the_kalmar_union
+	icon = GFX_goal_generic_demand_territory
+	prerequisite = { focus = SWE_prepare_closer_union focus = SWE_keep_denmark_occupied }
+	x = -2
+	y = 3
+	cost = 10
+	relative_position_id = SWE_mend_danish_ties
+
+	completion_reward = {
+	}
+}
+
+#sweden stands victorious
+
+focus = {
+	id = SWE_we_stand_victorious
+	icon = GFX_goal_generic_demand_territory
+	mutually_exclusive = { focus = SWE_defeat_in_the_northern_war }
+	x = 25
+	y = 7
+	cost = 10
+	prerequisite = { focus = SWE_deal_with_occupation }
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = SWE_expand_our_horizons
+	icon = GFX_goal_generic_demand_territory
+	x = 0
+	y = 1
+	cost = 10
+	prerequisite = { focus = SWE_we_stand_victorious }
+	relative_position_id = SWE_we_stand_victorious
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = SWE_baltic_mare_nostrum
+	icon = GFX_goal_generic_demand_territory
+	x = 4
+	y = 2
+	cost = 10
+	prerequisite = { focus = SWE_expand_our_horizons }
+	relative_position_id = SWE_we_stand_victorious
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = SWE_befriend_prussia
+	icon = GFX_goal_generic_demand_territory
+	x = 3
+	y = 3
+	cost = 10
+	mutually_exclusive = { focus = SWE_challenge_prussia }
+	prerequisite = { focus = SWE_baltic_mare_nostrum }
+	relative_position_id = SWE_we_stand_victorious
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = SWE_challenge_prussia
+	icon = GFX_goal_generic_demand_territory
+	x = 5
+	y = 3
+	cost = 10
+	prerequisite = { focus = SWE_baltic_mare_nostrum }
+	mutually_exclusive = { focus = SWE_befriend_prussia }
+	relative_position_id = SWE_we_stand_victorious
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = SWE_intervene_in_western_europe
+	icon = GFX_goal_generic_demand_territory
+	x = -4
+	y = 2
+	cost = 10
+	prerequisite = { focus = SWE_expand_our_horizons }
+	relative_position_id = SWE_we_stand_victorious
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = SWE_intervene_against_england
+	icon = GFX_goal_generic_demand_territory
+	x = -3
+	y = 3
+	cost = 10
+	prerequisite = { focus = SWE_intervene_in_western_europe }
+	relative_position_id = SWE_we_stand_victorious
+	mutually_exclusive = { focus = SWE_intervene_against_france }
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = SWE_intervene_against_france
+	icon = GFX_goal_generic_demand_territory
+	x = -5
+	y = 3
+	cost = 10
+	prerequisite = { focus = SWE_intervene_in_western_europe }
+	relative_position_id = SWE_we_stand_victorious
+	mutually_exclusive = { focus = SWE_intervene_against_england }
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = SWE_look_toward_northern_germany
+	icon = GFX_goal_generic_demand_territory
+	x = 0
+	y = 2
+	cost = 10
+	prerequisite = { focus = SWE_expand_our_horizons }
+	relative_position_id = SWE_we_stand_victorious
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = SWE_ally_luneburg
+	icon = GFX_goal_generic_demand_territory
+	x = -1
+	y = 3
+	cost = 10
+	prerequisite = { focus = SWE_look_toward_northern_germany }
+	relative_position_id = SWE_we_stand_victorious
+	mutually_exclusive = { focus = SWE_ally_mecklenburg }
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = SWE_crush_mecklenburg
+	icon = GFX_goal_generic_demand_territory
+	x = -1
+	y = 4
+	cost = 10
+	prerequisite = { focus = SWE_ally_luneburg }
+	relative_position_id = SWE_we_stand_victorious
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = SWE_betray_luneburg
+	icon = GFX_goal_generic_demand_territory
+	x = -1
+	y = 5
+	cost = 10
+	prerequisite = { focus = SWE_crush_mecklenburg }
+	relative_position_id = SWE_we_stand_victorious
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = SWE_ally_mecklenburg
+	icon = GFX_goal_generic_demand_territory
+	x = 1
+	y = 3
+	cost = 10
+	prerequisite = { focus = SWE_look_toward_northern_germany }
+	relative_position_id = SWE_we_stand_victorious
+	mutually_exclusive = { focus = SWE_ally_luneburg }
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = SWE_crush_luneburg
+	icon = GFX_goal_generic_demand_territory
+	x = 1
+	y = 4
+	cost = 10
+	prerequisite = { focus = SWE_ally_mecklenburg }
+	relative_position_id = SWE_we_stand_victorious
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = SWE_betray_mecklenburg
+	icon = GFX_goal_generic_demand_territory
+	x = 1
+	y = 5
+	cost = 10
+	prerequisite = { focus = SWE_crush_luneburg }
+	relative_position_id = SWE_we_stand_victorious
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = SWE_push_further_south
+	icon = GFX_goal_generic_demand_territory
+	x = 0
+	y = 6
+	cost = 10
+	prerequisite = { focus = SWE_betray_mecklenburg focus = SWE_betray_luneburg }
+	relative_position_id = SWE_we_stand_victorious
+
+	completion_reward = {
+	}
+}
+
+#sweden is defeated
+
+focus = {
+	id = SWE_defeat_in_the_northern_war
+	icon = GFX_goal_generic_demand_territory
+	x = 15
+	y = 7
+	cost = 10
+	prerequisite = { focus = SWE_deal_with_occupation }
+	mutually_exclusive = { focus = SWE_we_stand_victorious }
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = SWE_path_of_neutrality
+	icon = GFX_goal_generic_demand_territory
+	x = -2
+	y = 1
+	cost = 10
+	prerequisite = { focus = SWE_defeat_in_the_northern_war }
+	mutually_exclusive = { focus = SWE_swedish_revanchism }
+	relative_position_id = SWE_defeat_in_the_northern_war
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = SWE_swedish_revanchism
+	icon = GFX_goal_generic_demand_territory
+	x = 2
+	y = 1
+	cost = 10
+	prerequisite = { focus = SWE_defeat_in_the_northern_war }
+	mutually_exclusive = { focus = SWE_path_of_neutrality }
+	relative_position_id = SWE_defeat_in_the_northern_war
+
+	completion_reward = {
+	}
+}
+
+#naval tree
+
+focus = {
+		id = SWE_naval_effort
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 33
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		complete_tooltip = {
+			navy_experience = 25
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = dockyard
+				level = 3
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			navy_experience = 25
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							dockyard > 0
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					any_owned_state = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					NOT = {
+						any_owned_state = {
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+				}
+				random_state = {
+					limit = {
+						controller = { tag = ROOT }
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+			}			
+		}
+	}
+	focus = {
+		id = SWE_colonial_effort
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = SWE_naval_effort }
+		x = -4
+		y = 1
+		relative_position_id = SWE_naval_effort
+
+		available_if_capitulated = yes
+
+
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+		
+		completion_reward = {	
+			add_tech_bonus = {
+				name = sub_op_bonus
+				bonus = 1.0
+				uses = 2
+				category = colonial_tech
+			}	
+		}
+	}
+	focus = {
+		id = SWE_flexible_navy
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = SWE_naval_effort }
+		mutually_exclusive = { focus = SWE_large_navy }
+		x = -1
+		y = 1
+		relative_position_id = SWE_naval_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = sub_op_bonus
+				bonus = 1.0
+				uses = 2
+				technology = convoy_interdiction_ti
+				technology = unrestricted_submarine_warfare
+				technology = wolfpacks
+				technology = advanced_submarine_warfare
+				technology = combined_operations_raiding
+			}
+		}
+	}
+
+	focus = {
+		id = SWE_large_navy
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = SWE_naval_effort }
+		mutually_exclusive = { focus = SWE_flexible_navy }
+		x = 1
+		y = 1
+		relative_position_id = SWE_naval_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = fleet_in_being_bonus
+				bonus = 1.0
+				uses = 2
+				category = fleet_in_being_tree
+			}
+		}
+	}
+
+	focus = {
+		id = SWE_submarine_effort
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = SWE_flexible_navy }
+		x = -1
+		y = 1
+		relative_position_id = SWE_flexible_navy
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 3
+				category = ss_tech
+			}
+		}
+	}
+
+	focus = {
+		id = SWE_cruiser_effort
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = SWE_large_navy focus = SWE_flexible_navy }
+		x = -1
+		y = 1
+		relative_position_id = SWE_large_navy
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = cr_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 3
+				category = cl_tech
+				category = ca_tech
+			}
+		}
+	}
+
+	focus = {
+		id = SWE_destroyer_effort
+		icon = GFX_goal_generic_navy_anti_submarine
+		prerequisite = { focus = SWE_submarine_effort }
+		x = 0
+		y = 1
+		relative_position_id = SWE_submarine_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 3
+				category = dd_tech
+			}
+		}
+	}
+
+	focus = {
+		id = SWE_battlecruiser_effort
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = SWE_cruiser_effort }
+		x = 0
+		y = 1
+		relative_position_id = SWE_cruiser_effort
+		cost = 5
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = bc_tech
+			}
+		}
+	}
+	focus = {
+		id = SWE_battleship_effort
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = SWE_large_navy }
+		x = 1
+		y = 1
+		relative_position_id = SWE_large_navy
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 3
+				category = bb_tech
+				category = shbb_tech
+			}
+		}
+	}
+}

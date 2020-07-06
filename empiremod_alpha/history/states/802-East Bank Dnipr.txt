@@ -1,0 +1,25 @@
+state={
+	id=802
+	name="STATE_802"
+	provinces={
+		453 472 486 9463 9479 11452 
+	}
+
+	history={
+		owner = SOV
+		buildings={
+			infrastructure = 7
+			arms_factory = 2
+			industrial_complex = 1
+		}
+		add_core_of = SOV
+
+		victory_points = {
+			3326 5 
+		}
+	}
+
+	manpower=21324
+	buildings_max_level_factor=1.000
+	state_category = city
+}

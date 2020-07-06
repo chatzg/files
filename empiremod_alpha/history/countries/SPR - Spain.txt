@@ -1,0 +1,131 @@
+﻿capital = 41
+
+oob = "SPR_1936"
+
+set_research_slots = 3
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_mountaineers = 1
+	gw_artillery = 1
+	early_submarine = 1
+	early_destroyer = 1
+	basic_destroyer = 1
+	early_light_cruiser = 1
+	early_heavy_cruiser = 1
+	basic_heavy_cruiser = 1
+	early_battleship = 1
+	transport = 1
+	gwtank = 1
+	american_colonisation = 1
+	asian_trade_companies = 1
+	electronic_mechanical_engineering = 1
+}
+
+# DIPLOMACY
+if = {
+	limit = {
+		OR = {
+			has_dlc = "Together for Victory"
+			has_dlc = "Man the Guns"
+		}
+	}
+	
+	set_autonomy = {
+		target = BEL
+		autonomous_state = autonomy_puppet
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = PRU
+		autonomous_state = autonomy_colony
+		freedom_level = 0.2
+	}
+	set_autonomy = {
+		target = MEX
+		autonomous_state = autonomy_colony
+		freedom_level = 0.2
+	}
+	set_autonomy = {
+		target = PHI
+		autonomous_state = autonomy_colony
+		freedom_level = 0.2
+	}
+	set_autonomy = {
+		target = LOM
+		autonomous_state = autonomy_dominion
+		freedom_level = 0.2
+	}
+	set_autonomy = {
+		target = TSC
+		autonomous_state = autonomy_dominion
+		freedom_level = 0.2
+	}
+	else = {
+		puppet = BEL
+		puppet = MEX
+		puppet = PRU
+		puppet = PHI
+		puppet = TSC
+		puppet = LOM
+		puppet = PRM
+	}
+}
+
+BEL = {
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "1932.11.27"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 20
+		fascism = 23
+		communism = 6
+		neutrality = 35 
+		aristocracy = 16
+	}
+}
+
+add_ideas = {
+	maria_anna
+	disfunctional_economy
+	catholic
+	kingdom
+}
+
+SPR = {
+	add_opinion_modifier = { target = ENG modifier = Rivalry }
+	add_opinion_modifier = { target = HOL modifier = Rivalry }
+	add_opinion_modifier = { target = AUS modifier = Rivalry }
+}
+
+set_convoys = 30
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 5
+	fascism = 23
+	communism = 1
+	neutrality = 12
+	aristocracy = 59
+}
+create_country_leader = {
+	name = "Carlos II"
+	desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
+	picture = "leader_spain.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = { sickly_monarch }
+}

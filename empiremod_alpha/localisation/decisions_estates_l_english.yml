@@ -1,0 +1,30 @@
+﻿l_english:
+ burghers_estate:0 "Burghers Interactions"
+ burghers_estate_desc:0 "This estate represents the urban population of your country such as Artisans, Merchants or others that reside inside city walls. Their traditional responsibility is to work to keep the economy going and in order to do so efficiently they expect to be granted special rights and privileges for themselves and the cities they represent."
+
+ nobility_estate:0 "Nobility Interactions"
+ nobility_estate_desc:0 "This estate represents the families of landed aristocrats in your country. Their privileges are guaranteed by old traditions and most have originally been won through performing great services to the state. Their traditional responsibility is to fight and protect the realm against outside dangers as well as help the ruler keep the peace."
+ 
+ clergy_estate:0 "Clergy Interactions"
+ clergy_estate_desc:0 "This estate represents the educated priests of your state religion. They have a long tradition of serving in the administration of your country and their traditional responsibility is to care for the spiritual well-being of it and your people. Over the centuries they have acquired both land properties and privileges from former rulers as well as pious individuals."
+ 
+ raise_additional_levies:0 "Raise additional Levies"
+ raise_additional_levies_desc:0 "We can never have enough manpower, and thus whe should raise more troops."
+
+ censorship:0 "Religious Censorship"
+ censorship_desc:0 "The church has always been a vital ally in keeping the masses in check. Whilst this causes stability, it also grants the clergy significant power over the people."
+ 
+ appoint_new_officers:0 "Appoint new officers"
+ appoint_new_officers_desc:0 ""
+ 
+ seek_support_for_war:0 "Seek War Support"
+ seek_support_for_war_desc:0 "The Nobility still wield significant power when it comes to military affairs. Their support for war is absolutely vital."
+ 
+ lobby_war_effort:0 "Lobby with Merchants"
+ lobby_war_effort_desc:0 "If we are to expand our manufacturing, we will need the support of powerful burgher families."
+ 
+ appoint_new_admirals:0 "Appoint naval officers"
+ appoint_new_admirals_desc:0 "For sure, we could learn a thing or two from our ever growing merchant class when it comes to sailing."
+ 
+ appoint_ministers:0 "Appoint Ministers"
+ appoint_ministers_desc:0 "The clergymen make excellent ministers. We should befriend them, so we can employ them for a cheaper price."

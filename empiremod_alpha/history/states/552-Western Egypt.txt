@@ -1,0 +1,17 @@
+
+state={
+	id=552
+	name="STATE_552"
+
+	history={
+		owner = UNC
+
+	}
+	impassable = yes
+	provinces={
+		1206 2064 4910 7216 10097 10844 10869 10907 12099 12733 12764 12771 12816 
+	}
+	manpower=18539
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

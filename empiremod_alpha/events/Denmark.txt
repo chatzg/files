@@ -1,0 +1,36 @@
+﻿#Denmark
+
+add_namespace = denmark
+
+#whitepeace with sweden
+
+country_event = {
+	id = denmark.1
+	title = denmark.1.t
+	desc = denmark.1.d
+	picture = GFX_report_event_degaulle_churchill
+
+	fire_only_once = yes
+	trigger = {
+		tag = DEN
+		has_war_with = SWE
+		surrender_progress > 0.1
+	}
+	mean_time_to_happen = { days = 10 }
+
+	option = {
+		name = whitepeace
+		white_peace = {
+			tag = SWE
+		}
+		leave_faction = yes
+		add_war_support = -0.5
+
+		hidden_effect = {
+			news_event = { id = mod.4 days = 1 }
+		}
+
+	}
+
+	
+}

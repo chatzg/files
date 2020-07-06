@@ -1,0 +1,191 @@
+bookmarks = {
+	bookmark = {
+		name = "GATHERING_STORM_NAME"
+		desc = "GATHERING_STORM_DESC"
+		date = 1699.1.1.12
+		picture = "GFX_select_date_1936"
+		default_country = "FRA"
+		default = yes
+		
+		"FRA"={
+			history = "FRA_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				FRA_religious_unrest
+			}
+			focuses = {
+				FRA_expand_versailles_court
+				FRA_demand_corsica
+				FRA_proclaim_defender_of_the_faith
+			}
+		}
+		"SPR"={
+			history = "SPR_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				maria_anna
+				disfunctional_economy
+			}
+			focuses = {
+				SPR_bourbon_full
+				SPR_habsburg_partition
+				SPR_found_madrid_university
+			}
+		}
+
+		"ENG"={
+			history = "ENG_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				ENG_legacy
+				ENG_Irish_opposition
+			}
+			focuses = {
+				eng_proclaim_great_britain
+				eng_restore_the_old_pretender
+				eng_cromwellian_restauration
+			}
+		}
+		
+		"AUS"={
+			history = "GER_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				holy_roman_emperor
+				civil_unrest_hungary3
+				great_turkish_war
+			}
+			focuses = {
+				AUS_treaty_of_karlowitz
+				AUS_bourbon_spain
+				AUS_dual_monarchy
+			}
+		}
+		"SWE"={
+			history = "SWE_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				SOUND_TOLL
+			}
+			focuses = {
+				swedish_politics_2
+				swedish_army_10
+				swedish_politics_11
+			}	
+		}
+
+		"SOV"={
+			
+			history = "SOV_GATHERING_STORM_DESC"
+			ideology = neutrality	
+			ideas = {
+				RUS_army_corruption_1
+			}
+			focuses = {
+				RUS_great_reforms_of_Peter
+				RUS_our_place_in_the_world
+				RUS_crush_sweden
+			}
+		}
+
+
+		"HOL"={
+			history = "NETHERLANDS_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				CHI_hyper_inflation_1
+			}
+			focuses = {
+				hol_man_the_barrier_forts
+				hol_strike_a_deal_for_the_low_countries
+				hol_a_new_stadtholder
+			}
+		}
+
+		"---"={
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
+
+
+		# minors #
+
+		"TUR"={
+			minor = yes
+			history = "TUR_GATHERING_STORM_DESC"
+			ideology = neutrality
+				ideas = {
+					TUR_sick_man_of_europe_1
+					TUR_janissary_loyalty_3
+				}
+				focuses = {
+					TUR_restore_order_in_georgia
+					TUR_still_a_great_power
+					TUR_recover_morea
+				}
+		}
+
+		"POL"={
+			minor = yes
+			history = "POL_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				POL_liberum_veto
+				POL_sejm
+				POL_dominance_of_nobles
+			}	
+			focuses = {
+				POL_when_the_winged_hussars_arrived
+				POL_visegrad_empire
+				POL_russia_is_the_greater_threat
+			}	
+		}
+
+		"PRS"={
+			minor = yes
+			history = "PRS_GATHERING_STORM_DESC"
+			ideology = neutrality
+			focuses = {
+				PRS_greater_prussia
+				PRS_teutonic_legacy
+				PRS_proclaimkingdomofgermany
+			}
+		}
+
+		"BAV"={
+			minor = yes
+			history = ""
+			ideology = neutrality
+			focuses = {
+			}
+		}
+
+		"ITA"={
+			minor = yes
+			history = "SAV_GATHERING_STORM_DESC"
+			ideology = neutrality
+				ideas = {
+				}
+				focuses = {
+					SAV_italy_united
+					SAV_join_the_grand_alliance
+					SAV_join_bourbon_alliance
+				}
+		}
+
+		"VNC"={
+			minor = yes
+			history = "POL_GATHERING_STORM_DESC"
+			ideology = neutrality
+		}
+		"PAP"={
+			minor = yes
+			history = "CAN_GATHERING_STORM_DESC"
+			ideology = neutrality
+		}
+		
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

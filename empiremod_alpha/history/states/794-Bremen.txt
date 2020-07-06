@@ -1,0 +1,24 @@
+state={
+	id=794
+	name="STATE_794"
+	history={
+		owner = SWE
+		buildings={
+			infrastructure = 7
+			arms_factory = 2
+			industrial_complex = 1
+			6349 = {
+				naval_base = 5
+				}
+			}
+		victory_points = {
+			3326 5 
+			}
+	}
+	provinces={
+		374 3271 3326 6349 
+	}
+	manpower=73000
+	buildings_max_level_factor=1.000
+	state_category = city
+}

@@ -1,0 +1,386 @@
+colonisation = {
+	colonise_state = {
+
+		icon = eng_propaganda_campaigns
+
+		is_good = yes
+		days_mission_timeout = colonise_time
+		activation = {
+			
+			always = no
+		}
+
+		#visible = {
+		#	NOT = {
+		#		tag = UNC
+		#	}
+			
+		#}
+		fire_only_once = no
+		
+		available = {
+			always = no
+		}
+		timeout_effect = {
+			ROOT = {
+				effect_tooltip = {
+				random_list = {
+					0 = {
+						
+						ROOT = {country_event = {
+							id = colonisation.3
+							days = colonise_time
+						#	random = 10
+						}}
+						
+						
+					}
+					0 = {
+						
+					
+						ROOT = {country_event = {
+							id = colonisation.2
+							days = colonise_time
+						#	random = 10
+							
+						}}
+						
+					}
+				}
+				}
+				IF = {
+					limit = {
+						has_country_flag = suceeded_flag
+					}
+					country_event = {
+						id = colonisation.3
+					}
+				}
+				IF = {
+					limit = {
+						has_country_flag = failed_flag
+					}
+					country_event = {
+						id = colonisation.2
+					}
+				}
+			}
+		}
+
+		
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	create_australia = {
+
+		
+
+
+		
+		available = {
+			520 = {is_owned_and_controlled_by = ROOT}
+			521 = {is_owned_and_controlled_by = ROOT}
+			285 = {is_owned_and_controlled_by = ROOT}
+			517 = {is_owned_and_controlled_by = ROOT}
+			519 = {is_owned_and_controlled_by = ROOT}
+			522 = {is_owned_and_controlled_by = ROOT}
+			518 = {is_owned_and_controlled_by = ROOT}
+			674 = {is_owned_and_controlled_by = ROOT}
+		}
+
+		visible = {
+			OR = {
+				520 = {is_owned_and_controlled_by = ROOT}
+				521 = {is_owned_and_controlled_by = ROOT}
+				285 = {is_owned_and_controlled_by = ROOT}
+				517 = {is_owned_and_controlled_by = ROOT}
+				519 = {is_owned_and_controlled_by = ROOT}
+				522 = {is_owned_and_controlled_by = ROOT}
+				518 = {is_owned_and_controlled_by = ROOT}
+			}
+			NOT = {
+				original_tag = AST
+				original_tag = UNC
+			}
+			
+		}
+		fire_only_once = no
+		
+
+		complete_effect = {
+			AST = {
+				transfer_state = 520
+				transfer_state = 521
+				transfer_state = 522
+				transfer_state = 518
+				transfer_state = 517
+				transfer_state = 519
+				transfer_state = 285
+				transfer_state = 674
+				add_state_core = 520
+				add_state_core = 521
+				add_state_core = 522
+				add_state_core = 518
+				add_state_core = 517
+				add_state_core = 519
+				add_state_core = 285
+				add_state_core = 674
+			}
+			ROOT = {
+				puppet = AST
+			}
+			AST = {
+				add_ideas = {
+					population_boost
+					
+				}
+			}
+		}
+		
+		
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	create_newzealand = {
+
+		
+
+
+		
+		available = {
+			284 = {is_owned_and_controlled_by = ROOT}
+			723 = {is_owned_and_controlled_by = ROOT}
+			
+		}
+
+		visible = {
+			OR = {
+				284 = {is_owned_and_controlled_by = ROOT}
+				723 = {is_owned_and_controlled_by = ROOT}
+			}
+			NOT = {
+				original_tag = NZL
+				original_tag = UNC
+			}
+		}
+		fire_only_once = no
+		
+
+		complete_effect = {
+			NZL = {
+				transfer_state = 284
+				transfer_state = 723
+				
+				add_state_core = 284
+				add_state_core = 723
+				
+			}
+			ROOT = {
+				puppet = NZL
+			}
+			NZL = {
+				add_ideas = {
+					population_boost
+					
+				}
+			}
+		}
+
+		
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	create_SAF = {
+
+		
+
+
+		
+		available = {
+			831 = {is_owned_and_controlled_by = ROOT}
+			719 = {is_owned_and_controlled_by = ROOT}
+			681 = {is_owned_and_controlled_by = ROOT}
+		}
+
+		visible = {
+			OR = {
+				831 = {is_owned_and_controlled_by = ROOT}
+				719 = {is_owned_and_controlled_by = ROOT}
+				681 = {is_owned_and_controlled_by = ROOT}
+			}
+			NOT = {
+				original_tag = SAF
+				original_tag = UNC
+			}
+		}
+		fire_only_once = no
+		
+
+		complete_effect = {
+			SAF = {
+				transfer_state = 831
+				transfer_state = 719
+				transfer_state = 681
+				add_state_core = 831
+				add_state_core = 719
+				add_state_core = 681
+			}
+			ROOT = {
+				puppet = SAF
+			}
+			SAF = {
+				add_ideas = {
+					population_boost
+					
+				}
+			}
+		}
+
+		
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+	}
+	create_CAR = {
+
+		
+
+
+		
+		available = {
+			660 = {is_owned_and_controlled_by = ROOT}
+			773 = {is_owned_and_controlled_by = ROOT}
+
+		}
+
+		visible = {
+			OR = {
+				660 = {is_owned_and_controlled_by = ROOT}
+				773 = {is_owned_and_controlled_by = ROOT}
+			}
+			NOT = {
+				original_tag = CAR
+				original_tag = UNC
+			}
+		}
+		fire_only_once = no
+		
+
+		complete_effect = {
+			CAR = {
+				transfer_state = 773
+				transfer_state = 660
+				
+				add_state_core = 773
+				add_state_core = 660
+
+			}
+			ROOT = {
+				puppet = CAR
+			}
+			CAR = {
+				add_ideas = {
+					population_boost
+					
+				}
+			}
+		}
+		
+		
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+	}
+	create_CAN = {
+
+		
+
+
+		
+		available = {
+			332 = {is_owned_and_controlled_by = ROOT}
+			331 = {is_owned_and_controlled_by = ROOT}
+			464 = {is_owned_and_controlled_by = ROOT}
+			465 = {is_owned_and_controlled_by = ROOT}
+			468 = {is_owned_and_controlled_by = ROOT}
+			466 = {is_owned_and_controlled_by = ROOT}
+			830 = {is_owned_and_controlled_by = ROOT}
+			276 = {is_owned_and_controlled_by = ROOT}
+			829 = {is_owned_and_controlled_by = ROOT}
+			682 = {is_owned_and_controlled_by = ROOT}
+			
+		}
+
+		visible = {
+			OR = {
+				332 = {is_owned_and_controlled_by = ROOT}
+				331 = {is_owned_and_controlled_by = ROOT}
+				464 = {is_owned_and_controlled_by = ROOT}
+				465 = {is_owned_and_controlled_by = ROOT}
+				468 = {is_owned_and_controlled_by = ROOT}
+				466 = {is_owned_and_controlled_by = ROOT}
+				830 = {is_owned_and_controlled_by = ROOT}
+				276 = {is_owned_and_controlled_by = ROOT}
+				829 = {is_owned_and_controlled_by = ROOT}
+				682 = {is_owned_and_controlled_by = ROOT}
+			}
+			NOT = {
+				original_tag = CAN
+				original_tag = UNC
+			}
+		}
+		fire_only_once = no
+		
+
+		complete_effect = {
+			CAN = {
+				transfer_state = 331
+				transfer_state = 332
+				transfer_state = 464
+				transfer_state = 465
+				transfer_state = 466
+				transfer_state = 468
+				transfer_state = 830
+				transfer_state = 276
+				transfer_state = 829
+				transfer_state = 682
+				add_state_core = 331
+				add_state_core = 332
+				add_state_core = 464
+				add_state_core = 465
+				add_state_core = 466
+				add_state_core = 468
+				add_state_core = 830
+				add_state_core = 276
+				add_state_core = 829
+				add_state_core = 682
+
+			}
+			ROOT = {
+				puppet = CAN
+			}
+			CAN = {
+				add_ideas = {
+					population_boost
+					
+				}
+			}
+		}
+
+		
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}

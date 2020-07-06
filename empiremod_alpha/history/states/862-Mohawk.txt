@@ -1,0 +1,21 @@
+
+state={
+	id=862
+	name="STATE_862"
+
+	history={
+		owner = IRO
+		add_core_of = IRO
+		buildings = {
+			infrastructure = 1
+
+		}
+	}
+
+	provinces={
+		598 3602 6778 7345 9754 10381 11662 11665 11722 
+	}
+	manpower=5207
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

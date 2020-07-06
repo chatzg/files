@@ -1,0 +1,325 @@
+﻿capital = 16
+
+oob = "FRA_1936"
+set_naval_oob = "FRA_1936_naval"
+
+set_stability = 0.50
+set_war_support = .65
+
+set_research_slots = 3
+
+set_country_flag = FRA_limousin_rebels
+set_country_flag = FRA_centre_sud_rebels
+set_country_flag = FRA_auvergne_rebels
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	gwtank = 1
+	basic_light_tank = 1
+	
+	early_submarine = 1
+	basic_submarine = 1
+	early_destroyer = 1
+	basic_destroyer = 1
+	early_light_cruiser = 1
+	basic_light_cruiser = 1
+	early_heavy_cruiser = 1
+	basic_heavy_cruiser = 1
+	early_battleship = 1
+	early_battlecruiser = 1
+	basic_battlecruiser = 1
+	transport = 1
+	american_colonisation = 1
+	electronic_mechanical_engineering = 1
+	mechanical_computing = 1
+}
+
+add_ideas = {
+	FRA_religious_unrest
+	catholic
+	kingdom
+	limited_exports
+	FRA_birthplace_of_absolutism
+}
+
+add_opinion_modifier = { target = ENG modifier = Rivalry }
+add_opinion_modifier = { target = HOL modifier = Rivalry }
+add_opinion_modifier = { target = AUS modifier = Rivalry }
+add_opinion_modifier = { target = ENG modifier = HOL_colonial_rivalry_in_west_indies }
+
+
+if = {
+	limit = {
+		OR = {
+			has_dlc = "Together for Victory"
+			has_dlc = "Man the Guns"
+		}
+	}
+	
+	set_autonomy = {
+		target = QUE
+		autonomous_state = autonomy_dominion
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = LOU
+		autonomous_state = autonomy_dominion
+		freedom_level = 0.4
+	}
+
+	else = {
+		puppet = QUE
+		puppet = LOU
+	}
+}
+
+set_convoys = 30
+create_faction = "The Bourbon Alliance"
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 3
+	fascism = 5
+	communism = 2
+	neutrality = 69
+	aristocracy = 21
+}
+create_country_leader = {
+	name = "Louis XIV"
+	desc = ""
+	traits = { dictator }
+	picture = "France_leader.dds"
+	expire = "1715.9.1"
+	ideology = despotism
+}
+
+
+create_field_marshal = {
+	name = "Louis de France"
+	picture = "louis_de_france.dds"
+	traits = {}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_field_marshal = {
+	name = "Christian-Louis de Montmorency"
+	picture = "christian_louis_de_montmorency.dds"
+	traits = {}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Henri de Massue"
+	picture = "henri_de_massue.dds"
+	traits = { }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Louis Antoine de Pardaillan"
+	picture = "louis_antoin_de_pardaillan.dds"
+	traits = {  }
+	skill = 4
+	attack_skill = 2
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Anne-Jules de Noailles"
+	picture = "anne_jules_de_noailles.dds"
+	traits = {  }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Claude François Bidal d'Asfeld"
+	picture = "claude_francois_bidal_d'asfeld.dds"
+	traits = {  }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Claude Louis Hector de Villars"
+	picture = "claude_louis_hector_de_villars.dds"
+	traits = {  }
+	skill = 4
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "François de Neufville"
+	picture = "francois_de_neufville.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Henri d'Harcourt"
+	picture = "henri_d'harchourt.dds"
+	traits = {  }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Jacques Bazin de Bezons"
+	picture = "jacques_bazin_de_bezons.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "James Fitz de Berwick"
+	picture = "james_fitz_de_berwick.dds"
+	traits = {  }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+
+create_corps_commander = {
+	name = "Louis François de Boufflers"
+	picture = "louis_francois_de_boufflers.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Louis Joseph de Vendôme"
+	picture = "louis_joseph_de_vendome.dds"
+	traits = {  }
+	skill = 5
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Renné de Froulay"
+	picture = "renne_de_froulay.dds"
+	traits = {  }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+
+### VARIANTS ###
+# 1936 Start #
+
+	### Ship Variants ###
+	create_equipment_variant = {
+		name = "630 Series"
+		type = submarine_1
+		upgrades = {
+			ship_reliability_upgrade = 1
+			sub_engine_upgrade = 1
+			sub_stealth_upgrade = 1
+			sub_torpedo_upgrade = 1
+		}
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "Redoutable Class"
+		type = submarine_1
+		upgrades = {
+			ship_reliability_upgrade = 2
+			sub_engine_upgrade = 2
+			sub_stealth_upgrade = 2
+			sub_torpedo_upgrade = 2
+		}
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "Chacal Class"
+		type = destroyer_1
+		upgrades = {
+			ship_torpedo_upgrade = 1
+			destroyer_engine_upgrade = 1
+			ship_ASW_upgrade = 1
+			ship_anti_air_upgrade = 1
+		}
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "Aigle & Vauquelin Class"
+		type = destroyer_1
+		upgrades = {
+			ship_torpedo_upgrade = 2
+			destroyer_engine_upgrade = 2
+			ship_ASW_upgrade = 2
+			ship_anti_air_upgrade = 2
+		}
+	}
+
+	create_equipment_variant = {
+		name = "Bretagne Class"
+		type = battleship_1
+		upgrades = {
+			ship_reliability_upgrade = 1
+			ship_armor_upgrade = 1
+			ship_gun_upgrade = 1
+		}
+	}
+}

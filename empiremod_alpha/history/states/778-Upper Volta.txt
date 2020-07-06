@@ -1,0 +1,16 @@
+
+state={
+	id=778
+	name="STATE_778" # Upper Volta
+	manpower = 3186184
+	
+	state_category = pastoral
+	impassable = yes
+	history={
+	owner = UNC
+	}
+
+	provinces={
+		2001 7950 7983 8071 10836 12851
+	}
+}

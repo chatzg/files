@@ -1,0 +1,27 @@
+state={
+	id=686
+	name="STATE_686"
+	manpower = 81087
+	
+	state_category = rural
+
+	history={
+		add_core_of = SPR
+		owner = SPR
+		victory_points = {
+			1440 1 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			1440 = {
+				naval_base = 3
+
+			}
+		}
+	}
+
+	provinces={
+		1440 4155 
+	}
+}

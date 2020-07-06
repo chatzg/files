@@ -1,0 +1,31 @@
+state={
+	id=813
+	name="STATE_813"
+	provinces={
+		1453 4464 7480 7524 7552 7668 
+	}
+	history={
+		owner = LOU
+		add_core_of = LOU
+		buildings = {
+			infrastructure = 2
+			7552 = {
+				naval_base = 2
+
+			}
+		}
+		victory_points = {
+			7480 1 
+		}
+		victory_points = {
+			7552 10 
+		}
+		victory_points = {
+			4464 1 
+		}
+
+	}
+	manpower=100
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

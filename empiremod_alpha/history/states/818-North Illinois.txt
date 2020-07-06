@@ -1,0 +1,20 @@
+state={
+	id=818
+	name="STATE_818"
+	provinces={
+		6737 9450 11589 12312 12368 
+	}
+	history={
+		owner = LOU
+		add_core_of = LOU
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			9450 30.0 
+		}
+	}
+	manpower=205
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

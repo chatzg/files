@@ -1,0 +1,29 @@
+SOV_historical_plan = {
+	name = "Russia historical plan"
+	desc = "Historical behavior for Russia"
+	enable = {
+		tag = SOV
+	}
+	abort = {
+	}
+	ai_national_focuses = {
+		RUS_our_place_in_the_world
+		RUS_western_focus
+		RUS_anti_swedish_pact
+		RUS_invite_denmark
+		RUS_invite_poland
+		RUS_crush_sweden
+		RUS_found_saint_petersburg
+		RUS_great_reforms_of_Peter
+		RUS_great_reforms_military_reform
+		RUS_army_reform
+	}
+	research = {
+	}
+	ideas = {
+	}
+	weight = {
+		factor = 1.0
+	}
+
+}

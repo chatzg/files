@@ -1,0 +1,227 @@
+﻿###########################
+# Spanish Events
+###########################
+
+add_namespace = spain
+
+# Death of Carlos II
+country_event = {
+	id = spain.1
+	title = spain.1.t
+	desc = spain.1.d
+	picture = GFX_report_event_charles_II
+
+	
+	fire_only_once = yes
+		trigger = {
+			tag = SPR
+			AND = {
+				date > 1700.11.1	
+				}
+		}
+	mean_time_to_happen = {
+    days = 0
+		}
+	option = {
+		custom_effect_tooltip = france.20.a_tt
+		set_country_flag = france_de_gaulle
+		hidden_effect =  {
+			create_country_leader = {
+				name = "Regency"
+				desc = "POLITICS_CHARLES_DE_GAULLE_DESC"
+				picture = "regency.dds"
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {	
+				}
+			}
+		set_global_flag = SPR_Carlos_is_dead
+		}
+		hidden_effect = {
+			add_threat = 10
+			news_event = { id = mod.1 days = 1 }
+		}
+		
+		name = spain.1.a
+	}
+}
+
+#Aragonese Revolt
+
+country_event = {
+	id = spain.3
+	title = spain.3.t
+	desc = spain.3.d
+	picture = GFX_report_event_degaulle_churchill
+
+	
+	fire_only_once = yes
+		trigger = {
+			tag = SPR
+			has_war_with = ENG
+		}
+	mean_time_to_happen = {
+    days = 700
+		}
+
+	option = {
+		name = traitors
+
+		#hidden_effect = { news_event = { id = mod.7 days = 1 }
+		#}
+
+		165 = {
+			add_core_of = ARA
+		}
+		166 = {
+			add_core_of = ARA
+		}
+		177 = {
+			add_core_of = ARA
+		}
+		167 = {
+			add_core_of = ARA
+		}
+
+		ARA = { 
+		transfer_state = 165
+		transfer_state = 167
+		}
+
+		ARA = {
+		load_oob = "ARA_revolt"
+		}
+	}
+}
+
+#Aragon Declare war
+
+country_event = {
+	id = spain.4
+	title = spain.4.t
+	desc = spain.4.d
+	picture = GFX_report_event_degaulle_churchill
+
+	mean_time_to_happen = { days = 14 } 
+
+	fire_only_once = yes
+		trigger = {
+			tag = SPR
+			country_exists = ARA
+		}
+
+	option = {
+	declare_war_on = {
+			target = ARA
+			type = annex_everything
+		}
+	}
+}
+
+# POPE Blessing
+country_event = {
+	id = spain.5
+	title = spain.5.t
+	desc = spain.5.d
+	picture = GFX_report_event_degaulle_churchill 
+
+	is_triggered_only = yes
+
+	option = {
+		name = spain.5.a
+		SPR = { country_event = spain.7 }
+	}
+	option = {
+		name = spain.5.b
+		SPR = { country_event = spain.8 }
+	}
+}
+
+#advisorswitch?
+
+country_event = {
+	id = spain.6
+	title = spain.6.t
+	desc = spain.6.d
+	picture = GFX_report_event_degaulle_churchill 
+
+	fire_only_once = yes
+		trigger = {
+			tag = SPR
+			AND = {
+				date > 1699.8.12
+				}
+		}
+	mean_time_to_happen = { days = 14 } 
+
+	option = {
+		name = spain.6.a
+		add_political_power = 50
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 2
+				has_opinion = {
+					target = AUS
+					value > 49
+				}
+			}
+			modifier = {
+				factor = 4000
+				ENG = { has_completed_focus = eng_go_with_the_tories }
+			}
+
+		}
+	}
+	option = {
+		name = spain.6.b
+		swap_ideas = {
+		    remove_idea = maria_anna
+		    add_idea = cardinal_portocarrero 
+		}
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 0.5
+				has_opinion = {
+					target = FRA
+					value < 0
+				}
+			}
+		}
+	}
+}
+
+#Good news pope
+
+country_event = {
+	id = spain.7
+	title = spain.7.t
+	desc = spain.7.d
+	picture = GFX_report_event_degaulle_churchill
+ 	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = spain.7.a
+		add_political_power = 150
+	}
+}
+
+#Bad news pope
+
+country_event = {
+	id = spain.8
+	title = spain.8.t
+	desc = spain.8.d
+	picture = GFX_report_event_degaulle_churchill
+ 	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = spain.8.a
+		add_political_power = -50 
+	}
+}

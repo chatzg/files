@@ -1,0 +1,15 @@
+
+state={
+	id=776
+	name="STATE_776" # Benin/Dahomey
+	manpower = 1351563
+	state_category=pastoral
+	impassable = yes
+	history={
+	owner = UNC
+	}
+
+	provinces={
+		10919 12874 12762
+	}
+}

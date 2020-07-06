@@ -1,0 +1,332 @@
+burghers_estate = {
+
+	lobby_war_effort = {
+
+		cost = 50
+		days_remove = 180
+		fire_only_once = no
+		days_re_enable = 180
+
+		modifier = {
+			consumer_goods_factor = -0.05
+		}
+		complete_effect = {	
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			} 
+		}
+	}
+
+	appoint_new_admirals = {
+		cost = 50
+		fire_only_once = no
+		days_re_enable = 180
+
+		complete_effect = {
+			navy_experience = 20
+		}
+		complete_effect = {	
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			} 
+		}
+	}
+}
+
+nobility_estate = {
+
+	raise_additional_levies = {
+		cost = 50
+		fire_only_once = no
+		days_re_enable = 180
+
+		complete_effect = {
+			add_manpower = 5000
+		}
+		complete_effect = {	
+			add_popularity = {
+				ideology = aristocracy
+				popularity = 0.05
+			} 
+		}
+	}
+
+	appoint_new_officers = {
+		cost = 50
+		fire_only_once = no
+		days_re_enable = 180
+
+		complete_effect = {
+			army_experience = 10
+		}
+		complete_effect = {	
+			add_popularity = {
+				ideology = aristocracy
+				popularity = 0.05
+			} 
+		}
+	}
+
+	seek_support_for_war = {
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_war_support < 0.5
+			has_offensive_war = no
+		}
+
+		fire_only_once = no
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 150
+
+		modifier = {
+			war_support_weekly = 0.01
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				has_war_support < 0.4
+				has_war = yes
+			}
+		}
+
+		complete_effect = {	
+			add_popularity = {
+				ideology = aristocracy
+				popularity = 0.05
+			} 
+		}
+
+	}
+
+}
+
+clergy_estate = {
+	censorship = { 
+		cost = 50
+		fire_only_once = no
+		days_re_enable = 360
+		days_remove = 90
+
+		modifier = {
+			stability_weekly = 0.003
+			political_power_gain = -0.5
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+		}
+		complete_effect = {	
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			} 
+		}
+	}
+
+	appoint_ministers = {
+		cost = 50
+		fire_only_once = no
+		days_re_enable = 120
+		days_remove = 45
+
+		modifier = {
+			political_advisor_cost_factor = -0.5
+		}
+
+		complete_effect = {	
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			} 
+		}
+	}
+}
+
+patriarchy_interactions = {
+	adopt_icon_of_christ_pancreator = {
+		cost = 75
+		fire_only_once = no
+
+		icon = patriarchy
+
+		visible = {
+			NOT = {
+				OR = {
+					has_idea = icon_of_christ_pancreator
+					has_idea = icon_of_st_eleusa
+					has_idea = icon_of_st_nicholas
+					has_idea = icon_of_st_climacus
+					has_idea = icon_of_st_michael
+				}
+			}
+		}
+
+		complete_effect = {	
+			if = {
+			    limit = {
+			        NOT = { has_completed_focus = RUS_separate_church_influence}
+			    }   
+			    add_popularity = {
+					ideology = fascism
+					popularity = 0.05
+				}
+			} 
+			add_timed_idea = {
+			    idea = icon_of_christ_pancreator
+			    days = 180
+			}
+		}
+	}
+
+	adopt_icon_of_st_eleusa = {
+		cost = 75
+		fire_only_once = no
+
+		icon = patriarchy
+
+		visible = {
+			NOT = {
+				OR = {
+					has_idea = icon_of_christ_pancreator
+					has_idea = icon_of_st_eleusa
+					has_idea = icon_of_st_nicholas
+					has_idea = icon_of_st_climacus
+					has_idea = icon_of_st_michael
+				}
+			}
+		}
+
+		complete_effect = {	
+			if = {
+			    limit = {
+			        NOT = { has_completed_focus = RUS_separate_church_influence}
+			    }   
+			    add_popularity = {
+					ideology = fascism
+					popularity = 0.05
+				}
+			}
+			add_timed_idea = {
+			    idea = icon_of_st_eleusa
+			    days = 180
+			}
+		}
+	}
+
+	adopt_icon_of_st_nicholas = {
+		cost = 75
+		fire_only_once = no
+
+		icon = patriarchy
+
+		visible = {
+			NOT = {
+				OR = {
+					has_idea = icon_of_christ_pancreator
+					has_idea = icon_of_st_eleusa
+					has_idea = icon_of_st_nicholas
+					has_idea = icon_of_st_climacus
+					has_idea = icon_of_st_michael
+				}
+			}
+		}
+
+		complete_effect = {	
+			if = {
+			    limit = {
+			        NOT = { has_completed_focus = RUS_separate_church_influence}
+			    }   
+			    add_popularity = {
+					ideology = fascism
+					popularity = 0.05
+				}
+			} 
+			add_timed_idea = {
+			    idea = icon_of_st_nicholas
+			    days = 180
+			}
+		}
+	}
+
+	adopt_icon_of_st_michael = {
+		cost = 75
+		fire_only_once = no
+
+		icon = patriarchy
+
+		visible = {
+			NOT = {
+				OR = {
+					has_idea = icon_of_christ_pancreator
+					has_idea = icon_of_st_eleusa
+					has_idea = icon_of_st_nicholas
+					has_idea = icon_of_st_climacus
+					has_idea = icon_of_st_michael
+				}
+			}
+		}
+
+		complete_effect = {	
+			if = {
+			    limit = {
+			        NOT = { has_completed_focus = RUS_separate_church_influence}
+			    }   
+			    add_popularity = {
+					ideology = fascism
+					popularity = 0.05
+				}
+			} 
+			add_timed_idea = {
+			    idea = icon_of_st_michael
+			    days = 180
+			}
+		}
+	}
+
+	adopt_icon_of_st_climacus = {
+		cost = 75
+		fire_only_once = no
+
+		icon = patriarchy
+
+		visible = {
+			NOT = {
+				OR = {
+					has_idea = icon_of_christ_pancreator
+					has_idea = icon_of_st_eleusa
+					has_idea = icon_of_st_nicholas
+					has_idea = icon_of_st_climacus
+					has_idea = icon_of_st_michael
+				}
+			}
+		}
+
+		complete_effect = {
+			if = {
+			    limit = {
+			        NOT = { has_completed_focus = RUS_separate_church_influence}
+			    }   
+			    add_popularity = {
+					ideology = fascism
+					popularity = 0.05
+				}
+			}
+			add_timed_idea = {
+			    idea = icon_of_st_climacus
+			    days = 180
+			}	
+		}
+	}
+}

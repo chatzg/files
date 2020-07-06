@@ -1,0 +1,29 @@
+
+state={
+	id=62
+	name="STATE_62"
+
+	history={
+		victory_points = {
+			9388 1 
+		}
+		owner = SWE
+		buildings = {
+			infrastructure = 6
+			fuel_silo = 1
+			9388 = {
+				naval_base = 5
+			}
+			6282 = {
+				naval_base = 4
+			}
+		}
+	}
+
+	provinces={
+		349 3207 3258 3312 3340 6282 9388 
+	}
+	manpower=2506221
+	buildings_max_level_factor=1.000
+	state_category=town
+}

@@ -1,0 +1,17 @@
+
+state={
+	id=781
+	name="STATE_781" # Niger
+	manpower = 543817
+	
+	state_category = pastoral
+
+	impassable = yes
+	history={
+	owner = UNC
+	}
+
+	provinces={
+		1975 2056 12707
+	}
+}

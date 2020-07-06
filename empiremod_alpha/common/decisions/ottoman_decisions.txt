@@ -1,0 +1,133 @@
+TUR_janissar_revolt_category = {
+	TUR_edirne_event = {
+
+		icon = generic_civil_support
+
+		available = {
+			OR = {
+				NOT = { 
+					OR = {
+					has_idea = TUR_janissary_loyalty_5 
+					aristocracy > 0.50
+					}
+				}
+				has_stability > 0.75
+				has_government = aristocracy
+				has_global_flag = TUR_edirne_event_triggered
+				has_civil_war = yes
+			}
+		}
+
+		days_mission_timeout = 150
+
+		activation = {
+			OR = {
+				has_idea = TUR_janissary_loyalty_5
+				aristocracy > 0.50
+			}
+			has_stability < 0.75
+ 
+			#NOT = { has_global_flag = flag_second_mexican_civil_war } # Second Cristiada / Second Mexican Revolution are mutually exclusive
+
+			NOT = { has_government = aristocracy } # Government has a genuine commitment to reform
+
+			has_civil_war = no
+			
+			#OR = { # Domestic violence or antagonised world powers
+			#	has_completed_focus = MEX_focus_triumph_over_the_cristeros
+			#	has_completed_focus = MEX_focus_the_red_shirts
+			#	has_completed_focus = MEX_focus_international_proletarianism
+			#	has_completed_focus = MEX_focus_ejido_worker_militias
+			#	has_completed_focus = MEX_focus_bolivarian_alliance
+			#}
+		}
+
+		allowed = {
+			original_tag = TUR
+		}
+
+		fixed_random_seed = no
+
+		fire_only_once = no
+
+		is_good = no
+
+		timeout_effect = {
+			set_global_flag = TUR_edirne_event_triggered
+			country_event = {
+				id = ottomans.10
+			}
+		}
+	}
+
+	# Dummy decision to warn of Second Cristiada
+
+	TUR_edirne_event_dummy = {
+
+		icon = generic_civil_support
+
+		available = {
+			OR= {
+				has_idea = TUR_janissary_loyalty_5
+				aristocracy > 0.50
+			}
+
+			has_stability < 0.75
+
+			NOT = { has_global_flag = TUR_edirne_event_triggered }
+
+			has_civil_war = no
+			
+			NOT = { has_government = aristocracy } 
+			
+			#OR = { # Domestic violence or antagonised world powers
+			#	has_completed_focus = MEX_focus_triumph_over_the_cristeros
+			#	has_completed_focus = MEX_focus_the_red_shirts
+			#	has_completed_focus = MEX_focus_international_proletarianism
+			#	has_completed_focus = MEX_focus_ejido_worker_militias
+			#	has_completed_focus = MEX_focus_bolivarian_alliance
+			#}
+		}
+
+		days_remove = 150
+
+		allowed = {
+			original_tag = TUR
+		}
+
+		visible = {
+			NOT = { has_global_flag = TUR_edirne_event_triggered }
+			OR = {
+				#NOT = {
+				#	OR = {
+				#		has_completed_focus = MEX_focus_triumph_over_the_cristeros
+				#		has_completed_focus = MEX_focus_the_red_shirts
+				#		has_completed_focus = MEX_focus_international_proletarianism
+				#		has_completed_focus = MEX_focus_ejido_worker_militias
+				#		has_completed_focus = MEX_focus_bolivarian_alliance
+				#	}
+				#}
+				has_stability > 0.75
+				aristocracy < 0.50
+				has_idea = TUR_janissary_loyalty_4
+				has_idea = TUR_janissary_loyalty_3
+				has_idea = TUR_janissary_loyalty_2
+				has_idea = TUR_janissary_loyalty_1
+			}
+			has_civil_war = no
+		}
+
+		fixed_random_seed = no
+
+		fire_only_once = no
+
+		is_good = no
+
+		#remove_effect = {
+		#	set_global_flag = flag_second_mexican_civil_war
+		#	country_event = {
+		#		id = mexico.28
+		#	}
+		#}
+	}
+}

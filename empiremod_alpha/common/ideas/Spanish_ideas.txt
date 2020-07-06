@@ -1,0 +1,95 @@
+ideas = {
+	country = {
+		cardinal_portocarrero = {
+			picture = cardinal_portocarrero
+
+			modifier = {
+				political_power_gain = 0.8
+			}
+		}
+		maria_anna = {
+			picture = maria_anna
+
+			modifier = {
+				political_power_gain = 0.5
+			}
+		}
+		disfunctional_economy = {
+			picture = usa_great_depression_2
+
+			modifier = {
+				consumer_goods_factor = 0.25
+				production_speed_buildings_factor = -0.25
+				industrial_capacity_factory = -0.2
+			}
+		}
+
+		SPR_economic_recovery = {
+			picture = usa_great_depression_1
+
+			modifier = {
+				consumer_goods_factor = 0.20
+				production_speed_buildings_factor = -0.25
+				industrial_capacity_factory = -0.1
+			}
+		}
+
+		SPR_mestas = {
+			picture = usa_great_depression_1
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+
+
+
+	}
+
+	political_advisor = {
+		SPR_pontcarrero = {
+
+			picture = cardinal_portocarrero
+
+			cost = 50
+			
+			allowed = {
+				original_tag = SPR
+			}
+			available = {
+				has_completed_focus = SPR_pontcarrero_place_in_adm
+				original_tag = SPR
+			}
+			
+			traits = { genial_anti_revolutionary }
+
+		}
+
+		SPR_captain_of_industry = {
+
+			picture = trader
+				
+			allowed = {
+				original_tag = SPR
+			}
+			
+			traits = { captain_of_industry }
+		}
+
+		SPR_backroom_backstabber = {
+
+			picture = spymaster
+
+			allowed = {
+				original_tag = SPR
+			}
+			
+			traits = { backroom_backstabber }
+			ai_will_do = {
+				factor = 0
+			}
+		}
+
+	}
+}

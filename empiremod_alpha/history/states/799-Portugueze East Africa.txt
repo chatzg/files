@@ -1,0 +1,21 @@
+state={
+	id=799
+	name="STATE_799"
+	provinces={
+		2123 2202 5164 12971 
+	}
+
+	history={
+		owner = POR
+		buildings = {
+			infrastructure = 4
+			2202 = {
+				naval_base = 4
+			}
+		}
+	}
+
+	manpower=12300
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

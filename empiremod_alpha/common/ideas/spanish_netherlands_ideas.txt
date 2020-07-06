@@ -1,0 +1,18 @@
+ideas = {
+	country = {
+		closure_of_the_scheldt = {
+			picture = eng_a_change_in_course
+
+			modifier = {
+				#disable_ideas = 1
+			}
+		}
+		barrier_treaty = {
+			picture = mex_revolutionary_army
+
+			modifier = {
+				#country_lock_all_division_template = yes
+			}
+		}
+	}
+}

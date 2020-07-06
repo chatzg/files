@@ -1,0 +1,39 @@
+
+state={
+	id=231
+	name="STATE_231"
+	resources = {
+		steel=34
+	}
+	history={
+		owner = TUR
+		victory_points = {
+			1599 5 
+		}
+		victory_points = {
+			3653 3 
+		}
+		buildings = {
+			infrastructure = 2
+		}
+		set_border_war = yes
+		set_demilitarized_zone = yes
+		add_core_of = TUR
+		add_core_of = GEO
+		1939.1.1 = {
+			buildings = {
+				industrial_complex = 3
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		654 672 772 3653 3656 3658 9626 11599 11617 
+	}
+	manpower=149413
+	buildings_max_level_factor=1.000
+	state_category=town
+}

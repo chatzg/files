@@ -1,0 +1,23 @@
+
+state={
+	id=513
+	name="STATE_513"
+
+	history={
+		owner = UNC
+		buildings = {
+			infrastructure = 4
+
+		}
+
+	}
+
+	impassable = yes
+
+	provinces={
+		1126 1967 4018 4970 5053 7149 9943 9960 12018 12888 13074 
+	}
+	manpower=811486
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

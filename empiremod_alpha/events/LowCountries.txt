@@ -1,0 +1,28 @@
+﻿add_namespace = holland
+
+# Death of William III
+country_event = {
+	id = holland.1
+	title = holland.1.t
+	desc = holland.1.d
+	picture = GFX_report_event_degaulle_churchill
+
+	
+	fire_only_once = yes
+		trigger = {
+			tag = HOL
+			AND = {
+				date > 1702.3.8	
+				}
+		}
+	mean_time_to_happen = {
+    days = 0
+		}
+	option = {
+		name = england.3.a
+		kill_country_leader = yes
+		set_politics = {
+			ruling_party = democratic
+		}
+	}
+}

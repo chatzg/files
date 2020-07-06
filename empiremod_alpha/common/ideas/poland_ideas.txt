@@ -1,0 +1,217 @@
+ideas = {
+	country = {
+		POL_liberum_veto = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				stability_factor = -0.20
+				political_advisor_cost_factor = 0.5
+				trade_laws_cost_factor = 0.5
+				mobilization_laws_cost_factor = 0.5
+				economy_cost_factor = 0.5
+			}
+		}
+
+		POL_no_more_unanimity = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				stability_factor = -0.05
+				political_advisor_cost_factor = 0.25
+				trade_laws_cost_factor = 0.25
+				mobilization_laws_cost_factor = 0.25
+				economy_cost_factor = 0.25
+			}
+		}
+
+		POL_dominance_of_nobles = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = ROM_king_carol_ii_hedonist
+
+			modifier = {
+				production_speed_buildings_factor = -0.2
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
+			}
+		}
+
+		POL_weakened_nobles = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = ROM_king_carol_ii_hedonist
+
+			modifier = {
+				production_speed_buildings_factor = -0.1
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+			}
+		}
+
+		POL_cooperative_nobles = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = ROM_king_carol_ii_hedonist
+
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+			}
+		}
+
+		POL_conscription_crisis = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_army_problems
+
+			modifier = {
+				conscription_factor = -0.5
+				mobilization_speed = -0.2	
+			}
+		}
+
+		POL_sejm = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				political_power_factor = -0.25
+				stability_factor = 0.05
+			}
+		}
+
+		POL_weakened_sejm = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				political_power_factor = -0.10
+				stability_factor = 0.05
+			}
+		}
+
+		POL_centralization = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				neutrality_drift = 0.06
+				stability_factor = -0.05	
+			}
+		}
+
+		POL_burgher_counterweight = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			cancel = { neutrality < 0.1 }
+
+			picture = generic_democratic_drift_bonus
+
+			modifier = {
+				stability_factor = 0.05	
+			}
+		}
+		POL_anti_ottoman_pact_member = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			cancel = { neutrality < 0.1 }
+
+			picture = raj_marginalized_muslim_community_angry
+
+			modifier = {
+				war_support_factor = 0.05	
+			}
+		}
+		POL_align_magnates = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_volunteer_expedition_bonus
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.5
+			}
+		} 
+		POL_compensated_nobles = {
+			allowed = {
+				always = no
+			}
+
+			picture = ROM_king_carol_ii_hedonist
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.2
+			}
+		}
+
+		POL_emergency_war_act = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_central_management
+			removal_cost = -1
+
+			modifier = {
+				conversion_cost_civ_to_mil_factor = -0.2
+			}
+		}
+	}
+}

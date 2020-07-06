@@ -1,0 +1,17 @@
+state={
+	id=900
+	name="STATE_900"
+	provinces={
+		3444 
+	}
+	history={
+		buildings = {
+			infrastructure = 3
+		}
+		owner = PRS
+		add_core_of = PRS
+	}
+	manpower=32614
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

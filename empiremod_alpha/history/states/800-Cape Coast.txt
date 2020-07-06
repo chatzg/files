@@ -1,0 +1,21 @@
+state={
+	id=800
+	name="STATE_800"
+	provinces={
+		10862 12742 
+	}
+
+	history={
+		owner = HOL
+		victory_points = {
+			6788 10 
+		}
+		buildings = {
+			infrastructure = 2
+		}
+	}
+
+	manpower=4201
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

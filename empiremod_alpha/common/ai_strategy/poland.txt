@@ -1,0 +1,16 @@
+dislike_russia = {
+	enable = {
+		tag = POL
+		has_completed_focus = POL_polish_candidate
+		country_exists = SOV
+	}
+	abort = {
+		NOT = { country_exists = SOV }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "SOV"
+		value = 200
+	}
+}

@@ -1,0 +1,24 @@
+
+state={
+	id=804
+	name="STATE_804"
+
+	history={
+		add_core_of = TMS
+		owner = KAZ
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+
+		}
+		add_core_of = KAZ
+
+	}
+
+	provinces={
+		1493 1649 4563 7477 7563 7618 7635 10406 10414 
+	}
+	manpower=106523
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

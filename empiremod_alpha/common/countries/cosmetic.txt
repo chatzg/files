@@ -1,0 +1,17 @@
+TUR_jan = {
+   	color = rgb { 171 190 152 }
+	color_ui = rgb { 171 190 152 }
+}
+TUR = {
+	color = rgb { 169 17 1 }
+	color_ui = rgb { 169 17 1 }
+}
+GER_WESTFALEN = {
+	color = rgb { 240 230 134 }
+    color_ui = rgb { 240 230 134 }
+}
+
+GER_RHINE = {
+	color = rgb { 126 181 173 }
+    color_ui = rgb { 126 181 173  }
+}

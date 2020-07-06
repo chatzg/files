@@ -1,0 +1,17 @@
+state={
+	id=769
+	name="STATE_769" # Burundi
+	
+	state_category = pastoral
+
+	impassable = yes
+
+	provinces={
+		2220
+	}
+	history={
+	owner = UNC
+	}
+	manpower=2145731
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,31 @@
+
+state={
+	id=365
+	name="STATE_365"
+
+	history={
+	owner = UNC
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+
+		}
+	owner = UNC
+
+		1939.1.1 = {
+			buildings = {
+				industrial_complex = 4
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		1441 1523 1621 7449 7607 12463 
+	}
+	manpower=2908504
+	buildings_max_level_factor=1.000
+	state_category=city
+}

@@ -1,0 +1,14 @@
+state=
+{
+	id=767
+	name="STATE_767" # North Darfur
+	manpower = 8143
+	state_category=pastoral
+	impassable = yes
+	history={
+	owner = UNC
+	}
+	provinces={
+		7987 8103 10900
+	}
+}

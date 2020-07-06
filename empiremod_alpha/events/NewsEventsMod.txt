@@ -1,0 +1,408 @@
+﻿add_namespace = mod
+
+# Death of the Spanish King
+news_event = {
+	id = mod.1
+	title = mod.1.t
+	desc = mod.1.d
+	picture = GFX_news_event_regency
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = F
+		trigger = {
+			NOT = {
+				TAG = SPR
+			}
+		}
+	}
+	option = {
+		name = interesting
+		trigger = { TAG = FRA }
+	}
+}
+
+# Philip V inherits all of the Spanish possesions
+news_event = {
+	id = mod.2
+		title = mod.2.t
+		desc = mod.2.d
+		picture = GFX_news_event_anouncement
+
+		major = yes
+
+		is_triggered_only = yes
+
+		option = {
+			name = mod.2.a
+			trigger = {
+				NOT = {
+					TAG = FRA
+					TAG = SPR
+				}
+			}
+		}
+		option = {
+			name = mod.2.b
+			trigger = { TAG = FRA }
+		}
+		option = {
+			name = mod.2.c
+			trigger = { TAG = SPR }
+		}
+	}
+######
+# The Great Northern War
+#####
+
+news_event = {
+	id = mod.3
+		title = mod.3.t
+		desc = mod.3.d
+		picture = GFX_news_event_army
+
+		major = yes
+
+		is_triggered_only = yes
+
+		option = {
+			name = worrying
+			trigger = {
+			}
+		}
+		option = {
+			name = huzzah
+			trigger = { TAG = SOV }
+		}
+	}
+
+# Denmark surrenders
+
+news_event = {
+	id = mod.4
+		title = mod.4.t
+		desc = mod.4.d
+		picture = GFX_news_event_surrender
+
+		major = yes
+
+		is_triggered_only = yes
+
+		option = {
+			name = remarkable
+			trigger = {
+			}
+		}
+		option = {
+			name = excellent
+			trigger = { TAG = SWE }
+		}
+	}
+
+# formation of grand alliance
+
+news_event = {
+	id = mod.5
+		title = mod.5.t
+		desc = mod.5.d
+		picture = GFX_news_event_treaty
+
+		major = yes
+
+		is_triggered_only = yes
+
+		option = {
+			name =  mod.5.a
+			trigger = { }
+		}
+	}
+
+news_event = {
+	id = mod.6
+		title = mod.6.t
+		desc = mod.6.d
+		picture = GFX_news_event_army
+
+		major = yes
+
+		is_triggered_only = yes
+
+		option = {
+			name =  mod.6.a
+			trigger = { }
+		}
+	}
+
+### Hungarian Independence war
+
+	news_event = {
+
+		id = mod.7
+		title = mod.7.t
+		desc = mod.7.d
+		picture = GFX_news_event_civil_war
+
+		major = yes
+
+		is_triggered_only = yes
+
+		option = {
+			name = interesting
+		}
+	}
+
+### TREATY OF KARLOWITZ
+
+	news_event = {
+
+		id = mod.8
+		title = mod.8.t
+		desc = mod.8.d
+		picture = GFX_news_event_surrender
+
+		major = yes
+
+		is_triggered_only = yes
+
+		option = {
+			name = mod.8.a
+			set_global_flag = treaty_of_karlowitz
+		}
+	}
+
+## ALTERNATIVE SUCCESSIONS
+
+news_event = {
+	id = mod.9
+		title = mod.9.t
+		desc = mod.9.d
+		picture = GFX_news_event_anouncement
+
+		major = yes
+
+		is_triggered_only = yes
+
+		option = {
+			name = mod.9.a
+			trigger = {
+				NOT = {
+					TAG = FRA
+					TAG = SPR
+				}
+			}
+		}
+		option = {
+			name = mod.9.b
+			trigger = { TAG = FRA }
+		}
+		option = {
+			name = mod.9.c
+			trigger = { TAG = SPR }
+		}
+	}
+
+news_event = {
+	id = mod.10
+		title = mod.10.t
+		desc = mod.10.d
+		picture = GFX_news_event_anouncement
+
+		major = yes
+
+		is_triggered_only = yes
+
+		option = {
+			name = mod.10.a
+		}
+	}
+
+news_event = {
+	id = mod.11
+		title = mod.11.t
+		desc = mod.11.d
+		picture = GFX_news_event_anouncement
+
+		major = yes
+
+		is_triggered_only = yes
+
+		option = {
+			name = mod.11.a
+			trigger = {
+				NOT = {
+					TAG = FRA
+					TAG = SPR
+					TAG = AUS
+				}
+			}
+		}
+		option = {
+			name = mod.11.b
+			trigger = { TAG = FRA }
+		}
+		option = {
+			name = mod.11.c
+			trigger = { TAG = SPR }
+		}
+		option = {
+			name = mod.11.e
+			trigger = { TAG = AUS }
+		}
+	}
+
+news_event = {
+	id = mod.12
+		title = mod.12.t
+		desc = mod.12.d
+		picture = GFX_news_event_prussia
+
+		major = yes
+
+		is_triggered_only = yes
+
+		option = {
+			name = mod.12.a
+			trigger = {
+				NOT = {
+					TAG = PRS
+				}
+			}
+		}
+		option = {
+			name = mod.12.b
+			trigger = { TAG = PRS}
+		}
+	}
+
+#English Civil War
+
+news_event = {
+	id = mod.13
+	title = mod.13.t
+	desc = mod.13.d
+	picture = GFX_news_event_civil_war
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = mod.13.a
+	}
+}
+
+#Cromwell
+
+news_event = {
+	id = mod.14
+	title = mod.14.t
+	desc = mod.14.d
+	picture = GFX_news_event_anouncement
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = mod.14.a
+	}
+}
+
+#Utopia
+
+news_event = {
+	id = mod.15
+	title = mod.15.t
+	desc = mod.15.d
+	picture = GFX_news_event_anouncement
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = mod.15.a
+	}
+}
+
+#Jacobite Restauration
+
+news_event = {
+	id = mod.16
+	title = mod.16.t
+	desc = mod.16.d
+	picture = GFX_news_event_regency
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = mod.16.a
+	}
+}
+
+#Hanoverian Succession
+
+news_event = {
+	id = mod.17
+	title = mod.17.t
+	desc = mod.17.d
+	picture = GFX_news_event_regency
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = mod.17.a
+	}
+}
+
+news_event = {
+	id = mod.18
+	title = mod.18.t
+	desc = mod.18.d
+	picture = GFX_news_event_bankruptcy
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = mod.18.a
+	}
+}
+
+news_event = {
+	id = mod.19
+	title = mod.19.t
+	desc = mod.19.d
+	picture = GFX_news_event_vatican
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Requiescat in pace"
+	}
+}
+
+news_event = {
+	id = mod.20
+	title = mod.20.t
+	desc = mod.20.d
+	picture = GFX_news_event_pope
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Good luck to him!"
+	}
+}

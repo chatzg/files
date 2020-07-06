@@ -1,0 +1,19 @@
+state={
+	id=795
+	name="Brescia"
+	history={
+		owner = VNC
+		add_core_of = VNC
+		buildings = {
+			infrastructure = 8
+			arms_factory = 2
+			industrial_complex = 1
+			}
+		}
+	provinces={
+		773 3776 11568 11587 
+	}
+	manpower=320000
+	buildings_max_level_factor=1.000
+	state_category=city
+}

@@ -1,0 +1,134 @@
+ideas = {
+	country = {	
+		RUS_army_corruption_1 = {
+
+			picture = chi_army_corruption
+
+			name = CHI_army_corruption_1
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = -0.5
+				army_defence_factor = -0.5
+				mobilization_speed = -0.3
+			}
+		}
+		russia_standardized_equipment = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+			
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+		russia_planning_officers = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+			modifier = {
+				planning_speed = 0.25
+				supply_consumption_factor = -0.05
+			}
+		}
+
+		russia_organise_partisans = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+			modifier = {
+			}
+		}
+
+		russia_mass_drill = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+			modifier = {
+			training_time_factor = -0.2
+			}
+		}
+		russia_mass_mobilization = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+			modifier = {
+			conscription = 0.03
+			}
+		}
+		russia_army_of_offense = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+			modifier = {
+			army_infantry_attack_factor = 0.1
+			}
+		}
+		russia_army_of_defense = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+			
+			modifier = {
+			army_infantry_defence_factor = 0.1
+			}
+		}
+		russia_infrastructural_reforms = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_build_infrastructure
+
+			modifier = {
+			production_speed_infrastructure_factor = 0.1
+			}
+		}
+	}
+}
+

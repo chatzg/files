@@ -1,0 +1,33 @@
+
+state={
+	id=360
+	name="STATE_360"
+	resources={
+		steel=44.000
+	}
+
+	history={
+		owner = USA
+		add_core_of = USA
+		buildings = {
+			infrastructure = 2
+			6845 = {
+				naval_base = 5
+
+			}
+			industrial_complex = 1
+		}
+
+		victory_points = {
+			6845 20 
+		}
+
+	}
+
+	provinces={
+		702 822 847 862 891 894 3697 3824 3847 3850 3880 3897 6845 6869 6872 6885 9804 9820 9836 11758 11769 11785 11799 11817 12405 
+	}
+	manpower=17950
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

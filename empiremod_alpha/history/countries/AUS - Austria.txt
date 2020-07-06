@@ -1,0 +1,342 @@
+﻿capital = 4
+
+oob = "AUS_1936"
+
+set_research_slots = 3
+
+set_convoys = 30
+
+#Emperorship
+give_guarantee = PRS
+give_guarantee = BAV
+give_guarantee = HRE
+give_guarantee = SAX
+give_guarantee = MEC
+give_guarantee = HAN
+give_guarantee = SHL
+give_guarantee = AUG
+give_guarantee = IFC
+give_guarantee = WUR
+give_guarantee = WRZ
+give_guarantee = KOL
+give_guarantee = TRR
+give_guarantee = MAI
+give_guarantee = ANS
+give_guarantee = ANH
+give_guarantee = THU
+give_guarantee = BSG
+give_guarantee = RPA
+give_guarantee = MUN
+give_guarantee = HES
+give_guarantee = LUN
+
+add_ideas = {
+	holy_roman_emperor
+	civil_unrest_hungary3
+	great_turkish_war
+	catholic
+	empire
+	partial_economic_mobilisation
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_engineers = 1
+	tech_support = 1		
+	tech_mountaineers = 1
+	gw_artillery = 1
+	gwtank = 1
+	basic_light_tank = 1
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1930.11.9"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	neutrality = 41
+	aristocracy = 31
+	fascism = 12
+	democratic = 5
+	communism = 11
+}
+
+set_stability = 0.40
+set_war_support = .40
+
+73 = {
+	start_resistance = yes
+	set_compliance = 2
+	set_resistance = 10
+	set_garrison_strength = 1.0
+}
+664 = {
+	start_resistance = yes
+	set_compliance = 10
+	set_resistance = 5
+	set_garrison_strength = 1.0
+}
+
+154 = {
+	start_resistance = yes
+	set_compliance = 2
+	set_resistance = 10
+	set_garrison_strength = 1.0
+}
+43 = {
+	start_resistance = yes
+	set_compliance = 2
+	set_resistance = 10
+	set_garrison_strength = 1.0
+}
+76 = {
+	set_compliance = 2
+	set_resistance = 10
+	set_garrison_strength = 1.0
+}
+45 = {
+	start_resistance = yes
+	set_compliance = 2
+	set_resistance = 10
+	set_garrison_strength = 1.0
+}
+83 = {
+	start_resistance = yes
+	set_compliance = 2
+	set_resistance = 10
+	set_garrison_strength = 1.0
+}
+84 = {
+	start_resistance = yes
+	set_compliance = 2
+	set_resistance = 10
+	set_garrison_strength = 1.0
+}
+76 = {
+	start_resistance = yes
+	set_compliance = 2
+	set_resistance = 10
+	set_garrison_strength = 1.0
+}
+
+AUS = {
+	add_opinion_modifier = { target = SPR modifier = Rivalry }
+	add_opinion_modifier = { target = FRA modifier = Rivalry }
+	add_opinion_modifier = { target = TUR modifier = Rivalry }
+}
+
+create_country_leader = {
+	name = "Leopold VI"
+	desc = "POLITICS_KURT_SCHUSCHNIGG_DESC"
+	picture = "Austrian_leader.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		#
+	}
+}
+
+create_field_marshal = {
+	name = "Leopold VI"
+	picture = "Austrian_leader.dds"
+	traits = {}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_field_marshal = {
+	name = "Eugene of Savoy"
+	picture = "eugene_of_savoy.dds"
+	traits = {}
+	skill = 4
+	attack_skill = 2
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_field_marshal = {
+	name = "Karl von Habsburg"
+	picture = "Charles_Habsburg.dds"
+	traits = {}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_field_marshal = {
+	name = "Joseph von Habsburg"
+	picture = "jozef_i.dds"
+	traits = {}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_field_marshal = {
+	name = "Francis Rákóczi"
+	picture = "HUN_leader.dds"
+	traits = {}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+	id = 100
+}
+
+create_corps_commander = {
+	name = "Charles Alexander of Württemberg"
+	picture = "karl_alexander.dds"
+	traits = { trickster }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Charles of Commercy"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+	traits = { }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Jánós Palffy"
+	picture = "janos_palffy.dds"
+	traits = { }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+	id = 101
+}
+
+create_corps_commander = {
+	name = "Wirich Philipp von Daun"
+	picture = "wirich_von_daun.dds"
+	traits = {  }
+	skill = 4
+	attack_skill = 2
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Georg Louis von Hessen-Darmstadt"
+	picture = "Georg_von_hesse_darmstadt.dds"
+	traits = {  }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Charles Thomas von Vaudémont"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+	traits = { }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Claudius Florimund de Mercy"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Jean Philippe Eugène de Mérode"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
+	traits = { }
+	skill = 5
+	attack_skill = 3
+	defense_skill = 5
+	planning_skill = 4
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Philip of Hesse-Darmstadt"
+	picture = "philip_of_hesse_darmstadt.dds"
+	traits = { }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Johann Matthias von der Schulenburg"
+	picture = "Joahan_mathias_von_schulenberg.dds"
+	traits = { }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Friedrich Heinrich von Seckendorff"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_13.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Guido Starhemberg"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_19.dds"
+	traits = { trait_mountaineer }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "George Olivier"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+	traits = { }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}

@@ -1,0 +1,600 @@
+add_namespace = austria
+
+#ultimatum to spain
+
+country_event = {
+	id = austria.1
+	title = austria.1.t
+	desc = austria.1.d
+	picture = GFX_news_event_001
+
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = austria.1.a
+		SPR = {
+			country_event = {
+				id = austria.2
+			}
+		}
+		add_political_power = -100
+	}
+	option = {
+		name = austria.1.b
+		SPR = {
+			country_event = {
+				id = austria.3
+			}
+		}
+		add_political_power = -50
+	}
+	option = {
+		name = austria.1.c
+		add_political_power = -300
+	}
+
+}
+
+country_event = {
+	id = austria.2
+	title = austria.2.t
+	desc = austria.2.d
+	picture = GFX_news_event_001
+
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = austria.2.a
+		hidden_effect =  {	
+		}
+		AUS = {
+			country_event = {
+				id = austria.4
+			}
+		}
+		add_war_support = 0.05
+	}
+	option = {
+		name = austria.2.b
+		hidden_effect =  {	
+		}
+		AUS = {
+			country_event = {
+				id = austria.5
+			}
+		}
+		AUS = {
+			transfer_state = 6
+			transfer_state = 34
+			transfer_state = 8
+			transfer_state = 159
+			transfer_state = 157
+			transfer_state = 117
+			transfer_state = 156
+			transfer_state = 114
+		}
+		ITA = {
+			transfer_state = 115
+		}
+	}
+}
+
+country_event = {
+	id = austria.3
+	title = austria.3.t
+	desc = austria.3.d
+	picture = GFX_news_event_001
+
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = austria.2.a
+		hidden_effect =  {	
+		}
+		AUS = {
+			country_event = {
+				id = austria.4
+			}
+		}
+		add_war_support = 0.05
+	}
+	option = {
+		name = austria.2.b
+		hidden_effect =  {	
+		}
+		AUS = {
+			country_event = {
+				id = austria.5
+			}
+		}
+
+		AUS = {
+			transfer_state = 6
+			transfer_state = 34
+			transfer_state = 8
+			transfer_state = 159
+		}
+	}
+}
+
+country_event = {
+	id = austria.4
+	title = austria.4.t
+	desc = austria.4.d
+	picture = GFX_news_event_001
+
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = austria.4.a
+		hidden_effect =  {	
+		}
+		declare_war_on = {
+		    target = SPR
+		    type = annex_everything
+		}
+	}
+}
+
+country_event = {
+	id = austria.5
+	title = austria.5.t
+	desc = austria.5.d
+	picture = GFX_news_event_001
+
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = austria.5.a
+		hidden_effect =  {	
+		}
+	}
+}
+
+#Appease Hungarian Nobles
+
+country_event = {
+	id = austria.6
+	title = austria.6.t
+	desc = austria.6.d
+	picture = GFX_news_event_001
+
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = austria.6.a
+		hidden_effect =  {
+			country_event = { id = austria.7 }
+		}
+	}
+}
+
+country_event = {
+	id = austria.7
+	title = austria.7.t
+	desc = austria.7.d
+	picture = GFX_news_event_001
+
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = austria.7.a
+		add_timed_idea = {
+			idea = lowered_burden_peasants
+			days = 960
+		}
+		hidden_effect =  {
+			country_event = { id = austria.8 }
+		}
+		add_political_power = -50
+	}
+
+	option = {
+		name = austria.7.b
+		add_timed_idea = {
+			idea = temporary_tax_reform
+			days = 960
+		}
+		hidden_effect =  {
+			country_event = { id = austria.8 }
+		}
+		add_political_power = -50
+	}
+
+	option = {
+		name = austria.7.c
+		set_country_flag = failed_negotiations
+		add_political_power = 50
+	}
+}
+
+country_event = {
+	id = austria.8
+	title = austria.8.t
+	desc = austria.8.d
+	picture = GFX_news_event_001
+
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = austria.8.a
+		add_timed_idea = {
+			idea = no_hungarians_drafted
+			days = 960
+		}
+		hidden_effect =  {
+			country_event = { days = 5 id = austria.9 }
+		}
+		add_political_power = -50
+	}
+	option = {
+		name = austria.8.b
+		add_timed_idea = {
+			idea = high_soldier_wages
+			days = 960
+		}
+		hidden_effect =  {
+			country_event = { days = 5 id = austria.9 }	
+		}
+		add_political_power = -50
+	}
+	option = {
+		name = austria.8.c
+		set_country_flag = failed_negotiations
+		add_political_power = 50
+	}
+}
+
+country_event = {
+	id = austria.9
+	title = austria.9.t
+	desc = austria.9.d
+	picture = ?
+
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = austria.9.a
+		add_ideas = hungarian_noble_council
+		add_political_power = -50
+	}
+	option = {
+		name = austria.9.b
+		set_country_flag = failed_negotiations
+		add_political_power = 50
+	}
+}
+
+country_event = {
+	id = austria.10
+	title = austria.10.t
+	desc = austria.10.d
+	picture = ?
+
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = austria.10.a
+		remove_unit_leader = 100
+
+		hidden_effect =  {
+			country_event = { days = 10 id = austria.11 }	
+		}
+	}
+}
+
+country_event = {
+	id = austria.11
+	title = austria.11.t
+	desc = austria.11.d
+	picture = ?
+
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = austria.11.a
+		add_political_power = -300
+
+		hidden_effect =  {
+			country_event = {
+				id = hungary.3
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = {
+	id = austria.12
+	title = austria.12.t
+	desc = austria.12.d
+	picture = ?
+
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = austria.12.a
+		add_political_power = -100
+		AUS = {
+			country_event = { 
+				id = austria.13 
+				days = 5
+			}
+		}
+	}
+
+	option = {
+		name = austria.12.b
+		set_truce = {
+		    target = AUS
+		    days = 150
+		}
+		AUS = { transfer_state = 82
+			transfer_state = 764
+		}
+		AUS = {
+			country_event = { 
+				id = austria.14 
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = {
+	id = austria.13
+	title = austria.13.t
+	desc = austria.13.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = austria.13.a
+	}
+}
+
+country_event = {
+	id = austria.14
+	title = austria.14.t
+	desc = austria.14.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = austria.14.a
+	}
+}
+
+#AUSTRIA DEMANDS CONVERSION
+
+country_event = {
+	id = austria.15
+	title = austria.15.t
+	desc = austria.15.d
+	is_triggered_only = yes
+
+	option = {
+		name = austria.15.a
+		swap_ideas = {
+			remove_idea = protestant
+			add_idea = catholic
+		}
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 2
+				has_opinion = {
+					target = AUS
+					value > 99
+				}
+			}
+			modifier = {
+				factor = 4
+				has_opinion = {
+					target = AUS
+					value > 149
+				}
+			}
+			modifier = {
+				factor = 10
+				has_opinion = {
+					target = AUS
+					value > 199
+				}
+			}
+		}
+		AUS = { country_event = austria.16 } 
+	}
+
+	option = {
+		name = austria.15.b
+		AUS = { add_opinion_modifier = { target = ROOT modifier = abandoned_hre } }
+		AUS = {
+			diplomatic_relation = {
+			    country = ROOT
+			    relation = guarantee
+			    active = no
+			}
+		}
+		set_country_flag = left_the_empire
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_opinion = {
+					target = AUS
+					value < 100
+				}
+			}
+		}
+		AUS = { country_event = austria.17 } 
+	}
+}
+
+#convert
+
+country_event = {
+	id = austria.16
+	title = austria.16.t
+	desc = austria.16.d
+	is_triggered_only = yes
+
+	option = {
+		name = austria.16.a
+	}
+}
+#refuse conversion
+country_event = {
+	id = austria.17
+	title = austria.17.t
+	desc = austria.17.d
+	is_triggered_only = yes
+
+	option = {
+		name = austria.17.a
+	}
+}
+
+#investment hre
+
+country_event = {
+	id = austria.18
+	title = austria.18.t
+	desc = austria.18.d
+	is_triggered_only = yes
+
+	option = {
+		name = austria.18.a
+		add_offsite_building = { type = industrial_complex level = 1 }
+	}
+}
+
+#stabilize
+
+country_event = {
+	id = austria.19
+	title = austria.19.t
+	desc = austria.19.d
+	is_triggered_only = yes
+
+	option = {
+		name = austria.18.a
+		add_stability = 0.05
+	}
+}
+#emperor demands pledge of loyalty
+
+country_event = {
+	id = austria.20
+	title = austria.20.t
+	desc = austria.20.d
+	is_triggered_only = yes
+
+	option = {
+		name = austria.20.a
+		AUS = { puppet = ROOT }
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 2
+				has_opinion = {
+					target = AUS
+					value > 99
+				}
+			}
+			modifier = {
+				factor = 4
+				has_opinion = {
+					target = AUS
+					value > 149
+				}
+			}
+			modifier = {
+				factor = 10
+				has_opinion = {
+					target = AUS
+					value > 199
+				}
+			}
+		}
+		AUS = { country_event = austria.21 } 
+	}
+
+	option = {
+		name = austria.20.b
+		AUS = { add_opinion_modifier = { target = ROOT modifier = abandoned_hre } }
+		AUS = {
+			diplomatic_relation = {
+			    country = ROOT
+			    relation = guarantee
+			    active = no
+			}
+		}
+		set_country_flag = left_the_empire
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_opinion = {
+					target = AUS
+					value < 100
+				}
+			}
+		}
+		AUS = { country_event = austria.22 } 
+	}
+}
+
+#accept vassalization
+
+country_event = {
+	id = austria.21
+	title = austria.21.t
+	desc = austria.21.d
+	is_triggered_only = yes
+
+	option = {
+		name = austria.21.a
+	}
+}
+#refuse vassalization
+country_event = {
+	id = austria.22
+	title = austria.22.t
+	desc = austria.22.d
+	is_triggered_only = yes
+
+	option = {
+		name = austria.22.a
+		create_wargoal = {
+		    type = puppet_wargoal_focus
+		    target = FROM
+		}
+	}
+}

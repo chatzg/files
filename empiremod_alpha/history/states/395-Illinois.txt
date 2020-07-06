@@ -1,0 +1,22 @@
+
+state={
+	id=395
+	name="STATE_395"
+
+	history={
+		owner = LOU
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = LOU
+
+
+	}
+
+	provinces={
+		720 1655 4508 7611 9682 10461 12497 12697 
+	}
+	manpower=140
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

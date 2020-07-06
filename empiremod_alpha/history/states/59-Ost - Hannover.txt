@@ -1,0 +1,45 @@
+
+state={
+	id=59
+	name="STATE_59"
+	resources={
+		oil=2.000
+	}
+
+	history={
+		owner = HAN
+		victory_points = {
+			6377 10 
+		}
+		buildings = {
+			infrastructure = 7
+			arms_factory = 2
+			industrial_complex = 1
+			dockyard = 2
+			6325 = {
+				naval_base = 1
+
+			}
+
+		}
+		add_core_of = HAN
+		1939.1.1 = {
+			buildings = {
+				air_base = 6
+				arms_factory = 4
+				industrial_complex = 3
+				dockyard = 3
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		405 526 3234 3355 3395 6377 11493 
+	}
+	manpower=1248286
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

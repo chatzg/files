@@ -1,0 +1,29 @@
+
+state={
+	id=56
+	name="STATE_56"
+
+	history={
+		owner = MUN
+		victory_points = {
+			11360 1 
+		}
+		victory_points = {
+			11388 5 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 2
+
+		}
+		add_core_of = MUN
+
+	}
+
+	provinces={
+		247 9281 11233 11264 11388 
+	}
+	manpower=664478
+	buildings_max_level_factor=1.000
+	state_category=city
+}

@@ -1,0 +1,109 @@
+PRS_expansion = {
+	allowed = {
+		original_tag = PRS
+	}
+}
+
+integrate_state = {
+	icon = generic_political_power
+	visible = {}
+}
+
+AUS_reform_the_empire = {
+	icon = generic_political_power
+	picture = GFX_decision_cat_generic_hre
+	allowed = {
+		original_tag = AUS
+	}
+}
+
+AUS_intervention_mandate = {
+	icon = generic_prepare_civil_war
+
+	visible = {}
+}
+
+SWE_cossack_aid = {
+	icon = generic_prepare_civil_war
+
+	visible = {}
+}
+
+HOL_forced_loans = {
+	icon = generic_prepare_civil_war
+
+	visible = {}
+}
+
+RUS_army_reform = {
+	icon = generic_prepare_civil_war
+
+	visible = {}
+}
+
+SWE_ottoman_aid = {
+	icon = generic_prepare_civil_war
+
+	visible = {}
+}
+
+Spanish_crisis = {
+}
+
+RUS_great_patriotic_war = {
+	icon = generic_prepare_civil_war
+
+	visible = {}
+}
+
+nobility_estate = {
+	icon = nobility
+
+	allowed = {
+		has_government = neutrality
+	}
+}
+
+burghers_estate = {
+	icon = burghers
+
+	allowed = {
+		has_government = neutrality
+	}
+}
+patriarchy_interactions = {
+	icon = patriarchy
+
+	allowed = {
+	 	has_idea = orthodox
+	}
+}
+
+clergy_estate = {
+	icon = clergy
+
+	allowed = {
+		has_government = neutrality
+		NOT = { has_idea = orthodox }
+	}
+}
+
+colonisation = {
+	icon = generic_prepare_civil_war
+
+	allowed = {
+		has_government = neutrality
+	}
+}
+
+holy_roman_empire = {
+	icon = generic_political_power
+
+	allowed = {
+		original_tag = AUS
+	}
+}
+
+
+
+

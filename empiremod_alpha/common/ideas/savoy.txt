@@ -1,0 +1,64 @@
+ideas = {
+	country = {
+		USA_homeland_defense = {
+			picture = YUG_federal_defense_council
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			
+
+			modifier = {
+				army_core_defence_factor = 0.2
+				army_core_attack_factor = 0.2
+			}
+		}
+
+		CHI_forced_conscription = {
+
+			picture = chi_forced_conscription
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.02
+				war_support_factor = -0.1
+			}
+		}
+
+		militarized_schools = {
+		
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				conscription = 0.005
+			}
+		}
+	}
+}
+

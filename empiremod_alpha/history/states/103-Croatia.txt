@@ -1,0 +1,42 @@
+
+state={
+	id=103
+	name="STATE_103"
+
+	history={
+		owner = VNC
+		victory_points = {
+			3924 3 
+		}
+		victory_points = {
+			11564 1 
+		}
+		victory_points = {
+			6889 5 
+		}
+		buildings = {
+			infrastructure = 5
+			dockyard = 1
+			industrial_complex = 3
+			3924 = {
+				naval_base = 3
+
+			}
+			6889 = {
+				naval_base = 1
+
+			}
+
+		}
+		add_core_of = VNC
+		add_core_of = CRO
+
+	}
+
+	provinces={
+		984 3868 3924 3974 6889 11816 
+	}
+	manpower=443170
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

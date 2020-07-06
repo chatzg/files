@@ -1,0 +1,24 @@
+ENG_historical_plan = {
+	name = "England historical plan"
+	desc = "Historical behavior for England"
+	enable = {
+		tag = ENG
+	}
+	abort = {
+	}
+	ai_national_focuses = {
+		eng_strenghten_monarchy
+		eng_appease_parliament
+		eng_industrial_effort
+		eng_armament_effort
+		eng_british_museum_act
+	}
+	research = {
+	}
+	ideas = {
+	}
+	weight = {
+		factor = 1.0
+	}
+
+}

@@ -1,0 +1,28 @@
+﻿division_template = {
+	name = "Cossacks"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1 }
+	}
+}
+
+units = {
+
+	division= {
+			name = "Cossacks"
+			location = 11561
+			division_template = "Cossacks"
+			start_experience_factor = 0.8
+			start_equipment_factor = 1
+		}
+	division= {
+		name = "Cossacks"
+		location = 11437
+		division_template = "Cossacks"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+}

@@ -1,0 +1,422 @@
+﻿division_template = {
+	name = "Infanterie Regiment"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }   # Pioneer Bn
+	}
+}
+
+division_template = {
+	name = "Alpenjäger Regiment"
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }   # Pioneer Bn
+	}
+}
+
+division_template = {
+	name = "Husaren Regiment"  		# Schnelle-Division (cavalry)
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }      # Light tank (tankette) bn
+	}
+}
+
+units = {
+	##### Österreichisches Bundesheer #####
+	division= {	
+		location = 11666  # Vienna
+		division_template = "Husaren Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+
+	division= {	
+		location = 6611 
+		division_template = "Infanterie Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 6611 
+		division_template = "Infanterie Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 6611 
+		division_template = "Infanterie Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 3601 
+		division_template = "Husaren Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 3601 
+		division_template = "Infanterie Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 3592 
+		division_template = "Infanterie Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 3592 
+		division_template = "Infanterie Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 3596
+		division_template = "Husaren Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 624
+		division_template = "Infanterie Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 624
+		division_template = "Infanterie Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 9595
+		division_template = "Infanterie Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 9595
+		division_template = "Infanterie Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 6647
+		division_template = "Infanterie Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 11577
+		division_template = "Husaren Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 11577
+		division_template = "Infanterie Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 11577
+		division_template = "Infanterie Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 11580
+		division_template = "Infanterie Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 11580
+		division_template = "Husaren Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 3617
+		division_template = "Husaren Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 9621
+		division_template = "Infanterie Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 6700
+		division_template = "Infanterie Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 679
+		division_template = "Infanterie Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 6682
+		division_template = "Infanterie Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 6682
+		division_template = "Infanterie Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 6682
+		division_template = "Husaren Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 9640
+		division_template = "Infanterie Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 9640
+		division_template = "Infanterie Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 11622
+		division_template = "Infanterie Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 9619
+		division_template = "Infanterie Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 6709
+		division_template = "Infanterie Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 690
+		division_template = "Infanterie Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 690
+		division_template = "Infanterie Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 690
+		division_template = "Infanterie Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 11598
+		division_template = "Infanterie Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 11598
+		division_template = "Infanterie Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 11598
+		division_template = "Infanterie Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 11598
+		division_template = "Alpenjäger Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 11598
+		division_template = "Alpenjäger Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 688
+		division_template = "Infanterie Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 688
+		division_template = "Infanterie Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 11666
+		division_template = "Infanterie Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 11666
+		division_template = "Infanterie Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 11666
+		division_template = "Infanterie Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 11666
+		division_template = "Alpenjäger Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 11666
+		division_template = "Infanterie Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 11542
+		division_template = "Infanterie Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 11542
+		division_template = "Husaren Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 9570
+		division_template = "Husaren Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 9660
+		division_template = "Infanterie Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+
+	division= {	
+		location = 6712
+		division_template = "Infanterie Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 6712
+		division_template = "Infanterie Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 11640
+		division_template = "Infanterie Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		location = 11640
+		division_template = "Infanterie Regiment"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+
+
+
+}
+
+### Starting Production ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "AUS"
+		}
+		requested_factories = 5
+		progress = 0.54
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "AUS"
+		}
+		requested_factories = 3
+		progress = 0.74
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = basic_light_tank
+			creator = "AUS"
+		}
+		requested_factories = 3
+		progress = 0.74
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = gw_artillery
+			creator = "AUS"
+		}
+		requested_factories = 1
+		progress = 0.74
+		efficiency = 100
+	}
+}

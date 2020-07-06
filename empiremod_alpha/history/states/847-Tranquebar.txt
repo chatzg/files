@@ -1,0 +1,26 @@
+state={
+	id=847
+	name="STATE_847"
+	provinces={
+		1381 
+	}
+	
+	history={
+		victory_points = {
+			1381 1 
+		}
+
+		buildings = {
+			infrastructure = 2
+			1381 = {
+				naval_base = 3
+			}
+		}
+		owner = DEN
+		add_core_of = RAJ
+	}
+
+	manpower=2346
+	buildings_max_level_factor=1.000
+	state_category = pastoral
+}

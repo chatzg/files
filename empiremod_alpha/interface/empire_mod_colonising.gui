@@ -1,0 +1,35 @@
+guiTypes = {
+	containerWindowType = {
+		name = "colonising_gui"
+		position = {x=0 y=80}
+		size = { width=270 height=280 }
+
+		fade_time = 300
+		fade_type = linear
+		moveable = yes
+		
+		background = {
+			name = "Background"
+			spriteType = "GFX_BPT_areadef_conf_bg"
+		}
+
+		instantTextboxType = {
+			name = "title"
+			position = {x=14 y=6}
+			font = "hoi_18mbs"
+			text = "[This.GetName]"
+			maxWidth = 340
+			maxHeight = 23
+			format = left
+		}
+		
+		buttonType = {
+			name = "colonise_state" 
+			position = {x=20 y=35}
+			shortcut = "ctrl+c"
+			spriteType = "GFX_decision_generic_form_nation"
+			pdx_tooltip = "COLONISE_STATE_TOOLTIP"
+			scale = 1.1
+		}
+	}
+}

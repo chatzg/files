@@ -1,0 +1,587 @@
+﻿###########################
+# Hungary Events
+###########################
+
+add_namespace = hungary
+
+#Rákóczi's War of Independence
+
+#
+country_event = {
+	id = hungary.1
+	title = hungary.1.t
+	desc = hungary.1.d
+	picture = GFX_report_event_degaulle_churchill
+
+	fire_only_once = yes
+		trigger = {
+			tag = AUS
+			has_war_with = FRA
+			NOT = { has_global_flag = HUN_has_rebelled }
+			NOT = { has_global_flag = AUS_dual_monarchy }
+			NOT = { HUN = { is_puppet = yes } }
+		}
+	mean_time_to_happen = {
+    days = 365
+		}
+
+	option = {
+		name = hungary.1.a
+
+		create_wargoal = {
+		    type = annex_everything
+		    target = HUN
+		}
+
+		HUN = {
+			create_wargoal = {
+			    type = take_state_focus
+			    target = AUS
+			    generator = {
+			    	155 
+			    	45
+			    	109 
+			    }
+			}
+		}
+
+		hidden_effect = { news_event = { id = mod.7 days = 1 }
+		}
+
+		70 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+		71 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+		664 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+		43 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+		154 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+		76 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+		83 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+		84 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+		155 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+			}
+		}
+		73 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+		45 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+		764 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+		82 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+
+		109 = {
+			add_claim_by = HUN
+		}
+
+		HUN = { 
+		transfer_state = 43
+		transfer_state = 70
+		transfer_state = 71
+		transfer_state = 664
+		transfer_state = 154
+		transfer_state = 76
+		transfer_state = 83
+		transfer_state = 84
+		transfer_state = 73
+		}
+
+		HUN = {
+		load_oob = "HUN_revolt"
+		load_oob = "HUN_revolt"
+		}
+	}
+
+	option = {
+		name = hungary.1.b
+
+		HUN = { change_tag_from = AUS }
+
+		create_wargoal = {
+		    type = annex_everything
+		    target = HUN
+		}
+
+		HUN = {
+			create_wargoal = {
+			    type = take_state_focus
+			    target = AUS
+			    generator = {
+			    	155 
+			    	45
+			    	109 
+			    }
+			}
+		}
+
+		hidden_effect = { news_event = { id = mod.7 days = 1 }
+		}
+
+		70 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+		71 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+		664 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+		43 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+		154 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+		76 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+		83 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+		84 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+		155 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+			}
+		}
+		73 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+		45 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+		764 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+		82 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+
+		109 = {
+			add_claim_by = HUN
+		}
+
+		HUN = { 
+		transfer_state = 43
+		transfer_state = 70
+		transfer_state = 71
+		transfer_state = 664
+		transfer_state = 154
+		transfer_state = 76
+		transfer_state = 83
+		transfer_state = 84
+		transfer_state = 73
+		}
+
+		HUN = {
+		load_oob = "HUN_revolt"
+		load_oob = "HUN_revolt"
+		}
+	}
+}
+
+#all out confrontation
+
+country_event = {
+	id = hungary.3
+	title = hungary.3.t
+	desc = hungary.3.d	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = hungary.3.a
+
+		hidden_effect = { news_event = { id = mod.7 days = 1 }
+		}
+
+		create_wargoal = {
+		    type = annex_everything
+		    target = HUN
+		}
+
+		set_global_flag = HUN_has_rebelled
+
+		HUN = {
+			create_wargoal = {
+			    type = take_state_focus
+			    target = AUS
+			    generator = {
+			    	155 
+			    	45
+			    	109 
+			    }
+			}
+		}
+
+		70 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+		71 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+		664 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+		43 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+		154 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+		76 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+		83 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+		84 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+		155 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+			}
+		}
+		73 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+		45 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+		764 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+		82 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+
+		109 = {
+			add_claim_by = HUN
+		}
+
+		HUN = { 
+		transfer_state = 43
+		transfer_state = 70
+		transfer_state = 71
+		transfer_state = 664
+		transfer_state = 154
+		transfer_state = 76
+		transfer_state = 83
+		transfer_state = 84
+		transfer_state = 73
+		}
+
+		HUN = {
+		load_oob = "HUN_revolt"
+		load_oob = "HUN_revolt"
+		}
+	}
+
+	option = {
+		name = hungary.3.b
+
+		HUN = { change_tag_from = AUS }
+
+		create_wargoal = {
+		    type = annex_everything
+		    target = HUN
+		}
+
+		HUN = {
+			create_wargoal = {
+			    type = take_state_focus
+			    target = AUS
+			    generator = {
+			    	155 
+			    	45
+			    	109 
+			    }
+			}
+		}
+
+		hidden_effect = { news_event = { id = mod.7 days = 1 }
+		}
+
+		70 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+		71 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+		664 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+		43 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+		154 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+		76 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+		83 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+		84 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+		155 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+			}
+		}
+		73 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+		45 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+		764 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+		82 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+
+		109 = {
+			add_claim_by = HUN
+		}
+
+		HUN = { 
+		transfer_state = 43
+		transfer_state = 70
+		transfer_state = 71
+		transfer_state = 664
+		transfer_state = 154
+		transfer_state = 76
+		transfer_state = 83
+		transfer_state = 84
+		transfer_state = 73
+		}
+
+		HUN = {
+		load_oob = "HUN_revolt"
+		load_oob = "HUN_revolt"
+		}
+	}
+}

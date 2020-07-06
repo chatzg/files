@@ -1,0 +1,318 @@
+
+ideas = {
+	
+	state_religion = {
+		
+		law = yes
+
+
+		catholic = {
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.1
+			}
+
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = religion_available
+					always = no
+				}
+			}
+
+			removal_cost = -1
+
+			cancel_if_invalid = no
+		}
+
+		protestant = {
+			modifier = {
+				consumer_goods_factor = -0.02
+				political_advisor_cost_factor = -0.1
+				trade_opinion_factor = 0.10
+			}
+
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = religion_available
+					always = no
+				}
+			}
+
+			removal_cost = -1
+
+			cancel_if_invalid = no
+		}
+
+		orthodox = {
+			modifier = {
+				stability_factor = 0.05
+			}
+
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = religion_available
+					always = no
+				}
+			}
+
+			removal_cost = -1
+
+			cancel_if_invalid = no
+		}
+
+		sunni = {
+			modifier = {
+				conscription_factor = 0.1
+				MONTHLY_POPULATION = 0.02
+			}
+
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = religion_available
+					always = no
+				}
+			}
+
+			removal_cost = -1
+
+			cancel_if_invalid = no
+		}
+
+		shiite = {
+			modifier = {
+				army_attack_factor = 0.05
+				MONTHLY_POPULATION = 0.02
+			}
+
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = religion_available
+					always = no
+				}
+			}
+
+			removal_cost = -1
+
+			cancel_if_invalid = no
+		}
+
+		confucianism = {
+			modifier = {
+				research_speed_factor = 0.03
+			}
+
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = religion_available
+					always = no
+				}
+			}
+
+			removal_cost = -1
+
+			cancel_if_invalid = no
+		}
+
+		buddhism = {
+			modifier = {
+			}
+
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = religion_available
+					always = no
+				}
+			}
+
+			removal_cost = -1
+
+			cancel_if_invalid = no
+		}
+
+		hinduism = {
+			modifier = {
+			}
+
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = religion_available
+					always = no
+				}
+			}
+
+			removal_cost = -1
+
+			cancel_if_invalid = no
+		}
+
+		mahayana = {
+			modifier = {
+			}
+
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = religion_available
+					always = no
+				}
+			}
+
+			removal_cost = -1
+
+			cancel_if_invalid = no
+		}
+
+		theravada = {
+			modifier = {
+			}
+
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = religion_available
+					always = no
+				}
+			}
+
+			removal_cost = -1
+
+			cancel_if_invalid = no
+		}
+
+		vajrayana = {
+			modifier = {
+			}
+
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = religion_available
+					always = no
+				}
+			}
+
+			removal_cost = -1
+
+			cancel_if_invalid = no
+		}
+
+		shinto = {
+			modifier = {
+				army_core_attack_factor = 0.10
+				army_core_defence_factor = 0.10
+			}
+
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = religion_available
+					always = no
+				}
+			}
+
+			removal_cost = -1
+
+			cancel_if_invalid = no
+		}
+
+		fetishist = {
+			modifier = {
+			}
+
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = religion_available
+					always = no
+				}
+			}
+
+			removal_cost = -1
+
+			cancel_if_invalid = no
+		}
+	}
+
+	country = {
+
+		icon_of_st_eleusa = {
+			modifier = {
+				stability_factor = 0.10
+				compliance_gain = 0.02
+				resistance_target = -0.10
+
+			}
+
+			picture = st_eleusa
+
+			available = {
+				has_idea = orthodox
+			}
+
+			removal_cost = -1
+
+			cancel_if_invalid = yes
+		}
+
+		icon_of_christ_pancreator = {
+			modifier = {
+				production_speed_buildings_factor = 0.15
+			}
+
+			picture = christ_pancreator
+
+			available = {
+				has_idea = orthodox
+			}
+
+			removal_cost = -1
+
+			cancel_if_invalid = yes
+		}
+
+		icon_of_st_nicholas = {
+			modifier = {
+				consumer_goods_factor = -0.10
+			}
+
+			picture = st_nicholas
+
+			available = {
+				has_idea = orthodox
+			}
+
+			removal_cost = -1
+
+			cancel_if_invalid = yes
+		}
+
+		icon_of_st_michael = {
+			modifier = {
+				war_support_factor = 0.10
+				conscription = 0.02
+			}
+
+			picture = st_michael
+
+			available = {
+				has_idea = orthodox
+			}
+
+			removal_cost = -1
+
+			cancel_if_invalid = yes
+		}
+
+		icon_of_st_climacus = {
+			modifier = {
+				research_speed_factor = 0.08
+			}
+
+			picture = st_climacus
+
+			available = {
+				has_idea = orthodox
+			}
+
+			removal_cost = -1
+
+			cancel_if_invalid = yes
+		}
+
+	}
+}

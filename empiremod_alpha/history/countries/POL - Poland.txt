@@ -1,0 +1,171 @@
+﻿capital = 10
+
+oob = "POL_1936"
+set_naval_oob = "POL_1936_naval_legacy"
+
+set_research_slots = 3
+
+give_guarantee = ZAP
+
+set_stability = 0.30
+set_war_support = .27
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_mountaineers = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_recon = 1
+	gw_artillery = 1
+	gwtank = 1
+	early_destroyer = 1
+	early_submarine = 1
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_destroyer = 1
+		early_submarine = 1	
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		basic_battery = 1
+		basic_torpedo = 1
+	}
+}
+
+set_convoys = 10
+
+diplomatic_relation = {
+		country = LAT
+		relation = puppet
+}
+
+diplomatic_relation = {
+		country = SAX
+		relation = puppet
+}
+
+POL = {
+	add_opinion_modifier = { target = SWE modifier = Rivalry }
+	add_opinion_modifier = { target = TUR modifier = Rivalry }
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1935.9.8"
+	election_frequency = 36
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 1
+	fascism = 8
+	communism = 1
+	neutrality = 12
+	aristocracy = 78
+}
+
+add_ideas = {
+	POL_liberum_veto
+	POL_dominance_of_nobles
+	catholic
+	limited_exports
+	POL_conscription_crisis
+	POL_sejm
+	kingdom
+}
+
+create_country_leader = {
+	name = "Frederick Augustus"
+	desc = "POLITICS_KURT_SCHUSCHNIGG_DESC"
+	picture = "Saxony_leader.dds"
+	expire = "1965.1.1"
+	ideology = nobility
+}
+
+create_country_leader = {
+	name = "Frederick Augustus"
+	desc = "POLITICS_KURT_SCHUSCHNIGG_DESC"
+	picture = "Saxony_leader.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+}
+
+create_field_marshal = {
+	name = "Frederick Augustus"
+	picture = "Saxony_leader.dds"
+	traits = { defensive_doctrine }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+	id = 1300
+}
+
+create_field_marshal = {
+	name = "Adam Mikołaj Sieniawski"
+	picture = "adam_sieniawski.dds"
+	traits = {  thorough_planner }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+	id = 1301
+}
+
+create_corps_commander = {
+	name = "Stanisław Chomętowski"
+	picture = "stanislaw_chometowski.dds"
+	traits = {  armor_officer }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Michał Serwacy Wiśniowiecki"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+	traits = {  }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 3
+	id = 1302
+}
+
+create_corps_commander = {
+	name = "Hieronim Augustyn Lubomirski"
+	picture = "hieronim_augustyn.dds"
+	traits = { trickster }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+	id = 1303
+}
+
+create_corps_commander = {
+	name = "Grzegorz Antoni Ogiński"
+	picture = "grzegorz_antoni.dds"
+	traits = { trickster }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}

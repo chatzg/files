@@ -1,0 +1,34 @@
+state={
+	id=792
+	name="Kyiv"
+	history={
+		owner = SOV
+		victory_points = {
+			525 25 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+
+		}
+		add_core_of = SOV
+		add_core_of = UKR
+		1939.1.1 = {
+			buildings = {
+				arms_factory = 3
+				industrial_complex = 3
+
+			}
+
+		}
+
+	}
+
+
+	provinces={
+		489 525 582 9543 11557 
+	}
+	manpower=322415
+	buildings_max_level_factor=1.000
+	state_category=city
+}

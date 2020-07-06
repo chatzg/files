@@ -1,0 +1,19 @@
+
+state={
+	id=368
+	name="STATE_368"
+	resources={
+		steel=8.000
+	}
+
+	history={
+	owner = CHR
+	}
+
+	provinces={
+		913 1758 5059 8083 10281 10657 10824 12501 12670 
+	}
+	manpower=5780
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

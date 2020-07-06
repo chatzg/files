@@ -1,0 +1,58 @@
+ITA_historical_plan = {
+	name = "Savoy historical plan"
+	desc = "Historical behavior for Savoy/Italy"
+	enable = {
+		tag = ITA
+	}
+	abort = {
+	}
+	ai_national_focuses = {
+		SAV_political_effort 				#March 10 1699	
+		SAV_keep_the_king 						#May 20 1699	
+		SAV_autocracy 						#July 30 1699	
+		SAV_militarism 							#October 10 1936
+		SAV_indoctrination_focus 					#October 10 1936	
+		SAV_external_affairs 						#December 20 1936	
+		SAV_alliance_with_france 					#February 30 1937	 					#May 10 1937	
+		SAV_join_bourbon_alliance 					#July 20 1937	
+		SAV_industrial_effort 				#September 30 1937	
+		SAV_construction_effort 						#December 10 1937
+		SAV_national_defence_act 					#February 20 1938	
+		SAV_why_we_fight
+		SAV_army_effort 						#April 30 1938	
+		SAV_equipment_effort 							#July 10 1938	
+		SAV_inherit_genoa 							#September 20 1938
+		SAV_naval_effort 						#November 30 1938
+		SAV_doctrine_effort 						#February 10 1939	
+		SAV_flexible_navy 							#April 20 1939	
+		SAV_purchase_spanish_lands 							#June 30 1939
+		SAV_first_national_bank 						#September 10 1939	
+		SAV_technology_sharing
+		SAV_production_effort 						#November 20 1939	
+		SAV_construction_effort_2 							#January 30 1940
+		SAV_construction_effort_3  						#April 10 1940
+		SAV_production_effort_2 							#June 20 1940	
+		SAV_production_effort_3  						#August 30 1940
+		SAV_naval_effort_2 						#November 10 1940
+		SAV_cruiser_effort 			#January 20 1941	
+		SAV_battlecruiser_effort 						#March 30 1941	
+		SAV_infrastructure_effort 							#June 10 1941	
+		SAV_extra_tech_slot 				#August 20 1941
+		SAV_infrastructure_effort_2 						#October 30 1941	
+ 		SAV_equipment_effort_2 							#January 10
+ 		SAV_equipment_effort_3 						#March 20 1942
+ 		SAV_doctrine_effort_2 								#May 30 1942	
+ 		SAV_doctrine_effort_3 							#August 10 1942
+ 		SAV_special_forces 						#October 20 1942	
+ 		SAV_submarine_effort 						#December 30 1942	
+ 		SAV_destroyer_effort 						#March 10 1943	
+	}
+	research = {
+	}
+	ideas = {
+	}
+	weight = {
+		factor = 1.0
+	}
+
+}

@@ -1,0 +1,27 @@
+
+state={
+	id=394
+	name="STATE_394"
+	resources={
+		steel=53.000
+	}
+
+	history={
+		owner = LOU
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = LOU
+		victory_points = {
+			12357 5 
+		}
+
+	}
+
+	provinces={
+		703 926 1849 4029 4166 4738 4834 7776 7829 9657 9678 12357 12456 
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+	state_category=town
+}
