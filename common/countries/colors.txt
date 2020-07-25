@@ -5,28 +5,28 @@ ULM = {
 	color_ui = rgb { 216 208 208 }	
 }
 LUN = {
-	color = rgb { 154 121 136 }
-	color_ui = rgb { 154 121 136  }	
+	color = rgb { 143 83 165 }
+	color_ui = rgb { 143 83 165 }	
 }
 BSG = {	
 	color = rgb { 154 96 39 }
 	color_ui = rgb {  154 96 39 }
 }
 THU = {
-	color = rgb { 77 98 181 }
-	color_ui = rgb { 77 98 181 }	
+	color = rgb { 0 43 161 }
+	color_ui = rgb { 0 43 161 }	
 }
 WRZ = {
-	color = rgb { 77 81 63 }
-	color_ui = rgb { 77 81 63 }	
+	color = rgb { 233 41 41 }
+	color_ui = rgb { 233 41 41 }	
 }
 KOL = {
-	color = rgb { 57 104 62 }
-	color_ui = rgb { 57 104 62 }	
+	color = rgb { 42 146 15 }
+	color_ui = rgb { 42 146 15 }	
 }
 AUG = {
-	color = rgb { 222 46 46 }
-	color_ui = rgb { 222 46 46  }	
+	color = rgb { 230 9 9 }
+	color_ui = rgb { 230 9 9  }	
 }
 ANH = {
 	color = rgb { 209 67 133 }
@@ -37,28 +37,28 @@ ANS = {
 	color_ui = rgb { 136 71 210  }	
 }
 HES = {
-	color = rgb { 223 108 135 }
-	color_ui = rgb { 223 108 135 }	
+	color = rgb { 159 13 115 }
+	color_ui = rgb { 159 13 115 }	
 }
 IFC = {
 	color = rgb { 141 141 141 }
 	color_ui = rgb { 141 141 141 }	
 }
 MAI = {
-	color = rgb { 69  146  85 }
-	color_ui = rgb { 69  146  85 }	
+	color = rgb { 36 225 7 }
+	color_ui = rgb { 36 225 7 }	
 }
 RPA = {
-	color = rgb { 87 174 139 }
-	color_ui = rgb { 87 174 139  }	
+	color = rgb { 71 71 255 }
+	color_ui = rgb { 71 71 255 }	
 }
 TRR = {
 	color = rgb { 255  97  40 }
 	color_ui = rgb { 255  97  40 }	
 }
 MUN = {
-	color = rgb { 223  110  87 }
-	color_ui = rgb { 223  110  87 }	
+	color = rgb { 255 154 0 }
+	color_ui = rgb { 255 154 0 }	
 }
 
 CRI = {
@@ -67,8 +67,8 @@ CRI = {
 }
 
 SHL = {
-	color = rgb { 219 166 127 }
-	color_ui = rgb { 219 166 127 }
+	color = rgb { 141 24 24 }
+	color_ui = rgb { 141 24 24 }
 }
 
 CHR = {
@@ -86,8 +86,8 @@ IRO = {
 	color_ui = rgb { 78 207 69 }
 }
 HAN = {
-	color = rgb { 83 229 73 }
-	color_ui = rgb { 83 229 73 }
+	color = rgb { 55 112 16 }
+	color_ui = rgb { 55 112 16 }
 }
 UNC = {
 	color = rgb { 205 194 120 }
@@ -153,17 +153,17 @@ LOU = {
 }
 
 MEC = {
-	color = rgb { 194 180 0 }
-	color_ui = rgb { 194 180 0 }
+	color = rgb { 255 209 26 }
+	color_ui = rgb { 255 209 26 }
 }
 
 HRE = {
-	color = rgb { 141 141 141 }
+	color = rgb { 158 158 158 }
 }
 
 BAV = {
-	color = rgb { 98 130 233 }
-	color_ui = rgb { 98 130 233 }
+	color = rgb { 0 188 255 }
+	color_ui = rgb { 0 188 255 }
 }
 
 VNC = {
