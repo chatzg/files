@@ -1,0 +1,26 @@
+state={
+	id=903
+	name="Luik"
+	state_category = city
+	manpower = 596770
+	provinces={
+		6537 9444 9574 11519 13081 
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	history={
+		owner = BEL
+		add_core_of = BEL
+		add_core_of = HOL
+
+		victory_points = {
+			11519 10
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+
+		}
+		
+	}
+}
