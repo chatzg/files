@@ -6,12 +6,12 @@ state={
 	provinces={
 		6537 9444 9574 11519 13081 
 	}
-	manpower=0
 	buildings_max_level_factor=1.000
 	history={
-		owner = BEL
+		owner = LUI
 		add_core_of = BEL
 		add_core_of = HOL
+		add_core_of = LUI
 
 		victory_points = {
 			11519 10

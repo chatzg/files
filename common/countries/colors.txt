@@ -8,6 +8,10 @@ LUN = {
 	color = rgb { 143 83 165 }
 	color_ui = rgb { 143 83 165 }	
 }
+LUI = {
+	color = rgb { 168 79 42 }
+	color_ui = rgb { 168 79 42 }	
+}
 BSG = {	
 	color = rgb { 154 96 39 }
 	color_ui = rgb {  154 96 39 }

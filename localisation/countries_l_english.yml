@@ -1,5 +1,21 @@
 ﻿l_english:
 
+LUI_neutrality:0 "principality of Liège"
+LUI_neutrality_DEF:0 "the principality of Liège"
+LUI_neutrality_ADJ:0 "Liège"
+LUI_communism:0 "Free state of Liège"
+LUI_communism_DEF:0 "the Free state of Liège"
+LUI_communism_ADJ:0 "Liège"
+LUI_fascism:0 "Prince-Bishopric of Liège"
+LUI_fascism_DEF:0 "the Prince-Bishopric of Liège"
+LUI_fascism_ADJ:0 "Liège"
+LUI_democratic:0 "republic of Liège"
+LUI_democratic_DEF:0 "the republic of Liège"
+LUI_democratic_ADJ:0 "Liège"
+LUI_aristocracy:0 "principality of Liège"
+LUI_aristocracy_DEF:0 "the principality of Liège"
+LUI_aristocracy_ADJ:0 "Liège"
+
 ULM_neutrality:0 "Ulm"
 ULM_neutrality_DEF:0 "Ulm"
 ULM_neutrality_ADJ:0 "Ulmer"
