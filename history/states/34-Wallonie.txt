@@ -2,18 +2,15 @@
 state={
 	id=34
 	name="STATE_34"
-	manpower = 849785
-	
-	state_category = large_city
 
 	history={
 		owner = BEL
 		add_core_of = BEL
 		victory_points = {
-			3516 5
+			3516 5 
 		}
 		victory_points = {
-			9536 3
+			9536 3 
 		}
 		buildings = {
 			infrastructure = 6
@@ -28,10 +25,13 @@ state={
 			}
 
 		}
-		
+
 	}
 
 	provinces={
-		3488 3516 9418 9536 11407 13081 13234 13235 13236
+		3516 9536 13235 13237
 	}
+	manpower=849785
+	buildings_max_level_factor=1.000
+	state_category=large_city
 }

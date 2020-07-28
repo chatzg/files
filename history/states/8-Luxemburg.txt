@@ -1,17 +1,12 @@
-state=
-{
+
+state={
 	id=8
 	name="STATE_8"
-	
-	state_category = town
-	
-	manpower = 125058
 	resources={
-		steel=5 # was: 8
+		steel=5.000
 	}
 
-	history=
-	{
+	history={
 		owner = BEL
 		add_core_of = BEL
 		buildings = {
@@ -21,14 +16,19 @@ state=
 				bunker = 4
 
 			}
+
 		}
-		victory_points = { 6583 3 }
+		victory_points = {
+			6583 3 
+		}
 		add_core_of = LUX
 
-		
 	}
 
-	provinces=
-	{
-6583 	}
+	provinces={
+		3488 6583 9418 11407 13234 
+	}
+	manpower=125058
+	buildings_max_level_factor=1.000
+	state_category=town
 }
