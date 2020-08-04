@@ -22,9 +22,9 @@ set_popularities = {
 create_country_leader = {
 	name = "Benjamin Hornigold"
 	desc = "POLITICS_KURT_SCHUSCHNIGG_DESC"
-	picture = ".dds"
+	picture = "benjamin_hornigold.dds"
 	expire = "1965.1.1"
-	ideology = socialism
+	ideology = anarchist_communism
 	traits = {
 		#
 	}

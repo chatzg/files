@@ -123,6 +123,8 @@ SWE_partisan_resistance:0 "Partisan Resistance"
 SWE_partisan_resistance_desc:0 "As the enemy marches into our lands, they gain acces to our vast industries and resources. Organising peasants to resist the enemy may help weaken their grip."
 SWE_large_dowry_receiver:0 "Received Large Dowry"
 SWE_large_dowry:0 "Dowry to Sophia Hedwig"
+SWE_occupation_of_denmark:0 "Occupation of Denmark"
+SWE_preparing_closer_union:0 "Preparing Closer Union"
 #events
 
 sweden.1.t:0 "A peace deal with Sweden?"
@@ -173,7 +175,10 @@ sweden.11.a:0 "Time to plan the wedding!"
 sweden.12.t:0 "[FROM.GetLeader] accepts royal marriage."
 sweden.12.d:0 "[FROM.GetLeader] has reluctantly refused our offer, claiming it is not the right time to arrange a wedding. He also claims that Sophia herself was not interested, and was heard complaining at the prospect."
 sweden.12.a:0 "It was not meant to be."
-
+denmark.2.t:0 "Death of Frederick IV"
+denmark.2.d:0 "The late king Frederick IV has decided to die a little too soon, albeit in suspicious circumstances. As Frederick had not yet fathered a child of his own, the throne will pass on to his sister Sophia Hedwig, whose husband Charles XI of Sweden will hence rule in her name over Sweden, Denmark and Norway."
+denmark.2.a:0 "At least we get to keep our independence, right?"
+denmark.2.b:0 "A lucky coincidence."
 
 #decisions
 SWE_cossack_aid:0 "Cossack Support"
@@ -190,6 +195,8 @@ SWE_Cossack_border_conflict:0 "Encourage border incident with Russia"
 SWE_Cossack_border_conflict_desc:0 ""
 SWE_cossack_alliance:0 "Invite Zaporizhia to a formal alliance"
 SWE_cossack_alliance_desc:0 ""
+SWE_arange_an_accident_for_frederick:0 "Arange an Accident for Frederick of Denmark"
+SWE_arange_an_accident_for_frederick_desc:0 "As long as Frederick IV has no heir, the throne of the Danish-Norwegian kingdom is set to pass on to our monarch's wife Sophia Hedwig. Keeping this in mind, a great oppurtunity presents itself of arranging an 'accident' of some sorts in the near future."
 
 #cosmetic tags
 

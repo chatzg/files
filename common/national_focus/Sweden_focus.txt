@@ -989,7 +989,7 @@ focus = {
 
 focus = {
 	id = SWE_union_sweden_norway
-	icon = GFX_goal_generic_demand_territory
+	icon = GFX_goal_molotov_ribbentrop_pact
 	prerequisite = { focus = SWE_rally_around_the_flag }
 	mutually_exclusive = { focus = SWE_keep_denmark_occupied }
 	x = -1
@@ -1042,8 +1042,8 @@ focus = {
 }
 
 focus = {
-	id = SWE_the_royal_marriage # event chain which leads to chance of puppet
-	icon = GFX_goal_generic_demand_territory
+	id = SWE_the_royal_marriage
+	icon = GFX_focus_generic_royal_wedding
 	prerequisite = { focus = SWE_mend_danish_ties }
 	x = 0
 	y = 1
@@ -1060,7 +1060,7 @@ focus = {
 
 focus = {
 	id = SWE_prepare_closer_union
-	icon = GFX_goal_generic_demand_territory
+	icon = GFX_goal_tfv_strengthen_commonwealth_ties
 	prerequisite = { focus = SWE_the_royal_marriage }
 	mutually_exclusive = { focus = SWE_economic_cooperation }
 	x = -1
@@ -1079,7 +1079,7 @@ focus = {
 
 focus = {
 	id = SWE_economic_cooperation
-	icon = GFX_goal_generic_demand_territory
+	icon = GFX_goal_generic_positive_trade_relations
 	prerequisite = { focus = SWE_the_royal_marriage }
 	mutually_exclusive = { focus = SWE_prepare_closer_union }
 	x = 1
@@ -1190,6 +1190,10 @@ focus = {
 		}
 		add_political_power = 150
 		add_stability = 0.05
+		annex_country = {
+		    target = DEN
+		    transfer_troops = yes
+		}
 	}
 }
 

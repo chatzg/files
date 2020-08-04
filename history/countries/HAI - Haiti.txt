@@ -18,3 +18,13 @@ set_politics = {
 set_popularities = {
 	communism = 100
 }
+
+create_country_leader = {
+	name = "Council of Captains"
+	picture = "council_of_captains.dds"
+	expire = "1965.1.1"
+	ideology = anarchist_communism
+	traits = {
+		#
+	}
+}

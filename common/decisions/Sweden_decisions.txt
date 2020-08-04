@@ -6,6 +6,12 @@ political_actions = {
 	
 		allowed = {
 			tag = SWE
+			DEN = {
+				has_country_leader = {
+				    name = "Frederick IV"
+				    ruling_only = yes
+				}
+			}
 		}
 
 		days_remove = 70
