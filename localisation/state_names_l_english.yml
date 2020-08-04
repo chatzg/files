@@ -905,5 +905,5 @@
  STATE_899:0 "Lubeck"
  STATE_900:0 "Cleves"
  STATE_901:0 "Ulm"
- Northern Schleswig:0 "Northern Schleswig"
- Luik:0 "Luik"
+ STATE_902:0 "Northern Schleswig"
+ STATE_903:0 "Liege"

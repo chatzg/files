@@ -1,6 +1,6 @@
 state={
 	id=903
-	name="Liège"
+	name="Luik"
 	state_category = city
 	manpower = 596770
 	provinces={
