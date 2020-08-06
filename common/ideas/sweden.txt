@@ -64,7 +64,25 @@ ideas = {
 			#picture= 
 			
 			modifier = {
-				consumer_goods_factor = -0.10
+				consumer_goods_factor = -0.08
+			}
+		}
+
+		SOUND_TOLL_2 = {
+
+			picture = HUN_treaty_of_triannon
+			name = SOUND_TOLL
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			#picture= 
+			
+			modifier = {
+				consumer_goods_factor = -0.12
 			}
 		}
 

@@ -1,3 +1,4 @@
+NOV		= "countries/Novgorod.txt"
 PRS		= "countries/Prussia.txt"
 PAP		= "countries/Papal_States.txt"
 VNC		= "countries/Venice.txt"

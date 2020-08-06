@@ -1,5 +1,9 @@
 
 #reload countrycolors
+NOV = {
+	color = rgb { 90 151 71 }
+	color_ui = rgb { 90 151 71 }	
+}
 ULM = {
 	color = rgb { 216 208 208 }
 	color_ui = rgb { 216 208 208 }	

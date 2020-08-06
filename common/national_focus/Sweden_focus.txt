@@ -169,63 +169,145 @@ focus = {
 	prerequisite = { focus = swedish_infrastructure }
 
 completion_reward = {
-	custom_effect_tooltip = SWE_forts
-	hidden_effect = {
-			12 = {
-				add_building_construction = {
-					type = bunker
-					level = 1
-					province = 9340
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 1
-					province = 10323
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 1
-					province = 7482
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 1
-					province = 310
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 1
-					province = 6459
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 1
-					province = 7482
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 1
-					province = 9275
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 1
-					province = 222
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 1
-					province = 319
-					instant_build = yes
-				}
+		12 = {
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 9340
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 1
+				province = 10323
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 1
+				province = 7482
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 1
+				province = 11222
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 1
+				province = 3298
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 1
+				province = 11302
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 1
+				province = 9317
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 1
+				province = 10493
+				instant_build = yes
+			}
+		}
+		191 = {
+			add_building_construction = {
+				type = bunker
+				level = 1
+				province = 592
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				province = 4640
+				instant_build = yes
+			}
+		}
+		208 = {
+			add_building_construction = {
+				type = bunker
+				level = 1
+				province = 126
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 1
+				province = 3120
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 4
+				province = 9098
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 1
+				province = 11139
+				instant_build = yes
+			}
+			
+		}
+		195 = {
+			add_building_construction = {
+				type = bunker
+				level = 1
+				province = 79
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 1
+				province = 11068
+				instant_build = yes
+			}
+		}
+		146 = {
+			add_building_construction = {
+				type = bunker
+				level = 1
+				province = 9176
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 1
+				province = 6153
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 1
+				province = 11156
+				instant_build = yes
+			}
+		}
+		150 = {
+			add_building_construction = {
+				type = bunker
+				level = 1
+				province = 7
+				instant_build = yes
+			}
+		}
+		147 = {
+			add_building_construction = {
+				type = bunker
+				level = 2
+				province = 197
+				instant_build = yes
 			}
 		}
 	}
@@ -277,21 +359,6 @@ focus = {
 				instant_build = yes
 			}
 		}
-	}
-}
-
-#############
-
-focus = {
-		id = swedish_industry_3
-		icon = GFX_goal_generic_construct_civ_factory
-		prerequisite = { focus = swedish_industry_2}
-		x = 0
-		y = 2
-		cost = 10
-
-
-	completion_reward = {
 		random_owned_controlled_state = {
 			limit = {
 				free_building_slots = {
@@ -390,6 +457,20 @@ focus = {
 }
 
 focus = {
+	id = SWE_total_war_armament
+	icon = GFX_goal_generic_construct_mil_factory
+	prerequisite = { focus = swedish_industry_5}
+	prerequisite = { focus = swedish_politics_5}
+	x = 5
+	y = 4
+	cost = 10
+
+	completion_reward = {
+		replace_civ_with_arms_factories = yes
+	}
+}
+
+focus = {
 		id = swedish_infrastructure
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = swedish_politics_4}
@@ -481,15 +562,84 @@ focus = {
 ###############
 
 focus = {
-		id = swedish_industry_7
-		icon = GFX_focus_research
-		prerequisite = { focus = swedish_industry_6}
-		x = 2
-		y = 2
-		cost = 10
+	id = swedish_industry_7
+	icon = GFX_focus_research
+	prerequisite = { focus = swedish_industry_6}
+	prerequisite = { focus = swedish_industry_2}
+	x = 1
+	y = 2
+	cost = 10
 	
 	completion_reward = {
 		add_research_slot = 1
+	}
+}
+
+focus = {
+	id = SWE_open_market_economy
+	icon = GFX_goal_generic_positive_trade_relations
+	prerequisite = { focus = swedish_industry_7}
+	mutually_exclusive = { focus = SWE_increase_mercantilism }
+	x = 0
+	y = 3
+	cost = 10
+	
+	completion_reward = {
+		add_ideas = free_trade
+		add_offsite_building = { type = industrial_complex level = 2 }
+	}
+}
+
+focus = {
+	id = SWE_expand_merchant_fleets
+	icon = GFX_goal_generic_construct_naval_dockyard
+	prerequisite = { focus = SWE_open_market_economy}
+	x = 0
+	y = 4
+	cost = 10
+	
+	completion_reward = {
+		add_equipment_to_stockpile = {
+		    type = convoy
+		    amount = 60
+		    producer = SWE
+		}
+	}
+}
+
+focus = {
+	id = SWE_increase_mercantilism
+	icon = GFX_goal_generic_occupy_states_coastal
+	prerequisite = { focus = swedish_industry_7}
+	mutually_exclusive = { focus = SWE_open_market_economy }
+	x = 2
+	y = 3
+	cost = 10
+	
+	completion_reward = {
+		add_ideas = limited_exports
+		swap_ideas = {
+		    remove_idea = SOUND_TOLL
+		    add_idea = SOUND_TOLL_2
+		}
+		
+	}
+}
+
+focus = {
+	id = SWE_dominate_baltic_grain_trade
+	icon = GFX_goal_grain
+	prerequisite = { focus = SWE_increase_mercantilism}
+	x = 2
+	y = 4
+	cost = 10
+	
+	completion_reward = {
+		add_resource = {
+		    type = oil
+		    amount = 28
+		    state = 141
+		}	
 	}
 }
 
@@ -1201,14 +1351,15 @@ focus = {
 
 focus = {
 	id = SWE_we_stand_victorious
-	icon = GFX_goal_generic_demand_territory
+	icon = GFX_focus_generic_home_defense
 	mutually_exclusive = { focus = SWE_defeat_in_the_northern_war }
 	x = 25
 	y = 7
-	cost = 10
+	cost = 2
 	prerequisite = { focus = SWE_deal_with_occupation }
 
 	completion_reward = {
+		add_political_power = 80
 	}
 }
 
@@ -1217,11 +1368,13 @@ focus = {
 	icon = GFX_goal_generic_demand_territory
 	x = 0
 	y = 1
-	cost = 10
+	cost = 5
 	prerequisite = { focus = SWE_we_stand_victorious }
 	relative_position_id = SWE_we_stand_victorious
 
 	completion_reward = {
+		add_war_support = 0.1
+		add_stability = 0.1
 	}
 }
 
@@ -1249,6 +1402,7 @@ focus = {
 	relative_position_id = SWE_we_stand_victorious
 
 	completion_reward = {
+		PRS = { country_event = generic.5 }
 	}
 }
 
@@ -1263,12 +1417,16 @@ focus = {
 	relative_position_id = SWE_we_stand_victorious
 
 	completion_reward = {
+		create_wargoal = {
+		    type = annex_everything
+		    target = PRS
+		}
 	}
 }
 
 focus = {
 	id = SWE_intervene_in_western_europe
-	icon = GFX_goal_generic_demand_territory
+	icon = GFX_focus_usa_focus_on_europe
 	x = -4
 	y = 2
 	cost = 10
@@ -1281,7 +1439,7 @@ focus = {
 
 focus = {
 	id = SWE_intervene_against_austria
-	icon = GFX_goal_generic_demand_territory
+	icon = GFX_focus_ger_revive_kaiserreich
 	x = -3
 	y = 3
 	cost = 10
@@ -1295,7 +1453,7 @@ focus = {
 
 focus = {
 	id = SWE_intervene_against_france
-	icon = GFX_goal_generic_demand_territory
+	icon = GFX_focus_focus_fra_orleans_restoration
 	x = -5
 	y = 3
 	cost = 10
@@ -1309,7 +1467,7 @@ focus = {
 
 focus = {
 	id = SWE_look_toward_northern_germany
-	icon = GFX_goal_generic_demand_territory
+	icon = GFX_goal_generic_fortify_city
 	x = 0
 	y = 2
 	cost = 10
@@ -1317,96 +1475,180 @@ focus = {
 	relative_position_id = SWE_we_stand_victorious
 
 	completion_reward = {
+		794 = {
+			add_building_construction = {
+				type = naval_base
+				level = 2
+				province = 3326
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 1
+				province = 3271
+				instant_build = yes
+			}
+		}
+		62 = {
+			add_building_construction = {
+				type = naval_base
+				level = 2
+				province = 9388
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 1
+				province = 3258
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 1
+				province = 3312
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 1
+				province = 6282
+				instant_build = yes
+			}
+		}
+		SHL = { add_opinion_modifier = { target = SWE modifier = small_decrease } }
+		MEC = { add_opinion_modifier = { target = SWE modifier = small_decrease } }
+		IFC = { add_opinion_modifier = { target = SWE modifier = small_decrease } }
+		LUN = { add_opinion_modifier = { target = SWE modifier = small_decrease } }
+		HAN = { add_opinion_modifier = { target = SWE modifier = small_decrease } }
+		PRS = { add_opinion_modifier = { target = SWE modifier = small_decrease } }
+		ANH = { add_opinion_modifier = { target = SWE modifier = small_decrease } }
+		MUN = { add_opinion_modifier = { target = SWE modifier = small_decrease } }
+		BSG = { add_opinion_modifier = { target = SWE modifier = small_decrease } }
+		AUS = { add_opinion_modifier = { target = SWE modifier = small_decrease } }
 	}
 }
 
 focus = {
 	id = SWE_ally_luneburg
-	icon = GFX_goal_generic_demand_territory
+	icon = GFX_goal_generic_alliance
 	x = -1
 	y = 3
-	cost = 10
+	cost = 5
 	prerequisite = { focus = SWE_look_toward_northern_germany }
 	relative_position_id = SWE_we_stand_victorious
 	mutually_exclusive = { focus = SWE_ally_mecklenburg }
 
 	completion_reward = {
+		LUN = { country_event = generic.5 }
 	}
 }
 
 focus = {
 	id = SWE_crush_mecklenburg
-	icon = GFX_goal_generic_demand_territory
+	icon = GFX_goal_generic_major_war
 	x = -1
 	y = 4
-	cost = 10
+	cost = 5
 	prerequisite = { focus = SWE_ally_luneburg }
 	relative_position_id = SWE_we_stand_victorious
 
 	completion_reward = {
+		create_wargoal = {
+		    type = annex_everything
+		    target = MEC
+		}
 	}
 }
 
 focus = {
 	id = SWE_betray_luneburg
-	icon = GFX_goal_generic_demand_territory
-	x = -1
+	icon = GFX_goal_generic_attack_allies
+	x = -2
 	y = 5
-	cost = 10
+	cost = 5
 	prerequisite = { focus = SWE_crush_mecklenburg }
 	relative_position_id = SWE_we_stand_victorious
 
+	available = {
+		OR = {
+			MEC = { is_puppet_of = SWE }
+			NOT = { country_exists = MEC }
+		}
+	}
+
 	completion_reward = {
+		LUN = { leave_faction = yes }
+		create_wargoal = {
+		    type = annex_everything
+		    target = LUN
+		}
 	}
 }
 
 focus = {
 	id = SWE_ally_mecklenburg
-	icon = GFX_goal_generic_demand_territory
+	icon = GFX_goal_generic_alliance
 	x = 1
 	y = 3
-	cost = 10
+	cost = 5
 	prerequisite = { focus = SWE_look_toward_northern_germany }
 	relative_position_id = SWE_we_stand_victorious
 	mutually_exclusive = { focus = SWE_ally_luneburg }
 
 	completion_reward = {
+		MEC = { country_event = generic.5 }
 	}
 }
 
 focus = {
 	id = SWE_crush_luneburg
-	icon = GFX_goal_generic_demand_territory
+	icon = GFX_goal_generic_major_war
 	x = 1
 	y = 4
-	cost = 10
+	cost = 5
 	prerequisite = { focus = SWE_ally_mecklenburg }
 	relative_position_id = SWE_we_stand_victorious
 
 	completion_reward = {
+		create_wargoal = {
+		    type = annex_everything
+		    target = LUN
+		}
 	}
 }
 
 focus = {
 	id = SWE_betray_mecklenburg
-	icon = GFX_goal_generic_demand_territory
-	x = 1
+	icon = GFX_goal_generic_attack_allies
+	x = 2
 	y = 5
 	cost = 10
 	prerequisite = { focus = SWE_crush_luneburg }
 	relative_position_id = SWE_we_stand_victorious
 
+	available = {
+		OR = {
+			LUN = { is_puppet_of = SWE }
+			NOT = { country_exists = LUN }
+		}
+	}
+
 	completion_reward = {
+		MEC = { leave_faction = yes }
+		create_wargoal = {
+		    type = annex_everything
+		    target = MEC
+		}
 	}
 }
 
 focus = {
 	id = SWE_push_further_south
-	icon = GFX_goal_generic_demand_territory
+	icon = GFX_goal_generic_more_territorial_claims
 	x = 0
-	y = 6
+	y = 5
 	cost = 10
-	prerequisite = { focus = SWE_betray_mecklenburg focus = SWE_betray_luneburg }
+	prerequisite = { focus = SWE_crush_mecklenburg focus = SWE_crush_luneburg }
 	relative_position_id = SWE_we_stand_victorious
 
 	completion_reward = {
@@ -1417,7 +1659,7 @@ focus = {
 
 focus = {
 	id = SWE_defeat_in_the_northern_war
-	icon = GFX_goal_generic_demand_territory
+	icon = GFX_focus_CZE_german_puppet
 	x = 15
 	y = 7
 	cost = 10
