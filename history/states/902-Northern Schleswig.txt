@@ -1,6 +1,6 @@
 state={
 	id=902
-	name="Northern Schleswig"
+	name="STATE_902"
 	manpower = 60000
 	state_category = rural
 	provinces={

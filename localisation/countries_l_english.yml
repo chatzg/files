@@ -1,4 +1,20 @@
 ﻿l_english:
+LOR_neutrality:0 "Lorraine"
+LOR_neutrality_DEF:0 "Lorraine"
+LOR_neutrality_ADJ:0 "Lorraine"
+LOR_communism:0 "Lorraine"
+LOR_communism_DEF:0 "Lorraine"
+LOR_communism_ADJ:0 "Lorraine"
+LOR_fascism:0 "Lorraine"
+LOR_fascism_DEF:0 "Lorraine"
+LOR_fascism_ADJ:0 "Lorraine"
+LOR_democratic:0 "Lorraine"
+LOR_democratic_DEF:0 "Lorraine"
+LOR_democratic_ADJ:0 "Lorraine"
+LOR_aristocracy:0 "Lorraine"
+LOR_aristocracy_DEF:0 "Lorraine"
+LOR_aristocracy_ADJ:0 "Lorraine"
+
 
 LUI_neutrality:0 "Liège"
 LUI_neutrality_DEF:0 "Liège"

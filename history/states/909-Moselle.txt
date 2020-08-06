@@ -1,0 +1,23 @@
+
+state={
+	id=909
+	name="STATE_909"
+
+	history={
+		owner = LOR
+		add_core_of = LOR
+		add_core_of = FRA
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = LOR
+
+	}
+
+	provinces={
+		 3629 11502
+	}
+	manpower=74520
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

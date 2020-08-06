@@ -2,29 +2,24 @@ state={
 	id=736
 	name="STATE_736"
 	
-	state_category = city
+	state_category = rural
 
 	history={
-		victory_points = {
-			6626 1 
-		}
 		owner = VNC
 		add_core_of = VNC
 		add_claim_by = AUS
 		buildings = {
-			infrastructure = 2
+			infrastructure = 3
 			6626 = {
-				naval_base = 5
-
+				naval_base = 3
 			}
-
 		}
 
 	}
 
 	provinces={
-		599 6626 11595 11735 
+		11735 6626
 	}
-	manpower=210000
+	manpower=80000
 	buildings_max_level_factor=1.000
 }
