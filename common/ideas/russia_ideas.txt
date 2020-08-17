@@ -129,6 +129,40 @@ ideas = {
 			production_speed_infrastructure_factor = 0.1
 			}
 		}
+
+		RUS_russians_fleeing_serfdom = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = prc_low_popular_support2
+
+			modifier = {
+				weekly_manpower = -50
+				conscription = -0.005
+				communism_drift = 0.01
+			}
+		}
+
+		RUS_influx_of_russian_refugees = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = prc_low_popular_support2
+
+			modifier = {
+				weekly_manpower = 50
+				conscription = 0.005
+				stability_factor = -0.05
+			}
+		}
 	}
 }
 

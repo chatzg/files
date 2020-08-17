@@ -70,16 +70,18 @@ set_politics = {
 	elections_allowed = no
 }
 set_popularities = {
-	aristocracy = 48
-	democratic = 8
-	neutrality = 23
-	fascism = 21
+	aristocracy = 45
+	democratic = 4
+	neutrality = 21
+	fascism = 16
+	communism = 14
 }
 
 add_ideas = {
 	CHI_army_corruption_1
 	orthodox
 	empire
+	RUS_russians_fleeing_serfdom
 	}
 
 create_country_leader = {

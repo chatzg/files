@@ -114,8 +114,11 @@ RUS_icon_of_st_climacus_desc:0 "The Author of 'The Ladder of Divine Ascent', St.
 RUS_persue_caeseropapism:0 "Persue Caeseropapism"
 RUS_abolish_metropolitans:0 "Abolish Metropolitans"
 RUS_maintain_church_independence:0 "Maintain Church Independence"
-
 RUS_seperated_church_influence:0 "By completing this focus, the Clergy Estate will no longer gain influence when picking a religious icon."
+RUS_balanced_approach:0 "Balanced Approach"
+RUS_aggresive_foreign_policy:0 "Aggresive Foreign Policy"
+RUS_the_coassack:0 "The Cossacks"
+RUS_raise_cossack_host:0 "Raise Cossack Host"
 
 #ideas
 
@@ -129,8 +132,10 @@ icon_of_st_climacus:0 "Icon of St.- Climacus"
 icon_of_st_climacus_desc:0 "The Author of 'The Ladder of Divine Ascent', St. John Climacus has inspired generations of Orthodox Christians by describing how to strive towards the divine through asceticism and a pious life."
 icon_of_st_nicholas:0 "Icon of St.- Nicholas"
 icon_of_st_nicholas_desc:0 "Nikolaos the wonderworker or the bearer of gifts, is one of the earliest Christian saints and appears on many icons as an elderly man with a white beard."
-
-
+RUS_russians_fleeing_serfdom:0 "Fleeing Serfs"
+RUS_russians_fleeing_serfdom_desc:0 "The harsh conditions of serfdom have become to too much to bare for some Russians. Man of them flee to the southern regions, where they seek refuge with the rogue warlords who are called the Cossacks."
+RUS_influx_of_russian_refugees:0 "Influx of Russian Refugees"
+RUS_influx_of_russian_refugees_desc:0 "Many Russians fleeing the harsh conditions of serfdom have sought refuge in our nation. Whilst they are valuable manpower, their constant influx puts a strain on our country."
 
 #decisions
 patriarchy_interactions:0 "Patriarchy Interactions"
@@ -145,3 +150,5 @@ adopt_icon_of_st_michael:0 "Adopt Icon of St.- Michael"
 adopt_icon_of_st_michael_desc:0 "Saint Michael, the Archistrategos, is the commander of the heavenly hosts and the Archangel who will defeat Satan in the war in Heaven. Icons of Saint Michaels are common throughout Orthodox Christendom and most Russian cities have a church dedicated to him."
 adopt_icon_of_st_climacus:0 "Adopt Icon of St.- Climacus"
 adopt_icon_of_st_climacus_desc:0 "The Author of 'The Ladder of Divine Ascent', St. John Climacus has inspired generations of Orthodox Christians by describing how to strive towards the divine through asceticism and a pious life."
+RUS_challenge_swedish_supremacy:0 "Challenge Swedish Supremacy"
+RUS_challenge_swedish_supremacy_desc:0 "Following the chaos of the streltsy revolt the boyars have grown increasingly weary of their power-hunger czar. As Peter I strives to consolidate his power, he looks towards the Northern theatre to reinforce his position."

@@ -2348,4 +2348,44 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/goal_orthodox.tga"
 	}
 
+	SpriteType = { 
+		name = "GFX_SWE_conscription"
+		texturefile = "gfx/interface/goals/SWE_conscription.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_goal_alaska"
+		texturefile = "gfx/interface/goals/goal_alaska.tga"
+	}
+
+	SpriteType = { 
+		name = "GFX_goal_poland_partition"
+		texturefile = "gfx/interface/goals/goal_poland_partition.tga"
+	}
+
+	SpriteType = { 
+		name = "GFX_SWE_gustavus_adolphus"
+		texturefile = "gfx/interface/goals/SWE_gustavus_adolphus.tga"
+	}
+
+	SpriteType = { 
+		name = "GFX_SWE_karl_xii"
+		texturefile = "gfx/interface/goals/SWE_karl_xii.tga"
+	}
+
+	SpriteType = { 
+		name = "GFX_All_resource"
+		texturefile = "gfx/interface/goals/All_resource.tga"
+	}
+
+	SpriteType = { 
+		name = "GFX_goal_cossacks"
+		texturefile = "gfx/interface/goals/goal_cossacks.tga"
+	}
+
+	SpriteType = { 
+		name = "GFX_goal_cossacks2"
+		texturefile = "gfx/interface/goals/goal_cossacks2.tga"
+	}
+	
 }

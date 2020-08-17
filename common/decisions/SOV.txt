@@ -46,3 +46,32 @@ RUS_army_reform = {
 		}		
 	}
 }
+
+nobility_estate = {
+	RUS_challenge_swedish_supremacy = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			OR = {
+				has_war_with = SWE
+				neutrality > 0.50
+			}
+		}	
+
+		activation = {
+			original_tag = SOV
+		}
+
+		days_mission_timeout = 365
+
+		timeout_effect = {
+			add_popularity = {
+			    ideology = aristocracy
+			    popularity = 0.2
+			}
+			add_stability = -0.2
+			add_war_support = -0.2
+		}	
+	}
+}

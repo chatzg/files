@@ -99,7 +99,7 @@ focus = {
 
 focus = {
 	id = swedish_politics_2
-	icon = GFX_goal_generic_small_arms
+	icon = GFX_SWE_conscription
 	prerequisite = { focus = SWE_military_might }
 	x = -1
 	y = 1
@@ -643,6 +643,49 @@ focus = {
 	}
 }
 
+focus = {
+	id = SWE_stimulate_textile_production
+	icon = GFX_focus_generic_aluminum
+	prerequisite = { focus = SWE_dominate_baltic_grain_trade focus = SWE_expand_merchant_fleets}
+	x = 1
+	y = 5
+	cost = 10
+	
+	completion_reward = {
+		138 = {
+			limit = {
+				free_building_slots = {
+					building = textile_manufactury
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = textile_manufactury
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = industrial_complex
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+
+	}
+}
+
 ############
 
 focus = {
@@ -669,10 +712,10 @@ focus = {
 
 focus = {
 		id = swedish_army_2
-		icon = GFX_goal_generic_axis_build_infantry
+		icon = GFX_goal_generic_CAS
 		prerequisite = { focus = swedish_army_1 }
 		mutually_exclusive = { focus = swedish_army_3 }
-		x = -3
+		x = -2
 		y = 1
 		cost = 5
 		relative_position_id = swedish_army_1
@@ -706,7 +749,7 @@ focus = {
 
 focus = {
 		id = SWE_legacy_of_gustavus_adolphus
-		icon = GFX_goal_generic_axis_build_infantry
+		icon = GFX_SWE_gustavus_adolphus
 		prerequisite = { focus = SWE_gustavian_infantry }
 		x = -3
 		y = 3
@@ -722,10 +765,10 @@ focus = {
 
 focus = {
 		id = swedish_army_3
-		icon = GFX_goal_generic_axis_build_infantry
+		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = swedish_army_1 }
 		mutually_exclusive = { focus = swedish_army_2 }
-		x = 3
+		x = 2
 		y = 1
 		cost = 5
 		relative_position_id = swedish_army_1
@@ -803,6 +846,20 @@ focus = {
 	}
 }
 
+focus = {
+		id = SWE_military_academy
+		icon = GFX_focus_research
+		prerequisite = { focus = swedish_army_8 }
+		x = 0
+		y = 4
+		cost = 5
+		relative_position_id = swedish_army_1
+	
+	completion_reward = {
+		add_research_slot = 1 
+	}
+}
+
 #########
 
 focus = {
@@ -823,7 +880,7 @@ focus = {
 
 focus = {
 		id = SWE_carolus_rex
-		icon = GFX_focus_chi_army_reform
+		icon = GFX_SWE_karl_xii
 		prerequisite = { focus = swedish_army_10 }
 		x = 3
 		y = 3
@@ -932,7 +989,7 @@ focus = {
 	completion_reward = {
 	add_timed_idea = {
 		idea = SWE_focus_on_commonwealth
-		days = 720
+		days = 365
 		}
 	}
 }
@@ -1373,8 +1430,9 @@ focus = {
 	relative_position_id = SWE_we_stand_victorious
 
 	completion_reward = {
-		add_war_support = 0.1
-		add_stability = 0.1
+		add_war_support = 0.05
+		add_stability = 0.05
+		add_ideas = empire
 	}
 }
 
@@ -1448,6 +1506,10 @@ focus = {
 	mutually_exclusive = { focus = SWE_intervene_against_france }
 
 	completion_reward = {
+		create_wargoal = {
+		    type = liberate_wargoal
+		    target = AUS
+		}
 	}
 }
 
@@ -1462,6 +1524,10 @@ focus = {
 	mutually_exclusive = { focus = SWE_intervene_against_austria }
 
 	completion_reward = {
+		create_wargoal = {
+		    type = liberate_wargoal
+		    target = FRA
+		}
 	}
 }
 

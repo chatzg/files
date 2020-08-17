@@ -7,6 +7,19 @@ add_namespace = sweden
 #peace with anti-swedish pact
 
 country_event = {
+	id = sweden.0
+	title = sweden.0.t
+	desc = sweden.0.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { 
+		name = sweden.0.a
+	}
+}
+
+country_event = {
 	id = sweden.1
 	title = sweden.1.t
 	desc = sweden.1.d

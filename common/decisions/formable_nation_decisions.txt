@@ -8,7 +8,6 @@ form_scandinavia_category = {
 			OR = {
 				original_tag = NOR
 				original_tag = DEN
-				original_tag = SWE
 			}
 			has_dlc = "Waking the Tiger"
 		}
@@ -46,7 +45,6 @@ form_scandinavia_category = {
 			OR = {
 				original_tag = NOR
 				original_tag = DEN
-				original_tag = SWE
 			}
 			NOT = { has_global_flag = form_scandinavia_flag }
 		}
@@ -104,7 +102,6 @@ form_nordic_league_category = {
 			OR = {
 				original_tag = NOR
 				original_tag = DEN
-				original_tag = SWE
 				original_tag = FIN
 				original_tag = ICE
 			}
@@ -156,7 +153,6 @@ form_nordic_league_category = {
 			OR = {
 				original_tag = NOR
 				original_tag = DEN
-				original_tag = SWE
 				original_tag = FIN
 			}
 			NOT = { has_global_flag = form_nordic_league_flag }

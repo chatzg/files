@@ -1,0 +1,10 @@
+on_actions  = {
+	on_startup = {
+		effect = {
+			if = {
+				limit = { tag = SWE }
+				country_event = { id = sweden.0 }
+			}
+		}
+	}
+}

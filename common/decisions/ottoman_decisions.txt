@@ -60,8 +60,6 @@ TUR_janissar_revolt_category = {
 		}
 	}
 
-	# Dummy decision to warn of Second Cristiada
-
 	TUR_edirne_event_dummy = {
 
 		icon = generic_civil_support
