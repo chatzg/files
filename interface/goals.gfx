@@ -2387,5 +2387,14 @@ spriteTypes = {
 		name = "GFX_goal_cossacks2"
 		texturefile = "gfx/interface/goals/goal_cossacks2.tga"
 	}
-	
+
+	SpriteType = { 
+		name = "GFX_focus_caucasus"
+		texturefile = "gfx/interface/goals/focus_caucasus.tga"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_on_scandinavia"
+		texturefile = "gfx/interface/goals/focus_on_scandinavia.tga"
+	}
 }

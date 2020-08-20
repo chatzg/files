@@ -1,5 +1,18 @@
 
 #reload countrycolors
+
+KHA = {
+	color = rgb { 120 128 128 }
+	color_ui = rgb { 120 128 128 }	
+}
+CIR = {
+	color = rgb { 110 160 120 }
+	color_ui = rgb { 110 160 120 }	
+}
+AVA = {
+	color = rgb { 89 176 179 }
+	color_ui = rgb { 89 176 179 }	
+}
 NOV = {
 	color = rgb { 90 151 71 }
 	color_ui = rgb { 90 151 71 }	
@@ -108,8 +121,8 @@ PPR = {
 }
 
 CAU = {
-color = rgb { 110 160 120 }
-color_ui = rgb { 110 160 120 }
+color = rgb { 166 104 49 }
+color_ui = rgb { 166 104 49 }
 }
 
 PRM = {

@@ -67,7 +67,7 @@ focus = {
 
 focus = {
 	id = RUS_northern_focus
-	icon =  GFX_focus_usa_focus_on_europe
+	icon =  GFX_focus_on_scandinavia
 	x = -6
 	y = 2
 	cost = 2
@@ -673,7 +673,7 @@ focus = {
 
 focus = {
 	id = RUS_destroy_caucasian_states
-	icon =  GFX_goal_generic_occupy_states_ongoing_war
+	icon =  GFX_focus_caucasus
 	x = -2
 	y = 1
 	cost = 10

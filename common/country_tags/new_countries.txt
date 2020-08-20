@@ -1,4 +1,5 @@
-
+KHA 	= "countries/Khalmyk.txt"
+CIR		= "countries/Circassia.txt"
 AVA		= "countries/Avaria.txt"
 NOV		= "countries/Novgorod.txt"
 PRS		= "countries/Prussia.txt"
