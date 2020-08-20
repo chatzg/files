@@ -1,3 +1,5 @@
+
+AVA		= "countries/Avaria.txt"
 NOV		= "countries/Novgorod.txt"
 PRS		= "countries/Prussia.txt"
 PAP		= "countries/Papal_States.txt"

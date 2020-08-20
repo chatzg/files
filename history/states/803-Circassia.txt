@@ -1,25 +1,27 @@
+
 state={
 	id=803
 	name="STATE_803"
-	provinces={
-		717 719 735 3717 3720 3760 6736 6738 9691 9694 9696 11681 
-	}
 
 	history={
 		owner = CAU
-		buildings={
+		buildings = {
 			infrastructure = 3
 			arms_factory = 1
 			industrial_complex = 1
+
 		}
 		add_core_of = CAU
-
 		victory_points = {
 			3326 5 
 		}
+
 	}
 
+	provinces={
+		717 719 735 3698 3717 3720 3760 6692 6721 6736 6738 9663 9674 9691 9694 9696 11647 11664 11681 
+	}
 	manpower=128451
 	buildings_max_level_factor=1.000
-	state_category = city
+	state_category=city
 }
