@@ -21,13 +21,14 @@ state={
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
+
 		}
 		add_core_of = CRI
 
 	}
 
 	provinces={
-		426 750 765 775 3587 3734 3752 3765 6417 6755 6768 6781 6783 9709 9744 11403 11729 
+		426 585 750 765 775 3587 3734 3752 3765 6417 6755 6768 6781 6783 9709 9744 11403 11559 11729 
 	}
 	manpower=503371
 	buildings_max_level_factor=1.000

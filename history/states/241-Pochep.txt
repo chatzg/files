@@ -1,10 +1,7 @@
 
 state={
 	id=241
-	name="STATE_241" # Gomel
-	manpower = 183422
-	
-	state_category = rural
+	name="STATE_241"
 
 	history={
 		owner = POL
@@ -13,12 +10,17 @@ state={
 		}
 		buildings = {
 			infrastructure = 3
+
 		}
 		add_core_of = POL
 		add_core_of = BLR
+
 	}
 
 	provinces={
-		289 6233 6344 6354 9247 9288 9342 9371 9396 11230 11271 11298 11355 11383 11325 
+		223 289 3278 6233 6344 6354 9247 9288 9342 9371 9396 11230 11271 11298 11325 11355 11383 
 	}
+	manpower=183422
+	buildings_max_level_factor=1.000
+	state_category=rural
 }
