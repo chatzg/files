@@ -43,29 +43,55 @@ continent = {
 	}
 	
 	political = {
+
 		communism = {
-				male = { 
-					"gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
+			male = { 
+				"gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+				"gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+				"gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+				"gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
+				"gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
+				"gfx/leaders/Europe/portrait_europe_generic_land_13.dds"
 			}
 		}
 		democratic = {
-				male = { 
-					"gfx/leaders/Europe/Portrait_Europe_Generic_2.dds" 
+			male = { 
+				"gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+				"gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+				"gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+				"gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
+				"gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
+				"gfx/leaders/Europe/portrait_europe_generic_land_13.dds"
 			}
 		}
 		fascism = {
-				male = { 
-					"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds" 
+			male = { 
+				"gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+				"gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+				"gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+				"gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
+				"gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
+				"gfx/leaders/Europe/portrait_europe_generic_land_13.dds"
 			}
 		}
 		neutrality = {
-				male = { 
-					"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds" 
+			male = { 
+				"gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+				"gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+				"gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+				"gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
+				"gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
+				"gfx/leaders/Europe/portrait_europe_generic_land_13.dds"
 			}
 		}
 		aristocracy = {
-				male = { 
-					"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds" 
+			male = { 
+				"gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+				"gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+				"gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+				"gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
+				"gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
+				"gfx/leaders/Europe/portrait_europe_generic_land_13.dds"
 			}
 		}
 	}
@@ -234,46 +260,68 @@ continent = {
 	name = asia
 	army = {
 		male = {
-			"gfx/leaders/Asia/Portrait_Asia_Generic_land_1.dds"
-			"gfx/leaders/Asia/Portrait_Asia_Generic_land_2.dds"
-			"gfx/leaders/Asia/Portrait_Asia_Generic_land_3.dds"
-			"gfx/leaders/Asia/Portrait_Asia_Generic_land_4.dds"
-			"gfx/leaders/Asia/Portrait_Asia_Generic_land_5.dds"
+			"gfx/leaders/Asia/asian_leader_1.dds"
+			"gfx/leaders/Asia/asian_leader_2.dds"
+			"gfx/leaders/Asia/Pasian_leader_3.dds"
+			"gfx/leaders/Asia/asian_leader_4.dds"
+			"gfx/leaders/Asia/asian_leader_5.dds"
 		}
 	}
 	
 	navy = {
 		male = {
-			"gfx/leaders/Asia/Portrait_Asia_Generic_navy_1.dds"
-			"gfx/leaders/Asia/Portrait_Asia_Generic_navy_2.dds"
-			"gfx/leaders/Asia/Portrait_Asia_Generic_navy_3.dds"
+			"gfx/leaders/Asia/asian_leader_1.dds"
+			"gfx/leaders/Asia/asian_leader_2.dds"
+			"gfx/leaders/Asia/Pasian_leader_3.dds"
+			"gfx/leaders/Asia/asian_leader_4.dds"
+			"gfx/leaders/Asia/asian_leader_5.dds"
 		}
 	}
 
 	political = {
 		communism = {
-				male = { 
-					"gfx/leaders/Asia/Portrait_Asia_Generic_1.dds"
+			male = {
+				"gfx/leaders/Asia/asian_leader_1.dds"
+				"gfx/leaders/Asia/asian_leader_2.dds"
+				"gfx/leaders/Asia/Pasian_leader_3.dds"
+				"gfx/leaders/Asia/asian_leader_4.dds"
+				"gfx/leaders/Asia/asian_leader_5.dds"
 			}
 		}
 		democratic = {
-				male = { 
-					"gfx/leaders/Asia/Portrait_Asia_Generic_2.dds" 
+			male = {
+				"gfx/leaders/Asia/asian_leader_1.dds"
+				"gfx/leaders/Asia/asian_leader_2.dds"
+				"gfx/leaders/Asia/Pasian_leader_3.dds"
+				"gfx/leaders/Asia/asian_leader_4.dds"
+				"gfx/leaders/Asia/asian_leader_5.dds"
 			}
 		}
 		fascism = {
-				male = { 
-					"gfx/leaders/Asia/Portrait_Asia_Generic_3.dds" 
+			male = {
+				"gfx/leaders/Asia/asian_leader_1.dds"
+				"gfx/leaders/Asia/asian_leader_2.dds"
+				"gfx/leaders/Asia/Pasian_leader_3.dds"
+				"gfx/leaders/Asia/asian_leader_4.dds"
+				"gfx/leaders/Asia/asian_leader_5.dds"
 			}
 		}
 		neutrality = {
-				male = { 
-					"gfx/leaders/Asia/Portrait_Asia_Generic_3.dds" 
+			male = {
+				"gfx/leaders/Asia/asian_leader_1.dds"
+				"gfx/leaders/Asia/asian_leader_2.dds"
+				"gfx/leaders/Asia/Pasian_leader_3.dds"
+				"gfx/leaders/Asia/asian_leader_4.dds"
+				"gfx/leaders/Asia/asian_leader_5.dds"
 			}
 		}
 		aristocracy = {
-				male = { 
-					"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds" 
+			male = {
+				"gfx/leaders/Asia/asian_leader_1.dds"
+				"gfx/leaders/Asia/asian_leader_2.dds"
+				"gfx/leaders/Asia/Pasian_leader_3.dds"
+				"gfx/leaders/Asia/asian_leader_4.dds"
+				"gfx/leaders/Asia/asian_leader_5.dds"
 			}
 		}
 	}	

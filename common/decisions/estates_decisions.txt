@@ -1,3 +1,132 @@
+national_crisis = {                       
+    peasant_revolt_dummy = {
+    	icon = revolt
+    	selectable_mission = no  
+    	available = {
+    		AND = {
+    			has_stability < 0.50
+    			communism > 0.30
+    		}
+		}
+		visible = {
+			NOT = { has_active_mission = peasant_revolt }
+		}
+	}
+
+	peasant_revolt = {
+    	icon = revolt
+    	available = {
+    		has_stability > 0.50
+    		has_civil_war = yes
+    		has_government = communism
+		}
+
+		days_mission_timeout = 150
+
+		activation = {	
+			AND = {
+    			has_stability < 0.50
+    			communism > 0.30
+    		}
+		}
+	}
+
+	aristocratic_coup_dummy = {
+    	icon = aristocratic_coup
+    	selectable_mission = no  
+    	available = {
+    		AND = {
+    			has_stability < 0.50
+    			aristocracy > 0.40
+    		}
+		}
+		visible = {
+			NOT = { has_active_mission = aristocratic_coup }
+		}
+	}
+
+	aristocratic_coup = {
+    	icon = aristocratic_coup
+    	available = {
+    		has_stability > 0.50
+    		has_civil_war = yes
+    		has_government = aristocracy
+		}
+
+		days_mission_timeout = 150
+
+		activation = {	
+			AND = {
+    			has_stability < 0.50
+    			aristocracy > 0.40
+    		}
+		}
+	}
+
+	burgher_coup_dummy = {
+    	icon = burgher_coup
+    	selectable_mission = no  
+    	available = {
+    		AND = {
+    			has_stability < 0.50
+    			democratic > 0.40
+    		}
+		}
+		visible = {
+			NOT = { has_active_mission = burgher_coup }
+		}
+	}
+
+	burgher_coup = {
+    	icon = burgher_coup
+    	available = {
+    		has_stability > 0.50
+    		has_civil_war = yes
+    		has_government = democratic
+		}
+
+		days_mission_timeout = 150
+
+		activation = {	
+			AND = {
+    			has_stability < 0.50
+    			democratic > 0.40
+    		}
+		}
+	}
+
+	clergy_dominance_dummy = {
+    	icon = clergy_coup
+    	selectable_mission = no  
+    	available = {
+    		AND = {
+    			has_stability < 0.50
+    			fascism > 0.40
+    		}
+		}
+		visible = {
+			NOT = { has_active_mission = clergy_dominance }
+		}
+	}
+
+	clergy_dominance = {
+    	icon = clergy_coup
+    	available = {
+    		has_stability > 0.50
+    		has_civil_war = yes
+    		has_government = fascism
+		}
+
+		days_mission_timeout = 150
+
+		activation = {	
+			AND = {
+    			has_stability < 0.50
+    			fascism > 0.40
+    		}
+		}
+	}
+}
 burghers_estate = {
 
 	lobby_war_effort = {
@@ -7,8 +136,34 @@ burghers_estate = {
 		fire_only_once = no
 		days_re_enable = 180
 
+		available = {
+			democratic > 0.10
+		}
+
 		modifier = {
 			consumer_goods_factor = -0.05
+		}
+		complete_effect = {	
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			} 
+		}
+	}
+
+	ship_construction_effort = {
+
+		cost = 50
+		days_remove = 180
+		fire_only_once = no
+		days_re_enable = 180
+
+		available = {
+			democratic > 0.15
+		}
+
+		modifier = {
+			industrial_capacity_dockyard = 0.25
 		}
 		complete_effect = {	
 			add_popularity = {
@@ -27,6 +182,7 @@ burghers_estate = {
 			any_state = {
 				is_coastal = yes
 			}
+			democratic > 0.10
 		}
 
 		complete_effect = {
@@ -44,6 +200,10 @@ burghers_estate = {
 		cost = 50
 		fire_only_once = no
 		days_re_enable = 180
+
+		available = {
+			democratic > 0.20
+		}
 
 		complete_effect = {	
 			add_popularity = {
@@ -77,6 +237,10 @@ nobility_estate = {
 		fire_only_once = no
 		days_re_enable = 180
 
+		available = {
+			aristocracy > 0.15
+		}
+
 		complete_effect = {
 			add_manpower = 5000
 		}
@@ -92,6 +256,10 @@ nobility_estate = {
 		cost = 50
 		fire_only_once = no
 		days_re_enable = 180
+
+		available = {
+			aristocracy > 0.10
+		}
 
 		complete_effect = {
 			army_experience = 10
@@ -150,6 +318,10 @@ clergy_estate = {
 		days_re_enable = 360
 		days_remove = 90
 
+		available = {
+			fascism > 0.10
+		}
+
 		modifier = {
 			stability_weekly = 0.003
 			political_power_gain = -0.5
@@ -174,6 +346,10 @@ clergy_estate = {
 		fire_only_once = no
 		days_re_enable = 360
 
+		available = {
+			fascism > 0.15
+		}
+
 		ai_will_do = {
 			base = 1
 		}
@@ -197,6 +373,10 @@ clergy_estate = {
 		fire_only_once = no
 		days_re_enable = 120
 		days_remove = 45
+
+		available = {
+			fascism > 0.05
+		}
 
 		modifier = {
 			political_advisor_cost_factor = -0.5

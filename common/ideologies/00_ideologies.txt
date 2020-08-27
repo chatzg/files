@@ -93,7 +93,7 @@ ideologies = {
 			"FACTION_NAME_NONALIGNED_5"
 		}	
 		
-		war_impact_on_world_tension = 0.5
+		war_impact_on_world_tension = 1
 		faction_impact_on_world_tension = 0.1
 		
 		rules = {

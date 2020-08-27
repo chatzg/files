@@ -56,6 +56,13 @@ RUS_great_patriotic_war = {
 	visible = {}
 }
 
+national_crisis = {
+	icon = power_struggle
+
+	allowed = {
+	}
+}
+
 nobility_estate = {
 	icon = nobility
 

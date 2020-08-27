@@ -4,6 +4,7 @@ oob = "UZB"
 
 add_ideas = {
 	sunni
+	nomadic_society
 }
 
 # Starting tech

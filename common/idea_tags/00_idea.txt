@@ -30,26 +30,17 @@ idea_categories = {
 
 	advisors = {
 		slot = political_advisor
-		slot = political_advisor
-		slot = political_advisor
+		slot = chief_economic_advisor
+		slot = chief_diplomatic_advisor
+		slot = army_chief
+		slot = navy_chief
+		slot = spymaster
 
 		cost = 150
 		removal_cost = 0
-	}
-	
-	research_production = {
-		slot = naval_manufacturer
-		slot = materiel_manufacturer
-		slot = industrial_concern
-
-		cost = 150
-		removal_cost = 0
-
 	}
 	
 	military_staff = {
-		slot = army_chief 
-		slot = navy_chief 
 		slot = high_command
 		slot = high_command
 		slot = high_command

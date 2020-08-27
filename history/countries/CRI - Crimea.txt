@@ -6,6 +6,7 @@ oob = "CRI"
 
 add_ideas = {
 	sunni
+	nomadic_society
 }
 
 set_technology = {

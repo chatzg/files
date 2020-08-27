@@ -288,7 +288,7 @@ focus_tree = {
 	focus = {
 		id = naval_effort
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 5
+		x = 6
 		y = 0
 		cost = 10
 
@@ -416,7 +416,7 @@ focus_tree = {
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = naval_effort }
 		mutually_exclusive = { focus = large_navy }
-		x = -1
+		x = -2
 		y = 1
 		relative_position_id = naval_effort
 		cost = 10
@@ -453,10 +453,10 @@ focus_tree = {
 
 	focus = {
 		id = large_navy
-		icon = GFX_goal_generic_navy_doctrines_tactics
+		icon = GFX_goal_generic_navy_battleship
 		prerequisite = { focus = naval_effort }
 		mutually_exclusive = { focus = flexible_navy }
-		x = 1
+		x = 2
 		y = 1
 		relative_position_id = naval_effort
 		cost = 10
@@ -492,6 +492,42 @@ focus_tree = {
 		icon = GFX_goal_generic_navy_submarine
 		prerequisite = { focus = flexible_navy focus = large_navy }
 		x = 0
+		y = 1
+		relative_position_id = flexible_navy
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = ss_tech
+			}
+		}
+	}
+
+	focus = {
+		id = conquest_of_paradise
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = flexible_navy focus = large_navy }
+		x = 2
 		y = 1
 		relative_position_id = flexible_navy
 		cost = 10
@@ -638,7 +674,7 @@ focus_tree = {
 	focus = {
 		id = industrial_effort
 		icon = GFX_goal_generic_production
-		x = 9
+		x = 11
 		y = 0
 		cost = 10
 
@@ -1337,7 +1373,7 @@ focus_tree = {
 	focus = {
 		id = political_effort
 		icon = GFX_goal_generic_demand_territory
-		x = 15
+		x = 20
 		y = 0
 		cost = 10
 
@@ -1349,540 +1385,432 @@ focus_tree = {
 	}
 
 	focus = {
-		id = collectivist_ethos
-		icon = GFX_goal_generic_national_unity #icon = GFX_goal_tripartite_pact
-		prerequisite = { focus = political_effort }
-		mutually_exclusive = { focus = liberty_ethos}
+		id =  embrace_despotism
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 10
+		mutually_exclusive = { focus = embrace_theocracy }
+		mutually_exclusive = { focus = embrace_republicanism }
+
 		available = {
-			OR = {
-				has_government = fascism
-				has_government = communism
-				has_government = neutrality
+			OR = { 
+				has_government  = neutrality
+				has_government  = aristocracy
+				neutrality > 0.50
+				aristocracy > 0.50
 			}
 		}
+
+		available_if_capitulated = yes
+		prerequisite = { focus = political_effort }
+		relative_position_id = political_effort
+
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+
+	focus = {
+		id =  autocracy
+		icon = GFX_goal_generic_demand_territory
 		x = -1
 		y = 1
-		relative_position_id = political_effort
 		cost = 10
+		prerequisite = { focus = embrace_despotism }
+		relative_position_id = embrace_despotism
+		mutually_exclusive = { focus = enligthened_despotism }
 
 		available_if_capitulated = yes
 
-
-		ai_will_do = {
-			factor = 5
-			modifier = {
-				factor = 0
-				OR = {
-					AND = {
-						is_historical_focus_on = yes
-						has_government = neutrality
-					}
-					has_idea = neutrality_idea
-				}
-			}
-		}
-
-		completion_reward = {
-			add_timed_idea = { idea = collectivist_ethos_focus days = 1095 }
-		}
-	}
-
-	focus = {
-		id = nationalism_focus
-		icon = GFX_goal_support_fascism #icon = GFX_goal_tripartite_pact
-		prerequisite = { focus = collectivist_ethos }
-		mutually_exclusive = { focus = internationalism_focus }
 		available = {
-			OR = {
-				has_government = fascism
-				has_government = neutrality
-			}
-		}
-		x = -2
-		y = 1
-		relative_position_id = collectivist_ethos
-		cost = 10
-
-		available_if_capitulated = yes
-
-
-		ai_will_do = {
-			factor = 5
-			modifier = {
-				factor = 2
-				any_neighbor_country = {
-					is_major = yes
-					has_government = fascism
-				}
-			}
-			modifier = {
-				factor = 0
-				AND = {
-					is_historical_focus_on = yes
-					NOT = { has_government = fascism }
-				}
-			}
-		}
-
-		completion_reward = {
-			add_timed_idea = {
-				idea = nationalism
-				days = 720
-			}
-		}
-	}
-	
-	focus = {
-		id = internationalism_focus
-		icon = GFX_goal_support_communism #icon = GFX_goal_tripartite_pact
-		prerequisite = { focus = collectivist_ethos }
-		mutually_exclusive = { focus = nationalism_focus }
-		available = {
-			if = {
-				limit = { original_tag = CHI }
-				has_government = communism
-				else = {
-					OR = {
-						has_government = communism
-						has_government = neutrality
-					}
-				}
-			}
-		}
-		x = 0
-		y = 1
-		relative_position_id = collectivist_ethos
-		cost = 10
-
-		available_if_capitulated = yes
-
-
-		ai_will_do = {
-			factor = 5
-			modifier = {
-				factor = 2
-				any_neighbor_country = {
-					is_major = yes
-					has_government = communism
-				}
-			}			
-			modifier = {
-				factor = 0
-				AND = {
-					is_historical_focus_on = yes
-					NOT = { has_government = communism }
-				}
-			}
-		}
-
-		completion_reward = {
-			add_timed_idea = {
-				idea = internationalism
-				days = 720
-			}
-		}
-	}	
-
-	focus = {
-		id = liberty_ethos
-		icon = GFX_goal_support_democracy
-		prerequisite = { focus = political_effort }
-		mutually_exclusive = { focus = collectivist_ethos }
-		available = {
-			OR = {
-				has_government = democratic
-				has_government = neutrality
-			}
-		}
-		x = 1
-		y = 1
-		relative_position_id = political_effort
-		cost = 10
-
-		available_if_capitulated = yes
-
-
-		ai_will_do = {
-			factor = 95
-			modifier = {
-				factor = 0.1
-				any_neighbor_country = {
-					is_major = yes
-					OR = {
-						has_government = communism
-						has_government = fascism
-					}
-				}
-				NOT = {
-					any_neighbor_country = {
-						is_major = yes
-						has_government = democratic
-					}
-				}
-			}
-		}
-
-		completion_reward = {
-			add_ideas = liberty_ethos_focus
-		}
-	}
-
-	focus = {
-		id = militarism
-		icon = GFX_goal_generic_political_pressure
-		prerequisite = { focus = nationalism_focus }
-		x = 0
-		y = 1
-		relative_position_id = nationalism_focus
-		cost = 10
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			if = {
-				limit = { has_idea = neutrality_idea }
-				remove_ideas = neutrality_idea
-			}			
-			add_ideas = militarism_focus
-			army_experience = 20
-			set_rule = { can_send_volunteers = yes }
-		}
-	}
-
-	focus = {
-		id = political_correctness
-		icon = GFX_goal_generic_dangerous_deal
-		prerequisite = { focus = internationalism_focus }
-		x = 0
-		y = 1
-		relative_position_id = internationalism_focus
-		cost = 10
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			if = {
-				limit = { has_idea = neutrality_idea }
-				remove_ideas = neutrality_idea
-			}		
-			add_political_power = 200
-			add_ideas = idea_political_correctness
-		}
-	}
-
-	focus = {
-		id = neutrality_focus
-		icon = GFX_goal_generic_neutrality_focus
-		prerequisite = { focus = liberty_ethos }
-		mutually_exclusive = { focus = interventionism_focus }
-		x = 0
-		y = 1
-		relative_position_id = liberty_ethos
-		cost = 10
-
-		available_if_capitulated = yes
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				tag = AUS
-			}
-		}
-
-		completion_reward = {
-			if = {
-				limit = { NOT = { has_idea = neutrality_idea } }
-				add_ideas = neutrality_idea
-			}
-			add_political_power = 150
-		}
-	}
-
-	focus = {
-		id = interventionism_focus
-		icon = GFX_goal_generic_political_pressure
-		prerequisite = { focus = liberty_ethos }
-		mutually_exclusive = { focus = neutrality_focus }
-		x = 2
-		y = 1
-		relative_position_id = liberty_ethos
-		cost = 10
-
-		available_if_capitulated = yes
-
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				has_idea = neutrality_idea
-			}
-		}
-
-		completion_reward = {
-			if = {
-				limit = { has_idea = neutrality_idea }
-				remove_ideas = neutrality_idea
-			}	
-			set_rule = { can_send_volunteers = yes }
-			add_political_power = 150
-		}
-	}
-
-	focus = {
-		id = military_youth
-		icon = GFX_goal_generic_more_territorial_claims
-		prerequisite = { focus = militarism }
-		x = 0
-		y = 1
-		relative_position_id = militarism
-		cost = 10
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_ideas = military_youth_focus
-			if = {
-				limit = { has_government = fascism }
-				add_popularity = {
-					ideology = fascism
-					popularity = 0.2
-				}
-			}
-			if = {
-				limit = { has_government = communism }
-				add_popularity = {
-					ideology = communism
-					popularity = 0.2
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = deterrence
-		icon = GFX_goal_generic_defence
-		prerequisite = { focus = neutrality_focus }
-		x = 0
-		y = 1
-		relative_position_id = neutrality_focus
-		cost = 10
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_ideas = deterrence
-		}
-	}
-
-	focus = {
-		id = volunteer_corps
-		icon = GFX_goal_generic_allies_build_infantry
-		prerequisite = { focus = interventionism_focus }
-		x = 0
-		y = 1
-		relative_position_id = interventionism_focus
-		cost = 10
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_ideas = volunteer_corps_focus
-		}
-	}
-
-	focus = {
-		id = paramilitarism
-		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = military_youth }
-		x = 0
-		y = 1
-		relative_position_id = military_youth
-		cost = 10
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_ideas = paramilitarism_focus
-		}
-	}
-
-	focus = {
-		id = indoctrination_focus
-		icon = GFX_goal_generic_propaganda
-		prerequisite = { focus = political_correctness }
-		x = 0
-		y = 1
-		relative_position_id = political_correctness
-		cost = 10
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_ideas = indoctrination_focus
-			add_political_power = 150
-		}
-	}
-
-	focus = {
-		id = foreign_expeditions
-		icon = GFX_goal_generic_more_territorial_claims
-		prerequisite = { focus = volunteer_corps }
-		x = 0
-		y = 1
-		relative_position_id = volunteer_corps
-		cost = 10
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_ideas = foreign_expeditions_focus
-		}
-	}
-
-	focus = {
-		id = why_we_fight
-		icon = GFX_goal_generic_propaganda
-		prerequisite = { focus = foreign_expeditions focus = deterrence }
-		available = { 
 			OR = { 
-				threat > 0.75 
-				has_defensive_war = yes 
+				has_government  = neutrality
+				has_government  = aristocracy
+				neutrality > 0.50
+				aristocracy > 0.50
 			}
 		}
-
-		continue_if_invalid = yes
-		
-		x = -2
-		y = 1
-		relative_position_id = foreign_expeditions
-		cost = 10
-
-		available_if_capitulated = yes
-
+	
 		completion_reward = {
-			add_ideas = why_we_fight_focus
-			custom_effect_tooltip = why_we_fight_effect
-			hidden_effect = {
-				if = {
-					limit = { NOT = { has_idea = neutrality_idea } }
-					set_rule = { can_create_factions = yes }
-				}			
-			}
 		}
 	}
 
 	focus = {
-		id = political_commissars
-		icon = GFX_goal_generic_forceful_treaty
-		prerequisite = { focus = indoctrination_focus }
-		available = {
-		}
-		x = 0
-		y = 1
-		relative_position_id = indoctrination_focus
-		cost = 10
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_ideas = political_commissars_focus
-			if = {
-				limit = { has_government = fascism }
-				add_popularity = {
-					ideology = fascism
-					popularity = 0.2
-				}
-			}
-			if = {
-				limit = { has_government = communism }
-				add_popularity = {
-					ideology = communism
-					popularity = 0.2
-				}
-			}
-			add_political_power = 200
-		}
-	}
-
-	focus = {
-		id = ideological_fanaticism
+		id =  absolutism
 		icon = GFX_goal_generic_demand_territory
-		prerequisite = { focus = paramilitarism focus = political_commissars }
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = { focus = autocracy focus = theocratic_despotism }
+		relative_position_id = autocracy
+
+		available_if_capitulated = yes
+
+		available = {
+			OR = { 
+				AND = {
+					has_government = fascism
+					fascism > 0.40
+				}
+				AND = {
+					has_government = neutrality
+					neutrality > 0.40
+				}
+			}
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id =  dominance_of_military_class
+		icon = GFX_goal_generic_demand_territory
 		x = 1
 		y = 1
-		relative_position_id = paramilitarism
 		cost = 10
+		prerequisite = { focus = autocracy focus = theocratic_despotism }
+		relative_position_id = autocracy
 
 		available_if_capitulated = yes
 
+		available = {
+			aristocracy > 0.40
+		}
+	
 		completion_reward = {
-			add_ideas = ideological_fanaticism_focus
-			set_rule = {
-				can_create_factions = yes
-			}
-			hidden_effect = {
-				set_rule = { can_use_kamikaze_pilots = yes }
-			}
-			custom_effect_tooltip = kamikaze_focus_tooltip
 		}
 	}
-	
+
 	focus = {
-		id = technology_sharing
-		icon = GFX_goal_generic_scientific_exchange
-		prerequisite = { focus = ideological_fanaticism focus = why_we_fight }
-		available = {
-			has_war = yes
-			is_in_faction = yes
-			OR = {
-				num_of_factories > 50
-				any_other_country = {
-					is_in_faction_with = ROOT
-					num_of_factories > 50
-				}
-			}
-		}		
-		x = 2
+		id =  install_elective_monarchy
+		icon = GFX_goal_generic_demand_territory
+		x = 1
 		y = 1
-		relative_position_id = ideological_fanaticism
 		cost = 10
+		prerequisite = { focus = dominance_of_military_class }
+		relative_position_id = dominance_of_military_class
+		mutually_exclusive = {focus = press_toward_reform }
+
+		available_if_capitulated = yes
+
+		available = {
+			OR = {
+				AND = {
+					aristocracy > 0.40
+					has_government = neutrality
+				}
+				has_government = aristocracy
+			}
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id =  press_toward_reform
+		icon = GFX_goal_generic_demand_territory
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = { focus = dominance_of_military_class }
+		relative_position_id = dominance_of_military_class
+		mutually_exclusive = {focus = install_elective_monarchy }
+
+		available_if_capitulated = yes
+
+		available = {
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id =  enligthened_despotism
+		icon = GFX_goal_generic_demand_territory
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = embrace_despotism }
+		relative_position_id = embrace_despotism
+		mutually_exclusive = { focus = autocracy }
+
+		available_if_capitulated = yes
+
+		available = {
+			OR = { 
+				has_government  = neutrality
+				has_government  = aristocracy
+				neutrality > 0.50
+				aristocracy > 0.50
+			}
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id =  what_the_people_need
+		icon = GFX_goal_generic_demand_territory
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = enligthened_despotism focus = focus_oligarchism }
+		relative_position_id = enligthened_despotism
+
+		available_if_capitulated = yes
+
+		available = {
+			OR = { 
+				has_government  = neutrality
+				has_government  = aristocracy
+				neutrality > 0.50
+				aristocracy > 0.50
+			}
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id =  embrace_theocracy
+		icon = GFX_goal_generic_demand_territory
+		x = -4
+		y = 1
+		cost = 10
+		mutually_exclusive = { focus = embrace_republicanism }
+		mutually_exclusive = { focus = embrace_despotism }
+		prerequisite = { focus = political_effort }
+		relative_position_id = political_effort
+
+		available = {
+			OR = { 
+				has_government  = fascism
+				fascism > 0.50
+			}
+		}
 
 		available_if_capitulated = yes
 
 		completion_reward = {
-			if = {
-				limit = {
-					original_research_slots < 3
-				}
-				add_research_slot = 1
-			}
-			if = {
-				limit = {
-					original_research_slots > 2
-				}
-				add_tech_bonus = {
-					name = electronics_bonus
-					bonus = 1.0
-					uses = 1
-					category = electronics
-				}
-				add_tech_bonus = {
-					name = industrial_bonus
-					bonus = 1.0
-					uses = 1
-					category = industry
-				}	
-				add_tech_bonus = {
-					name = infantry_artillery_bonus #@#
-					bonus = 1.0
-					uses = 1
-					category = infantry_weapons
-					category = artillery
-				}				
-			}			
+			add_political_power = 120
 		}
-	}	
+	}
+
+	focus = {
+		id =  theocratic_despotism
+		icon = GFX_goal_generic_demand_territory
+		x = 1
+		y = 1
+		cost = 10
+		mutually_exclusive = { focus = religious_order }
+		prerequisite = { focus = embrace_theocracy }
+		relative_position_id = embrace_theocracy
+
+		available = {
+			has_government  = fascism
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id =  religious_order
+		icon = GFX_goal_generic_demand_territory
+		x = -1
+		y = 1
+		cost = 10
+		mutually_exclusive = { focus = theocratic_despotism }
+		prerequisite = { focus = embrace_theocracy }
+		relative_position_id = embrace_theocracy
+
+		available = {
+			has_government  = fascism
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id =  embrace_republicanism
+		icon = GFX_goal_generic_demand_territory
+		x = 6
+		y = 1
+		cost = 10
+		mutually_exclusive = { focus = embrace_theocracy }
+		mutually_exclusive = { focus = embrace_despotism }
+
+		available = {
+			OR = { 
+				has_government  = democratic
+				democratic > 0.50
+			}
+		}
+
+		available_if_capitulated = yes
+		prerequisite = { focus = political_effort }
+		relative_position_id = political_effort
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id =  focus_oligarchism
+		icon = GFX_goal_generic_demand_territory
+		x = -2
+		y = 1
+		cost = 10
+		mutually_exclusive = { focus = plutocracy }
+		prerequisite = { focus = embrace_republicanism }
+		relative_position_id = embrace_republicanism
+
+		available = {
+			OR = { 
+				has_government  = democratic
+				democratic > 0.50
+			}
+		}
+
+		available_if_capitulated = yes		
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id =  authoritarianism
+		icon = GFX_goal_generic_demand_territory
+		x = -2
+		y = 2
+		cost = 10
+		mutually_exclusive = { focus = political_dynasties focus = republicanism }
+		prerequisite = { focus = focus_oligarchism }
+		relative_position_id = embrace_republicanism
+
+		available = {
+		}
+
+		available_if_capitulated = yes		
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id =  consolidation_of_power
+		icon = GFX_goal_generic_demand_territory
+		x = -2
+		y = 3
+		cost = 10
+		prerequisite = { focus = authoritarianism focus = political_dynasties }
+		relative_position_id = embrace_republicanism
+
+		available = {
+		}
+
+		available_if_capitulated = yes		
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id =  plutocracy
+		icon = GFX_goal_generic_demand_territory
+		x = 2
+		y = 1
+		cost = 10
+		mutually_exclusive = { focus = focus_oligarchism }
+		prerequisite = { focus = embrace_republicanism }
+		relative_position_id = embrace_republicanism
+
+		available = {
+			OR = { 
+				has_government  = democratic
+				democratic > 0.50
+			}
+		}
+
+		available_if_capitulated = yes		
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id =  republicanism
+		icon = GFX_goal_generic_demand_territory
+		x = 2
+		y = 2
+		cost = 10
+		mutually_exclusive = { focus = political_dynasties }
+		prerequisite = { focus = plutocracy }
+		relative_position_id = embrace_republicanism
+
+		available = {
+			OR = { 
+				has_government  = democratic
+				democratic > 0.50
+			}
+		}
+
+		available_if_capitulated = yes		
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id =  legislative_assembly
+		icon = GFX_goal_generic_demand_territory
+		x = 2
+		y = 3
+		cost = 10
+		prerequisite = { focus = republicanism focus = political_dynasties }
+		relative_position_id = embrace_republicanism
+
+		available = {
+		}
+
+		available_if_capitulated = yes		
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id =  political_dynasties
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 2
+		cost = 10
+		mutually_exclusive = { focus = republicanism }
+		prerequisite = { focus = plutocracy focus = focus_oligarchism }
+		relative_position_id = embrace_republicanism
+
+		available = {
+			OR = { 
+				has_government  = democratic
+				democratic > 0.50
+			}
+		}
+
+		available_if_capitulated = yes		
+
+		completion_reward = {
+		}
+	}
 
 }

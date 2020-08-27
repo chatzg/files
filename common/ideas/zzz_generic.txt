@@ -22,6 +22,34 @@ ideas = {
 
 	# Special ones that can be applied on other countries through focus system.
 	country = {
+
+		nomadic_society = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+
+			picture = horde
+
+			
+			modifier = {
+				war_support_factor = 0.15
+				research_speed_factor = -0.05
+				justify_war_goal_time = -0.25
+				generate_wargoal_tension = -0.4
+				global_building_slots_factor = -0.50
+				army_armor_speed_factor = 0.1
+				army_armor_attack_factor = 0.15
+				production_factory_max_efficiency_factor = 0.5
+				ai_focus_aggressive_factor = 1
+			}
+		}
 	
 		nationalism = {
 			
@@ -868,373 +896,5 @@ ideas = {
 				army_core_attack_factor = 0.25 
 			}
 		}	
-	}
-
-	# TECHNOLOGY
-	
-	naval_manufacturer = { 
-	
-		designer = yes
-	
-		generic_naval_manufacturer = {
-			
-			picture = generic_naval_manufacturer_1
-
-			allowed = {
-				NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = SWE tag = HUN tag = CZE } }
-				NOT = {
-					has_available_idea_with_traits = { idea = naval_manufacturer limit = 1 }
-				}
-				NOT = {
-					AND = {
-						OR = { tag = AST tag = CAN tag = NZL tag = RAJ }
-						has_dlc = "Together for Victory"
-					}
-				}
-				NOT = {
-					AND = {
-						OR = { tag = CHI tag = PRC tag = MAN tag = SHX tag = XSM tag = GXC tag = YUN tag = SIK tag = MEN }
-						has_dlc = "Waking the Tiger"
-					}
-				}
-				NOT = {
-					AND = {
-						OR = { tag = MEX tag = HOL }
-						has_dlc = "Man the Guns"
-					}
-				}
-			}
-			
-			cost = 150
-			removal_cost = 10
-			
-			research_bonus = {
-				naval_equipment = 0.15
-			}
-			
-			traits = { naval_manufacturer }
-		}
-	}
-
-	industrial_concern = {
-	
-		generic_industrial_concern = {
-			
-			picture = generic_industrial_concern_1
-
-			allowed = {
-			}
-			
-			cost = 150
-			removal_cost = 10
-			
-			research_bonus = {
-				industry = 0.15
-			}
-			
-			traits = { industrial_concern }
-		}
-
-		generic_electronics_concern = {
-			
-			picture = generic_electronics_concern_1
-
-			allowed = {
-			}
-			
-			cost = 150
-			removal_cost = 10
-			
-			research_bonus = {
-				electronics = 0.15
-			}
-			
-			traits = { electronics_concern }
-		}
-	}
-
-	materiel_manufacturer = {
-	
-		designer = yes
-	
-		generic_motorized_equipment_manufacturer = {
-			
-			picture = generic_motorized_equipment_manufacturer_3
-
-			allowed = {
-			}
-			
-			cost = 150
-			removal_cost = 10
-			
-			research_bonus = {
-				motorized_equipment = 0.15
-			}
-			
-			traits = { motorized_equipment_manufacturer }
-		}
-		
-		generic_infantry_equipment_manufacturer = {
-			
-			picture = generic_infantry_equipment_manufacturer_2
-
-			allowed = {
-			}
-			
-			cost = 150
-			removal_cost = 10
-			
-			research_bonus = {
-				infantry_weapons = 0.15
-			}
-			
-			traits = { infantry_equipment_manufacturer }
-		}
-		
-		generic_artillery_manufacturer = {
-			
-			picture = generic_artillery_manufacturer_2
-
-			allowed = {
-			}
-			
-			cost = 150
-			removal_cost = 10
-			
-			research_bonus = {
-				artillery = 0.15
-			}
-			
-			traits = { artillery_manufacturer }
-		}
-	}
-
-	political_advisor = {
-
-		generic_captain_of_industry = {
-
-			allowed = {
-			}
-
-			picture = treasurer
-			
-			traits = { captain_of_industry }
-		}
-		
-		generic_fortification_engineer = {
-
-			allowed = {
-			}
-
-			picture = military_engineer
-			
-			traits = { fortification_engineer }
-		}
-
-		generic_war_industrialist = {
-
-			allowed = {
-			}
-
-			picture = spymaster
-			
-			traits = { war_industrialist }
-		}
-
-		generic_silent_workhorse = {
-
-			allowed = {
-			}
-
-			picture = statesman
-			
-			traits = { silent_workhorse }
-		}
-
-		generic_prince_of_terror = {
-
-			allowed = {
-			}
-
-			picture = inquisitor
-			
-			traits = { prince_of_terror }
-		}
-
-		generic_popular_figurehead = {
-
-			allowed = {
-			}
-
-			picture = artist
-			
-			traits = { popular_figurehead }
-		}
-
-		generic_backroom_backstabber = {
-
-			allowed = {
-			}
-
-			picture = diplomat
-			
-			traits = { backroom_backstabber }
-		}
-
-		generic_smooth_talking_charmer = {
-
-			allowed = {
-			}
-
-			picture = trader
-			
-			traits = { smooth_talking_charmer }
-		}
-
-	}
-
-	army_chief = {
-		
-		generic_army_chief_off = {
-			
-			allowed = {
-			}
-
-			picture = grand_captain
-			
-			traits = { army_chief_offensive_1 }
-		}
-
-		generic_army_chief_def = {
-			
-			allowed = {
-			}
-
-			picture = army_organiser
-			
-			traits = { army_chief_defensive_1 }
-		}
-
-		generic_army_chief_org = {
-			
-			allowed = {
-			}
-
-			picture = master_recruiter
-			
-			traits = { army_chief_organizational_1 }
-		}
-
-		generic_army_chief_morale = {
-			
-			allowed = {
-			}
-
-			picture = quartermaster
-			
-			traits = { army_chief_morale_1 }
-		}
-	}
-
-	navy_chief = {		
-
-		generic_navy_chief_decisive_bat = {
-			
-			allowed = {
-			}
-
-			picture = navigator
-			
-			traits = { navy_chief_decisive_battle_2 }
-		}
-
-		generic_navy_anti_submarine = {
-			
-			allowed = {
-			}
-
-			picture = grand_captain
-			
-			traits = { navy_anti_submarine_2 }
-		}
-	}
-
-	high_command = {
-
-		generic_army_art = {
-			
-			allowed = {
-			}
-
-			picture = quartermaster
-			
-			traits = { army_artillery_1 }			
-		}
-		
-		generic_army_log = {
-
-			allowed = {
-			}
-			
-			picture = commander
-			traits = { army_logistics_1 }			
-		}
-
-		generic_army_reg = {
-
-			allowed = {
-			}
-			
-			picture = army_organiser
-			traits = { army_regrouping_1 }			
-		}
-
-		generic_army_inf = {
-
-			allowed = {
-			}
-			
-			picture = army_reformer
-
-			traits = { army_infantry_1 }			
-		}
-
-		generic_navy_fleet_log = {
-
-			allowed = {
-			}
-
-			picture = navigator
-			
-			traits = { navy_fleet_logistics_1 }			
-		}
-	}
-
-	theorist = {
-
-		generic_military_theorist = {
-
-			picture = army_reformer
-			
-			research_bonus = {
-				land_doctrine = 0.10
-			}
-			
-			traits = { military_theorist }
-		}
-	
-		generic_naval_theorist = {
-			
-			allowed = {
-			}
-			
-			picture = naval_reformer
-
-			research_bonus = {
-				naval_doctrine = 0.10
-			}
-			
-			traits = { naval_theorist }
-		}
 	}
 }

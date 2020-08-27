@@ -77,14 +77,6 @@ TUR_janissar_revolt_category = {
 			has_civil_war = no
 			
 			NOT = { has_government = aristocracy } 
-			
-			#OR = { # Domestic violence or antagonised world powers
-			#	has_completed_focus = MEX_focus_triumph_over_the_cristeros
-			#	has_completed_focus = MEX_focus_the_red_shirts
-			#	has_completed_focus = MEX_focus_international_proletarianism
-			#	has_completed_focus = MEX_focus_ejido_worker_militias
-			#	has_completed_focus = MEX_focus_bolivarian_alliance
-			#}
 		}
 
 		days_remove = 150
@@ -96,15 +88,6 @@ TUR_janissar_revolt_category = {
 		visible = {
 			NOT = { has_global_flag = TUR_edirne_event_triggered }
 			OR = {
-				#NOT = {
-				#	OR = {
-				#		has_completed_focus = MEX_focus_triumph_over_the_cristeros
-				#		has_completed_focus = MEX_focus_the_red_shirts
-				#		has_completed_focus = MEX_focus_international_proletarianism
-				#		has_completed_focus = MEX_focus_ejido_worker_militias
-				#		has_completed_focus = MEX_focus_bolivarian_alliance
-				#	}
-				#}
 				has_stability > 0.75
 				aristocracy < 0.50
 				has_idea = TUR_janissary_loyalty_4

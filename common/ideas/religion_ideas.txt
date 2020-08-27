@@ -13,9 +13,8 @@ ideas = {
 			}
 
 			available = {
-				custom_trigger_tooltip = {
-					tooltip = religion_available
-					always = no
+				any_neighbor_country = {
+				    has_idea = catholic
 				}
 			}
 

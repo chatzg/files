@@ -1,5 +1,47 @@
 leader_traits = {
+
+	technology_thief = {
+		random = no
+		sprite = 13
+		research_speed_factor = 0.03
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	
+	war_propagandist = {
+		random = no
+		sprite = 13
+		war_support_factor = 0.10
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	coercive_diplomat = {
+		random = no
+		sprite = 13
+		justify_war_goal_time = -0.25
+		generate_wargoal_tension = -0.25
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	corrupt_treasurer = {
+		random = no
+		sprite = 13
+		political_power_gain = 0.15
+		consumer_goods_factor = 0.03
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 	republican_reformer = {
 		random = no
 		# Boosts Unaligned

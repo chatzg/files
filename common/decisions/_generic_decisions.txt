@@ -2,7 +2,7 @@
 
 political_actions = {
 
-	improved_worker_conditions = {
+	lower_tax_burdens = {
 
 		icon = generic_industry
 
@@ -47,51 +47,6 @@ political_actions = {
 
 economy_decisions = {
 }
-
-propaganda_efforts = {
-
-	war_propaganda = {
-
-		icon = generic_prepare_civil_war
-
-		available = {
-			NOT = { has_country_flag = war_propaganda_campaign_running }
-			threat > 0.5
-			has_war_support < 0.5
-			has_offensive_war = no
-		}
-
-		visible = {
-			
-		}
-
-		fire_only_once = no
-
-		days_remove = 90
-		days_re_enable = 180
-
-		cost = 150
-
-		modifier = {
-			war_support_weekly = 0.01
-		}
-
-		complete_effect = {
-			set_country_flag = war_propaganda_campaign_running
-		}
-		remove_effect = {
-			clr_country_flag = war_propaganda_campaign_running
-		}
-
-		ai_will_do = {
-			base = 0
-			modifier = {
-				add = 1
-				has_war_support < 0.4
-				has_war = yes
-			}
-		}
-	}
 
 	#Propaganda campaign against a country in offensive that has caused a lot of tension and started a war
 	war_propaganda_against_warmonger = {

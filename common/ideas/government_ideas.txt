@@ -77,4 +77,278 @@ ideas = {
 	   		}
 		}
 	}
+
+	political_advisor = {
+
+		generic_silent_workhorse = {
+
+			allowed = {
+			}
+
+			picture = statesman
+			
+			traits = { silent_workhorse }
+		}
+
+		generic_prince_of_terror = {
+
+			allowed = {
+			}
+
+			picture = inquisitor
+			
+			traits = { prince_of_terror }
+		}
+
+		generic_popular_figurehead = {
+
+			allowed = {
+			}
+
+			picture = artist
+			
+			traits = { popular_figurehead }
+		}
+	}
+
+	chief_economic_advisor = {
+		generic_war_industrialist = {
+
+			allowed = {
+			}
+
+			picture = spymaster
+			
+			traits = { war_industrialist }
+		}
+
+		generic_captain_of_industry = {
+
+			allowed = {
+			}
+
+			picture = treasurer
+			
+			traits = { captain_of_industry }
+		}
+
+		generic_treasurer = {
+
+			allowed = {
+			}
+
+			picture = merchant_3
+			
+			traits = { corrupt_treasurer }
+		}
+	}
+
+	chief_diplomatic_advisor = {
+
+		generic_war_propagandist = {
+
+			allowed = {
+			}
+
+			picture = chancellor
+			
+			traits = { war_propagandist }
+		}
+
+		generic_coercive_diplomat = {
+
+			allowed = {
+			}
+
+			picture = noble_2
+			
+			traits = { coercive_diplomat }
+		}
+
+		generic_smooth_talking_charmer = {
+
+			allowed = {
+			}
+
+			picture = trader
+			
+			traits = { smooth_talking_charmer }
+		}
+
+		generic_backroom_backstabber = {
+
+			allowed = {
+			}
+
+			picture = clergyman_1
+			
+			traits = { backroom_backstabber }
+		}
+	}
+
+	spymaster = {
+		generic_technology_thief = {
+
+			allowed = {
+			}
+
+			picture = spymaster
+			
+			traits = { technology_thief }
+		}
+	}
+
+	army_chief = {
+		generic_fortification_engineer = {
+
+			allowed = {
+			}
+
+			picture = military_engineer
+			
+			traits = { fortification_engineer }
+		}
+		
+		generic_army_chief_off = {
+			
+			allowed = {
+			}
+
+			picture = grand_captain
+			
+			traits = { army_chief_offensive_1 }
+		}
+
+		generic_army_chief_def = {
+			
+			allowed = {
+			}
+
+			picture = army_organiser
+			
+			traits = { army_chief_defensive_1 }
+		}
+
+		generic_army_chief_org = {
+			
+			allowed = {
+			}
+
+			picture = master_recruiter
+			
+			traits = { army_chief_organizational_1 }
+		}
+
+		generic_army_chief_morale = {
+			
+			allowed = {
+			}
+
+			picture = quartermaster
+			
+			traits = { army_chief_morale_1 }
+		}
+	}
+
+	navy_chief = {		
+
+		generic_navy_chief_decisive_bat = {
+			
+			allowed = {
+			}
+
+			picture = navigator
+			
+			traits = { navy_chief_decisive_battle_2 }
+		}
+
+		generic_navy_anti_submarine = {
+			
+			allowed = {
+			}
+
+			picture = grand_captain
+			
+			traits = { navy_anti_submarine_2 }
+		}
+	}
+
+	high_command = {
+
+		generic_army_art = {
+			
+			allowed = {
+			}
+
+			picture = quartermaster
+			
+			traits = { army_artillery_1 }			
+		}
+		
+		generic_army_log = {
+
+			allowed = {
+			}
+			
+			picture = commander
+			traits = { army_logistics_1 }			
+		}
+
+		generic_army_reg = {
+
+			allowed = {
+			}
+			
+			picture = army_organiser
+			traits = { army_regrouping_1 }			
+		}
+
+		generic_army_inf = {
+
+			allowed = {
+			}
+			
+			picture = army_reformer
+
+			traits = { army_infantry_1 }			
+		}
+
+		generic_navy_fleet_log = {
+
+			allowed = {
+			}
+
+			picture = navigator
+			
+			traits = { navy_fleet_logistics_1 }			
+		}
+	}
+
+	theorist = {
+
+		generic_military_theorist = {
+
+			picture = army_reformer
+			
+			research_bonus = {
+				land_doctrine = 0.10
+			}
+			
+			traits = { military_theorist }
+		}
+	
+		generic_naval_theorist = {
+			
+			allowed = {
+			}
+			
+			picture = naval_reformer
+
+			research_bonus = {
+				naval_doctrine = 0.10
+			}
+			
+			traits = { naval_theorist }
+		}
+	}
 }

@@ -6,6 +6,7 @@ set_research_slots = 3
 
 add_ideas = {
 	buddhism
+	nomadic_society
 }
 
 # Starting tech

@@ -4708,4 +4708,87 @@ spriteTypes = {
 		name = "GFX_idea_st_michael"
 		texturefile = "gfx/interface/ideas/idea_st_michael.dds"
 	}
+
+	spriteType = {
+		name = "GFX_idea_burgher_coup"
+		texturefile = "gfx/interface/ideas/idea_burgher_coup.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_clergy_coup"
+		texturefile = "gfx/interface/ideas/idea_clergy_coup.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_aristocratic_coup"
+		texturefile = "gfx/interface/ideas/idea_aristocratic_coup.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_peasants_war"
+		texturefile = "gfx/interface/ideas/idea_peasants_war.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_chancellor"
+		texturefile = "gfx/interface/ideas/idea_chancellor.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_clergyman_1"
+		texturefile = "gfx/interface/ideas/idea_clergyman_1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_clergyman_2"
+		texturefile = "gfx/interface/ideas/idea_clergyman_2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_clergyman_3"
+		texturefile = "gfx/interface/ideas/idea_clergyman_3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_clergyman_4"
+		texturefile = "gfx/interface/ideas/idea_clergyman_4.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_jesuit"
+		texturefile = "gfx/interface/ideas/idea_jesuit.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_judge"
+		texturefile = "gfx/interface/ideas/idea_judge.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_merchant"
+		texturefile = "gfx/interface/ideas/idea_merchant.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_merchant_2"
+		texturefile = "gfx/interface/ideas/idea_merchant_2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_merchant_3"
+		texturefile = "gfx/interface/ideas/idea_merchant_3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_noble"
+		texturefile = "gfx/interface/ideas/idea_noble.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_noble_2"
+		texturefile = "gfx/interface/ideas/idea_noble_2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_noble_3"
+		texturefile = "gfx/interface/ideas/idea_noble_3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_patriarch"
+		texturefile = "gfx/interface/ideas/idea_patriarch.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_polish_nobleman"
+		texturefile = "gfx/interface/ideas/idea_polish_nobleman.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_protestant_priest"
+		texturefile = "gfx/interface/ideas/idea_protestant_priest.dds"
+	}
+
 }

@@ -538,7 +538,7 @@ focus = {
 
 focus = {
 	id = RUS_bring_cossacks_to_justice
-	icon =  GFX_goal_generic_occupy_states_ongoing_war
+	icon =  GFX_focus_eng_move_to_secure_the_dominions
 	x = -1
 	y = 1
 	cost = 10
@@ -552,7 +552,7 @@ focus = {
 
 focus = {
 	id = RUS_seek_revocations_of_protection
-	icon =  GFX_goal_generic_occupy_states_ongoing_war
+	icon =  GFX_goal_generic_forceful_treaty
 	x = -1
 	y = 2
 	cost = 10
@@ -579,7 +579,7 @@ focus = {
 
 focus = {
 	id = RUS_integrate_cossack_territories
-	icon =  GFX_goal_generic_occupy_states_ongoing_war
+	icon =  GFX_goal_generic_position_armies
 	x = -2
 	y = 4
 	cost = 10
@@ -592,7 +592,7 @@ focus = {
 
 focus = {
 	id = RUS_demand_oath_of_loyalty
-	icon =  GFX_goal_generic_occupy_states_ongoing_war
+	icon =  GFX_focus_CZE_german_puppet
 	x = 0
 	y = 3
 	cost = 10
@@ -606,7 +606,7 @@ focus = {
 
 focus = {
 	id = RUS_enforce_russian_laws
-	icon =  GFX_goal_generic_occupy_states_ongoing_war
+	icon =  GFX_goal_demand_sudetenland
 	x = 0
 	y = 4
 	cost = 10
@@ -619,7 +619,7 @@ focus = {
 
 focus = {
 	id = RUS_recognize_autonomous_guberniya
-	icon =  GFX_goal_generic_occupy_states_ongoing_war
+	icon =  GFX_goal_generic_improve_relations
 	x = 2
 	y = 3
 	cost = 10
@@ -633,7 +633,7 @@ focus = {
 
 focus = {
 	id = RUS_migration_agreement
-	icon =  GFX_goal_generic_occupy_states_ongoing_war
+	icon =  GFX_goal_generic_intelligence_exchange
 	x = 2
 	y = 4
 	cost = 10
@@ -646,7 +646,7 @@ focus = {
 
 focus = {
 	id = RUS_legal_status_for_cossacks
-	icon =  GFX_goal_generic_occupy_states_ongoing_war
+	icon =  GFX_focus_generic_treaty
 	x = 1
 	y = 1
 	cost = 10
@@ -1356,7 +1356,7 @@ focus = {
 	x = -1
 	y = 1
 	cost = 10
-	mutually_exclusive = { focus = RUS_seperate_church_influence }
+	mutually_exclusive = { focus = RUS_separate_church_influence }
 	prerequisite = { focus = RUS_maintain_church_independence }
 	relative_position_id = RUS_maintain_church_independence
 

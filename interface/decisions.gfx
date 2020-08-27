@@ -1,7 +1,18 @@
 spriteTypes = {	
 
 	### categories
-
+	spriteType = {
+		name = "GFX_decision_burgher_coup"
+		texturefile = "gfx/interface/decisions/decision_burgher_coup.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_clergy_coup"
+		texturefile = "gfx/interface/decisions/decision_clergy_coup.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_aristocratic_coup"
+		texturefile = "gfx/interface/decisions/decision_aristocratic_coup.dds"
+	}
 	spriteType = {
 		name = "GFX_decision_patriarchy"
 		texturefile = "gfx/interface/decisions/decision_patriarchy.dds"
