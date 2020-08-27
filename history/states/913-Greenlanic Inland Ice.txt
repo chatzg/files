@@ -1,0 +1,23 @@
+state={
+	id=913
+	name="STATE_913"
+
+	state_category = wasteland
+	impassable = yes
+
+	history={
+		owner = DEN
+		buildings = {
+			infrastructure = 1
+
+		}
+		add_core_of = DEN
+
+	}
+
+	provinces={
+		13058 
+	}
+	manpower=800
+	buildings_max_level_factor=1.000
+}

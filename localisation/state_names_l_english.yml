@@ -99,7 +99,7 @@
  STATE_98:0 "Płock"
  STATE_99:0 "Jutland"
  STATE_100:0 "Iceland"
- STATE_101:0 "Greenland"
+ STATE_101:0 "Greenlandic shore"
  STATE_102:0 "Slovenia"
  STATE_103:0 "Dalmatia"
  STATE_104:0 "Bosnia"
@@ -916,3 +916,4 @@
  STATE_910:0 "Dagestan"
  STATE_911:0 "Khundzia"
  STATE_912:0 "Terek"
+ STATE_913:0 "Greenlanic Inland Ice"
