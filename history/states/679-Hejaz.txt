@@ -5,18 +5,8 @@ state={
 
 	history={
 		owner = TUR
-		victory_points = {
-			12758 1 
-		}
-		victory_points = {
-			12883 1 
-		}
 		buildings = {
 			infrastructure = 3
-			12883 = {
-				naval_base = 5
-
-			}
 
 		}
 		add_core_of = TUR
@@ -24,9 +14,9 @@ state={
 	}
 
 	provinces={
-		1033 1923 2027 2033 2095 5037 8073 8092 12101 12883 
+		1033 2027 2095 8092 12101 
 	}
-	manpower=411000
+	manpower=283220
 	buildings_max_level_factor=1.000
 	state_category=pastoral
 }

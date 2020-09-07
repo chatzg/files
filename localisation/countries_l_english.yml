@@ -1,5 +1,21 @@
 ﻿l_english:
 
+MCA_neutrality:0 "Mecca"
+MCA_neutrality_DEF:0 "Mecca"
+MCA_neutrality_ADJ:0 "Mecca"
+MCA_communism:0 "Mecca"
+MCA_communism_DEF:0 "Mecca"
+MCA_communism_ADJ:0 "Mecca"
+MCA_fascism:0 "Mecca"
+MCA_fascism_DEF:0 "Mecca"
+MCA_fascism_ADJ:0 "Mecca"
+MCA_democratic:0 "Mecca"
+MCA_democratic_DEF:0 "Mecca"
+MCA_democratic_ADJ:0 "Mecca"
+MCA_aristocracy:0 "Mecca"
+MCA_aristocracy_DEF:0 "Mecca"
+MCA_aristocracy_ADJ:0 "Mecca"
+
 KHA_neutrality:0 "Khalmyk"
 KHA_neutrality_DEF:0 "Khalmyk"
 KHA_neutrality_ADJ:0 "Khalmyk"

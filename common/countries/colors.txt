@@ -754,3 +754,7 @@ WUR = {
 	color = rgb { 137 90 44 }
 	color_ui = rgb { 252 182 112 }
 }
+MCA = {
+	color = rgb { 200 180 90 }
+	color_ui = rgb { 252 182 112 }
+}

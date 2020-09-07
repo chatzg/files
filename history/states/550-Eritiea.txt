@@ -1,17 +1,17 @@
-state=
-{
+
+state={
 	id=550
 	name="STATE_550"
-	manpower = 600600
-	
-	state_category = rural
-	
-	impassable = yes
+
 	history={
-	owner = UNC
+		owner = UNC
+
 	}
-	
+
 	provinces={
-		5017 5047 5091 8043 12723 12766
+		5017 5091 8043 12723 
 	}
+	manpower=600600
+	buildings_max_level_factor=1.000
+	state_category=rural
 }

@@ -1,0 +1,15 @@
+state={
+	id=929
+	name="STATE_929"
+
+	history={
+	owner = UNC
+	}
+
+	provinces={
+		2009 2072 4995 5010 5041 7912 7980 8019 8036 8062 10734 10775 12714 12757 12812 12856 
+	}
+	manpower=1358456
+	buildings_max_level_factor=1.000
+	state_category = rural
+}
