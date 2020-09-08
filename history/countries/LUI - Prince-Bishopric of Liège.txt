@@ -3,11 +3,14 @@
 set_research_slots = 2
 set_stability = 0.8
 set_war_support = 0.2 #we see what you are doing there Adolf
+set_country_flag = HRE_imperial_subject
 
 add_ideas = {
 	only_mercenaries
 	catholic
 }
+
+give_military_access = BEL
 
 set_technology = {
 	infantry_weapons = 1
