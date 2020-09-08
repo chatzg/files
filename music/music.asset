@@ -8,132 +8,43 @@ music = {
 
 # General Peace:
 music = {
-	name = "general_peace_1"
-	file = "general_peace_heartsofmen.ogg"
+	name = "French_Anthem"
+	file = "French_anthem_496-1791.ogg"
 	volume = 0.65
 }
 music = {
-	name = "general_peace_2"
-	file = "thewarends.ogg"
+	name = "Marche_du_Royal_Soissonais"
+	file = "Marche_du_Royal_Soissonais.ogg"
 	volume = 0.65
 }
 music = {
-	name = "general_peace_3"
-	file = "asongforthechildrenofww2.ogg"
+	name = "Marche_Des_Combattants"
+	file = "Marche_Des_Combattants_-_Jean_Baptiste_Lully.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Hymne_De_La_Monarchie_Francaise"
+	file = "Hymne_De_La_Monarchie_Francaise_version_de_Tchaikovsky_19e_siecle.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Marche_pour_la_ceremonie_des_Turcs"
+	file = "Royaume_de_France_1643-1792_Musique_de_la_Court_de_Louis_XIV_Marche_pour_la_ceremonie_des_Tur.ogg"
+	volume = 0.80
+}
+music = {
+	name = "Marche_Royale_de_France"
+	file = "Marche_militaire_francaise_de_lancien_regime_-_Marche_Royale_de_France.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Danse_de_village"
+	file = "Marche_militaire_francaise_de_lancien_regime_-_Danse_de_village.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Merck-toch-hoe-sterck"
+	file = "Dutch-Patriotic-song-Merck-toch-hoe-sterck-_Bergen-op-zoom_.ogg"
 	volume = 0.65
 }
 
-# General war:
-music = {
-	name = "general_war_1"
-	file = "general_war_bringforththetanks.ogg"
-	volume = 0.65
-}
-music = {
-	name = "general_war_2"
-	file = "general_war_theattack.ogg"
-	volume = 0.65
-}
-
-
-# Allies Peace:
-music = {
-	name = "allies_peace_1"
-	file = "allies_peace_morningofdday.ogg"
-	volume = 0.65
-}
-music = {
-	name = "allies_peace_2"
-	file = "endofthetour.ogg"
-	volume = 0.65
-}
-
-
-# Allies War:
-music = {
-	name = "allies_war_1"
-	file = "wearesoldiers.ogg"
-	volume = 0.65
-}
-music = {
-	name = "allies_war_2"
-	file = "allies_war_theroyalairforce.ogg"
-	volume = 0.65
-}
-
-
-# Axis Peace:
-music = {
-	name = "axis_peace_1"
-	file = "axis_peace_krakow.ogg"
-	volume = 0.65
-}
-music = {
-	name = "axis_peace_2"
-	file = "luftwaffemarch_reprise.ogg"
-	volume = 0.65
-}
-
-
-# Axis War:
-music = {
-	name = "axis_war_1"
-	file = "axistheme.ogg"
-	volume = 0.65
-}
-music = {
-	name = "axis_war_2"
-	file = "heavywater.ogg"
-	volume = 0.65
-}
-music = {
-	name = "axis_war_3"
-	file = "operationbarbarossa.ogg"
-	volume = 0.65
-}
-music = {
-	name = "axis_war_4"
-	file = "war_axis_1_daysofthunder.ogg"
-	volume = 0.65
-}
-
-
-# Comintern Peace:
-
-music = {
-	name = "comintern_peace_1"
-	file = "motherrussia.ogg"
-	volume = 0.65
-}
-
-music = {
-	name = "comintern_peace_2"
-	file = "theredarmy.ogg"
-	volume = 0.65
-}
-
-music = {
-	name = "comintern_peace_3"
-	file = "sovietvictory.ogg"
-	volume = 0.65
-}
-
-# Comintern War:
-
-music = {
-	name = "comintern_war_1"
-	file = "themightofsovietunion.ogg"
-	volume = 0.65
-}
-
-music = {
-	name = "comintern_war_2"
-	file = "cominterntheme.ogg"
-	volume = 0.65
-}
-
-music = {
-	name = "comintern_war_3"
-	file = "thegreatpatrioticwar.ogg"
-	volume = 0.65
-}

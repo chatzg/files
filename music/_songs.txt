@@ -10,9 +10,31 @@ music = {
 	}
 }
 
-# PEACE SONGS ##################
+# FRENCH SONGS ##################
 music = {
-	song = "general_peace_1"
+	song = "French_Anthem"
+	
+	chance = {
+		modifier = {
+			factor = 1
+
+			has_war = no
+		}		
+	}	
+}
+music = {
+	song = "Marche_du_Royal_Soissonais"
+	
+	chance = {
+		modifier = {
+			factor = 1
+
+			has_war = no
+		}		
+	}	
+}
+music = {
+	song = "Marche_Des_Combattants"
 	
 	chance = {
 		modifier = {
@@ -24,7 +46,7 @@ music = {
 }
 
 music = {
-	song = "general_peace_2"
+	song = "Hymne_De_La_Monarchie_Francaise"
 	
 	chance = {
 		modifier = {
@@ -36,7 +58,7 @@ music = {
 }
 
 music = {
-	song = "general_peace_3"
+	song = "Marche_pour_la_ceremonie_des_Turcs"
 	
 	chance = {
 		modifier = {
@@ -44,240 +66,41 @@ music = {
 
 			has_war = no
 		}		
-	}
-}
-
-music = {
-	song = "allies_peace_1"
-	
-	chance = {
-		modifier = {
-			factor = 2
-
-			has_war = no
-			has_government = democratic
-		}		
 	}	
 }
 
 music = {
-	song = "allies_peace_2"
-	
-	chance = {
-		modifier = {
-			factor = 2
-
-			has_war = no
-			has_government = democratic
-		}		
-	}	
-}
-
-music = {
-	song = "axis_peace_1"
-	
-	chance = {
-		modifier = {
-			factor = 2
-
-			has_war = no
-			has_government = fascism
-		}		
-	}	
-}
-
-music = {
-	song = "axis_peace_2"
-	
-	chance = {
-		modifier = {
-			factor = 2
-
-			has_war = no
-			has_government = fascism
-		}		
-	}	
-}
-
-# WAR SONGS ####################
-
-music = {
-	song = "general_war_1"
+	song = "Marche_Royale_de_France"
 	
 	chance = {
 		modifier = {
 			factor = 1
 
-			has_war = yes
+			has_war = no
 		}		
 	}	
 }
 
 music = {
-	song = "general_war_2"
+	song = "Danse_de_village"
 	
 	chance = {
 		modifier = {
 			factor = 1
 
-			has_war = yes
+			has_war = no
 		}		
 	}	
 }
 
 music = {
-	song = "axis_war_1"
+	song = "Merck-toch-hoe-sterck"
 	
 	chance = {
 		modifier = {
-			factor = 2
-
-			has_war = yes
-			has_government = fascism
-		}		
-	}	
-}
-
-music = {
-	song = "axis_war_2"
-	
-	chance = {
-		modifier = {
-			factor = 2
-
-			has_war = yes
-			has_government = fascism
-		}		
-	}	
-}
-
-music = {
-	song = "axis_war_3"
-	
-	chance = {
-		modifier = {
-			factor = 2
-
-			has_war = yes
-			has_government = fascism
-		}		
-	}	
-}
-
-music = {
-	song = "axis_war_4"
-	
-	chance = {
-		modifier = {
-			factor = 2
-
-			has_war = yes
-			has_government = fascism
-		}		
-	}	
-}
-
-music = {
-	song = "allies_war_1"
-	
-	chance = {
-		modifier = {
-			factor = 2
-
-			has_war = yes
-			has_government = democratic
-		}		
-	}	
-}
-
-music = {
-	song = "allies_war_2"
-	
-	chance = {
-		modifier = {
-			factor = 2
-
-			has_war = yes
-			has_government = democratic
-		}		
-	}	
-}
-
-music = {
-	song = "comintern_peace_1"
-	
-	chance = {
-		modifier = {
-			factor = 2
+			factor = 1
 
 			has_war = no
-			has_government = communism
-		}		
-	}	
-}
-
-music = {
-	song = "comintern_peace_2"
-	
-	chance = {
-		modifier = {
-			factor = 2
-
-			has_war = no
-			has_government = communism
-		}		
-	}	
-}
-
-music = {
-	song = "comintern_peace_3"
-	
-	chance = {
-		modifier = {
-			factor = 2
-
-			has_war = no
-			has_government = communism
-		}		
-	}	
-}
-
-
-music = {
-	song = "comintern_war_1"
-	
-	chance = {
-		modifier = {
-			factor = 2
-
-			has_war = yes
-			has_government = communism
-		}		
-	}	
-}
-
-music = {
-	song = "comintern_war_2"
-	
-	chance = {
-		modifier = {
-			factor = 2
-
-			has_war = yes
-			has_government = communism
-		}		
-	}	
-}
-
-music = {
-	song = "comintern_war_3"
-	
-	chance = {
-		modifier = {
-			factor = 2
-
-			has_war = yes
-			has_government = communism
 		}		
 	}	
 }

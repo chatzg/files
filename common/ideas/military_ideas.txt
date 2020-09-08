@@ -44,20 +44,6 @@ ideas = {
 			}
 		}
 
-		serfdom = {
-			allowed = {
-				always = no
-			}
-
-			removal_cost = -1
-
-			picture = generic_infantry_bonus
-
-			modifier = 
-				{ conscription_factor = 0.33
-			}
-		}
-
 		offensive_doctrine = {
 			allowed = {
 				always = no

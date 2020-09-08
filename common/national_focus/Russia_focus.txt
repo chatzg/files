@@ -17,7 +17,7 @@ focus = {
 	id = RUS_our_place_in_the_world
 	icon = GFX_focus_russia_place_in_the_world
 	prerequisite = { focus = RUS_great_reforms_of_Peter }
-	x = 10
+	x = 13
 	y = 5
 	cost = 5
 	ai_will_do = { 
@@ -112,7 +112,7 @@ focus = {
 
 focus = {
 	id = RUS_state_visit_to_netherlands
-	icon =  GFX_focus_usa_focus_on_europe
+	icon =  GFX_focus_hol_oranje_boven
 	x = 3
 	y = 1
 	cost = 10
@@ -1047,7 +1047,7 @@ focus = {
 focus = {
 	id = RUS_great_reforms_of_Peter
 	icon =  GFX_goal_generic_demand_territory
-	x = 10
+	x = 13
 	y = 0
 	cost = 10
 
@@ -1063,7 +1063,7 @@ focus = {
 focus = {
 	id = RUS_great_reforms_industrial_reform
 	icon =  GFX_goal_generic_production
-	x = 15
+	x = 8
 	y = 1
 	cost = 10
 	prerequisite = { focus = RUS_great_reforms_of_Peter }
@@ -1072,7 +1072,7 @@ focus = {
 		add_tech_bonus = {
 			name = industrial_bonus
 			bonus = 1.0
-			uses = 1
+			uses = 2
 			category = industry
 		}
 	}
@@ -1081,18 +1081,34 @@ focus = {
 focus = {
 	id = RUS_construction_effort
 	icon = GFX_goal_generic_construct_civ_factory
-	prerequisite = { focus = RUS_great_reforms_industrial_reform }
-	x = 1
-	y = 1
+	prerequisite = { focus = RUS_infrastructure_effort }
+	x = 3
+	y = 2
 	relative_position_id = RUS_great_reforms_industrial_reform
 	cost = 10
 
 	completion_reward = {
-		random_owned_controlled_state = {
-			add_extra_state_shared_building_slots = 1
+		219 = {
+			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
 				type = industrial_complex
-				level = 1
+				level = 2
+				instant_build = yes
+			}
+		}
+		263 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		252 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
 				instant_build = yes
 			}
 		}
@@ -1103,13 +1119,53 @@ focus = {
 	id = RUS_construction_effort_2
 	icon = GFX_goal_generic_construct_civ_factory
 	prerequisite = { focus = RUS_construction_effort }
-	x = 1
-	y = 2
+	x = 3
+	y = 3
 	relative_position_id = RUS_great_reforms_industrial_reform
 	cost = 10
 
 	completion_reward = {
-	random_owned_controlled_state = {
+		217 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		239 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		236 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		249 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		398 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		572 = {
 			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = industrial_complex
@@ -1123,14 +1179,28 @@ focus = {
 focus = {
 	id = RUS_infrastructure_effort
 	icon = GFX_goal_generic_construct_civ_factory
-	prerequisite = { focus = RUS_construction_effort_2 }
-	x = 1
-	y = 3
+	prerequisite = { focus = RUS_great_reforms_industrial_reform }
+	x = 2
+	y = 1
 	relative_position_id = RUS_great_reforms_industrial_reform
 	cost = 10
 
 	completion_reward = {
-	random_owned_controlled_state = {
+		219 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		246 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		263 = {
 			add_building_construction = {
 				type = infrastructure
 				level = 2
@@ -1141,59 +1211,47 @@ focus = {
 }
 
 focus = {
-	id = RUS_armament_effort
+	id = RUS_raise_war_taxes
 	icon = GFX_goal_generic_construct_mil_factory
-	prerequisite = { focus = RUS_great_reforms_industrial_reform }
-	x = -1
-	y = 1
+	prerequisite = { focus = RUS_infrastructure_effort }
+	x = 1
+	y = 2
 	relative_position_id = RUS_great_reforms_industrial_reform
 	cost = 10
 
 	completion_reward = {
-	random_owned_controlled_state = {
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = arms_factory
-				level = 1
-				instant_build = yes
-			}
-		}
+		add_ideas = RUS_war_taxes
 	}
 }
 
 focus = {
 	id = RUS_armament_effort_2
 	icon = GFX_goal_generic_construct_mil_factory
-	prerequisite = { focus = RUS_armament_effort }
-	x = -1
-	y = 2
-	relative_position_id = RUS_great_reforms_industrial_reform
-	cost = 10
-
-	completion_reward = {
-	random_owned_controlled_state = {
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = arms_factory
-				level = 1
-				instant_build = yes
-			}
-		}
-	}
-}
-
-focus = {
-	id = RUS_armament_effort_3
-	icon = GFX_goal_generic_construct_mil_factory
-	prerequisite = { focus = RUS_armament_effort_2 }
-	x = -1
+	prerequisite = { focus = RUS_raise_war_taxes }
+	x = 1
 	y = 3
 	relative_position_id = RUS_great_reforms_industrial_reform
 	cost = 10
 
 	completion_reward = {
-	random_owned_controlled_state = {
-			add_extra_state_shared_building_slots = 1
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
 				type = arms_factory
 				level = 1
@@ -1206,7 +1264,7 @@ focus = {
 focus = {
 	id = RUS_great_reforms_domestic_reform
 	icon =  GFX_goal_generic_neutrality_focus
-	x = 20
+	x = 24
 	y = 1
 	cost = 10
 	prerequisite = { focus = RUS_great_reforms_of_Peter }
@@ -1219,7 +1277,7 @@ focus = {
 focus = {
 	id = RUS_reform_orthodox_church
 	icon =  GFX_focus_mex_triumph_over_the_cristeros
-	x = 5
+	x = -6
 	y = 1
 	cost = 10
 	prerequisite = { focus = RUS_great_reforms_domestic_reform }
@@ -1379,12 +1437,27 @@ focus = {
 	}
 }
 
+focus = {
+	id = RUS_third_rome_doctrine
+	icon =  GFX_goal_third_rome
+	x = 0
+	y = 2
+	cost = 10
+	prerequisite = { focus = RUS_separate_church_influence focus = RUS_efficient_icon_funding }
+	relative_position_id = RUS_maintain_church_independence
+
+	completion_reward = {
+		custom_effect_tooltip = RUS_seperated_church_influence
+	}
+}
+
+
 
 
 focus = {
 	id = RUS_build_moscow_hospital
 	icon =  GFX_focus_generic_treaty
-	x = -2
+	x = 5
 	y = 1
 	cost = 10
 	prerequisite = { focus = RUS_great_reforms_domestic_reform }
@@ -1398,29 +1471,119 @@ focus = {
 focus = {
 	id = RUS_enforce_serfdom
 	icon =  GFX_focus_CZE_german_puppet
-	x = 0
+	x = -1
 	y = 1
 	cost = 10
 	prerequisite = { focus = RUS_great_reforms_domestic_reform }
+	relative_position_id = RUS_great_reforms_domestic_reform
+	mutually_exclusive = { focus = RUS_abolish_serfdom }
+
+	completion_reward = {
+		add_popularity = {
+		    ideology = neutrality
+		    popularity = 0.10
+		}
+
+		add_ideas = serfdom_enforced 
+	}
+}
+
+focus = {
+	id = RUS_grain_taxes
+	icon =  GFX_goal_grain
+	x = -1
+	y = 2
+	cost = 10
+	prerequisite = { focus = RUS_enforce_serfdom }
+	relative_position_id = RUS_great_reforms_domestic_reform
+
+	completion_reward = {
+		add_resource = {
+		    type = oil
+		    amount = 8
+		    state = 223
+		}
+		add_resource = {
+		    type = oil
+		    amount = 10
+		    state = 253
+		}
+		add_resource = {
+		    type = oil
+		    amount = 12
+		    state = 258
+		}
+		add_resource = {
+		    type = oil
+		    amount = 7
+		    state = 238
+		}
+	}
+}
+
+focus = {
+	id = RUS_abolish_serfdom
+	icon =  GFX_focus_spr_masters_of_our_own_fate
+	x = 1
+	y = 1
+	cost = 10
+	prerequisite = { focus = RUS_great_reforms_domestic_reform }
+	relative_position_id = RUS_great_reforms_domestic_reform
+	mutually_exclusive = { focus = RUS_enforce_serfdom }
+
+	completion_reward = {
+		add_popularity = {
+		    ideology = communism
+		    popularity = 0.05
+		}
+		add_popularity = {
+		    ideology = aristocracy
+		    popularity = 0.10
+		}
+		remove_ideas = RUS_russians_fleeing_serfdom
+		add_stability = 0.05
+	}
+}
+
+focus = {
+	id = RUS_land_redistribution
+	icon =  GFX_focus_generic_concessions
+	x = 1
+	y = 2
+	cost = 10
+	prerequisite = { focus = RUS_abolish_serfdom }
 	relative_position_id = RUS_great_reforms_domestic_reform
 
 	completion_reward = {
 		add_popularity = {
 		    ideology = communism
-		    popularity = -0.10
+		    popularity = 0.05
 		}
-
-		add_ideas = serfdom 
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+		}
 	}
 }
 
 focus = {
-	id = RUS_beard_tax
-	icon =  GFX_focus_generic_treaty
+	id = RUS_deal_with_the_boyars
+	icon =  GFX_goal_generic_demand_territory
 	x = 0
-	y = 2
+	y = 3
 	cost = 10
-	prerequisite = { focus = RUS_enforce_serfdom }
+	prerequisite = { focus = RUS_enforce_serfdom focus = RUS_abolish_serfdom }
 	relative_position_id = RUS_great_reforms_domestic_reform
 
 	completion_reward = {
@@ -1432,12 +1595,12 @@ focus = {
 }
 
 focus = {
-	id = RUS_crush_boyar_opposition
+	id = RUS_beard_tax
 	icon =  GFX_focus_generic_treaty
 	x = 0
-	y = 3
+	y = 4
 	cost = 10
-	prerequisite = { focus = RUS_beard_tax }
+	prerequisite = { focus = RUS_deal_with_the_boyars }
 	relative_position_id = RUS_great_reforms_domestic_reform
 
 	completion_reward = {
@@ -1452,7 +1615,7 @@ focus = {
 	id = RUS_abolish_duma
 	icon =  GFX_focus_generic_treaty
 	x = 0
-	y = 4
+	y = 5
 	cost = 10
 	prerequisite = { focus = RUS_crush_boyar_opposition }
 	relative_position_id = RUS_great_reforms_domestic_reform
@@ -1469,10 +1632,10 @@ focus = {
 	id = RUS_infrastructural_reforms
 	icon =  GFX_goal_generic_construct_infrastructure
 	x = -2
-	y = 2
+	y = 1
 	cost = 10
-	prerequisite = { focus = RUS_build_moscow_hospital }
-	relative_position_id = RUS_great_reforms_domestic_reform
+	prerequisite = { focus = RUS_great_reforms_industrial_reform }
+	relative_position_id = RUS_great_reforms_industrial_reform
 
 	completion_reward = {
 		add_ideas = russia_infrastructural_reforms
@@ -1480,12 +1643,168 @@ focus = {
 }
 
 focus = {
-	id = RUS_education_reform
-	icon =  GFX_focus_research
-	x = -2
-	y = 3
+	id = RUS_exploit_russias_riches
+	icon =  GFX_goal_generic_construct_infrastructure
+	x = 1
+	y = 1
 	cost = 10
 	prerequisite = { focus = RUS_infrastructural_reforms }
+	relative_position_id = RUS_infrastructural_reforms
+
+	completion_reward = {
+		add_ideas = RUS_rich_in_resources
+	}
+}
+
+focus = {
+	id = RUS_monopolize_natural_resources
+	icon =  GFX_All_resource
+	x = 1
+	y = 2
+	cost = 10
+	prerequisite = { focus = RUS_exploit_russias_riches }
+	relative_position_id = RUS_infrastructural_reforms
+
+	completion_reward = {
+		add_resource = {
+		    type = steel
+		    amount = 12
+		    state = 248
+		}
+		add_resource = {
+		    type = chromium
+		    amount = 14
+		    state = 351
+		}
+		add_resource = {
+		    type = steel
+		    amount = 20
+		    state = 581
+		}
+		add_resource = {
+		    type = oil
+		    amount = 18
+		    state = 237
+		}
+	}
+}
+
+focus = {
+	id = RUS_modernize_old_fortifications
+	icon =  GFX_goal_generic_construct_infrastructure
+	x = -1
+	y = 1
+	cost = 10
+	prerequisite = { focus = RUS_infrastructural_reforms }
+	relative_position_id = RUS_infrastructural_reforms
+
+	completion_reward = {
+		218 = {
+			add_building_construction = {
+				type = bunker
+				level = 2
+				province = 9417
+				instant_build = yes
+			}
+		}
+		217 = {
+			add_building_construction = {
+				type = bunker
+				level = 2
+				province = 3529
+				instant_build = yes
+			}
+		}
+		792 = {
+			add_building_construction = {
+				type = bunker
+				level = 2
+				province = 525
+				instant_build = yes
+			}
+		}
+		246 = {
+			add_building_construction = {
+				type = bunker
+				level = 2
+				province = 11349
+				instant_build = yes
+			}
+		}
+		263 = {
+			add_building_construction = {
+				type = bunker
+				level = 2
+				province = 117
+				instant_build = yes
+			}
+		}
+		209 = {
+			add_building_construction = {
+				type = bunker
+				level = 2
+				province = 11202
+				instant_build = yes
+			}
+		}
+		248 = {
+			add_building_construction = {
+				type = bunker
+				level = 2
+				province = 121
+				instant_build = yes
+			}
+		}
+		252 = {
+			add_building_construction = {
+				type = bunker
+				level = 2
+				province = 11375
+				instant_build = yes
+			}
+		}
+	}
+}
+
+focus = {
+	id = RUS_upgrade_the_kremlin_fortification
+	icon =  GFX_goal_generic_construct_infrastructure
+	x = -1
+	y = 2
+	cost = 10
+	prerequisite = { focus = RUS_modernize_old_fortifications }
+	relative_position_id = RUS_infrastructural_reforms
+
+	completion_reward = {
+		add_war_support = 0.05
+		219 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 6
+				province = 6380
+				instant_build = yes
+			}
+		}
+	}
+}
+
+
+
+
+
+focus = {
+	id = RUS_education_reform
+	icon =  GFX_focus_research
+	x = 5
+	y = 2
+	cost = 10
+	prerequisite = { focus = RUS_build_moscow_hospital }
 	relative_position_id = RUS_great_reforms_domestic_reform
 
 	completion_reward = {
@@ -1496,11 +1815,10 @@ focus = {
 focus = {
 	id = RUS_expand_research
 	icon =  GFX_focus_research2
-	x = -2
-	y = 4
+	x = 4
+	y = 3
 	cost = 10
 	prerequisite = { focus = RUS_education_reform }
-	prerequisite = { focus = RUS_infrastructure_effort }
 	relative_position_id = RUS_great_reforms_domestic_reform
 
 	completion_reward = {
@@ -1509,25 +1827,9 @@ focus = {
 }
 
 focus = {
-	id = RUS_great_naval_reforms
-	icon =  GFX_goal_generic_army_doctrines
-	x = -1
-	y = 1
-	cost = 10
-	prerequisite = { focus = RUS_great_reforms_of_Peter }
-
-	ai_will_do = { 
-		factor = 1
-	}
-	
-	completion_reward = {
-	}
-}
-
-focus = {
 	id = RUS_great_reforms_military_reform
 	icon =  GFX_goal_generic_army_doctrines
-	x = 5
+	x = 0
 	y = 1
 	cost = 10
 	prerequisite = { focus = RUS_great_reforms_of_Peter }

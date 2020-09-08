@@ -163,6 +163,51 @@ ideas = {
 				stability_factor = -0.05
 			}
 		}
+		RUS_war_taxes = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = chi_hyper_inflation
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_arms_factory_factor = 0.1
+				stability_factor = -0.05
+			}
+		}
+
+		RUS_rich_in_resources = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_production_bonus
+
+			modifier = {
+				local_resources_factor = 0.20
+			}
+		}
+
+		serfdom_enforced = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+
+			modifier = 
+				{ conscription_factor = 0.33
+			}
+		}
 	}
 }
 

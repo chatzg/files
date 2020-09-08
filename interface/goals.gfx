@@ -2397,4 +2397,33 @@ spriteTypes = {
 		name = "GFX_focus_on_scandinavia"
 		texturefile = "gfx/interface/goals/focus_on_scandinavia.tga"
 	}
+	SpriteType = { 
+		name = "GFX_peter_the_great"
+		texturefile = "gfx/interface/goals/peter_the_great.tga"
+	}
+
+	SpriteType = { 
+		name = "GFX_goal_autocracy"
+		texturefile = "gfx/interface/goals/goal_autocracy.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_aristocracy"
+		texturefile = "gfx/interface/goals/goal_aristocracy.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_clergy"
+		texturefile = "gfx/interface/goals/goal_clergy.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_republicanism"
+		texturefile = "gfx/interface/goals/goal_republicanism.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_revolutionary"
+		texturefile = "gfx/interface/goals/goal_revolutionary.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_third_rome"
+		texturefile = "gfx/interface/goals/goal_third_rome.tga"
+	}
 }
