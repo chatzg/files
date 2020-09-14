@@ -80,9 +80,6 @@ if = {
 BEL = {
 	set_politics = {
 		ruling_party = neutrality
-		last_election = "1932.11.27"
-		election_frequency = 48
-		elections_allowed = yes
 	}
 	set_popularities = {
 		democratic = 20

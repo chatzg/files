@@ -4,10 +4,16 @@ oob = "SOV_1936"
 
 set_research_slots = 3
 set_stability = 0.5
-set_war_support = 0.8
+set_war_support = 0.6
 
 give_guarantee = ZAP
 give_guarantee = DEN
+
+set_autonomy = {
+	target = KHA
+	autonomous_state = autonomy_dominion
+	freedom_level = 0.2
+}
 
 # Starting tech
 set_technology = {
@@ -82,7 +88,8 @@ add_ideas = {
 	orthodox
 	empire
 	RUS_russians_fleeing_serfdom
-	}
+	boyar_duma
+}
 
 create_country_leader = {
 	name = "Peter I"

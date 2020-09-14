@@ -362,6 +362,8 @@ news_event = {
 	}
 }
 
+#netherlands declared bankrupt
+
 news_event = {
 	id = mod.18
 	title = mod.18.t
@@ -376,6 +378,8 @@ news_event = {
 		name = mod.18.a
 	}
 }
+
+#death of pope
 
 news_event = {
 	id = mod.19
@@ -392,6 +396,8 @@ news_event = {
 	}
 }
 
+#new pope
+
 news_event = {
 	id = mod.20
 	title = mod.20.t
@@ -407,6 +413,8 @@ news_event = {
 	}
 }
 
+#Danish king dies
+
 news_event = {
 	id = mod.21
 	title = mod.21.t
@@ -419,5 +427,39 @@ news_event = {
 
 	option = {
 		name = "What a coincidence!"
+	}
+}
+
+#first partition of poland
+
+news_event = {
+	id = mod.22
+	title = mod.22.t
+	desc = mod.22.d
+	picture = GFX_news_event_map
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		trigger = {
+			NOT = {
+				has_country_flag = first_partition_succes
+			}
+		}
+		name = mod.22.a
+	}
+	option = {
+		trigger = {
+			has_country_flag = first_partition_succes
+		}
+		name = mod.22.b
+	}
+	option = {
+		trigger = {
+			original_tag = POL
+		}
+		name = mod.22.c
 	}
 }

@@ -21,6 +21,19 @@ add_ideas = {
 	TUR_sick_man_of_europe_1
 }
 
+ROM = {
+	set_politics = {
+		ruling_party = neutrality
+	}
+	set_popularities = {
+		democratic = 20
+		fascism = 23
+		communism = 6
+		neutrality = 35 
+		aristocracy = 16
+	}
+}
+
 create_faction = "The Ottoman Empire"
 
 if = {

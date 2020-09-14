@@ -204,8 +204,152 @@ ideas = {
 
 			picture = generic_infantry_bonus
 
-			modifier = 
-				{ conscription_factor = 0.33
+			modifier = { 
+				conscription_factor = 0.33
+			}
+		}
+
+		balanced_foreign_policy = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = neutral_foreign_policy
+
+			modifier = { 
+				trade_opinion_factor = 0.25
+				stability_factor = 0.05
+			}
+		}
+
+		enforcement_of_russian_laws = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = HUN_treaty_of_trianon
+
+			modifier = { 
+				autonomy_gain = -2
+			}
+		}
+
+		boyar_duma = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = { 
+				political_power_factor = -0.15
+				aristocracy_drift = 0.01
+			}
+		}
+
+		absolutist_centralization = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = { 
+				stability_factor = -0.05
+				neutrality_drift = 0.10
+			}
+		}
+
+		enlightened_despotism = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = { 
+				stability_factor = 0.10
+				research_speed_factor = 0.05
+			}
+		}
+		governing_senate = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = { 
+				political_power_factor = -0.05
+				democratic_drift = 0.01
+				production_factory_max_efficiency_factor = 0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		beard_tax = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = { 
+				aristocracy_drift = -0.05
+				consumer_goods_factor = -0.02
+			}
+		}
+		caeseropapism= {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = MEX_church_power_4
+
+			modifier = { 
+				neutrality_drift = 0.02
+				political_power_gain = 0.15
+			}
+		}
+		abolished_metropolitans= {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = MEX_church_power_2
+
+			modifier = { 
+				industrial_capacity_factory = 0.1
+			}
+		}
+		being_integrated = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = hol_the_foundations_of_defense
+
+			modifier = { 
+				autonomy_gain = -1
 			}
 		}
 	}

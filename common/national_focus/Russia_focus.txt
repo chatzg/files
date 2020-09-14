@@ -25,7 +25,8 @@ focus = {
 	}
 
 	completion_reward = {
-		add_political_power = 100
+		add_political_power = 75
+		add_war_support = 0.10
 	}
 }
 
@@ -44,6 +45,7 @@ focus = {
 	}
 
 	completion_reward = {
+		add_ideas = balanced_foreign_policy
 	}
 }
 
@@ -62,12 +64,13 @@ focus = {
 	}
 
 	completion_reward = {
+		add_ideas = agressive_foreign_policy
 	}
 }
 
 focus = {
 	id = RUS_northern_focus
-	icon =  GFX_focus_on_scandinavia
+	icon =  GFX_goal_scandinavia
 	x = -6
 	y = 2
 	cost = 2
@@ -117,7 +120,7 @@ focus = {
 	y = 1
 	cost = 10
 	relative_position_id = RUS_western_focus
-	prerequisite = { focus = RUS_western_focus }
+	prerequisite = { focus = RUS_western_focus focus = RUS_northern_focus}
 
 	ai_will_do = { 
 		factor = 100
@@ -184,7 +187,7 @@ focus = {
 	icon =  GFX_goal_generic_military_deal
 	x = 0
 	y = 1
-	cost = 10
+	cost = 4
 	relative_position_id = RUS_northern_focus
 	prerequisite = { focus = RUS_northern_focus }
 
@@ -213,7 +216,7 @@ focus = {
 	icon =  GFX_DEN_alliance
 	x = -1
 	y = 2
-	cost = 10
+	cost = 2
 	relative_position_id = RUS_northern_focus
 	prerequisite = { focus = RUS_anti_swedish_pact }
 
@@ -231,7 +234,7 @@ focus = {
 	icon =  GFX_goal_generic_alliance
 	x = 1
 	y = 2
-	cost = 10
+	cost = 2
 	relative_position_id = RUS_northern_focus
 	prerequisite = { focus = RUS_anti_swedish_pact }
 
@@ -249,7 +252,7 @@ focus = {
 	icon =  GFX_goal_sweden
 	x = 0
 	y = 3
-	cost = 10
+	cost = 5
 	relative_position_id = RUS_northern_focus
 	prerequisite = { focus = RUS_invite_poland focus = RUS_invite_denmark }
 
@@ -375,10 +378,10 @@ focus = {
 
 focus = {
 	id = RUS_betray_poland
-	icon =  GFX_goal_generic_attack_allies
+	icon =  GFX_focus_pol_polish_king
 	x = -9
 	y = 6
-	cost = 10
+	cost = 5
 	relative_position_id = RUS_our_place_in_the_world
 	prerequisite = { focus = RUS_make_saint_petersburg_capital }
 	prerequisite = { focus = RUS_crush_sweden }
@@ -388,7 +391,6 @@ focus = {
 			has_war_with = SWE 
 		}
 	}
-
 	completion_reward = {
 		add_ai_strategy = {
 		    type = antagonize
@@ -406,19 +408,59 @@ focus = {
 		remove_from_faction = POL
 		POL = { add_opinion_modifier = { target = SOV modifier = rivalry } }
 		add_opinion_modifier = { target = POL modifier = rivalry }	
-
 	}
 	will_lead_to_war_with = POL
 }
 
 focus = {
+	id = RUS_treaty_of_the_three_black_eagles
+	icon =  GFX_goal_generic_attack_allies
+	x = 0
+	y = 1
+	cost = 5
+	relative_position_id = RUS_betray_poland
+	prerequisite = { focus = RUS_betray_poland }
+
+	available = { 
+	}
+	completion_reward = {
+		reverse_add_opinion_modifier = {
+		    target = POL
+		    modifier = partition_treaty
+		}
+		AUS = { country_event = russia.5 }
+		PRS = { country_event = russia.5 }
+		add_state_claim = 241
+		add_state_claim = 207
+		add_state_claim = 869
+		add_state_claim = 189
+		add_state_claim = 11
+		add_state_claim = 784
+		add_state_claim = 96
+		add_state_claim = 95
+		add_state_claim = 94
+		add_state_claim = 93
+		add_state_claim = 199
+		add_state_claim = 198
+		add_state_claim = 202
+		add_state_claim = 201
+		add_state_claim = 194
+		add_state_claim = 204
+		add_state_claim = 206
+		add_state_claim = 207
+		add_state_claim = 190
+	}
+}
+
+
+focus = {
 	id = RUS_crush_poland_alone
 	icon =  GFX_goal_generic_political_pressure
-	x = -8
-	y = 7
+	x = 1
+	y = 1
 	cost = 10
-	relative_position_id = RUS_our_place_in_the_world
-	prerequisite = { focus = RUS_betray_poland }
+	relative_position_id = RUS_treaty_of_the_three_black_eagles
+	prerequisite = { focus = RUS_treaty_of_the_three_black_eagles }
 	mutually_exclusive = { focus = RUS_first_partition_treaty }
 
 	completion_reward = {
@@ -434,11 +476,11 @@ focus = {
 focus = {
 	id = RUS_first_partition_treaty
 	icon =  GFX_goal_poland_partition
-	x = -10
-	y = 7
+	x = -1
+	y = 1
 	cost = 10
-	relative_position_id = RUS_our_place_in_the_world
-	prerequisite = { focus = RUS_betray_poland }
+	relative_position_id = RUS_treaty_of_the_three_black_eagles
+	prerequisite = { focus = RUS_treaty_of_the_three_black_eagles }
 	mutually_exclusive = { focus = RUS_crush_poland_alone }
 
 	available = {
@@ -449,6 +491,11 @@ focus = {
 		POL = {
 			is_ai = yes
 		}
+		OR = {
+			AUS = { has_country_flag = partition_treaty_signature }
+			PRS = { has_country_flag = partition_treaty_signature }
+		}
+		POL = { has_stability < 0.35}
 	}
 
 	completion_reward = {
@@ -457,13 +504,16 @@ focus = {
 		transfer_state = 869
 
 		PRS = {
-			transfer_state = 85
-			transfer_state = 86
+			country_event = russia.8
 		}	
 		AUS = {
-			transfer_state = 88
-			transfer_state = 89
-			transfer_state = 91
+			country_event = russia.8
+		}
+		POL = {
+			country_event = {
+			    id = russia.8
+			    days = 5
+			}
 		}
 	}
 	will_lead_to_war_with = POL
@@ -472,10 +522,10 @@ focus = {
 focus = {
 	id = RUS_second_partition_treaty
 	icon =  GFX_goal_generic_military_deal
-	x = -10
-	y = 8
+	x = -1
+	y = 2
 	cost = 10
-	relative_position_id = RUS_our_place_in_the_world
+	relative_position_id = RUS_treaty_of_the_three_black_eagles
 	prerequisite = { focus = RUS_first_partition_treaty }
 
 	ai_will_do = { 
@@ -555,7 +605,7 @@ focus = {
 	icon =  GFX_goal_generic_forceful_treaty
 	x = -1
 	y = 2
-	cost = 10
+	cost = 5
 	relative_position_id = RUS_the_coassack
 	prerequisite = { focus = RUS_bring_cossacks_to_justice }
 
@@ -568,12 +618,16 @@ focus = {
 	icon =  GFX_goal_generic_occupy_states_ongoing_war
 	x = -2
 	y = 3
-	cost = 10
+	cost = 5
 	relative_position_id = RUS_the_coassack
 	prerequisite = { focus = RUS_seek_revocations_of_protection }
 	mutually_exclusive = { focus = RUS_demand_oath_of_loyalty focus = RUS_recognize_autonomous_guberniya }
 
 	completion_reward = {
+		create_wargoal = {
+		    type = annex_everything
+		    target = ZAP
+		}
 	}
 }
 
@@ -587,6 +641,8 @@ focus = {
 	prerequisite = { focus = RUS_dissolve_cossack_state }
 
 	completion_reward = {
+		203 = { add_core_of = SOV }
+		226 = { add_core_of = SOV }
 	}
 }
 
@@ -595,12 +651,15 @@ focus = {
 	icon =  GFX_focus_CZE_german_puppet
 	x = 0
 	y = 3
-	cost = 10
+	cost = 5
 	relative_position_id = RUS_the_coassack
 	prerequisite = { focus = RUS_seek_revocations_of_protection focus = RUS_raise_cossack_host }
 	mutually_exclusive = { focus = RUS_dissolve_cossack_state focus = RUS_recognize_autonomous_guberniya }
 
 	completion_reward = {
+		ZAP = {
+			country_event = russia.2
+		}
 	}
 }
 
@@ -613,7 +672,12 @@ focus = {
 	relative_position_id = RUS_the_coassack
 	prerequisite = { focus = RUS_demand_oath_of_loyalty }
 
+	available = {
+		ZAP = { is_puppet_of = SOV }
+	}
+
 	completion_reward = {
+		ZAP = { add_ideas = enforcement_of_russian_laws }
 	}
 }
 
@@ -622,12 +686,17 @@ focus = {
 	icon =  GFX_goal_generic_improve_relations
 	x = 2
 	y = 3
-	cost = 10
+	cost = 5
 	relative_position_id = RUS_the_coassack
 	prerequisite = { focus = RUS_raise_cossack_host }
 	mutually_exclusive = { focus = RUS_demand_oath_of_loyalty focus = RUS_dissolve_cossack_state }
 
+	available = {
+		is_faction_leader = yes
+	}
+
 	completion_reward = {
+		ZAP = { country_event = generic.5 }
 	}
 }
 
@@ -641,6 +710,7 @@ focus = {
 	prerequisite = { focus = RUS_recognize_autonomous_guberniya }
 
 	completion_reward = {
+		remove_ideas = RUS_russians_fleeing_serfdom
 	}
 }
 
@@ -674,7 +744,7 @@ focus = {
 focus = {
 	id = RUS_destroy_caucasian_states
 	icon =  GFX_focus_caucasus
-	x = -2
+	x = 2
 	y = 1
 	cost = 10
 	relative_position_id = RUS_southern_direction
@@ -693,7 +763,7 @@ focus = {
 focus = {
 	id = RUS_invade_crimea
 	icon =  GFX_goal_generic_occupy_states_ongoing_war
-	x = 2
+	x = -2
 	y = 1
 	cost = 10
 	relative_position_id = RUS_southern_direction
@@ -726,7 +796,7 @@ focus = {
 focus = {
 	id = RUS_ottomans_are_busy
 	icon =  GFX_focus_generic_provoke_border_clashes
-	x = 4
+	x = -4
 	y = 1
 	cost = 10
 	relative_position_id = RUS_southern_direction
@@ -763,7 +833,7 @@ focus = {
 focus = {
 	id = RUS_claim_the_straits
 	icon =  GFX_goal_generic_political_pressure
-	x = 3
+	x = -3
 	y = 4
 	cost = 10
 	relative_position_id = RUS_our_place_in_the_world
@@ -791,8 +861,8 @@ focus = {
 
 focus = {
 	id = RUS_subjugate_kazakh
-	icon =  GFX_goal_generic_occupy_states_ongoing_war
-	x = 0
+	icon =  GFX_goal_attack_kazakh
+	x = 1
 	y = 1
 	cost = 10
 	relative_position_id = RUS_turn_to_the_steppes
@@ -820,6 +890,72 @@ focus = {
 	will_lead_to_war_with = KAZ
 }
 
+focus = {
+	id = RUS_invest_into_kalmyk
+	icon =  GFX_goal_generic_intelligence_exchange
+	x = -1
+	y = 1
+	cost = 10
+	relative_position_id = RUS_turn_to_the_steppes
+	prerequisite = { focus = RUS_turn_to_the_steppes }
+
+	ai_will_do = {
+	    factor = 1
+	}
+	
+	completion_reward = {
+		251 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+			type = infrastructure
+			level = 1
+			instant_build = yes
+			}
+		}	
+		582 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+			type = arms_factory
+			level = 1
+			instant_build = yes
+			}
+		}
+		407 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+			type = industrial_complex
+			level = 1
+			instant_build = yes
+			}
+		}
+		KHA = {
+			add_autonomy_score = {
+			    value = -200
+			    localization = RUS_invest_into_kalmyk
+			}
+		}
+	}
+}
+
+focus = {
+	id = RUS_reduce_kalmyk_autonomy
+	icon =  GFX_focus_eng_move_to_secure_the_dominions
+	x = -2
+	y = 2
+	cost = 10
+	relative_position_id = RUS_turn_to_the_steppes
+	prerequisite = { focus = RUS_invest_into_kalmyk }
+
+	ai_will_do = {
+	    factor = 1
+	}
+	
+	completion_reward = {
+		KHA = {
+			add_ideas = being_integrated	
+		}
+	}
+}
 focus = {
 	id = RUS_siberian_resource_prospection
 	icon =  GFX_All_resource
@@ -900,8 +1036,8 @@ focus = {
 
 focus = {
 	id = RUS_destroy_khiva
-	icon =  GFX_goal_generic_occupy_states_ongoing_war
-	x = -1
+	icon =  GFX_goal_attack_khiva
+	x = 0
 	y = 2
 	cost = 10
 	relative_position_id = RUS_turn_to_the_steppes
@@ -931,8 +1067,8 @@ focus = {
 
 focus = {
 	id = RUS_destroy_bukhara
-	icon =  GFX_goal_generic_occupy_states_ongoing_war
-	x = 1
+	icon =  GFX_goal_attack_bukhara
+	x = 2
 	y = 2
 	cost = 10
 	relative_position_id = RUS_turn_to_the_steppes
@@ -1277,14 +1413,14 @@ focus = {
 focus = {
 	id = RUS_reform_orthodox_church
 	icon =  GFX_focus_mex_triumph_over_the_cristeros
-	x = -6
+	x = 5
 	y = 1
 	cost = 10
-	prerequisite = { focus = RUS_great_reforms_domestic_reform }
-	relative_position_id = RUS_great_reforms_domestic_reform
+	prerequisite = { focus = RUS_great_reforms_of_Peter }
+	relative_position_id = RUS_great_reforms_of_Peter
 
 	completion_reward = {
-		add_stability = .10
+		add_stability = 0.05
 		add_popularity = {
 		    ideology = fascism
 		    popularity = -0.10
@@ -1303,6 +1439,7 @@ focus = {
 	relative_position_id = RUS_reform_orthodox_church
 
 	completion_reward = {
+		add_ideas = caeseropapism
 	}
 }
 
@@ -1315,7 +1452,12 @@ focus = {
 	prerequisite = { focus = RUS_persue_caeseropapism }
 	relative_position_id = RUS_persue_caeseropapism
 
-	completion_reward = {
+	completion_reward = {	
+		add_ideas = abolished_metropolitans
+		add_popularity = {
+		    ideology = fascism
+		    popularity = -0.10
+		}
 	}
 }
 
@@ -1405,12 +1547,13 @@ focus = {
 	relative_position_id = RUS_reform_orthodox_church
 
 	completion_reward = {
+		add_political_power = 100
 	}
 }
 
 focus = {
 	id = RUS_efficient_icon_funding
-	icon =  GFX_goal_orthodox
+	icon =  GFX_focus_focus_fra_national_resistance_council
 	x = -1
 	y = 1
 	cost = 10
@@ -1419,12 +1562,13 @@ focus = {
 	relative_position_id = RUS_maintain_church_independence
 
 	completion_reward = {
+		custom_effect_tooltip = RUS_funding_of_icons
 	}
 }
 
 focus = {
 	id = RUS_separate_church_influence
-	icon =  GFX_goal_orthodox
+	icon =  GFX_goal_generic_neutrality_focus
 	x = 1
 	y = 1
 	cost = 10
@@ -1447,24 +1591,17 @@ focus = {
 	relative_position_id = RUS_maintain_church_independence
 
 	completion_reward = {
-		custom_effect_tooltip = RUS_seperated_church_influence
-	}
-}
-
-
-
-
-focus = {
-	id = RUS_build_moscow_hospital
-	icon =  GFX_focus_generic_treaty
-	x = 5
-	y = 1
-	cost = 10
-	prerequisite = { focus = RUS_great_reforms_domestic_reform }
-	relative_position_id = RUS_great_reforms_domestic_reform
-
-	completion_reward = {
-		add_war_support = .10
+		every_country = { 
+			limit = {
+				has_idea = orthodox
+			}
+			add_opinion_modifier = {
+			    target = SOV
+			    modifier = huge_increase
+			}
+		}
+		add_stability = 0.05
+		add_war_support = 0.10
 	}
 }
 
@@ -1578,12 +1715,26 @@ focus = {
 }
 
 focus = {
-	id = RUS_deal_with_the_boyars
-	icon =  GFX_goal_generic_demand_territory
-	x = 0
-	y = 3
+	id = RUS_build_moscow_hospital
+	icon =  GFX_focus_generic_treaty
+	x = 1
+	y = 1
 	cost = 10
-	prerequisite = { focus = RUS_enforce_serfdom focus = RUS_abolish_serfdom }
+	prerequisite = { focus = RUS_grain_taxes focus =RUS_land_redistribution }
+	relative_position_id = RUS_grain_taxes
+
+	completion_reward = {
+		add_war_support = .10
+	}
+}
+
+focus = {
+	id = RUS_deal_with_the_boyars
+	icon =  GFX_goal_boyars
+	x = 4
+	y = 1
+	cost = 10
+	prerequisite = { focus = RUS_great_reforms_domestic_reform }
 	relative_position_id = RUS_great_reforms_domestic_reform
 
 	completion_reward = {
@@ -1595,35 +1746,81 @@ focus = {
 }
 
 focus = {
-	id = RUS_beard_tax
-	icon =  GFX_focus_generic_treaty
-	x = 0
-	y = 4
+	id = RUS_persue_absolutism
+	icon =  GFX_focus_generic_monarchy_1
+	x = -1
+	y = 1
 	cost = 10
+	mutually_exclusive = { focus = RUS_enlightened_ideas }
 	prerequisite = { focus = RUS_deal_with_the_boyars }
-	relative_position_id = RUS_great_reforms_domestic_reform
+	relative_position_id = RUS_deal_with_the_boyars
 
 	completion_reward = {
-		add_popularity = {
-		    ideology = aristocracy
-		    popularity = -0.20
-		}
+		add_ideas = absolutist_centralization
+	}
+}
+
+focus = {
+	id = RUS_enlightened_ideas
+	icon =  GFX_focus_spr_torchbearers_of_tomorrow
+	x = 1
+	y = 1
+	cost = 10
+	mutually_exclusive = { focus = RUS_persue_absolutism }
+	prerequisite = { focus = RUS_deal_with_the_boyars }
+	relative_position_id = RUS_deal_with_the_boyars
+
+	completion_reward = {
+		add_ideas = enlightened_despotism
+	}
+}
+
+focus = {
+	id = RUS_beard_tax
+	icon =  GFX_goal_generic_forceful_treaty
+	x = 0
+	y = 2
+	cost = 10
+	prerequisite = { focus = RUS_enlightened_ideas focus = RUS_persue_absolutism }
+	relative_position_id = RUS_deal_with_the_boyars
+
+	completion_reward = {
+		add_ideas = beard_tax
 	}
 }
 
 focus = {
 	id = RUS_abolish_duma
-	icon =  GFX_focus_generic_treaty
-	x = 0
-	y = 5
+	icon =  GFX_focus_eng_move_to_secure_the_dominions
+	x = -1
+	y = 1
 	cost = 10
-	prerequisite = { focus = RUS_crush_boyar_opposition }
-	relative_position_id = RUS_great_reforms_domestic_reform
+	prerequisite = { focus = RUS_persue_absolutism }
+	relative_position_id = RUS_persue_absolutism
+
+	available = { 
+		neutrality > 0.4
+		has_stability > 0.6
+	}
 
 	completion_reward = {
-		add_popularity = {
-		    ideology = aristocracy
-		    popularity = -0.20
+		remove_ideas = boyar_duma
+	}
+}
+
+focus = {
+	id = RUS_install_the_governing_senate
+	icon =  GFX_goal_generic_neutrality_focus
+	x = 3
+	y = 1
+	cost = 10
+	prerequisite = { focus = RUS_enlightened_ideas }
+	relative_position_id = RUS_persue_absolutism
+
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = boyar_duma
+			add_idea = governing_senate
 		}
 	}
 }
@@ -1794,32 +1991,30 @@ focus = {
 	}
 }
 
-
-
-
-
 focus = {
-	id = RUS_education_reform
-	icon =  GFX_focus_research
-	x = 5
-	y = 2
+	id = RUS_expand_research
+	icon =  GFX_focus_research2
+	x = -3
+	y = 1
 	cost = 10
-	prerequisite = { focus = RUS_build_moscow_hospital }
-	relative_position_id = RUS_great_reforms_domestic_reform
+	prerequisite = { focus = RUS_construction_effort_2 focus = RUS_armament_effort_2 }
+	prerequisite = { focus = RUS_upgrade_the_kremlin_fortification focus = RUS_monopolize_natural_resources }
+	relative_position_id = RUS_construction_effort_2
 
 	completion_reward = {
 		add_research_slot = 1
 	}
 }
 
+
 focus = {
-	id = RUS_expand_research
-	icon =  GFX_focus_research2
-	x = 4
-	y = 3
+	id = RUS_education_reform
+	icon =  GFX_focus_research
+	x = 0
+	y = 1
 	cost = 10
-	prerequisite = { focus = RUS_education_reform }
-	relative_position_id = RUS_great_reforms_domestic_reform
+	prerequisite = { focus = RUS_build_moscow_hospital }
+	relative_position_id = RUS_build_moscow_hospital
 
 	completion_reward = {
 		add_research_slot = 1

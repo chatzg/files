@@ -2426,4 +2426,26 @@ spriteTypes = {
 		name = "GFX_goal_third_rome"
 		texturefile = "gfx/interface/goals/goal_third_rome.tga"
 	}
+	SpriteType = { 
+		name = "GFX_goal_scandinavia"
+		texturefile = "gfx/interface/goals/goal_scandinavia.tga"
+	}
+	SpriteType = { 
+		name = "GFX_goal_boyars"
+		texturefile = "gfx/interface/goals/goal_boyars.tga"
+	}
+	SpriteType = { 
+		name = "GFX_goal_attack_bukhara"
+		texturefile = "gfx/interface/goals/goal_attack_bukhara.tga"
+	}
+	SpriteType = { 
+		name = "GFX_goal_attack_khiva"
+		texturefile = "gfx/interface/goals/goal_attack_khiva.tga"
+	}
+	SpriteType = { 
+		name = "GFX_goal_attack_kazakh"
+		texturefile = "gfx/interface/goals/goal_attack_kazakh.tga"
+	}
+	
+
 }

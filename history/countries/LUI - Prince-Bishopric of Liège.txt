@@ -6,7 +6,6 @@ set_war_support = 0.2 #we see what you are doing there Adolf
 set_country_flag = HRE_imperial_subject
 
 add_ideas = {
-	only_mercenaries
 	catholic
 }
 

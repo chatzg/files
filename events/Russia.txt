@@ -4,8 +4,6 @@ country_event = {
 	id = russia.1
 	title = russia.1.t
 	desc = russia.1.d
-	picture = GFX_report_event_degaulle_churchill
-
 	
 	fire_only_once = yes
 
@@ -23,5 +21,312 @@ country_event = {
 		}
 		add_political_power = -100
 	}
+}
 
+#demand cossack loyalty
+
+country_event = {
+	id = russia.2
+	title = russia.2.t
+	desc = russia.2.d
+
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = russia.2.a
+		SOV = {
+			puppet = ZAP
+		}
+		add_stability = 0.20
+		SOV = {
+			country_event = {
+				id = russia.4
+				days = 5
+			}
+		}
+	}
+	option = {
+		name = russia.2.b
+		add_war_support = 0.10
+		SOV = {
+			country_event = {
+				id = russia.3
+				days = 5
+			}
+		}
+	}
+	option = {
+		trigger = {
+			SWE = {
+				has_war_with = SOV
+			}
+		}
+		name = russia.3.b
+		SWE = { country_event = generic.2 }
+		add_war_support = 0.10
+		SOV = {
+			country_event = {
+				id = russia.3
+				days = 5
+			}
+		}
+	}
+}
+
+#not accept
+
+country_event = {
+	id = russia.3
+	title = russia.3.t
+	desc = russia.3.d
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "They prefer to die instead."
+		create_wargoal = {
+		    type = puppet_wargoal_focus
+		    target = ROOT
+		}
+	}
+}
+
+#accept
+
+country_event = {
+	id = russia.4
+	title = russia.4.t
+	desc = russia.4.d
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Good to hear!"
+	}
+}
+
+# 5 - Treaty of Three Black Eagles
+
+country_event = {
+	id = russia.5
+	title = russia.5.t
+	desc = russia.5.d
+	
+	fire_only_once = no
+
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			factor = 80
+		}
+		name = "It is time to end the Polish!"
+		trigger = {
+			NOT = {
+				OR = {
+					is_in_faction_with = POL
+					has_non_aggression_pact_with = POL
+					has_guaranteed = POL 
+				}		
+			}
+		}
+		set_country_flag = partition_treaty_signature
+		IF = {
+			limit = {
+				original_tag = AUS
+			}
+			add_state_claim = 88
+			add_state_claim = 89
+			add_state_claim = 90
+			add_state_claim = 91
+			add_state_claim = 92
+		}
+		IF = {
+			limit = {
+				original_tag = PRS
+			}
+			add_state_claim = 85
+			add_state_claim = 86
+			add_state_claim = 87
+			add_state_claim = 98
+			add_state_claim = 10
+			add_state_claim = 97
+		}
+		reverse_add_opinion_modifier = {
+		    target = POL
+		    modifier = partition_treaty
+		}
+		SOV = {
+			country_event = {
+			    id = russia.6
+			    days = 5
+			}
+		}
+	}
+
+	option = {
+		name = "We have no intrest in such agreements."
+		add_political_power = 50
+		SOV = {
+			country_event = {
+			    id = russia.7
+			    days = 5
+			}
+		}
+	}
+}
+
+country_event = {
+	id = russia.6
+	title = russia.6.t
+	desc = russia.6.d
+	
+	fire_only_once = no
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Good."
+	}
+}
+
+country_event = {
+	id = russia.7
+	title = russia.7.t
+	desc = russia.7.d
+	
+	fire_only_once = no
+
+	is_triggered_only = yes
+
+	option = {
+		name = "We don't need them anyways."
+	}
+}
+
+#First partition of Poland
+
+country_event = {
+	id = russia.8
+	title = russia.8.t
+	desc = russia.8.d
+	
+	fire_only_once = no
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Then we shall move in too!"
+		ai_chance = {
+			factor = 80
+		}
+		trigger = {
+			has_country_flag = partition_treaty_signature
+		}
+		IF = {
+			limit = {
+				original_tag = AUS
+			}
+			transfer_state = 88
+			transfer_state = 89
+			transfer_state = 91
+			POL = {
+				country_event = {
+				    id = russia.8
+				    days = 5
+				}
+			}
+			set_country_flag = first_partition_succes
+		}
+		IF = {
+			limit = {
+				original_tag = PRS
+			}
+			transfer_state = 85
+			transfer_state = 86
+			transfer_state = 868
+			POL = {
+				country_event = {
+				    id = russia.8
+				    days = 5
+				}
+			}
+			set_country_flag = first_partition_succes
+		}
+	}
+	option = {
+		name = "We have changed our mind about the treaty..."
+		ai_chance = {
+			factor = 1
+		}
+		trigger = {
+			has_country_flag = partition_treaty_signature
+		}
+		IF = {
+			limit = {
+				original_tag = AUS
+			}
+			clr_country_flag = partition_treaty_signature
+		}
+		IF = {
+			limit = {
+				original_tag = PRS
+			}
+			clr_country_flag = partition_treaty_signature
+		}
+	}
+	option = {
+		ai_chance = {
+			factor = 10
+		}
+		trigger = {
+			original_tag = POL
+		}
+		declare_war_on = {
+		    target = FROM
+		    type = annex_everything
+		}
+		name = "And we will fight them every step of the way!"
+	}
+	option = {
+		ai_chance = {
+			factor = 80
+		}
+		trigger = {
+			original_tag = POL
+		}
+		name = "Nothing can be done about it..."
+	}
+}
+
+country_event = {
+	id = russia.9
+	title = russia.9.t
+	desc = russia.9.d
+	
+	fire_only_once = yes
+
+	mean_time_to_happen = { days = 2}
+
+	trigger = {
+		OR = {
+			PRS = { has_country_flag = first_partition_succes }
+			AUS = { has_country_flag = first_partition_succes }
+		}
+		NOT = { has_war_with = POL }
+		original_tag = SOV
+	}
+
+	option = {
+		name = "Great succes indeed!"
+		set_country_flag = first_partition_succes
+		news_event = mod.22
+	}
 }

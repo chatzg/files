@@ -407,6 +407,7 @@ patriarchy_interactions = {
 					has_idea = icon_of_st_climacus
 					has_idea = icon_of_st_michael
 				}
+				has_completed_focus = RUS_efficient_icon_funding
 			}
 		}
 
@@ -442,6 +443,7 @@ patriarchy_interactions = {
 					has_idea = icon_of_st_climacus
 					has_idea = icon_of_st_michael
 				}
+				has_completed_focus = RUS_efficient_icon_funding
 			}
 		}
 
@@ -477,6 +479,7 @@ patriarchy_interactions = {
 					has_idea = icon_of_st_climacus
 					has_idea = icon_of_st_michael
 				}
+				has_completed_focus = RUS_efficient_icon_funding
 			}
 		}
 
@@ -512,6 +515,7 @@ patriarchy_interactions = {
 					has_idea = icon_of_st_climacus
 					has_idea = icon_of_st_michael
 				}
+				has_completed_focus = RUS_efficient_icon_funding
 			}
 		}
 
@@ -547,6 +551,7 @@ patriarchy_interactions = {
 					has_idea = icon_of_st_climacus
 					has_idea = icon_of_st_michael
 				}
+				has_completed_focus = RUS_efficient_icon_funding
 			}
 		}
 
@@ -559,6 +564,161 @@ patriarchy_interactions = {
 					ideology = fascism
 					popularity = 0.05
 				}
+			}
+			add_timed_idea = {
+			    idea = icon_of_st_climacus
+			    days = 180
+			}	
+		}
+	}
+
+	adopt_icon_of_christ_pancreator_2 = {
+		cost = 25
+		fire_only_once = no
+
+		icon = patriarchy
+
+		visible = {
+			NOT = {
+				OR = {
+					has_idea = icon_of_christ_pancreator
+					has_idea = icon_of_st_eleusa
+					has_idea = icon_of_st_nicholas
+					has_idea = icon_of_st_climacus
+					has_idea = icon_of_st_michael
+				}
+			}
+			has_completed_focus = RUS_efficient_icon_funding
+		}
+
+		complete_effect = {	 
+		    add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			add_timed_idea = {
+			    idea = icon_of_christ_pancreator
+			    days = 180
+			}
+		}
+	}
+
+	adopt_icon_of_st_eleusa_2 = {
+		cost = 25
+		fire_only_once = no
+
+		icon = patriarchy
+
+		visible = {
+			NOT = {
+				OR = {
+					has_idea = icon_of_christ_pancreator
+					has_idea = icon_of_st_eleusa
+					has_idea = icon_of_st_nicholas
+					has_idea = icon_of_st_climacus
+					has_idea = icon_of_st_michael
+				}
+			}
+			has_completed_focus = RUS_efficient_icon_funding
+		}
+
+		complete_effect = {	  
+		    add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			add_timed_idea = {
+			    idea = icon_of_st_eleusa
+			    days = 180
+			}
+		}
+	}
+
+	adopt_icon_of_st_nicholas_2 = {
+		cost = 25
+		fire_only_once = no
+
+		icon = patriarchy
+
+		visible = {
+			NOT = {
+				OR = {
+					has_idea = icon_of_christ_pancreator
+					has_idea = icon_of_st_eleusa
+					has_idea = icon_of_st_nicholas
+					has_idea = icon_of_st_climacus
+					has_idea = icon_of_st_michael
+				}
+			}
+			has_completed_focus = RUS_efficient_icon_funding
+		}
+
+		complete_effect = {  
+		    add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			add_timed_idea = {
+			    idea = icon_of_st_nicholas
+			    days = 180
+			}
+		}
+	}
+
+	adopt_icon_of_st_michael_2 = {
+		cost = 25
+		fire_only_once = no
+
+		icon = patriarchy
+
+		visible = {
+			NOT = {
+				OR = {
+					has_idea = icon_of_christ_pancreator
+					has_idea = icon_of_st_eleusa
+					has_idea = icon_of_st_nicholas
+					has_idea = icon_of_st_climacus
+					has_idea = icon_of_st_michael
+				}
+			}
+			has_completed_focus = RUS_efficient_icon_funding
+		}
+
+		complete_effect = {	 
+		    add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			add_timed_idea = {
+			    idea = icon_of_st_michael
+			    days = 180
+			}
+		}
+	}
+
+	adopt_icon_of_st_climacus_2 = {
+		cost = 25
+		fire_only_once = no
+
+		icon = patriarchy
+
+		visible = {
+			NOT = {
+				OR = {
+					has_idea = icon_of_christ_pancreator
+					has_idea = icon_of_st_eleusa
+					has_idea = icon_of_st_nicholas
+					has_idea = icon_of_st_climacus
+					has_idea = icon_of_st_michael
+				}
+			}
+			has_completed_focus = RUS_efficient_icon_funding
+		}
+
+		complete_effect = { 
+		    add_popularity = {
+				ideology = fascism
+				popularity = 0.05
 			}
 			add_timed_idea = {
 			    idea = icon_of_st_climacus

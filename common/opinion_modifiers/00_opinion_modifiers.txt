@@ -1026,6 +1026,10 @@ opinion_modifiers = {
 		value = 50
 		decay = 1
 	}
+	partition_treaty = {
+		value = -50
+		decay = 1
+	}
 
 
 }	
