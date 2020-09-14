@@ -31,67 +31,91 @@ continent = {
 			"gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
 			"gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_land_13.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_noble_1.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_noble_2.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_noble_3.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_noble_4.dds"
 		}
 	}
 	
 	navy = {
 		male = {
-			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_1.dds"
-			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_2.dds"
-			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_3.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_13.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_noble_1.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_noble_2.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_noble_3.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_noble_4.dds"
 		}
 	}
 	
 	political = {
 
 		communism = {
-			male = { 
+			male = {
 				"gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
 				"gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
 				"gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
 				"gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
 				"gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
 				"gfx/leaders/Europe/portrait_europe_generic_land_13.dds"
+				"gfx/leaders/Europe/portrait_europe_generic_noble_1.dds"
+				"gfx/leaders/Europe/portrait_europe_generic_noble_2.dds"
+				"gfx/leaders/Europe/portrait_europe_generic_noble_3.dds"
+				"gfx/leaders/Europe/portrait_europe_generic_noble_4.dds"
 			}
 		}
 		democratic = {
-			male = { 
+			male = {
 				"gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
 				"gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
 				"gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
 				"gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
 				"gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
 				"gfx/leaders/Europe/portrait_europe_generic_land_13.dds"
+				"gfx/leaders/Europe/portrait_europe_generic_noble_1.dds"
+				"gfx/leaders/Europe/portrait_europe_generic_noble_2.dds"
+				"gfx/leaders/Europe/portrait_europe_generic_noble_3.dds"
+				"gfx/leaders/Europe/portrait_europe_generic_noble_4.dds"
 			}
 		}
 		fascism = {
-			male = { 
-				"gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
-				"gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
-				"gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
-				"gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
-				"gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
-				"gfx/leaders/Europe/portrait_europe_generic_land_13.dds"
+			male = {
+				"gfx/leaders/Europe/portrait_europe_generic_clergy_1.dds"
+				"gfx/leaders/Europe/portrait_europe_generic_clergy_2.dds"
+				"gfx/leaders/Europe/portrait_europe_generic_clergy_3.dds"
 			}
 		}
 		neutrality = {
-			male = { 
+			male = {
 				"gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
 				"gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
 				"gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
 				"gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
 				"gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
 				"gfx/leaders/Europe/portrait_europe_generic_land_13.dds"
+				"gfx/leaders/Europe/portrait_europe_generic_noble_1.dds"
+				"gfx/leaders/Europe/portrait_europe_generic_noble_2.dds"
+				"gfx/leaders/Europe/portrait_europe_generic_noble_3.dds"
+				"gfx/leaders/Europe/portrait_europe_generic_noble_4.dds"
 			}
 		}
 		aristocracy = {
-			male = { 
+			male = {
 				"gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
 				"gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
 				"gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
 				"gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
 				"gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
 				"gfx/leaders/Europe/portrait_europe_generic_land_13.dds"
+				"gfx/leaders/Europe/portrait_europe_generic_noble_1.dds"
+				"gfx/leaders/Europe/portrait_europe_generic_noble_2.dds"
+				"gfx/leaders/Europe/portrait_europe_generic_noble_3.dds"
+				"gfx/leaders/Europe/portrait_europe_generic_noble_4.dds"
 			}
 		}
 	}
