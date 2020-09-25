@@ -85,9 +85,9 @@ add_ideas = {
 }
 
 create_country_leader = {
-	name = "Frederick Augustus"
+	name = "Stanisław Leszczyński"
 	desc = "POLITICS_KURT_SCHUSCHNIGG_DESC"
-	picture = "Saxony_leader.dds"
+	picture = "Stanislaw.dds"
 	expire = "1965.1.1"
 	ideology = nobility
 }

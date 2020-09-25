@@ -598,3 +598,19 @@ country_event = {
 		}
 	}
 }
+
+#country_event = {
+#	id = austria.23
+#	title = austria.23.t
+#	desc = austria.23.d
+#	is_triggered_only = yes
+#
+#	option = {
+#		name = austria.23.a
+#		white_peace = {
+#		    tag = TUR
+#		    message = "After 15 years, figthing finally ends."
+#		}
+#		dismantle_faction = yes
+#	}
+#}

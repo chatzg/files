@@ -1415,6 +1415,13 @@ focus = {
 	cost = 2
 	prerequisite = { focus = SWE_deal_with_occupation }
 
+	available = {
+		NOT = {
+			has_country_flag = SWE_defeated_by_russia 
+			has_war_with = SOV
+		}
+	}
+
 	completion_reward = {
 		add_political_power = 80
 	}
@@ -1731,6 +1738,11 @@ focus = {
 	cost = 10
 	prerequisite = { focus = SWE_deal_with_occupation }
 	mutually_exclusive = { focus = SWE_we_stand_victorious }
+
+	available = {
+		has_country_flag = SWE_defeated_by_russia 
+		NOT = { has_war_with = SOV }
+	}
 
 	completion_reward = {
 	}

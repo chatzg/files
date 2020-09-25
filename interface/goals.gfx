@@ -2446,6 +2446,8 @@ spriteTypes = {
 		name = "GFX_goal_attack_kazakh"
 		texturefile = "gfx/interface/goals/goal_attack_kazakh.tga"
 	}
-	
-
+	SpriteType = { 
+		name = "GFX_focus_depose_august"
+		texturefile = "gfx/interface/goals/focus_depose_august.tga"
+	}
 }

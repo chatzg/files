@@ -9,29 +9,54 @@ focus_tree = {
 	}
 }
 
+#focus = {
+#	id = POL_debate_absolutism
+#	icon = GFX_focus_generic_military_academy
+#	x = 12
+#	y = 0
+#	cost = 20
+#	ai_will_do = { 
+#		factor = 100
+#	}
+#
+#	bypass = {
+#		OR = {
+#			has_country_flag = POL_noble_coup
+#			has_country_flag = POL_august_dead
+#			has_country_flag = POL_august_abdicates
+#		}
+#	}
+#
+#	completion_reward = {
+#	}
+#	select_effect = {
+#		country_event = { id = poland.2 days = 5 }
+#	}
+#}
+
 focus = {
-	id = POL_debate_absolutism
-	icon = GFX_focus_generic_military_academy
-	x = 12
+	id = POL_attack_sweden_test
+	icon = GFX_POL_regency_council_focus
+	x = 10
 	y = 0
-	cost = 20
-	ai_will_do = { 
-		factor = 100
+	cost = 1
+
+	available = {
+		date > 1700.02.01
 	}
 
-	bypass = {
-		OR = {
-			has_country_flag = POL_noble_coup
-			has_country_flag = POL_august_dead
-			has_country_flag = POL_august_abdicates
-		}
+	ai_will_do = { 
+		factor = 1000
 	}
+	
 
 	completion_reward = {
+		declare_war_on = {
+		    target = SWE
+		    type = annex_everything
+		}
 	}
-	select_effect = {
-		country_event = { id = poland.2 days = 5 }
-	}
+	will_lead_to_war_with = SWE
 }
 
 #KEEP AUGUST TREE
@@ -39,29 +64,48 @@ focus = {
 focus = {
 	id = POL_restructure_poland
 	icon = GFX_POL_regency_council_focus
-	prerequisite = { focus = POL_debate_absolutism }
-	mutually_exclusive = { focus = POL_elect_new_king }
-	#mutually_exclusive = { focus = POL_szlachta_dictatorship }
-	x = -7
+	mutually_exclusive = { focus = POL_depose_august }
+	x = 5
+	y = 0
+	cost = 10
+
+	ai_will_do = { 
+		factor = 100
+	}
+	
+
+	completion_reward = {
+		add_political_power = 100
+	}
+}
+
+focus = {
+	id = POL_foreign_affairs
+	icon = GFX_POL_regency_council_focus
+	x = 4
 	y = 1
-	cost = 0
-	relative_position_id = POL_debate_absolutism
+	cost = 10
+	relative_position_id = POL_restructure_poland
+	prerequisite = { focus = POL_restructure_poland }
 
-	available = {
-		NOT = {
-			has_country_flag = POL_noble_coup
-			has_country_flag = POL_august_dead
-			has_country_flag = POL_august_abdicates
-		}
+	ai_will_do = { 
+		factor = 100
 	}
+	
 
-	bypass = {
-		NOT = {
-			has_country_flag = POL_noble_coup
-			has_country_flag = POL_august_dead
-			has_country_flag = POL_august_abdicates
-		}
+	completion_reward = {
+		add_political_power = 100
 	}
+}
+
+focus = {
+	id = POL_combat_foreign_influence
+	icon = GFX_POL_Russian_Alliance
+	prerequisite = { focus = POL_foreign_affairs }
+	x = 0
+	y = 1
+	cost = 10
+	relative_position_id = POL_foreign_affairs
 
 	ai_will_do = { 
 		factor = 1
@@ -75,11 +119,11 @@ focus = {
 focus = {
 	id = POL_russian_relations
 	icon = GFX_POL_Russian_Alliance
-	prerequisite = { focus = POL_restructure_poland }
-	x = 0
-	y = 2
+	prerequisite = { focus = POL_foreign_affairs }
+	x = -2
+	y = 1
 	cost = 10
-	relative_position_id = POL_restructure_poland
+	relative_position_id = POL_foreign_affairs
 
 	ai_will_do = { 
 		factor = 1
@@ -115,14 +159,32 @@ focus = {
 #ABSOLUTISM
 
 focus = {
-	id = POL_no_compromise
+	id = POL_question_of_absolutism
 	icon = GFX_goal_generic_political_pressure
 	prerequisite = { focus = POL_restructure_poland }
-	mutually_exclusive = { focus = POL_compromise }
 	x = -4
 	y = 1
 	cost = 10
 	relative_position_id = POL_restructure_poland
+
+	ai_will_do = { 
+		factor = 1
+	}
+
+	completion_reward = {
+		add_political_power = 100
+	}
+}
+
+focus = {
+	id = POL_no_compromise
+	icon = GFX_goal_generic_political_pressure
+	prerequisite = { focus = POL_question_of_absolutism }
+	mutually_exclusive = { focus = POL_compromise }
+	x = -2
+	y = 1
+	cost = 10
+	relative_position_id = POL_question_of_absolutism
 
 	ai_will_do = { 
 		factor = 1
@@ -289,12 +351,12 @@ focus = {
 focus = {
 	id = POL_compromise
 	icon = GFX_goal_generic_major_alliance
-	prerequisite = { focus = POL_restructure_poland }
+	prerequisite = { focus = POL_question_of_absolutism }
 	mutually_exclusive = { focus = POL_no_compromise }
-	x = 4
+	x = 2
 	y = 1
 	cost = 10
-	relative_position_id = POL_restructure_poland
+	relative_position_id = POL_question_of_absolutism
 
 	ai_will_do = { 
 		factor = 100
@@ -331,7 +393,7 @@ focus = {
 	icon = GFX_money
 	prerequisite = { focus = POL_cooperate_with_nobles }
 	x = -1
-	y = 3
+	y = 2
 	cost = 10
 	relative_position_id = POL_compromise
 
@@ -375,7 +437,7 @@ focus = {
 	icon = GFX_focus_hol_the_foundations_of_defense
 	prerequisite = { focus = POL_foreign_support }
 	x = 1
-	y = 3
+	y = 2
 	cost = 10
 	relative_position_id = POL_compromise
 
@@ -397,7 +459,7 @@ focus = {
 	prerequisite = { focus = POL_end_paralysis }
 	prerequisite = { focus = POL_burgher_counterweight }
 	x = 0
-	y = 4
+	y = 3
 	cost = 10
 	relative_position_id = POL_compromise
 
@@ -416,11 +478,11 @@ focus = {
 focus = {
 	id = POL_great_betrayal
 	icon = GFX_focus_generic_strike_at_democracy2
-	prerequisite = { focus = POL_limit_sejm  focus = POL_abolish_sejm }
+	prerequisite = { focus = POL_russian_relations }
 	x = 0
-	y = 6
+	y = 1
 	cost = 10
-	relative_position_id = POL_restructure_poland
+	relative_position_id = POL_russian_relations
 
 	ai_will_do = { 
 		factor = 1
@@ -434,32 +496,93 @@ focus = {
 
 
 #NEW KING TREE
+focus = {
+	id = POL_depose_august
+	icon = GFX_focus_depose_august
+	mutually_exclusive = { focus = POL_restructure_poland }
+	x = 25
+	y = 0
+	cost = 10
+
+	available = {
+	}
+
+	bypass = {
+	}
+
+	ai_will_do = { 
+		factor = 1
+	}
+	
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = POL_stabilize_the_country
+	icon = GFX_focus_plc_commonwealth_king
+	prerequisite = { focus = POL_depose_august }
+	relative_position_id = POL_depose_august
+	x = 0
+	y = 1
+	cost = 0
+
+	available = {
+	}
+
+	bypass = {
+	}
+
+	ai_will_do = { 
+		factor = 1
+	}
+	
+
+	completion_reward = {
+	}
+}
+
+
+focus = {
+	id = POL_the_end_of_kings
+	icon = GFX_focus_plc_commonwealth_king
+	prerequisite = { focus = POL_stabilize_the_country }
+	relative_position_id = POL_depose_august
+	mutually_exclusive = { focus = POL_elect_new_king}
+	x = 4
+	y = 2
+	cost = 0
+
+	available = {
+	}
+
+	bypass = {
+	}
+
+	ai_will_do = { 
+		factor = 1
+	}
+	
+
+	completion_reward = {
+	}
+}
 
 focus = {
 	id = POL_elect_new_king
 	icon = GFX_focus_plc_commonwealth_king
-	prerequisite = { focus = POL_debate_absolutism }
-	mutually_exclusive = { focus = POL_restructure_poland }
-	#mutually_exclusive = { focus = POL_szlachta_dictatorship }
-	x = 7
-	y = 1
+	prerequisite = { focus = POL_stabilize_the_country }
+	relative_position_id = POL_depose_august
+	mutually_exclusive = { focus = POL_the_end_of_kings}
+	x = -4
+	y = 2
 	cost = 0
-	relative_position_id = POL_debate_absolutism
 
 	available = {
-		OR = {
-			has_country_flag = POL_august_dead
-			has_country_flag = POL_august_abdicates
-			has_country_flag = POL_noble_coup
-		}
 	}
 
 	bypass = {
-		OR = {
-			has_country_flag = POL_august_dead
-			has_country_flag = POL_august_abdicates
-			has_country_flag = POL_noble_coup
-		}
 	}
 
 	ai_will_do = { 
@@ -640,7 +763,7 @@ focus = {
 	prerequisite = { focus = POL_elect_new_king}
 	mutually_exclusive = { focus = POL_habsburg_candidate }
 	mutually_exclusive = { focus = POL_polish_candidate }
-	x = -5
+	x = -4
 	y = 1
 	cost = 5
 	relative_position_id = POL_elect_new_king
@@ -892,7 +1015,7 @@ focus = {
 	prerequisite = { focus = POL_elect_new_king }
 	mutually_exclusive = { focus = POL_habsburg_candidate }
 	mutually_exclusive = { focus = POL_french_candidate }
-	x = 5
+	x = 4
 	y = 1
 	cost = 5
 	relative_position_id = POL_elect_new_king
@@ -1178,14 +1301,33 @@ focus = {
 #	}
 #}
 
+
+focus = {
+	id = POL_claims_in_the_baltic
+	icon = GFX_goal_generic_major_alliance
+	x = 4
+	y = 1
+	cost = 10
+	prerequisite = { focus = POL_foreign_affairs }
+	relative_position_id = POL_foreign_affairs
+
+	available = {
+	}
+
+	completion_reward = {
+	}
+}
+
 #SAXONY
 
 focus = {
 	id = POL_saxon_ties
 	icon = GFX_goal_generic_major_alliance
-	x = 27
-	y = 0
+	x = 2
+	y = 1
 	cost = 10
+	prerequisite = { focus = POL_foreign_affairs }
+	relative_position_id = POL_foreign_affairs
 
 	available = {
 		SAX = { is_subject_of = POL }

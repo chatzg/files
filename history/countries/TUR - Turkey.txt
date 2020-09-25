@@ -10,6 +10,7 @@ if = {
 }
 
 give_guarantee = ZAP
+give_guarantee = CRO
 
 set_research_slots = 2
 

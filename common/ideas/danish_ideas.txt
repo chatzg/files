@@ -1,0 +1,30 @@
+ideas = {
+	country = {
+		DEN_outmanoeuvred_by_sweden_1 = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			name = DEN_outmanoeuvred_by_sweden
+
+			allowed_civil_war = {
+           		always = yes
+      		}
+
+			picture = janissary
+			
+			modifier = {
+				army_org_factor = 0.12
+				consumer_goods_factor = 0.10
+				stability_factor = 0.10
+			}
+			targetted_modifier = {
+				defense_bonus_against = -0.3
+			}
+		}
+
+
+	}
+}

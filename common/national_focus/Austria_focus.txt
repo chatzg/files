@@ -29,6 +29,7 @@ focus_tree = {
 			remove_ideas = great_turkish_war
 			add_political_power = 150
 			news_event = mod.8 
+			#country_event = austria.23
 		}
 	}
 

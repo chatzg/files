@@ -20,9 +20,11 @@ POL_compensated_nobles:0 "Bribed Nobles"
 
 #focus tree
 
+POL_depose_august:0 "Depose August"
+POL_depose_august_desc:0 "The election of Frederick Augustus was illegitimate, as he did not have the most votes during the election of 1697. In fact, it was only due to Russian pressure he was allowed to be crowned king in the first place. August has to be opposed and new elections have to be held."
 POL_debate_absolutism:0 "Debate Absolutism"
 POL_debate_absolutism_desc:0 "Since ascending to the throne, Frederick Augustus has made it no secret he would like to reform Poland-Lithuania into an absolute monarchy, however the Polish szlachta will try to stop him in the sejm. If Augustus wants to push his reforms, he will have to make his case in the sejm and gain the approval of the szlachta. Indeed, a debate which could potentially change the course of Polish history forever."
-POL_restructure_poland:0 "Restructure the Commonwealth"
+POL_restructure_poland:0 "Reinforce the Commonwealth"
 POL_restructure_poland_desc:0 "After making his case to the sejm, August now stands before a long route of reform."
 POL_russian_relations:0 "Russian Relations"
 POL_russian_relations_desc:0 "The influence of Russia was vital in the coronation of Frederick Augustus, and continues to be of great importance for the Commonwealth to survive. Good relations with the east are the only realistic path to a chance of survival."

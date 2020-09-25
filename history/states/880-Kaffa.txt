@@ -28,6 +28,7 @@ state={
 			}
 		}
 		add_core_of = TUR
+		add_claim_by = SOV
 	}
 	state_category=city
 	manpower=152349

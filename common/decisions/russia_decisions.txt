@@ -1,0 +1,728 @@
+RUS_army_reform = {
+	RUS_army_reform = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_army_experience > 49
+			has_completed_focus = RUS_army_reform
+		}
+
+		cost = 0
+		ai_will_do = {
+			factor = 500
+		}
+		days_remove = 90
+
+		visible = {
+			OR = {
+				has_idea = RUS_streltsy_purge_1
+				has_idea = RUS_streltsy_purge_2
+				has_idea = RUS_streltsy_purge_3
+				has_idea = RUS_streltsy_purge_4
+				has_idea = RUS_streltsy_purge_5
+			}
+		}
+		remove_effect = {
+			RUS_lower_purge_effects = yes
+		}
+		complete_effect = {
+			army_experience = -50						
+		}		
+	}
+}
+
+#nobility_estate = {
+#	RUS_challenge_swedish_supremacy = {
+#
+#		icon = generic_prepare_civil_war
+#
+#		available = {
+#			OR = {
+#				has_war_with = SWE
+#				neutrality > 0.50
+#			}
+#		}	
+#
+#		activation = {
+#			original_tag = SOV
+#		}
+#
+#		days_mission_timeout = 365
+#
+#		timeout_effect = {
+#			add_popularity = {
+#			    ideology = aristocracy
+#			    popularity = 0.2
+#			}
+#			add_stability = -0.2
+##			add_war_support = -0.2
+#		}	
+#	}
+#}
+
+foreign_policy = {
+	RUS_negotiate_swedish_surrender = {
+
+		icon = generic_decisison
+
+		days_re_enable = 60 
+
+		cost = 25
+
+		visible = {
+			has_war_with = SWE
+			original_tag = SOV
+			NOT = { SWE = { has_country_flag = SWE_defeated_by_russia }}
+		}
+
+		available = {
+			SWE = { surrender_progress > 0.5 }
+			is_faction_leader = yes
+		}	
+
+		complete_effect = {
+			country_event = sweden.1
+		}	
+	}
+
+	#RUS_negotiate_white_peace = {
+	#	
+	#	icon = generic_decisison
+#
+#		cost = 25
+#
+#		days_re_enable = 60 
+#
+#		available = {
+#			has_war_with = SWE
+##			SWE = { 
+#				surrender_progress < 0.1 
+#				has_war_support < 0.25
+#			}
+#			SOV = { 
+#				surrender_progress < 0.1 
+#				has_war_support < 0.25
+#			}
+#			is_faction_leader = yes
+#		}	
+#
+#		complete_effect = {
+#		}	
+#	}
+}
+
+RUS_great_northern_war = {
+
+	RUS_scorched_earth = {
+
+		icon = generic_scorched_earth
+
+		available = {
+			has_completed_focus = RUS_scorched_earth
+		}
+
+		cost = 50
+		fire_only_once = yes
+		visible = {
+			has_war = yes
+			any_enemy_country = {
+				is_major = yes
+			}
+			surrender_progress > 0
+		}
+
+		complete_effect = {
+			set_country_flag = SOV_scorched_earth
+			unlock_decision_tooltip = RUS_scorched_earth_novgorod
+			unlock_decision_tooltip = RUS_scorched_earth_pskov
+			unlock_decision_tooltip = RUS_scorched_earth_rzhev
+			unlock_decision_tooltip = RUS_scorched_earth_moscow
+			unlock_decision_tooltip = RUS_scorched_earth_nizhny_novogorod
+			#unlock_decision_tooltip = RUS_scorched_earth_ukraine
+			unlock_decision_tooltip = RUS_scorched_earth_caucasus
+			unlock_decision_tooltip = RUS_scorched_earth_tsaritsyn
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	RUS_scorched_earth_tsaritsyn = {
+
+		icon = generic_scorched_earth
+
+		available = {
+			has_war = yes
+			has_country_flag = SOV_scorched_earth
+			has_equipment = {
+				support_equipment > 24
+			}
+		}
+
+		cost = 50
+		fire_only_once = yes
+		visible = {
+			has_war = yes
+			OR = {
+				controls_state = 217
+				controls_state = 245
+				controls_state = 265
+				controls_state = 239
+			}
+			has_country_flag = SOV_scorched_earth
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = -25
+			}
+			if = {
+				limit = {
+					controls_state = 217
+				}
+				217 = {
+					damage_building = {
+						type = infrastructure
+						damage = 3
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 245
+				}
+				245 = {
+					damage_building = {
+						type = infrastructure
+						damage = 3
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 265
+				}
+				265 = {
+					damage_building = {
+						type = infrastructure
+						damage = 3
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 239
+				}
+				239 = {
+					damage_building = {
+						type = infrastructure
+						damage = 3
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	RUS_scorched_earth_caucasus = {
+
+		icon = generic_scorched_earth
+
+		available = {
+			has_war = yes
+			has_country_flag = SOV_scorched_earth
+			has_equipment = {
+				support_equipment > 24
+			}
+		}
+
+		cost = 50
+		fire_only_once = yes
+		visible = {
+			has_war = yes
+			OR = {
+				controls_state = 235
+				controls_state = 237
+				controls_state = 236
+				controls_state = 234
+				controls_state = 803
+				controls_state = 912
+			}
+			has_country_flag = SOV_scorched_earth
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = -25
+			}
+			if = {
+				limit = {
+					controls_state = 235
+				}
+				235 = {
+					damage_building = {
+						type = infrastructure
+						damage = 3
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 237
+				}
+				237 = {
+					damage_building = {
+						type = infrastructure
+						damage = 3
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 236
+				}
+				236 = {
+					damage_building = {
+						type = infrastructure
+						damage = 3
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 234
+				}
+				234 = {
+					damage_building = {
+						type = infrastructure
+						damage = 3
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 803
+				}
+				803 = {
+					damage_building = {
+						type = infrastructure
+						damage = 3
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 912
+				}
+				912 = {
+					damage_building = {
+						type = infrastructure
+						damage = 3
+					}
+				}
+			}	
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	RUS_scorched_earth_nizhny_novogorod = {
+
+		icon = generic_scorched_earth
+
+		available = {
+			has_war = yes
+			has_country_flag = SOV_scorched_earth
+			has_equipment = {
+				support_equipment > 24
+			}
+		}
+
+		cost = 50
+		fire_only_once = yes
+		visible = {
+			has_war = yes
+			OR = {
+				controls_state = 252
+				controls_state = 400
+				controls_state = 256
+				controls_state = 255
+				controls_state = 250
+			}
+			has_country_flag = SOV_scorched_earth
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = -25
+			}
+			if = {
+				limit = {
+					controls_state = 252
+				}
+				252 = {
+					damage_building = {
+						type = infrastructure
+						damage = 3
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 400
+				}
+				400 = {
+					damage_building = {
+						type = infrastructure
+						damage = 3
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 256
+				}
+				256 = {
+					damage_building = {
+						type = infrastructure
+						damage = 3
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 255
+				}
+				255 = {
+					damage_building = {
+						type = infrastructure
+						damage = 3
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 250
+				}
+				250 = {
+					damage_building = {
+						type = infrastructure
+						damage = 3
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	RUS_scorched_earth_moscow = {
+
+		icon = generic_scorched_earth
+
+		available = {
+			has_war = yes
+			has_country_flag = SOV_scorched_earth
+			has_equipment = {
+				support_equipment > 24
+			}
+		}
+
+		cost = 50
+		fire_only_once = yes
+		visible = {
+			has_war = yes
+			OR = {
+				controls_state = 219
+				controls_state = 242
+				controls_state = 205
+				controls_state = 223
+				controls_state = 253
+				controls_state = 254
+			}
+			has_country_flag = SOV_scorched_earth
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = -25
+			}
+			if = {
+				limit = {
+					controls_state = 223
+				}
+				223 = {
+					damage_building = {
+						type = infrastructure
+						damage = 3
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 253
+				}
+				253 = {
+					damage_building = {
+						type = infrastructure
+						damage = 3
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 254
+				}
+				254 = {
+					damage_building = {
+						type = infrastructure
+						damage = 3
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 219
+				}
+				219 = {
+					damage_building = {
+						type = infrastructure
+						damage = 3
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 242
+				}
+				242 = {
+					damage_building = {
+						type = infrastructure
+						damage = 3
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 205
+				}
+				205 = {
+					damage_building = {
+						type = infrastructure
+						damage = 3
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	RUS_scorched_earth_novgorod = {
+
+		icon = generic_scorched_earth
+
+		available = {
+			has_war = yes
+			has_country_flag = SOV_scorched_earth
+			has_equipment = {
+				support_equipment > 24
+			}
+		}
+
+		cost = 50
+		fire_only_once = yes
+		visible = {
+			has_war = yes
+			OR = {
+				controls_state = 263
+				controls_state = 244
+				controls_state = 264
+			}
+			has_country_flag = SOV_scorched_earth
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = -25
+			}
+			if = {
+				limit = {
+					controls_state = 263
+				}
+				263 = {
+					damage_building = {
+						type = infrastructure
+						damage = 3
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 244
+				}
+				244 = {
+					damage_building = {
+						type = infrastructure
+						damage = 3
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 264
+				}
+				264 = {
+					damage_building = {
+						type = infrastructure
+						damage = 3
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	RUS_scorched_earth_pskov = {
+
+		icon = generic_scorched_earth
+
+		available = {
+			has_war = yes
+			has_country_flag = SOV_scorched_earth
+			has_equipment = {
+				support_equipment > 24
+			}
+		}
+
+		cost = 50
+		fire_only_once = yes
+		visible = {
+			has_war = yes
+			OR = {
+				controls_state = 209
+				controls_state = 210
+			}
+			has_country_flag = SOV_scorched_earth
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = -25
+			}
+			if = {
+				limit = {
+					controls_state = 209
+				}
+				209 = {
+					damage_building = {
+						type = infrastructure
+						damage = 3
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 210
+				}
+				210 = {
+					damage_building = {
+						type = infrastructure
+						damage = 3
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	RUS_scorched_earth_rzhev = {
+
+		icon = generic_scorched_earth
+
+		available = {
+			has_war = yes
+			has_country_flag = SOV_scorched_earth
+			has_equipment = {
+				support_equipment > 24
+			}
+		}
+
+		cost = 50
+		fire_only_once = yes
+		visible = {
+			has_war = yes
+			OR = {
+				controls_state = 246
+				controls_state = 247
+				controls_state = 248
+			}
+			has_country_flag = SOV_scorched_earth
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = -25
+			}
+			if = {
+				limit = {
+					controls_state = 246
+				}
+				246 = {
+					damage_building = {
+						type = infrastructure
+						damage = 3
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 247
+				}
+				247 = {
+					damage_building = {
+						type = infrastructure
+						damage = 3
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 248
+				}
+				248 = {
+					damage_building = {
+						type = infrastructure
+						damage = 3
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

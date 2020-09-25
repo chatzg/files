@@ -9,6 +9,8 @@ set_war_support = 0.6
 give_guarantee = ZAP
 give_guarantee = DEN
 
+create_faction = "Anti-Swedish Coalition"
+
 set_autonomy = {
 	target = KHA
 	autonomous_state = autonomy_dominion
@@ -84,11 +86,12 @@ set_popularities = {
 }
 
 add_ideas = {
-	CHI_army_corruption_1
+	RUS_streltsy_purge_5
 	orthodox
 	empire
 	RUS_russians_fleeing_serfdom
 	boyar_duma
+	RUS_ottoman_standoff
 }
 
 create_country_leader = {

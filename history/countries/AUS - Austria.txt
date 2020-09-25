@@ -74,7 +74,7 @@ set_war_support = .40
 
 73 = {
 	start_resistance = yes
-	set_compliance = 2
+	set_compliance = 10
 	set_resistance = 10
 	set_garrison_strength = 1.0
 }
@@ -87,42 +87,42 @@ set_war_support = .40
 
 154 = {
 	start_resistance = yes
-	set_compliance = 2
+	set_compliance = 10
 	set_resistance = 10
 	set_garrison_strength = 1.0
 }
 43 = {
 	start_resistance = yes
-	set_compliance = 2
+	set_compliance = 10
 	set_resistance = 10
 	set_garrison_strength = 1.0
 }
 76 = {
-	set_compliance = 2
+	set_compliance = 10
 	set_resistance = 10
 	set_garrison_strength = 1.0
 }
 45 = {
 	start_resistance = yes
-	set_compliance = 2
+	set_compliance = 10
 	set_resistance = 10
 	set_garrison_strength = 1.0
 }
 83 = {
 	start_resistance = yes
-	set_compliance = 2
+	set_compliance = 10
 	set_resistance = 10
 	set_garrison_strength = 1.0
 }
 84 = {
 	start_resistance = yes
-	set_compliance = 2
+	set_compliance = 10
 	set_resistance = 10
 	set_garrison_strength = 1.0
 }
 76 = {
 	start_resistance = yes
-	set_compliance = 2
+	set_compliance = 10
 	set_resistance = 10
 	set_garrison_strength = 1.0
 }

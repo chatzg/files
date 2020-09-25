@@ -23,19 +23,9 @@ country_event = {
 	id = sweden.1
 	title = sweden.1.t
 	desc = sweden.1.d
-	picture = GFX_report_event_degaulle_churchill
 
 	fire_only_once = no
-	trigger = {
-		tag = SOV
-		has_war_with = SWE
-		SWE = { surrender_progress > 0.4 }
-		NOT = {
-			has_country_flag = kill_sweden_whole
-		}
-	}
-
-	mean_time_to_happen = { days = 60 }
+	is_triggered_only = yes
 
 	option = { #take historical provinces
 		name = sweden.1.a
@@ -67,7 +57,6 @@ country_event = {
 		ai_chance = {
 			factor = 0
 		}
-		set_country_flag = kill_sweden_whole
 	}
 }
 
@@ -75,7 +64,6 @@ country_event = {
 	id = sweden.2
 	title = sweden.2.t
 	desc = sweden.2.d
-	picture = GFX_report_event_degaulle_churchill
 
 	fire_only_once = no
 	is_triggered_only = yes
@@ -101,6 +89,8 @@ country_event = {
 				days = 2
 			}
 		}
+		white_peace = SOV
+		add_country_flag = SWE_defeated_by_russia
 	}
 	option = { #refuse
 		name = sweden.2.b
@@ -112,7 +102,7 @@ country_event = {
 		SOV = {
 			country_event = {
 				id = sweden.5
-				days = 2
+				days = 1
 			}
 		}
 	}
@@ -122,7 +112,6 @@ country_event = {
 	id = sweden.3
 	title = sweden.3.t
 	desc = sweden.3.d
-	picture = GFX_report_event_degaulle_churchill
 
 	fire_only_once = no
 	is_triggered_only = yes
@@ -152,6 +141,8 @@ country_event = {
 				days = 2
 			}
 		}
+		white_peace = SOV
+		add_country_flag = SWE_defeated_by_russia
 	}
 	option = { #refuse
 		name = sweden.3.b
@@ -163,7 +154,7 @@ country_event = {
 		SOV = {
 			country_event = {
 				id = sweden.5
-				days = 2
+				days = 1
 			}
 		}
 	}
@@ -173,7 +164,6 @@ country_event = {
 	id = sweden.4
 	title = sweden.4.t
 	desc = sweden.4.d
-	picture = GFX_report_event_degaulle_churchill
 
 	fire_only_once = no
 	is_triggered_only = yes

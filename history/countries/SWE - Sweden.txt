@@ -36,7 +36,7 @@ SWE = {
 	add_opinion_modifier = { target = DEN modifier = Rivalry }
 }
 
-create_faction = "The Swedish Sphere"
+create_faction = "Swedish Sphere"
 add_to_faction = SHL
 
 set_politics = {
@@ -71,6 +71,7 @@ create_country_leader = {
 	ideology = despotism
 	traits = {
 		inexperienced_monarch
+		warmonger
 	}
 }
 

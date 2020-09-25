@@ -1030,6 +1030,8 @@ opinion_modifiers = {
 		value = -50
 		decay = 1
 	}
-
-
+	supported_rogue_state = {
+		value = -50
+		decay = 1
+	}
 }	

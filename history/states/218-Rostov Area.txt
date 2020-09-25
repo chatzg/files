@@ -5,6 +5,9 @@ state={
 
 	history={
 		owner = SOV
+		add_core_of = TUR
+		add_core_of = CRI
+		set_border_war = yes
 		victory_points = {
 			9417 10 
 		}

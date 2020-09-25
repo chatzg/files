@@ -330,3 +330,212 @@ country_event = {
 		news_event = mod.22
 	}
 }
+
+#resource prospection: Siberia
+
+country_event = {
+	id = russia.10
+	title = russia.10.t
+	desc = russia.10.d
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = russia.10.a
+		add_resource = {
+		    type = chromium
+		    amount = 16
+		    state = 576
+		}
+		random_list = {
+		    25 = {
+
+		    }
+		    25 = {
+		        add_resource = {
+				    type = steel
+				    amount = 14
+				    state = 567
+				} 
+		    }
+		    25 = {
+		        add_resource = {
+				    type = steel
+				    amount = 14
+				    state = 644
+				} 
+		    }
+		    25 = {
+		        add_resource = {
+				    type = steel
+				    amount = 14
+				    state = 644
+				}
+				add_resource = {
+				    type = steel
+				    amount = 14
+				    state = 567
+				}
+		    }
+		}
+	}
+}
+
+#kamchatka prospection
+
+country_event = {
+	id = russia.11
+	title = russia.11.t
+	desc = russia.11.d
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = russia.11.a
+		random_list = {
+		    50 = {
+		    }
+		    50 = {
+		        add_resource = {
+				    type = steel
+				    amount = 8
+				    state = 637
+				} 
+		    }
+		}
+	}
+}
+
+#alaska prospection
+
+country_event = {
+	id = russia.12
+	title = russia.12.t
+	desc = russia.12.d
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = russia.12.a
+		random_list = {
+		    25 = {
+		    }
+		    50 = {
+		        add_resource = {
+				    type = steel
+				    amount = 12
+				    state = 463
+				} 
+		    }
+		    25 = {
+		        add_resource = {
+				    type = steel
+				    amount = 34
+				    state = 463
+				} 
+		    }
+		}
+	}
+}
+
+#demand end of guarantee
+
+country_event = {
+	id = russia.13
+	title = russia.13.t
+	desc = russia.13.d
+	
+	fire_only_once = no
+
+	is_triggered_only = yes
+
+	option = {
+		name = "These terrorists have to be combated."
+		diplomatic_relation = {
+		    country = ZAP
+		    relation = guarantee
+		    active = no
+		}
+		SOV = {
+			country_event = {
+			    id = russia.14
+			    days = 2
+			}
+		}
+	}
+	option = {
+		name = "It is not in the intrest of our nation."
+		reverse_add_opinion_modifier = {
+		    target = SOV
+		    modifier = supported_rogue_state
+		}
+		SOV = {
+			country_event = {
+			    id = russia.15
+			    days = 2
+			}
+		}
+	}
+}
+
+country_event = {
+	id = russia.14
+	title = russia.14.t
+	desc = russia.14.d
+	
+	fire_only_once = no
+
+	is_triggered_only = yes
+
+	option = {
+		name = "We stand united against terrorists!"
+	}
+}
+
+country_event = {
+	id = russia.15
+	title = russia.15.t
+	desc = russia.15.d
+	
+	fire_only_once = no
+
+	is_triggered_only = yes
+
+	option = {
+		name = "They have shown their true colors!"
+	}
+}
+
+#treaty of constantinople
+
+country_event = {
+	id = russia.16
+	title = russia.16.t
+	desc = russia.16.d
+	
+	fire_only_once = no
+
+	is_triggered_only = yes
+
+	option = {
+		name = "OK."
+		880 = {
+			remove_claim_by = SOV
+		}
+		881 = {
+			remove_claim_by = SOV
+		}
+		SOV = {
+			set_truce = {
+			    target = TUR
+			    days = 1800
+			}
+		}
+	}
+}

@@ -4,7 +4,7 @@ state={
 	name="STATE_907"
 
 	history={
-		owner = TUR
+		owner = CRO
 		victory_points = {
 			6889 5 
 		}
@@ -15,9 +15,9 @@ state={
 			}
 
 		}
-		add_core_of = VNC
+		add_claim_by = VNC
 		add_core_of = CRO
-		add_core_of = TUR
+		add_claim_by = TUR
 
 	}
 

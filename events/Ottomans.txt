@@ -25,7 +25,6 @@ country_event = {
 		    set_cosmetic_tag = TUR
 		    add_ideas = TUR_engulved_in_civil_war
 		    load_focus_tree = { tree = ottoman_focus keep_completed = yes }
-		    set_cosmetic_tag = TUR
 		}
 		add_ideas = TUR_engulved_in_civil_war
 		

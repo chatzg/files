@@ -1,0 +1,797 @@
+focus_tree = {
+	id = denmark_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 20
+			tag = DEN
+		}
+	}
+	
+	default = no
+#############################################
+	
+	focus = {
+		id = DEN_danish_age_of_absolutism
+		icon = GFX_focus_generic_monarchy_1
+		x = 10
+		y = 0
+		cost = 1
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DEN_rebuilding_the_nation
+		icon = GFX_goal_generic_neutrality_focus
+		x = -5
+		y = 1
+		cost = 1
+		prerequisite = { focus = DEN_danish_age_of_absolutism }
+		relative_position_id = DEN_danish_age_of_absolutism
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DEN_the_weakness_of_sweden
+		icon = GFX_goal_sweden
+		x = 0
+		y = 1
+		cost = 1
+		mutually_exclusive = { focus = DEN_abandon_revanchism }
+		prerequisite = { focus = DEN_danish_age_of_absolutism }
+		relative_position_id = DEN_danish_age_of_absolutism
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DEN_look_towards_russia
+		icon = GFX_goal_third_rome
+		x = -1
+		y = 1
+		cost = 1
+		prerequisite = { focus = DEN_the_weakness_of_sweden }
+		relative_position_id = DEN_the_weakness_of_sweden
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DEN_danish_polish_alliance
+		icon = GFX_focus_plc_commonwealth_king
+		x = 1
+		y = 1
+		cost = 1
+		prerequisite = { focus = DEN_the_weakness_of_sweden }
+		relative_position_id = DEN_the_weakness_of_sweden
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DEN_strike_first
+		icon = GFX_goal_generic_attack_allies
+		x = 0
+		y = 2
+		cost = 1
+		prerequisite = { focus = DEN_danish_polish_alliance focus = DEN_look_towards_russia }
+		relative_position_id = DEN_the_weakness_of_sweden
+
+		completion_reward = {
+
+		}
+	}
+
+
+	focus = {
+		id = DEN_abandon_revanchism
+		icon = GFX_goal_generic_major_alliance
+		x = 6
+		y = 1
+		cost = 1
+		mutually_exclusive = { focus = DEN_the_weakness_of_sweden }
+		prerequisite = { focus = DEN_danish_age_of_absolutism }
+		relative_position_id = DEN_danish_age_of_absolutism
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DEN_open_ports_for_swedish_trade
+		icon = GFX_goal_generic_major_alliance
+		x = -1
+		y = 1
+		cost = 1
+		prerequisite = { focus = DEN_abandon_revanchism }
+		relative_position_id = DEN_abandon_revanchism
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DEN_joint_ownership_of_sound_toll
+		icon = GFX_goal_generic_major_alliance
+		x = -1
+		y = 2
+		cost = 1
+		prerequisite = { focus = DEN_open_ports_for_swedish_trade }
+		relative_position_id = DEN_abandon_revanchism
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DEN_guarantees_for_territories
+		icon = GFX_goal_generic_major_alliance
+		x = 3
+		y = 1
+		cost = 1
+		mutually_exclusive = { focus = DEN_drop_claims_on_scania }
+		prerequisite = { focus = DEN_abandon_revanchism }
+		relative_position_id = DEN_abandon_revanchism
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DEN_drop_claims_on_scania
+		icon = GFX_goal_generic_major_alliance
+		x = 1
+		y = 1
+		cost = 1
+		mutually_exclusive = { focus = DEN_guarantees_for_territories }
+		prerequisite = { focus = DEN_abandon_revanchism }
+		relative_position_id = DEN_abandon_revanchism
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DEN_alliance_of_kalmar
+		icon = GFX_goal_generic_major_alliance
+		x = 2
+		y = 2
+		cost = 1
+		prerequisite = { focus = DEN_drop_claims_on_scania focus = DEN_guarantees_for_territories }
+		relative_position_id = DEN_abandon_revanchism
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DEN_an_integrated_union
+		icon = GFX_goal_generic_major_alliance
+		x = 1
+		y = 3
+		cost = 1
+		mutually_exclusive = { focus = DEN_a_decentralized_union}
+		prerequisite = { focus = DEN_alliance_of_kalmar }
+		relative_position_id = DEN_abandon_revanchism
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DEN_a_decentralized_union
+		icon = GFX_goal_generic_major_alliance
+		x = 3
+		y = 3
+		cost = 1
+		mutually_exclusive = { focus = DEN_an_integrated_union}
+		prerequisite = { focus = DEN_alliance_of_kalmar }
+		relative_position_id = DEN_abandon_revanchism
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DEN_protectors_of_the_protestant_faith
+		icon = GFX_goal_generic_major_alliance
+		x = 6
+		y = 4
+		cost = 1
+		prerequisite = { focus = DEN_a_decentralized_union }
+		relative_position_id = DEN_abandon_revanchism
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DEN_invite_the_german_princes
+		icon = GFX_goal_generic_major_alliance
+		x = 6
+		y = 5
+		cost = 1
+		prerequisite = { focus = DEN_protectors_of_the_protestant_faith }
+		relative_position_id = DEN_abandon_revanchism
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DEN_end_the_empire
+		icon = GFX_goal_generic_major_alliance
+		x = 6
+		y = 6
+		cost = 1
+		prerequisite = { focus = DEN_invite_the_german_princes }
+		relative_position_id = DEN_abandon_revanchism
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DEN_economic_integration
+		icon = GFX_goal_generic_major_alliance
+		x = 2
+		y = 4
+		cost = 1
+		prerequisite = { focus = DEN_a_decentralized_union focus = DEN_an_integrated_union }
+		relative_position_id = DEN_abandon_revanchism
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DEN_military_integration
+		icon = GFX_goal_generic_major_alliance
+		x = 0
+		y = 4
+		cost = 1
+		prerequisite = { focus = DEN_a_decentralized_union focus = DEN_an_integrated_union }
+		relative_position_id = DEN_abandon_revanchism
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DEN_diplomatic_integration
+		icon = GFX_goal_generic_major_alliance
+		x = 4
+		y = 4
+		cost = 1
+		prerequisite = { focus = DEN_a_decentralized_union focus = DEN_an_integrated_union }
+		relative_position_id = DEN_abandon_revanchism
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DEN_kalmar_union_restored
+		icon = GFX_goal_generic_major_alliance
+		x = 1
+		y = 5
+		cost = 1
+		prerequisite = { focus = DEN_an_integrated_union  }
+		prerequisite = { focus = DEN_military_integration  }
+		prerequisite = { focus = DEN_economic_integration  }
+		prerequisite = { focus = DEN_diplomatic_integration  }
+		relative_position_id = DEN_abandon_revanchism
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DEN_make_norway_third_partner
+		icon = GFX_goal_generic_major_alliance
+		x = 3
+		y = 5
+		cost = 1
+		prerequisite = { focus = DEN_a_decentralized_union  }
+		prerequisite = { focus = DEN_military_integration  }
+		prerequisite = { focus = DEN_economic_integration  }
+		prerequisite = { focus = DEN_diplomatic_integration  }
+		relative_position_id = DEN_abandon_revanchism
+
+		completion_reward = {
+
+		}
+	}
+
+
+	focus = {
+		id = DEN_treaty_of_travendal
+		icon = GFX_Peace
+		x = 9
+		y = 4
+		cost = 1
+		mutually_exclusive = { focus = DEN_bypass_travendal }
+		prerequisite = { focus = DEN_strike_first }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DEN_licking_our_wounds
+		icon = GFX_Peace
+		x = -5
+		y = 1
+		cost = 1
+		prerequisite = { focus = DEN_treaty_of_travendal }
+		relative_position_id = DEN_treaty_of_travendal
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DEN_prevent_second_english_intervention
+		icon = GFX_Peace
+		x = 0
+		y = 1
+		cost = 1
+		prerequisite = { focus = DEN_licking_our_wounds }
+		relative_position_id = DEN_licking_our_wounds
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = DEN_rejoin_war_against_sweden
+		icon = GFX_Peace
+		x = 0
+		y = 5
+		cost = 1
+		prerequisite = { focus = DEN_prevent_second_english_intervention }
+		prerequisite = { focus = DEN_wise_lessons_learned }
+		prerequisite = { focus = DEN_expand_military_research_effort }
+		relative_position_id = DEN_licking_our_wounds
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = DEN_rebuild_our_defenses
+		icon = GFX_Peace
+		x = -3
+		y = 1
+		cost = 1
+		prerequisite = { focus = DEN_licking_our_wounds }
+		relative_position_id = DEN_licking_our_wounds
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DEN_defend_denmark
+		icon = GFX_Peace
+		x = -3
+		y = 2
+		cost = 1
+		prerequisite = { focus = DEN_rebuild_our_defenses }
+		relative_position_id = DEN_licking_our_wounds
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DEN_restore_danish_arms_industry
+		icon = GFX_Peace
+		x = -3
+		y = 3
+		cost = 1
+		prerequisite = { focus = DEN_defend_denmark }
+		relative_position_id = DEN_licking_our_wounds
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DEN_study_swedish_supremacy
+		icon = GFX_Peace
+		x = -1
+		y = 2
+		cost = 1
+		prerequisite = { focus = DEN_licking_our_wounds }
+		relative_position_id = DEN_licking_our_wounds
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DEN_countering_swedish_tactics
+		icon = GFX_Peace
+		x = -1
+		y = 3
+		cost = 1
+		prerequisite = { focus = DEN_study_swedish_supremacy }
+		relative_position_id = DEN_licking_our_wounds
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DEN_expand_military_research_effort
+		icon = GFX_focus_research
+		x = -2
+		y = 4
+		cost = 1
+		prerequisite = { focus = DEN_countering_swedish_tactics focus = DEN_restore_danish_arms_industry }
+		relative_position_id = DEN_licking_our_wounds
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DEN_foreign_expeditions
+		icon = GFX_Peace
+		x = 2
+		y = 1
+		cost = 1
+		prerequisite = { focus = DEN_licking_our_wounds }
+		relative_position_id = DEN_licking_our_wounds
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = DEN_support_france
+		icon = GFX_Peace
+		x = 1
+		y = 1
+		cost = 1
+		prerequisite = { focus = DEN_foreign_expeditions }
+		relative_position_id = DEN_foreign_expeditions
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = DEN_support_austria
+		icon = GFX_Peace
+		x = -1
+		y = 1
+		cost = 1
+		prerequisite = { focus = DEN_foreign_expeditions }
+		relative_position_id = DEN_foreign_expeditions
+
+		completion_reward = {
+		}
+	}
+
+
+	focus = {
+		id = DEN_expand_foreign_legion
+		icon = GFX_Peace
+		x = 2
+		y = 3
+		cost = 1
+		prerequisite = { focus = DEN_support_austria focus = DEN_support_france }
+		relative_position_id = DEN_licking_our_wounds
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = DEN_wise_lessons_learned
+		icon = GFX_Peace
+		x = 2
+		y = 4
+		cost = 1
+		prerequisite = { focus = DEN_expand_foreign_legion }
+		relative_position_id = DEN_licking_our_wounds
+
+		completion_reward = {
+		}
+	}
+
+
+	focus = {
+		id = DEN_initiate_army_reform
+		icon = GFX_focus_generic_military_academy
+		x = 1
+		y = 1
+		cost = 1
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DEN_the_danish_mercenary_expedition
+		icon = GFX_focus_generic_military_academy
+		x = 1
+		y = 1
+		cost = 1
+		prerequisite = { focus = DEN_initiate_army_reform }
+		relative_position_id = DEN_initiate_army_reform
+
+		completion_reward = {
+
+		}
+	}
+
+
+	focus = {
+		id = DEN_bypass_travendal
+		icon = GFX_goal_generic_demand_territory
+		x = 2
+		y = 0
+		cost = 1
+		prerequisite = { focus = DEN_strike_first }
+		mutually_exclusive = { focus = DEN_treaty_of_travendal }
+		relative_position_id = DEN_treaty_of_travendal
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DEN_split_sweden_with_russia
+		icon = GFX_goal_generic_demand_territory
+		x = 3
+		y = 1
+		cost = 1
+		mutually_exclusive = { focus = DEN_peace_for_scania_and_gotland }
+		prerequisite = { focus = DEN_bypass_travendal }
+		relative_position_id = DEN_bypass_travendal
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DEN_kalmar_empire
+		icon = GFX_goal_generic_demand_territory
+		x = 3
+		y = 2
+		cost = 1
+		prerequisite = { focus = DEN_split_sweden_with_russia }
+		relative_position_id = DEN_bypass_travendal
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DEN_among_the_great_powers
+		icon = GFX_goal_generic_demand_territory
+		x = 3
+		y = 1
+		cost = 1
+		prerequisite = { focus = DEN_kalmar_empire focus = DEN_kalmar_union_restored }
+		relative_position_id = DEN_kalmar_empire
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DEN_challenge_maritime_powers
+		icon = GFX_goal_generic_demand_territory
+		x = -1
+		y = 1
+		cost = 1
+		prerequisite = { focus = DEN_among_the_great_powers }
+		relative_position_id = DEN_among_the_great_powers
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DEN_secure_eastern_front
+		icon = GFX_goal_generic_demand_territory
+		x = 1
+		y = 1
+		cost = 1
+		prerequisite = { focus = DEN_among_the_great_powers }
+		relative_position_id = DEN_among_the_great_powers
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DEN_peace_for_scania_and_gotland
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 1
+		mutually_exclusive = { focus = DEN_split_sweden_with_russia }
+		prerequisite = { focus = DEN_bypass_travendal }
+		relative_position_id = DEN_bypass_travendal
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DEN_persue_old_glories
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 2
+		cost = 1
+		prerequisite = { focus = DEN_peace_for_scania_and_gotland }
+		relative_position_id = DEN_bypass_travendal
+
+		completion_reward = {
+			create_faction = "North Sea Empire"
+		}
+	}
+
+	focus = {
+		id = DEN_honour_our_ancestors
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 3
+		cost = 1
+		prerequisite = { focus = DEN_persue_old_glories }
+		relative_position_id = DEN_bypass_travendal
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DEN_shrine_to_odin
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 4
+		cost = 1
+		prerequisite = { focus = DEN_honour_our_ancestors }
+		relative_position_id = DEN_bypass_travendal
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DEN_norse_syncreticism
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 5
+		cost = 1
+		prerequisite = { focus = DEN_shrine_to_odin }
+		relative_position_id = DEN_bypass_travendal
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DEN_legacy_of_the_great_adventurers
+		icon = GFX_goal_generic_demand_territory
+		x = 2
+		y = 3
+		cost = 1
+		prerequisite = { focus = DEN_persue_old_glories }
+		relative_position_id = DEN_bypass_travendal
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DEN_adventure_into_russia
+		icon = GFX_goal_generic_demand_territory
+		x = 2
+		y = 4
+		cost = 1
+		prerequisite = { focus = DEN_legacy_of_the_great_adventurers }
+		relative_position_id = DEN_bypass_travendal
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DEN_raid_baltic_coast
+		icon = GFX_goal_generic_demand_territory
+		x = -2
+		y = 3
+		cost = 1
+		prerequisite = { focus = DEN_persue_old_glories }
+		relative_position_id = DEN_bypass_travendal
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DEN_raid_north_sea_coast
+		icon = GFX_goal_generic_demand_territory
+		x = -2
+		y = 4
+		cost = 1
+		prerequisite = { focus = DEN_raid_baltic_coast }
+		relative_position_id = DEN_bypass_travendal
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DEN_restoration_of_the_danelaw
+		icon = GFX_goal_generic_demand_territory
+		x = -2
+		y = 5
+		cost = 1
+		prerequisite = { focus = DEN_raid_north_sea_coast }
+		relative_position_id = DEN_bypass_travendal
+
+		completion_reward = {
+
+		}
+	}
+
+}

@@ -17,10 +17,10 @@ weather_rain_light = { # on Region
 weather_rain_heavy = { # on Region 
 	air_detection = -0.2
 	naval_detection = -0.2
-	naval_hit_chance = -0.1
+	naval_hit_chance = -0.2
 	naval_speed_factor = -0.1
-	carrier_traffic = -1.0
-    naval_strike = -0.4			
+	carrier_traffic = -0.8
+	naval_strike = -0.4
 	air_accidents = 0.3
 	air_bombing_targetting = -0.5
 	local_org_regain = -0.2
@@ -133,12 +133,11 @@ resistance_effect_base = {
 	# todo - spy defense
 }
 
-# The following is multiplied by local resistance strength.
 resistance_effect = {
-	local_supplies = -0.5
-	local_intel_to_enemies = 1
-	local_factory_sabotage = 0.75
-	attrition = 0.25
+	#local_supplies = -0.5
+	#local_intel_to_enemies = 10
+	#local_factory_sabotage = 0.75
+	#attrition = 0.25
 }
 
 # For compliance base + effect * compliance_level will be applied as a modifier.
@@ -236,29 +235,6 @@ FRA_coordinate_rearmament = {
 	license_tech_difference_speed = 0.25
 }
 
-HUN_stubborn_fools = {
-	valid_relation_trigger = {
-		FROM = {
-			NOT = { is_in_faction_with = ROOT }
-		}
-	}
-	ai_license_acceptance = -50 #penalty to AI acceptance
-
-}
-
-ROM_military_modernization = {
-	valid_relation_trigger = {
-		FROM = {
-			NOT = { has_war_with = ROOT }
-		}
-	}
-
-	license_purchase_cost = 0 #base cost reduction
-	ai_license_acceptance = 60 #more to AI acceptance value.
-	license_production_speed = 0.25 #speed  increase for being a license
-	license_tech_difference_speed = 0.25 #less cost increase for each tech level between the license and own tech level 
-}
-
 free_license = {
 	valid_relation_trigger = {
 		FROM = {
@@ -270,35 +246,32 @@ free_license = {
 
 # applies when stability > 50%
 stability_good_modifier = {
-	industrial_capacity_factory = 0.25 #Originally 0.20
-	industrial_capacity_dockyard = 0.25 #Originally 0.20
-	consumer_goods_factor = -0.1 #Originally -0.05
-	stability_weekly = -0.002 #This will cause stability to lower itself to 74% if at a higher value.
+	industrial_capacity_factory = 0.20
+	industrial_capacity_dockyard = 0.20
+	consumer_goods_factor = -0.05
+	political_power_factor = 0.1
 }
 
 # applies when stability < 50%
 stability_bad_modifier = {
-	army_org_factor = -0.2
 	industrial_capacity_factory = -0.50
 	industrial_capacity_dockyard = -0.50
-	consumer_goods_factor = 0.3
-	stability_weekly = 0.003 #This will cause stability to raise itself to 34% if at a lower value.
+	political_power_factor = -0.2
 }
 
 war_support_good_modifier = {
-	mobilization_speed = 0.050 #in 1/1000 of 1 %
-	conscription_factor = 0.1
-	army_org_factor = 0.1
-	land_reinforce_rate = 0.05
+	mobilization_speed = 0.30 #in 1/1000 of 1 %
+	army_core_attack_factor = 0.1
+	army_core_defence_factor = 0.1
 	command_power_gain_mult = 0.5
 }
 
 war_support_bad_modifier = {
-	mobilization_speed = -0.500 # Reduce mobilization speed by -50%.
-	conscription_factor = -0.1
-	army_org_factor = -0.1
-	land_reinforce_rate = -0.05
-	command_power_gain_mult = -0.95 
+	mobilization_speed = -0.500 # Reduce mobilization speed by half.
+	#army_noncore_attack_factor = -0.50  # Attacking or defending on non-core takes a huge penalty.
+	#army_noncore_defence_factor = -0.50
+	command_power_gain_mult = -0.95
+	surrender_limit = -0.3
 }
 
 
@@ -310,7 +283,7 @@ attache_sent = {
 
 diff_very_easy_player = {
 	production_factory_max_efficiency_factor = 0.3
-	research_speed_factor = 0.1
+	research_speed_factor = 0.15
 	political_power_factor = 0.5
 	production_lack_of_resource_penalty_factor = -0.8
 	army_fuel_consumption_factor = -0.5
@@ -320,7 +293,7 @@ diff_very_easy_player = {
 
 diff_easy_player = {
 	production_factory_max_efficiency_factor = 0.2
-	research_speed_factor = 0.05
+	research_speed_factor = 0.07
 	political_power_factor = 0.25
 	production_lack_of_resource_penalty_factor = -0.3
 	army_fuel_consumption_factor = -0.25
@@ -333,14 +306,14 @@ diff_normal_player = {
 
 diff_hard_player = {
 	production_factory_max_efficiency_factor = -0.2
-	research_speed_factor = -0.10
-	political_power_factor = -0.2
+	research_speed_factor = -0.15
+	political_power_factor = -0.1
 }
 
 diff_very_hard_player = {
 	production_factory_max_efficiency_factor = -0.3
-	research_speed_factor = -0.2
-	political_power_factor = -0.3
+	research_speed_factor = -0.30
+	political_power_factor = -0.15
 }
 
 
@@ -348,10 +321,10 @@ diff_very_easy_ai = {
 }
 
 diff_easy_ai = {
+	
 }
 
 diff_normal_ai = {
-
 }
 
 diff_hard_ai = {
@@ -393,11 +366,12 @@ diff_strong_ai_generic = {
 	army_fuel_consumption_factor = -0.40
 	air_fuel_consumption_factor = -0.40
  	navy_fuel_consumption_factor = -0.40
-	
+
 	# xp gain
 	experience_gain_air_factor = 0.25
 	experience_gain_army_factor = 0.25
 	experience_gain_navy_factor = 0.25
+	air_mission_xp_gain_factor = 0.25
 	experience_gain_army_unit_factor = 0.10
 	experience_gain_navy_unit_factor = 0.10
 }
@@ -406,22 +380,6 @@ naval_mines_effect = {
 	naval_accidents_chance = 0.15
 	naval_speed_factor = -0.8
 	naval_invasion_penalty = 0.5
-}
-
-air_wing_experience_bad = {
-	air_attack_factor = -0.15
-	#air_defence_factor = -0.15
-	air_agility_factor = -0.15
-	air_night_penalty = 0.15
-	#air_weather_penalty = 0.15
-}
-
-air_wing_experience = {
-	air_attack_factor = 0.2
-	#air_defence_factor = 0.2
-	air_agility_factor = 0.3
-	air_night_penalty = -0.2
-	#air_weather_penalty = -0.3
 }
 
 air_wing_experience_bonus_max = {
@@ -479,6 +437,7 @@ water_modifier_shark_infested = {
 
 screening_bonus = { 
   naval_retreat_speed = 0.2 
+  convoy_retreat_speed = 0.2
   naval_hit_chance = 0.4
 }
 
@@ -555,23 +514,10 @@ operative_nationality_operation = {
 	operation_cost = -0.1
 }
 
-country_is_at_peace = {
-	decryption_power_factor = -0.5
-}
+#modded_modifiers
 
-country_is_at_war = {
-	decryption_power_factor = -0.75 #used to be 0
-}
-
-# For compliance base + effect * compliance_level will be applied as a modifier.
-compliance_effect_base = {
-	#local_factories = -0.75
-	#local_manpower = -0.75
-	#local_resources = -0.75
-}
-
-compliance_effect = {
-	local_factories = 0.65
-	local_non_core_manpower = 0.18
-	local_resources = 0.60
+protected_by_barrier_treaty = { # on Province
+	targeted_modifier = { tag = FRA attack_bonus_against = 0.5} 
+	targeted_modifier = { tag = FRA defense_bonus_against = 0.5} 
+	dig_in_speed_factor = 0.2
 }

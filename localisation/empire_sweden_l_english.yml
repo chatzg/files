@@ -6,6 +6,7 @@ great_war_hero:0 "Military Genius"
 ottoman_aid:0 "This will unlock interactions with the Ottoman Empire."
 cossack_aid:0 "This will unlock interactions with the Zaporozhian Hetmanate."
 RUS_anti_swedish_pact_WT:0 "Formation of Anti-Swedish Pact"
+SWE_defeated_by_russia:0 "Defeated In Great Northern War"
 
 #focus:
 
@@ -163,10 +164,10 @@ SWE_preparing_closer_union:0 "Preparing Closer Union"
 #events
 sweden.0.t:0 "Sweden Anno 1699"
 sweden.0.d:0 "As Sweden prepares to enter the 18th century it finds itself in a perilous state. After its military successes in the 30 years' war (1618-1648) Sweden had risen as a new great power in Europe, securing holdings in Northern Germany and defeating imperial forces with its far superior Gustavian infantry. \n\n Sweden's rise to power made them a few enemies, most notably the powerful Russian state rising in the East. Seeing our state as weak and ruled by a young and incompetent monarch, there is a fear that Russia will seek to exploit Sweden's moment of weakness and take its place as a European great power."
-sweden.1.t:0 "A peace deal with Sweden?"
-sweden.1.d:0 "With the Swedes on the retreat on all sides, it is time to come to the negotioating table. The Swedes are resentfull towards us, and many of them would rather die fighting than surrender. If we want to end the bloodshed, we should make a decent offer, one they can accept. Should we be greedy and risk more death and destruction, or will we take a diplomatic approach."
-sweden.1.a:0 "Demand minor border concessions such as Karelia, and the Baltic States."
-sweden.1.b:0 "Demand minor border concessions such as Karelia, the Baltic States and all of Finland."
+sweden.1.t:0 "Opening up peace talks with Sweden"
+sweden.1.d:0 "As our forces close in on the Swedish heartland after a hard fought battle their situation appears more dire and irreversable. However, Sweden is not willing to accept an unconditional surrender by any means just yet. Many of our advisors believe continuing the war will only further destabilize our nation and add to our war exhaustion. Our diplomats estimate it is quite realistic to demand the Baltic, the Neva area and some border regions along Finland, whilst others have more bold visions such as subjecting all of Finland, or even push for a complete surrender and a march to Stockholm. The final decision is in your hands, what deal should we propose the deal? Should the Swedes not accept our demands of surrender, we will be able to re-open negotiations in a few months."
+sweden.1.a:0 "Demand minor border concessions such as Karelia, and the Baltic."
+sweden.1.b:0 "All of Finland and the Baltic belongs to Russia!"
 sweden.1.c:0 "We shall conquer them whole!"
 sweden.2.t:0 "Peace offer from Russia"
 sweden.2.d:0 "We have received a peace offer from Russia, demanding that we cede minor territories on the Russian border and Estonia. Seeing our precarious position it might not be a bad idea to come to the negotioating table."

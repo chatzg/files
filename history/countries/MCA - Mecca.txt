@@ -1,6 +1,5 @@
 ﻿capital = 926
 
-oob = "TUR_1936"
 if = {
 	limit = { has_dlc = "Man the Guns" }
 		set_naval_oob = "TUR_naval_mtg"

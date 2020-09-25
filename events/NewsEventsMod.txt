@@ -62,20 +62,23 @@ news_event = {
 	id = mod.3
 		title = mod.3.t
 		desc = mod.3.d
-		picture = GFX_news_event_army
+		picture = GFX_news_event_northern_war
 
 		major = yes
 
 		is_triggered_only = yes
 
 		option = {
-			name = worrying
+			name = "David against Golliath"
 			trigger = {
+				NOT = { has_war_with = SWE }
 			}
 		}
 		option = {
-			name = huzzah
-			trigger = { TAG = SOV }
+			name = "We will crush them!"
+			trigger = { 
+				has_war_with = SWE
+			}
 		}
 	}
 

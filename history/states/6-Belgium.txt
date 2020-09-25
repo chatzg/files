@@ -7,6 +7,12 @@ state={
 		steel=8
 		rubber=48
 	}
+
+	add_state_modifier = {
+    static_modifier = {
+        protected_by_barrier_treaty
+	    }
+	}
 	
 	state_category = metropolis
 
