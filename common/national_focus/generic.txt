@@ -248,7 +248,9 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
-
+		available = {
+			has_tech = construction1
+		}
 		
 		ai_will_do = {
 			factor = 2
@@ -277,6 +279,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = rank_factor
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
@@ -307,6 +310,108 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			IF = {
+				limit = { 
+					has_idea = kingdom 
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			IF = {
+				limit = { 
+					OR = {
+						has_idea = empire 
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
 		}
 	}
 
@@ -318,6 +423,10 @@ focus_tree = {
 		y = 1
 		relative_position_id = industrial_effort
 		cost = 10
+
+		available = {
+			has_tech = construction1
+		}
 
 		available_if_capitulated = yes
 
@@ -349,6 +458,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = rank_factor
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
@@ -379,6 +489,108 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			IF = {
+				limit = { 
+					has_idea = kingdom 
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			IF = {
+				limit = { 
+					OR = {
+						has_idea = empire 
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
 		}
 	}
 
@@ -393,6 +605,9 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
+		available = {
+			has_tech = construction2
+		}
 
 		ai_will_do = {
 			factor = 2
@@ -421,6 +636,7 @@ focus_tree = {
 		}		
 
 		completion_reward = {
+			custom_effect_tooltip = rank_factor
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
@@ -451,6 +667,108 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			IF = {
+				limit = { 
+					has_idea = kingdom 
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			IF = {
+				limit = { 
+					OR = {
+						has_idea = empire 
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
 		}
 	}
 
@@ -465,6 +783,9 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
+		available = {
+			has_tech = construction2
+		}
 
 		ai_will_do = {
 			factor = 2
@@ -493,6 +814,7 @@ focus_tree = {
 		}		
 
 		completion_reward = {
+			custom_effect_tooltip = rank_factor
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
@@ -521,6 +843,108 @@ focus_tree = {
 					type = arms_factory
 					level = 1
 					instant_build = yes
+				}
+			}
+			IF = {
+				limit = { 
+					has_idea = kingdom 
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			IF = {
+				limit = { 
+					OR = {
+						has_idea = empire 
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
 				}
 			}
 		}
@@ -613,7 +1037,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -630,7 +1054,11 @@ focus_tree = {
 		relative_position_id = production_effort_2
 		cost = 10
 
-		available_if_capitulated = yes
+		available = {
+			has_tech = construction3
+		}
+
+		available_if_capitulated = no
 
 
 		ai_will_do = {
@@ -660,11 +1088,12 @@ focus_tree = {
 		}		
 
 		completion_reward = {
+			custom_effect_tooltip = rank_factor
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
 						building = arms_factory
-						size > 0
+						size > 1
 						include_locked = yes
 					}
 					OR = {
@@ -674,7 +1103,7 @@ focus_tree = {
 								any_owned_state = {
 									free_building_slots = {
 										building = arms_factory
-										size > 0
+										size > 1
 										include_locked = yes
 									}
 									is_in_home_area = yes
@@ -683,11 +1112,113 @@ focus_tree = {
 						}
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
+				}
+			}
+			IF = {
+				limit = { 
+					has_idea = kingdom 
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = arms_factory
+											size > 1
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			IF = {
+				limit = { 
+					OR = {
+						has_idea = empire 
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = arms_factory
+											size > 1
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = arms_factory
+											size > 1
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
 				}
 			}
 		}
@@ -797,6 +1328,10 @@ focus_tree = {
 		relative_position_id = construction_effort_2
 		cost = 10
 
+		available = {
+			has_tech = construction3
+		}
+
 		available_if_capitulated = yes
 
 
@@ -827,6 +1362,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = rank_factor
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
@@ -855,6 +1391,108 @@ focus_tree = {
 					type = industrial_complex
 					level = 2
 					instant_build = yes
+				}
+			}
+			IF = {
+				limit = { 
+					has_idea = kingdom 
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = industrial_complex
+											size > 1
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			IF = {
+				limit = { 
+					OR = {
+						has_idea = empire 
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = industrial_complex
+											size > 1
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = industrial_complex
+											size > 1
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
 				}
 			}
 		}
@@ -943,7 +1581,7 @@ focus_tree = {
 	focus = {
 		id =  autocracy
 		icon = GFX_goal_autocracy
-		x = -1
+		x = 1
 		y = 1
 		cost = 10
 		prerequisite = { focus = embrace_despotism }
@@ -994,12 +1632,30 @@ focus_tree = {
 	}
 
 	focus = {
+		id =  centralization_effort
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = absolutism }
+		relative_position_id = absolutism
+
+		available_if_capitulated = yes
+
+		available = {
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
 		id =  dominance_of_military_class
 		icon = GFX_goal_aristocracy
 		x = 1
 		y = 1
 		cost = 10
-		prerequisite = { focus = autocracy focus = theocratic_despotism }
+		prerequisite = { focus = autocracy focus = focus_oligarchism }
 		relative_position_id = autocracy
 
 		available_if_capitulated = yes
@@ -1013,44 +1669,18 @@ focus_tree = {
 	}
 
 	focus = {
-		id =  install_elective_monarchy
-		icon = GFX_goal_generic_demand_territory
-		x = 1
+		id =  militaritic_society
+		icon = GFX_goal_aristocracy
+		x = 0
 		y = 1
 		cost = 10
 		prerequisite = { focus = dominance_of_military_class }
 		relative_position_id = dominance_of_military_class
-		mutually_exclusive = {focus = press_toward_reform }
 
 		available_if_capitulated = yes
 
 		available = {
-			OR = {
-				AND = {
-					aristocracy > 0.40
-					has_government = neutrality
-				}
-				has_government = aristocracy
-			}
-		}
-	
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id =  press_toward_reform
-		icon = GFX_goal_generic_demand_territory
-		x = -1
-		y = 1
-		cost = 10
-		prerequisite = { focus = dominance_of_military_class }
-		relative_position_id = dominance_of_military_class
-		mutually_exclusive = {focus = install_elective_monarchy }
-
-		available_if_capitulated = yes
-
-		available = {
+			aristocracy > 0.40
 		}
 	
 		completion_reward = {
@@ -1060,7 +1690,7 @@ focus_tree = {
 	focus = {
 		id =  enligthened_despotism
 		icon = GFX_goal_generic_demand_territory
-		x = 1
+		x = -1
 		y = 1
 		cost = 10
 		prerequisite = { focus = embrace_despotism }
@@ -1083,9 +1713,9 @@ focus_tree = {
 	}
 
 	focus = {
-		id =  what_the_people_need
+		id =  rational_administrations
 		icon = GFX_goal_generic_demand_territory
-		x = 1
+		x = -1
 		y = 1
 		cost = 10
 		prerequisite = { focus = enligthened_despotism focus = focus_oligarchism }
@@ -1107,9 +1737,27 @@ focus_tree = {
 	}
 
 	focus = {
+		id =  crackdown_on_feudal_elements
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = rational_administrations }
+		relative_position_id = rational_administrations
+
+		available_if_capitulated = yes
+
+		available = {
+		}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
 		id =  embrace_theocracy
 		icon = GFX_goal_generic_demand_territory
-		x = -4
+		x = -5
 		y = 1
 		cost = 10
 		mutually_exclusive = { focus = embrace_republicanism }
@@ -1154,6 +1802,65 @@ focus_tree = {
 	}
 
 	focus = {
+		id =  internal_mission
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = theocratic_despotism }
+		relative_position_id = theocratic_despotism
+
+		available = {
+			has_government  = fascism
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id =  partial_secularisation
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = internal_mission focus = external_mission}
+		relative_position_id = internal_mission
+		mutually_exclusive = { focus = strenghten_religious_head }
+
+		available = {
+			has_government  = fascism
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id =  strenghten_religious_head
+		icon = GFX_goal_generic_demand_territory
+		x = -2
+		y = 1
+		cost = 10
+		prerequisite = { focus = internal_mission focus = external_mission}
+		relative_position_id = internal_mission
+		mutually_exclusive = { focus = partial_secularisation }
+
+		available = {
+			has_government  = fascism
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
 		id =  religious_order
 		icon = GFX_goal_generic_demand_territory
 		x = -1
@@ -1174,9 +1881,28 @@ focus_tree = {
 	}
 
 	focus = {
+		id =  external_mission
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = religious_order }
+		relative_position_id = religious_order
+
+		available = {
+			has_government  = fascism
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
 		id =  embrace_republicanism
 		icon = GFX_goal_republicanism
-		x = 6
+		x = 5
 		y = 1
 		cost = 10
 		mutually_exclusive = { focus = embrace_theocracy }
@@ -1204,7 +1930,7 @@ focus_tree = {
 	focus = {
 		id =  focus_oligarchism
 		icon = GFX_focus_generic_support_the_left_right
-		x = -2
+		x = -1
 		y = 1
 		cost = 10
 		mutually_exclusive = { focus = plutocracy }
@@ -1234,10 +1960,9 @@ focus_tree = {
 	focus = {
 		id =  authoritarianism
 		icon = GFX_goal_demand_sudetenland
-		x = -2
+		x = -1
 		y = 2
 		cost = 10
-		mutually_exclusive = { focus = political_dynasties focus = republicanism }
 		prerequisite = { focus = focus_oligarchism }
 		relative_position_id = embrace_republicanism
 
@@ -1253,10 +1978,10 @@ focus_tree = {
 	focus = {
 		id =  consolidation_of_power
 		icon = GFX_goal_generic_demand_territory
-		x = -2
+		x = -1
 		y = 3
 		cost = 10
-		prerequisite = { focus = authoritarianism focus = political_dynasties }
+		prerequisite = { focus = authoritarianism }
 		relative_position_id = embrace_republicanism
 
 		available = {
@@ -1271,7 +1996,7 @@ focus_tree = {
 	focus = {
 		id =  plutocracy
 		icon = GFX_goal_generic_intelligence_exchange
-		x = 2
+		x = 1
 		y = 1
 		cost = 10
 		mutually_exclusive = { focus = focus_oligarchism }
@@ -1298,10 +2023,9 @@ focus_tree = {
 	focus = {
 		id =  republicanism
 		icon = GFX_focus_generic_self_management
-		x = 2
+		x = 1
 		y = 2
 		cost = 10
-		mutually_exclusive = { focus = political_dynasties focus = authoritarianism}
 		prerequisite = { focus = plutocracy }
 		relative_position_id = embrace_republicanism
 
@@ -1322,10 +2046,10 @@ focus_tree = {
 	focus = {
 		id =  legislative_assembly
 		icon = GFX_focus_generic_treaty
-		x = 2
+		x = 1
 		y = 3
 		cost = 10
-		prerequisite = { focus = republicanism focus = political_dynasties }
+		prerequisite = { focus = republicanism}
 		relative_position_id = embrace_republicanism
 
 		available = {
@@ -1340,7 +2064,7 @@ focus_tree = {
 	focus = {
 		id =  revolutionary_assembly
 		icon = GFX_focus_prc_agrarian_socialism
-		x = 6
+		x = 3
 		y = 3
 		cost = 10
 		prerequisite = { focus = republicanism }
@@ -1356,20 +2080,15 @@ focus_tree = {
 	}
 
 	focus = {
-		id =  political_dynasties
-		icon = GFX_goal_generic_demand_territory
+		id =  interventionism
+		icon = GFX_focus_prc_agrarian_socialism
 		x = 0
-		y = 2
+		y = 5
 		cost = 10
-		mutually_exclusive = { focus = republicanism focus = authoritarianism }
-		prerequisite = { focus = plutocracy focus = focus_oligarchism }
-		relative_position_id = embrace_republicanism
+		#prerequisite = { focus = republicanism }
+		relative_position_id = government_reform
 
 		available = {
-			OR = { 
-				has_government  = democratic
-				democratic > 0.50
-			}
 		}
 
 		available_if_capitulated = yes		
@@ -1377,6 +2096,49 @@ focus_tree = {
 		completion_reward = {
 		}
 	}
+
+	focus = {
+		id =  focus_neutrality
+		icon = GFX_focus_prc_agrarian_socialism
+		x = -4
+		y = 5
+		cost = 10
+		#prerequisite = { focus = republicanism }
+		relative_position_id = government_reform
+
+		available = {
+		}
+
+		available_if_capitulated = yes		
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id =  realpolitics
+		icon = GFX_focus_prc_agrarian_socialism
+		x = 4
+		y = 5
+		cost = 10
+		#prerequisite = { focus = republicanism }
+		relative_position_id = government_reform
+
+		available = {
+		}
+
+		available_if_capitulated = yes		
+
+		completion_reward = {
+		}
+	}
+
+
+
+	##############################################
+	###############################################
+	###############################################
+	###############################################
 
 	focus = {
 		id = naval_effort

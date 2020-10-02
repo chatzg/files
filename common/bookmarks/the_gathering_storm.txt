@@ -151,6 +151,14 @@ bookmarks = {
 			}
 		}
 
+		"DEN"={
+			minor = yes
+			history = ""
+			ideology = neutrality
+			focuses = {
+			}
+		}
+
 		"BAV"={
 			minor = yes
 			history = ""

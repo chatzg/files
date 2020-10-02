@@ -1,5 +1,123 @@
 ideas = {
 	country = {
+		DEN_outmanoeuvred_by_sweden_6 = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			name = DEN_outmanoeuvred_by_sweden
+
+			allowed_civil_war = {
+           		always = yes
+      		}
+			
+			modifier = {
+				experience_gain_army_factor = -0.1
+				army_org_factor = -0.30
+			}
+		}
+
+		DEN_outmanoeuvred_by_sweden_5 = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			name = DEN_outmanoeuvred_by_sweden
+
+			allowed_civil_war = {
+           		always = yes
+      		}
+			
+			modifier = {
+				experience_gain_army_factor = -0.1
+				army_org_factor = -0.25
+			}
+			targeted_modifier = {
+				tag = SWE 
+				defense_bonus_against = -0.25
+				attack_bonus_against = -0.25
+				
+			}
+		}
+
+		DEN_outmanoeuvred_by_sweden_4 = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			name = DEN_outmanoeuvred_by_sweden
+
+			allowed_civil_war = {
+           		always = yes
+      		}
+			
+			modifier = {
+				experience_gain_army_factor = -0.1
+				army_org_factor = -0.20
+			}
+			targeted_modifier = {
+				tag = SWE 
+				defense_bonus_against = -0.2
+				attack_bonus_against = -0.2
+				
+			}
+		}
+
+		DEN_outmanoeuvred_by_sweden_3 = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			name = DEN_outmanoeuvred_by_sweden
+
+			allowed_civil_war = {
+           		always = yes
+      		}
+			
+			modifier = {
+				experience_gain_army_factor = -0.1
+				army_org_factor = -0.15
+			}
+			targeted_modifier = {
+				tag = SWE 
+				defense_bonus_against = -0.15
+				attack_bonus_against = -0.15
+				
+			}
+		}
+
+		DEN_outmanoeuvred_by_sweden_2 = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			name = DEN_outmanoeuvred_by_sweden
+
+			allowed_civil_war = {
+           		always = yes
+      		}
+			
+			modifier = {
+				experience_gain_army_factor = -0.1
+				army_org_factor = -0.10
+			}
+			targeted_modifier = {
+				tag = SWE 
+				defense_bonus_against = -0.1
+				attack_bonus_against = -0.1		
+			}
+		}
+
 		DEN_outmanoeuvred_by_sweden_1 = {
 			allowed = {
 				always = no
@@ -12,16 +130,15 @@ ideas = {
 			allowed_civil_war = {
            		always = yes
       		}
-
-			picture = janissary
 			
 			modifier = {
-				army_org_factor = 0.12
-				consumer_goods_factor = 0.10
-				stability_factor = 0.10
+				experience_gain_army_factor = -0.05
+				army_org_factor = -0.04
 			}
-			targetted_modifier = {
-				defense_bonus_against = -0.3
+			targeted_modifier = {
+				tag = SWE 
+				defense_bonus_against = -0.05
+				attack_bonus_against = -0.05
 			}
 		}
 

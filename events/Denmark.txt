@@ -11,11 +11,8 @@ country_event = {
 	picture = GFX_report_event_degaulle_churchill
 
 	fire_only_once = yes
-	trigger = {
-		tag = DEN
-		has_war_with = SWE
-		surrender_progress > 0.1
-	}
+	is_triggered_only = yes
+
 	mean_time_to_happen = { days = 10 }
 
 	option = {

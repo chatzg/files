@@ -991,7 +991,7 @@ focus = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		ai_will_do = {
-			factor = 10
+			factor = 0
 		}
 
 		available_if_capitulated = no

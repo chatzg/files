@@ -18,39 +18,93 @@ focus_tree = {
 		icon = GFX_focus_generic_monarchy_1
 		x = 10
 		y = 0
-		cost = 1
+		cost = 10
 
 		completion_reward = {
-
+			add_popularity = {
+			    ideology = neutrality
+			    popularity = 0.05
+			}
+			add_stability = 0.05
 		}
 	}
 
 	focus = {
 		id = DEN_rebuilding_the_nation
 		icon = GFX_goal_generic_neutrality_focus
-		x = -5
+		x = -6
 		y = 1
-		cost = 1
+		cost = 10
 		prerequisite = { focus = DEN_danish_age_of_absolutism }
 		relative_position_id = DEN_danish_age_of_absolutism
 
 		completion_reward = {
-
+			add_political_power = 150
 		}
 	}
+
+	focus = {
+		id = DEN_adressing_the_cattle_crisis
+		icon = GFX_goal_generic_neutrality_focus
+		x = -3
+		y = 1
+		cost = 10
+		prerequisite = { focus = DEN_rebuilding_the_nation }
+		relative_position_id = DEN_rebuilding_the_nation
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = DEN_concentrate_capital
+		icon = GFX_goal_generic_neutrality_focus
+		x = -4
+		y = 2
+		cost = 10
+		prerequisite = { focus = DEN_adressing_the_cattle_crisis }
+		relative_position_id = DEN_rebuilding_the_nation
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = DEN_dispersed_manufacturing
+		icon = GFX_goal_generic_neutrality_focus
+		x = -2
+		y = 2
+		cost = 10
+		prerequisite = { focus = DEN_adressing_the_cattle_crisis }
+		relative_position_id = DEN_rebuilding_the_nation
+
+		completion_reward = {
+		}
+	}
+
 
 	focus = {
 		id = DEN_the_weakness_of_sweden
 		icon = GFX_goal_sweden
 		x = 0
 		y = 1
-		cost = 1
+		cost = 5
 		mutually_exclusive = { focus = DEN_abandon_revanchism }
 		prerequisite = { focus = DEN_danish_age_of_absolutism }
 		relative_position_id = DEN_danish_age_of_absolutism
 
-		completion_reward = {
+		bypass = {
+			has_war_with = SWE
+		}
 
+		available = {
+			has_army_manpower = {
+    			size > 30000
+    		}
+		}
+
+		completion_reward = {
+			add_war_support = 0.10
 		}
 	}
 
@@ -59,12 +113,12 @@ focus_tree = {
 		icon = GFX_goal_third_rome
 		x = -1
 		y = 1
-		cost = 1
+		cost = 5
 		prerequisite = { focus = DEN_the_weakness_of_sweden }
 		relative_position_id = DEN_the_weakness_of_sweden
 
 		completion_reward = {
-
+			SOV = { country_event = generic.2 }
 		}
 	}
 
@@ -73,12 +127,13 @@ focus_tree = {
 		icon = GFX_focus_plc_commonwealth_king
 		x = 1
 		y = 1
-		cost = 1
+		cost = 5
 		prerequisite = { focus = DEN_the_weakness_of_sweden }
 		relative_position_id = DEN_the_weakness_of_sweden
 
 		completion_reward = {
-
+			give_guarantee = POL
+			POL = { give_guarantee = DEN }
 		}
 	}
 
@@ -87,12 +142,16 @@ focus_tree = {
 		icon = GFX_goal_generic_attack_allies
 		x = 0
 		y = 2
-		cost = 1
+		cost = 10
 		prerequisite = { focus = DEN_danish_polish_alliance focus = DEN_look_towards_russia }
 		relative_position_id = DEN_the_weakness_of_sweden
 
 		completion_reward = {
-
+			declare_war_on = {
+			    target = SWE
+			    type = annex_everything
+			}
+			will_lead_to_war_with = SWE
 		}
 	}
 
@@ -102,13 +161,22 @@ focus_tree = {
 		icon = GFX_goal_generic_major_alliance
 		x = 6
 		y = 1
-		cost = 1
+		cost = 5
 		mutually_exclusive = { focus = DEN_the_weakness_of_sweden }
 		prerequisite = { focus = DEN_danish_age_of_absolutism }
 		relative_position_id = DEN_danish_age_of_absolutism
 
 		completion_reward = {
-
+			remove_opinion_modifier = {
+			    target = SWE
+			    modifier = rivalry
+			}
+			SWE = {
+				remove_opinion_modifier = {
+				    target = DEN
+				    modifier = rivalry
+				}
+			}
 		}
 	}
 
@@ -455,7 +523,7 @@ focus_tree = {
 		relative_position_id = DEN_licking_our_wounds
 
 		completion_reward = {
-
+			DEN_lower_army_ineffectiveness = yes
 		}
 	}
 
@@ -543,8 +611,8 @@ focus_tree = {
 	focus = {
 		id = DEN_initiate_army_reform
 		icon = GFX_focus_generic_military_academy
-		x = 1
-		y = 1
+		x = 20
+		y = 0
 		cost = 1
 
 		completion_reward = {

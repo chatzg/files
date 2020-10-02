@@ -976,7 +976,7 @@ opinion_modifiers = {
 	}
 
 	Rivalry = {
-		value = -100
+		value = -80
 	}
 
 	HOL_colonial_rivalry_in_west_indies = {

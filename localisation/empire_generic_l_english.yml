@@ -1,5 +1,8 @@
 ﻿l_english:
 
+rank_factor:0 "Having a higher §YGovernment Rank§! will increase the benefits of this focus when completed."
+
+
 government_reform:0 "Government Reform"
 government_reform_desc:0 "As our nation advances through time, its political institutions have to reform so that our nation is not left behind."
 embrace_republicanism:0 "Embrace Republicanism"
