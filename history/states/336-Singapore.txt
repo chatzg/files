@@ -14,21 +14,21 @@ state={
 	}
 
 	history={
-		owner = UNC
+		owner = MAL
 		victory_points = {
-			12299 10
+			12299 3
 		}
 		victory_points = {
 			7329 1 
 		}
 		victory_points = {
-			10297 1 
+			10297 10 
 		}
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1
 		}
-		add_core_of = UNC
+		add_core_of = MAL
 	}
 
 	provinces={

@@ -5,6 +5,8 @@ ideas = {
 				always = no
 			}
 
+			picture = generic_army_war_college
+
 			removal_cost = -1
 
 			name = DEN_outmanoeuvred_by_sweden
@@ -23,6 +25,8 @@ ideas = {
 			allowed = {
 				always = no
 			}
+
+			picture = generic_army_war_college
 
 			removal_cost = -1
 
@@ -49,6 +53,8 @@ ideas = {
 				always = no
 			}
 
+			picture = generic_army_war_college
+
 			removal_cost = -1
 
 			name = DEN_outmanoeuvred_by_sweden
@@ -73,6 +79,8 @@ ideas = {
 			allowed = {
 				always = no
 			}
+
+			picture = generic_army_war_college
 
 			removal_cost = -1
 
@@ -99,6 +107,8 @@ ideas = {
 				always = no
 			}
 
+			picture = generic_army_war_college
+
 			removal_cost = -1
 
 			name = DEN_outmanoeuvred_by_sweden
@@ -123,6 +133,8 @@ ideas = {
 				always = no
 			}
 
+			picture = generic_army_war_college
+
 			removal_cost = -1
 
 			name = DEN_outmanoeuvred_by_sweden
@@ -142,6 +154,23 @@ ideas = {
 			}
 		}
 
+		DEN_cattle_crisis = {
+			allowed = {
+				always = no
+			}
 
+			removal_cost = -1
+
+			picture = cattle_crisis
+
+			allowed_civil_war = {
+           		always = yes
+      		}
+			
+			modifier = {
+				industrial_capacity_factory = -0.2
+				production_speed_buildings_factor = -0.2
+			}
+		}
 	}
 }

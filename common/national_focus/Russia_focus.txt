@@ -201,7 +201,6 @@ focus = {
 	}
 
 	completion_reward = {
-		create_faction = "Anti-Swedish Coalition"
 		SWE = { add_opinion_modifier = { target = SOV modifier = large_decrease } }
 		add_state_claim = 191
 		add_state_claim = 13

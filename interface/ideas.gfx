@@ -4790,5 +4790,8 @@ spriteTypes = {
 		name = "GFX_idea_protestant_priest"
 		texturefile = "gfx/interface/ideas/idea_protestant_priest.dds"
 	}
-
+	spriteType = {
+		name = "GFX_idea_cattle_crisis"
+		texturefile = "gfx/interface/ideas/idea_cattle_crisis.dds"
+	}
 }

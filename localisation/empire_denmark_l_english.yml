@@ -23,7 +23,7 @@ DEN_guarantees_for_territories:0 "Guarantees for Territories"
 DEN_drop_claims_on_scania:0 "Drop Claims on Scania"
 DEN_alliance_of_kalmar:0 "Alliance of Kalmar"
 DEN_an_integrated_union:0 "An Integrated Union"
-DEN_a_decentralized_union:0 "A Centralized Union"
+DEN_a_decentralized_union:0 "A Decentralized Union"
 DEN_protectors_of_the_protestant_faith:0 "Protectors of the Protestant Faith"
 DEN_invite_the_german_princes:0 "Invite German Princes"
 DEN_end_the_empire:0 "End the Empire"
@@ -68,8 +68,15 @@ DEN_restoration_of_the_danelaw:0 "Restoration of the Danelaw"
 
 #ideas:
 DEN_outmanoeuvred_by_sweden:0 "Outmanoeuvred Military"
+DEN_cattle_crisis:0 "Cattle Crisis"
 
 #events:
+denmark.3.t:0 "The Death of Christian V"
+denmark.3.d:0 "Our nation mourns the loss of our beloved monarch Christian V, who died of the after-effects of a hunting accident at the age of 53. He will be interred in Roskilde cathedral. As our nation mourns, we look towards the future and the coronation of his son, Frederick IV."
+denmark.4.t:0 "Parliament presses for Intervention in Scandinavia"
+denmark.4.d:0 "As war has broken out between the Northern powers Denmark and Sweden, parliament has stated the absolute urgency to intervene against the Danish agression in order to maintain the stability in the Baltic. As tensions are rising in Western Europe, so are the grain prices, causing the risk of famine. It is almost certain that the war between Denmark and Sweden will cause grain supply from the Batlic to virtually dry up. What's even more important is the control of the Sound tolls. Should either Sweden or Denmark gain control over either sides of the Sound straits, it will drastically impact our trading potential in the region, hence why the status quo must be maintained. Parliament is fairly positive that Denmark will back down if confronted by the might by the combined Anglo-Dutch military and naval strenght. Should we not intervene, then the balance of power is at stake."
+denmark.5.t:0 "England threatens war"
+denmark.5.d:0 "Our rival, England, has deceided they are in the position to enforce a peace between our great nation and the Kingdom of Sweden. They cite the wish to maintain the stability in the region. In reality they are afraid that we may regain our long lost province of Skåne which was unrightfully taken by the Swedes. Whilst it is not certain whether or not they would go through with their plans of military intervention, we should be extremely cautious as they, along with their personal union partner of the Netherlands, hold a vastly superior military and navy."
 
 #decisions:
 

@@ -1,6 +1,21 @@
 ideas = {
 	country = {
 
+		militaristic_society = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+			
+			modifier = {
+				conscription = 0.05
+			}
+		}
+
 		aristocratic_ideas = {
 
 			allowed = {

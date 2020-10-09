@@ -88,6 +88,7 @@ add_opinion_modifier = { target = FRA modifier = HOL_colonial_rivalry_in_west_in
 
 
 create_faction = "Grand Alliance"
+add_to_faction = HOL
 
 
 # DIPLOMACY

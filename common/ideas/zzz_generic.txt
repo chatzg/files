@@ -44,6 +44,28 @@ ideas = {
 			}
 		}
 
+		crackdown_on_feudalism = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = aristocracy
+				}
+			}
+
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+
+			
+			modifier = {
+				aristocracy_drift = -0.05
+			}
+		}
+
 		focus_oligarchism = {
 			
 			allowed = {

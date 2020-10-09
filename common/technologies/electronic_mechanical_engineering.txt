@@ -495,8 +495,6 @@ technologies = {
 #COLONIALISM
 
 	american_colonisation = {
-
-		
 		
 		on_research_complete = {
 			set_country_flag = colonise_america_unlock
