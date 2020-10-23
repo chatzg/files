@@ -17,7 +17,7 @@ focus_tree = {
 focus = {
 	id = SWE_strenghten_legitimacy
 	icon = GFX_focus_hun_elect_a_king
-	x = 23
+	x = 22
 	y = 0
 	cost = 5
 
@@ -57,7 +57,7 @@ focus = {
 focus = {
 	id = swedish_politics_1
 	icon = GFX_focus_eng_expose_the_belly_of_the_bear
-	x = 11
+	x = 10
 	y = 0
 	cost = 5
 
@@ -691,7 +691,7 @@ focus = {
 focus = {
 		id = swedish_army_1
 		icon = GFX_goal_generic_army_doctrines
-		x = 11
+		x = 10
 		y = 3
 		cost = 5
 		prerequisite = { focus = swedish_politics_2}

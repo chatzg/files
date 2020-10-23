@@ -4,6 +4,10 @@
 
 #flags:
 
+colonial_tech:0 "Colonial Expansion Research"
+flag_peace_of_travendal:0 "Signed treaty of Travendal"
+DEN_army_reform_tt:0 "This will unlock decisions to reform our army."
+
 #focus:
 
 DEN_danish_age_of_absolutism:0 "Danish Age of Absolutism"
@@ -42,14 +46,14 @@ DEN_restore_danish_arms_industry:0 "Restore Danish Arms Industry"
 DEN_study_swedish_supremacy:0 "Study Swedish Supremacy"
 DEN_countering_swedish_tactics:0 "Countering Swedish Tactics"
 DEN_expand_military_research_effort:0 "Expand Military Research Effort"
-DEN_foreign_expeditions:0 "Foreign Expeditions"
+DEN_foreign_expeditions:0 "The Danish Auxiliary Corps"
 DEN_support_france:0 "Support France"
 DEN_support_austria:0 "Support Austria"
 DEN_expand_foreign_legion:0 "Expand Foreign Legions"
 DEN_wise_lessons_learned:0 "Wise Lessons Learned"
 DEN_initiate_army_reform:0 "Initiate Army Reform"
 DEN_the_danish_mercenary_expedition:0 "The Danish Mercenary Force"
-DEN_bypass_travendal:0 "Bypass Travendal"
+DEN_bypass_travendal:0 "Advance on Sweden"
 DEN_split_sweden_with_russia:0 "Split Sweden with Russia"
 DEN_kalmar_empire:0 "Kalmar Empire"
 DEN_among_the_great_powers:0 "Among the Great Powers"
@@ -65,19 +69,34 @@ DEN_adventure_into_russia:0 "Adventure into Russia"
 DEN_raid_baltic_coast:0 "Raid Baltic Coast"
 DEN_raid_north_sea_coast:0 "Raid North Sea Coast"
 DEN_restoration_of_the_danelaw:0 "Restoration of the Danelaw"
+DEN_pass_land_reforms:0 "Pass Land Reforms"
+DEN_renovate_copenhagen:0 "Renovate Copenhagen"
+DEN_invest_into_norway:0 "Invest into Norway"
+DEN_narvik_iron_shipping:0 "Narvik Iron Shipping"
+DEN_colonial_effort:0 "Colonial Effort"
+DEN_invest_in_greenland:0 "Invest in Greenland"
+DEN_invest_in_iceland:0 "Invest in Iceland"
+DEN_claim_shetland:0 "Claim Shetland"
+DEN_expand_oldenburg_docks:0 "Expand Oldenburg Docks"
+DEN_rebuilding_our_defenses:0 "Rebuilding our Defenses"
 
 #ideas:
 DEN_outmanoeuvred_by_sweden:0 "Outmanoeuvred Military"
 DEN_cattle_crisis:0 "Cattle Crisis"
+danish_volunteer_corps_focus:0 "Danish Auxiliary Corps"
+danish_volunteer_corps_focus_2:0 "Danish Auxiliary Corps"
+DEN_defense_of_denmark:0 "Defend Denmark"
 
 #events:
+denmark.1.t:0 "Naval powers enforce treaty of Travendal"
 denmark.3.t:0 "The Death of Christian V"
 denmark.3.d:0 "Our nation mourns the loss of our beloved monarch Christian V, who died of the after-effects of a hunting accident at the age of 53. He will be interred in Roskilde cathedral. As our nation mourns, we look towards the future and the coronation of his son, Frederick IV."
 denmark.4.t:0 "Parliament presses for Intervention in Scandinavia"
 denmark.4.d:0 "As war has broken out between the Northern powers Denmark and Sweden, parliament has stated the absolute urgency to intervene against the Danish agression in order to maintain the stability in the Baltic. As tensions are rising in Western Europe, so are the grain prices, causing the risk of famine. It is almost certain that the war between Denmark and Sweden will cause grain supply from the Batlic to virtually dry up. What's even more important is the control of the Sound tolls. Should either Sweden or Denmark gain control over either sides of the Sound straits, it will drastically impact our trading potential in the region, hence why the status quo must be maintained. Parliament is fairly positive that Denmark will back down if confronted by the might by the combined Anglo-Dutch military and naval strenght. Should we not intervene, then the balance of power is at stake."
 denmark.5.t:0 "England threatens war"
 denmark.5.d:0 "Our rival, England, has deceided they are in the position to enforce a peace between our great nation and the Kingdom of Sweden. They cite the wish to maintain the stability in the region. In reality they are afraid that we may regain our long lost province of Skåne which was unrightfully taken by the Swedes. Whilst it is not certain whether or not they would go through with their plans of military intervention, we should be extremely cautious as they, along with their personal union partner of the Netherlands, hold a vastly superior military and navy."
-
+denmark.9.t:0 "Allied Navy shells Copenhagen"
+denmark.9.d:0 "Disturbing news! A combined English-Dutch-Swedish fleets has launched a major bombardment in our capital Copenhagen, causing extensive damage. A clear signal for what will happen should we continue our involvement in the war against Sweden."
 #decisions:
 
 #cosmetic tags:

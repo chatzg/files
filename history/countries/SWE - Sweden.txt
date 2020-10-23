@@ -56,7 +56,6 @@ set_popularities = {
 set_convoys = 25
 
 add_ideas = {
-	SOUND_TOLL
 	extensive_conscription
 	protestant
 	kingdom

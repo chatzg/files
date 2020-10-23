@@ -5,11 +5,12 @@ state={
 	provinces={
 		1909 4957 5013 5039 5070 8008 8065 8122 10762 12802 12858 
 	}
-
-	impassable = yes
+	
 	history={
 	owner = UNC
 	}
+
+	impassable = yes
 	
 	manpower=195041
 	buildings_max_level_factor=1.000

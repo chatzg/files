@@ -44,7 +44,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = DEN_adressing_the_cattle_crisis
+		id = DEN_pass_land_reforms
 		icon = GFX_goal_generic_neutrality_focus
 		x = -3
 		y = 1
@@ -53,32 +53,199 @@ focus_tree = {
 		relative_position_id = DEN_rebuilding_the_nation
 
 		completion_reward = {
+			37 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			99 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 
 	focus = {
 		id = DEN_concentrate_capital
-		icon = GFX_goal_generic_neutrality_focus
+		icon = GFX_focus_generic_industry_3
 		x = -4
 		y = 2
 		cost = 10
-		prerequisite = { focus = DEN_adressing_the_cattle_crisis }
+		mutually_exclusive = { focus = DEN_dispersed_manufacturing }
+		prerequisite = { focus = DEN_pass_land_reforms }
 		relative_position_id = DEN_rebuilding_the_nation
 
 		completion_reward = {
+			add_tech_bonus = {
+			    bonus = 1.0
+			    uses = 1
+			    technology = concentrated_industry
+			    technology = concentrated_industry2
+			    technology = concentrated_industry3
+			    technology = concentrated_industry4
+			}
+			37 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}	
+			}
+		}
+	}
+
+	focus = {
+		id = DEN_renovate_copenhagen
+		icon = GFX_goal_copenhagen
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = DEN_concentrate_capital }
+		relative_position_id = DEN_concentrate_capital
+
+		completion_reward = {
+			37 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}	
+		}
+	}
+
+	focus = {
+		id = DEN_adressing_the_cattle_crisis
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = DEN_renovate_copenhagen focus = DEN_invest_into_norway }
+		relative_position_id = DEN_renovate_copenhagen
+
+		completion_reward = {
+			remove_ideas = DEN_cattle_crisis	
 		}
 	}
 
 	focus = {
 		id = DEN_dispersed_manufacturing
-		icon = GFX_goal_generic_neutrality_focus
+		icon = GFX_goal_generic_construct_civ_factory
 		x = -2
 		y = 2
 		cost = 10
-		prerequisite = { focus = DEN_adressing_the_cattle_crisis }
+		prerequisite = { focus = DEN_pass_land_reforms }
 		relative_position_id = DEN_rebuilding_the_nation
+		mutually_exclusive = { focus = DEN_concentrate_capital }
 
 		completion_reward = {
+			add_tech_bonus = {
+			    bonus = 1.0
+			    uses = 1
+			    technology = dispersed_industry
+			    technology = dispersed_industry2
+			    technology = dispersed_industry3
+			    technology = dispersed_industry4
+			}
+			142 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			99 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}		
+		}
+	}
+
+	focus = {
+		id = DEN_expand_oldenburg_docks
+		icon = GFX_goal_generic_build_navy
+		x = 2
+		y = 1
+		cost = 10
+		prerequisite = { focus = DEN_dispersed_manufacturing }
+		relative_position_id = DEN_dispersed_manufacturing
+
+		completion_reward = {
+			866 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}		
+		}
+	}
+
+	focus = {
+		id = DEN_invest_into_norway
+		icon = GFX_goal_norway
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = DEN_dispersed_manufacturing }
+		relative_position_id = DEN_dispersed_manufacturing
+
+		completion_reward = {
+			110 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}	
+			143 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}	
+		}
+	}
+
+	focus = {
+		id = DEN_narvik_iron_shipping
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = DEN_invest_into_norway }
+		relative_position_id = DEN_invest_into_norway
+
+		completion_reward = {
+			144 = {
+				add_resource = {
+				    type = steel
+				    amount = 26
+				}
+			}		
 		}
 	}
 
@@ -117,6 +284,10 @@ focus_tree = {
 		prerequisite = { focus = DEN_the_weakness_of_sweden }
 		relative_position_id = DEN_the_weakness_of_sweden
 
+		bypass = {
+			is_in_faction_with = SOV
+		}
+
 		completion_reward = {
 			SOV = { country_event = generic.2 }
 		}
@@ -146,6 +317,10 @@ focus_tree = {
 		prerequisite = { focus = DEN_danish_polish_alliance focus = DEN_look_towards_russia }
 		relative_position_id = DEN_the_weakness_of_sweden
 
+		bypass = {
+			has_war_with = SWE
+		}
+
 		completion_reward = {
 			declare_war_on = {
 			    target = SWE
@@ -165,6 +340,15 @@ focus_tree = {
 		mutually_exclusive = { focus = DEN_the_weakness_of_sweden }
 		prerequisite = { focus = DEN_danish_age_of_absolutism }
 		relative_position_id = DEN_danish_age_of_absolutism
+
+		available = {
+			SWE = {
+				has_opinion = {
+				    target = DEN
+				    value > 9
+				}
+			}
+		}
 
 		completion_reward = {
 			remove_opinion_modifier = {
@@ -385,7 +569,7 @@ focus_tree = {
 
 	focus = {
 		id = DEN_make_norway_third_partner
-		icon = GFX_goal_generic_major_alliance
+		icon = GFX_goal_norway
 		x = 3
 		y = 5
 		cost = 1
@@ -396,8 +580,8 @@ focus_tree = {
 		relative_position_id = DEN_abandon_revanchism
 
 		completion_reward = {
-
-		}
+			release_puppet = NOR
+		}	
 	}
 
 
@@ -407,17 +591,21 @@ focus_tree = {
 		x = 9
 		y = 4
 		cost = 1
-		mutually_exclusive = { focus = DEN_bypass_travendal }
 		prerequisite = { focus = DEN_strike_first }
 
-		completion_reward = {
+		available = {
+			has_country_flag = flag_peace_of_travendal
+		}
 
+		completion_reward = {
+			add_political_power = 30
+			add_stability = 0.05
 		}
 	}
 
 	focus = {
 		id = DEN_licking_our_wounds
-		icon = GFX_Peace
+		icon = GFX_focus_CZE_german_puppet
 		x = -5
 		y = 1
 		cost = 1
@@ -431,71 +619,137 @@ focus_tree = {
 
 	focus = {
 		id = DEN_prevent_second_english_intervention
-		icon = GFX_Peace
+		icon = GFX_focus_chi_british_cooperation
 		x = 0
 		y = 1
 		cost = 1
 		prerequisite = { focus = DEN_licking_our_wounds }
 		relative_position_id = DEN_licking_our_wounds
 
+		available = {
+			ENG ={
+				has_opinion = {
+				    target = DEN
+				    value > 99
+				}
+			}
+		}
+
 		completion_reward = {
+			add_war_support = 0.15
+		}
+	}
+
+	focus = {
+		id = DEN_anti_swedish_sentiment
+		icon = GFX_SWE_conscription
+		x = 0
+		y = 2
+		cost = 1
+		prerequisite = { focus = DEN_prevent_second_english_intervention }
+		relative_position_id = DEN_prevent_second_english_intervention
+
+		available = {
+		}
+
+		completion_reward = {
+			add_war_support = 0.15
 		}
 	}
 
 	focus = {
 		id = DEN_rejoin_war_against_sweden
-		icon = GFX_Peace
+		icon = GFX_goal_generic_attack_allies
 		x = 0
 		y = 5
-		cost = 1
-		prerequisite = { focus = DEN_prevent_second_english_intervention }
+		cost = 10
+		prerequisite = { focus = DEN_anti_swedish_sentiment }
 		prerequisite = { focus = DEN_wise_lessons_learned }
 		prerequisite = { focus = DEN_expand_military_research_effort }
 		relative_position_id = DEN_licking_our_wounds
 
+		available = {
+		}
+
 		completion_reward = {
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = SWE
+			}
+			will_lead_to_war_with = SWE
 		}
 	}
 
 	focus = {
 		id = DEN_rebuild_our_defenses
-		icon = GFX_Peace
-		x = -3
+		icon = GFX_fortification
+		x = -2
 		y = 1
-		cost = 1
+		cost = 10
 		prerequisite = { focus = DEN_licking_our_wounds }
 		relative_position_id = DEN_licking_our_wounds
 
 		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = DEN_defend_denmark
-		icon = GFX_Peace
-		x = -3
-		y = 2
-		cost = 1
-		prerequisite = { focus = DEN_rebuild_our_defenses }
-		relative_position_id = DEN_licking_our_wounds
-
-		completion_reward = {
-
+			add_ideas = DEN_rebuilding_our_defenses
 		}
 	}
 
 	focus = {
 		id = DEN_restore_danish_arms_industry
-		icon = GFX_Peace
-		x = -3
-		y = 3
-		cost = 1
-		prerequisite = { focus = DEN_defend_denmark }
+		icon = GFX_goal_generic_construct_mil_factory
+		x = -4
+		y = 1
+		cost = 10
+		prerequisite = { focus = DEN_licking_our_wounds }
+		prerequisite = { focus = DEN_adressing_the_cattle_crisis }
 		relative_position_id = DEN_licking_our_wounds
 
 		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
 
+	focus = {
+		id = DEN_defend_denmark
+		icon = GFX_goal_generic_defence
+		x = -3
+		y = 2
+		cost = 10
+		prerequisite = { focus = DEN_restore_danish_arms_industry }
+		prerequisite = { focus = DEN_rebuild_our_defenses }
+		relative_position_id = DEN_licking_our_wounds
+
+		completion_reward = {
+			add_ideas = DEN_defense_of_denmark
 		}
 	}
 
@@ -504,22 +758,24 @@ focus_tree = {
 		icon = GFX_Peace
 		x = -1
 		y = 2
-		cost = 1
+		cost = 10
 		prerequisite = { focus = DEN_licking_our_wounds }
 		relative_position_id = DEN_licking_our_wounds
 
 		completion_reward = {
-
+			unlock_decision_category_tooltip = RUS_army_reform
+			army_experience = 10
 		}
 	}
 
 	focus = {
 		id = DEN_countering_swedish_tactics
 		icon = GFX_Peace
-		x = -1
+		x = -2
 		y = 3
-		cost = 1
+		cost = 10
 		prerequisite = { focus = DEN_study_swedish_supremacy }
+		prerequisite = { focus = DEN_defend_denmark }
 		relative_position_id = DEN_licking_our_wounds
 
 		completion_reward = {
@@ -532,36 +788,38 @@ focus_tree = {
 		icon = GFX_focus_research
 		x = -2
 		y = 4
-		cost = 1
-		prerequisite = { focus = DEN_countering_swedish_tactics focus = DEN_restore_danish_arms_industry }
+		cost = 10
+		prerequisite = { focus = DEN_countering_swedish_tactics }
 		relative_position_id = DEN_licking_our_wounds
 
 		completion_reward = {
-
+			add_research_slot = 1
 		}
 	}
 
 	focus = {
 		id = DEN_foreign_expeditions
-		icon = GFX_Peace
+		icon = GFX_goal_generic_small_arms
 		x = 2
 		y = 1
-		cost = 1
-		prerequisite = { focus = DEN_licking_our_wounds }
+		cost = 5
+		prerequisite = { focus = DEN_licking_our_wounds focus = DEN_peace_for_scania_and_gotland focus = DEN_split_sweden_with_russia}
 		relative_position_id = DEN_licking_our_wounds
 
 		completion_reward = {
+			add_ideas = danish_volunteer_corps_focus
 		}
 	}
 
 	focus = {
 		id = DEN_support_france
-		icon = GFX_Peace
+		icon = GFX_france_kingdom
 		x = 1
 		y = 1
-		cost = 1
+		cost = 5
 		prerequisite = { focus = DEN_foreign_expeditions }
 		relative_position_id = DEN_foreign_expeditions
+		mutually_exclusive = { focus = DEN_support_austria }
 
 		completion_reward = {
 		}
@@ -569,12 +827,13 @@ focus_tree = {
 
 	focus = {
 		id = DEN_support_austria
-		icon = GFX_Peace
+		icon = GFX_focus_ger_revive_kaiserreich
 		x = -1
 		y = 1
-		cost = 1
+		cost = 5
 		prerequisite = { focus = DEN_foreign_expeditions }
 		relative_position_id = DEN_foreign_expeditions
+		mutually_exclusive = { focus = DEN_support_france }
 
 		completion_reward = {
 		}
@@ -583,27 +842,49 @@ focus_tree = {
 
 	focus = {
 		id = DEN_expand_foreign_legion
-		icon = GFX_Peace
+		icon = GFX_goal_generic_special_forces
 		x = 2
 		y = 3
-		cost = 1
+		cost = 5
 		prerequisite = { focus = DEN_support_austria focus = DEN_support_france }
 		relative_position_id = DEN_licking_our_wounds
 
 		completion_reward = {
+			swap_ideas = {
+			    remove_idea = danish_volunteer_corps_focus
+			    add_idea = danish_volunteer_corps_focus_2
+			}
 		}
+
 	}
 
 	focus = {
 		id = DEN_wise_lessons_learned
-		icon = GFX_Peace
+		icon = GFX_focus_generic_military_academy
 		x = 2
 		y = 4
-		cost = 1
+		cost = 5
 		prerequisite = { focus = DEN_expand_foreign_legion }
 		relative_position_id = DEN_licking_our_wounds
 
+		available = {
+			NOT = {
+				has_idea = DEN_outmanoeuvred_by_sweden_6
+			    has_idea = DEN_outmanoeuvred_by_sweden_5
+				has_idea = DEN_outmanoeuvred_by_sweden_4
+				has_idea = DEN_outmanoeuvred_by_sweden_3
+				has_idea = DEN_outmanoeuvred_by_sweden_2
+				has_idea = DEN_outmanoeuvred_by_sweden_1
+			}
+		}
+
 		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 2
+				category = land_doctrine
+			}
 		}
 	}
 
@@ -637,13 +918,17 @@ focus_tree = {
 
 	focus = {
 		id = DEN_bypass_travendal
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_SWE_conscription
 		x = 2
 		y = 0
 		cost = 1
 		prerequisite = { focus = DEN_strike_first }
-		mutually_exclusive = { focus = DEN_treaty_of_travendal }
 		relative_position_id = DEN_treaty_of_travendal
+
+		available = {
+			controls_state = 138
+			SWE = { surrender_progress > 0.15 }
+		}
 
 		completion_reward = {
 
@@ -667,7 +952,7 @@ focus_tree = {
 
 	focus = {
 		id = DEN_kalmar_empire
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_goal_scandinavia
 		x = 3
 		y = 2
 		cost = 1
@@ -698,6 +983,20 @@ focus_tree = {
 		icon = GFX_goal_generic_demand_territory
 		x = -1
 		y = 1
+		cost = 1
+		prerequisite = { focus = DEN_among_the_great_powers }
+		relative_position_id = DEN_among_the_great_powers
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = DEN_monopolize_sound_toll_income
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 2
 		cost = 1
 		prerequisite = { focus = DEN_among_the_great_powers }
 		relative_position_id = DEN_among_the_great_powers
@@ -862,4 +1161,449 @@ focus_tree = {
 		}
 	}
 
+#naval tree
+
+	focus = {
+		id = DEN_naval_effort
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 23
+		y = 0
+		cost = 5
+
+		available_if_capitulated = yes
+
+
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		complete_tooltip = {
+			navy_experience = 25
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = dockyard
+				level = 1
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			navy_experience = 25
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							dockyard > 0
+							free_building_slots = {
+								building = dockyard
+								size > 0
+								include_locked = yes
+							}
+						}
+					}
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					any_owned_state = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 0
+							include_locked = yes
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					NOT = {
+						any_owned_state = {
+							free_building_slots = {
+								building = dockyard
+								size > 0
+								include_locked = yes
+							}
+						}
+					}
+				}
+				random_state = {
+					limit = {
+						controller = { tag = ROOT }
+						free_building_slots = {
+							building = dockyard
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+			}			
+		}
+	}
+	focus = {
+		id = DEN_colonial_effort
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = DEN_rebuilding_the_nation }
+		x = 2
+		y = 1
+		relative_position_id = DEN_rebuilding_the_nation
+
+		available_if_capitulated = yes
+
+
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+		
+		completion_reward = {	
+			add_tech_bonus = {
+				name = sub_op_bonus
+				bonus = 1.0
+				uses = 2
+				category = colonial_tech
+			}	
+		}
+
+		cost = 5
+	}
+
+	focus = {
+		id = DEN_invest_in_greenland
+		icon = GFX_goal_greenland
+		prerequisite = { focus = DEN_colonial_effort }
+		x = -1
+		y = 1
+		relative_position_id = DEN_colonial_effort
+
+		available_if_capitulated = yes
+
+		cost = 5
+
+
+		available = {
+		}
+		
+		completion_reward = {	
+			918 = {
+				add_extra_state_shared_building_slots = 2
+			}	
+		}
+	}
+
+	focus = {
+		id = DEN_invest_in_iceland
+		icon = GFX_goal_iceland
+		prerequisite = { focus = DEN_colonial_effort }
+		x = 1
+		y = 1
+		relative_position_id = DEN_colonial_effort
+
+		cost = 5
+
+		available_if_capitulated = yes
+
+
+		available = {
+		}
+		
+		completion_reward = {	
+			100 = {
+				add_extra_state_shared_building_slots = 2
+			}	
+		}
+	}
+
+	focus = {
+		id = DEN_claim_shetland
+		icon = GFX_goal_shetland
+		prerequisite = { focus = DEN_invest_in_iceland focus = DEN_invest_in_greenland }
+		x = 0
+		y = 2
+		relative_position_id = DEN_colonial_effort
+
+		cost = 5
+
+		available_if_capitulated = yes
+
+
+		available = {
+		}
+		
+		completion_reward = {		
+		}
+	}
+
+	focus = {
+		id = DEN_flexible_navy
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = DEN_naval_effort }
+		mutually_exclusive = { focus = DEN_large_navy }
+		x = -1
+		y = 1
+		relative_position_id = DEN_naval_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = sub_op_bonus
+				bonus = 1.0
+				uses = 2
+				technology = convoy_interdiction_ti
+				technology = unrestricted_submarine_warfare
+				technology = wolfpacks
+				technology = advanced_submarine_warfare
+				technology = combined_operations_raiding
+			}
+		}
+	}
+
+	focus = {
+		id = DEN_large_navy
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = DEN_naval_effort }
+		mutually_exclusive = { focus = DEN_flexible_navy }
+		x = 1
+		y = 1
+		relative_position_id = DEN_naval_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = fleet_in_being_bonus
+				bonus = 1.0
+				uses = 2
+				category = fleet_in_being_tree
+			}
+		}
+	}
+
+	focus = {
+		id = DEN_submarine_effort
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = DEN_flexible_navy }
+		x = 0
+		y = 1
+		relative_position_id = DEN_flexible_navy
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 3
+				category = ss_tech
+			}
+		}
+	}
+
+	focus = {
+		id = DEN_cruiser_effort
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = DEN_large_navy focus = DEN_flexible_navy }
+		x = 0
+		y = 1
+		relative_position_id = DEN_large_navy
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = cr_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 3
+				category = cl_tech
+				category = ca_tech
+			}
+		}
+	}
+
+	focus = {
+		id = DEN_destroyer_effort
+		icon = GFX_goal_generic_navy_anti_submarine
+		prerequisite = { focus = DEN_submarine_effort }
+		x = 0
+		y = 1
+		relative_position_id = DEN_submarine_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 3
+				category = dd_tech
+			}
+		}
+	}
+	focus = {
+		id = DEN_battleship_effort
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = DEN_cruiser_effort }
+		x = 0
+		y = 1
+		relative_position_id = DEN_cruiser_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 3
+				category = bb_tech
+				category = shbb_tech
+			}
+		}
+	}
 }

@@ -2450,4 +2450,28 @@ spriteTypes = {
 		name = "GFX_focus_depose_august"
 		texturefile = "gfx/interface/goals/focus_depose_august.tga"
 	}
+	SpriteType = { 
+		name = "GFX_focus_depose_august"
+		texturefile = "gfx/interface/goals/focus_depose_august.tga"
+	}
+	SpriteType = { 
+		name = "GFX_goal_greenland"
+		texturefile = "gfx/interface/goals/goal_greenland.tga"
+	}
+	SpriteType = { 
+		name = "GFX_goal_iceland"
+		texturefile = "gfx/interface/goals/goal_iceland.tga"
+	}
+	SpriteType = { 
+		name = "GFX_goal_shetland"
+		texturefile = "gfx/interface/goals/goal_shetland.tga"
+	}
+	SpriteType = { 
+		name = "GFX_goal_norway"
+		texturefile = "gfx/interface/goals/goal_norway.tga"
+	}
+	SpriteType = { 
+		name = "GFX_goal_copenhagen"
+		texturefile = "gfx/interface/goals/goal_copenhagen.tga"
+	}
 }

@@ -12,13 +12,26 @@ add_namespace = denmark
 	is_triggered_only = yes
 
 	option = {
-		name = whitepeace
+		name = "We will be back"
+		add_ideas = DEN_outmanoeuvred_by_sweden_6
+		set_truce = {
+		    target = SWE
+		    days = 720
+		}
 		white_peace = {
-			tag = SWE
-			tag = ENG
+			tag = SWE	
+		}
+		white_peace = {
+			tag = ENG	
+		}
+		all_allied_country = {
+		   has_war_with = ENG
+		   white_peace = {
+				tag = ENG	
+			}
 		}
 		leave_faction = yes
-		add_war_support = -0.5
+		add_war_support = -0.4
 
 		hidden_effect = {
 			news_event = { id = mod.4 days = 1 }
@@ -148,6 +161,7 @@ country_event = {
 				days = 2
 			}
 		}
+		set_country_flag = flag_peace_of_travendal
 	}
 
 	option = {	
@@ -217,7 +231,7 @@ country_event = {
 	}
 
 	option = {
-		name = "Perhaps a declartion of war will persuade them..."
+		name = "We will shell Copenhagen into the ground!"
 		ai_chance = {
 			factor = 20
 		}
@@ -266,6 +280,20 @@ country_event = {
 			factor = 1
 		}
 		add_war_support = 0.10
+		37 = {
+			damage_building = {
+		    type = infrastructure
+		    damage = 3
+			}
+			damage_building = {
+			    type = industrial_complex
+			    damage = 3
+			}
+			damage_building = {
+			    type = arms_factory
+			    damage = 3
+			}
+		}
 	}
 
 	option = {
@@ -283,5 +311,21 @@ country_event = {
 				days = 2
 			}
 		}
+		37 = {
+			damage_building = {
+		    type = infrastructure
+		    damage = 3
+			}
+			damage_building = {
+			    type = industrial_complex
+			    damage = 3
+			}
+			damage_building = {
+			    type = arms_factory
+			    damage = 3
+			}
+		}
+		
+		set_country_flag = flag_peace_of_travendal
 	}
 }

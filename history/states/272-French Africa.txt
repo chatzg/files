@@ -9,9 +9,8 @@ state={
 	
 	state_category = pastoral
 
-	impassable = yes
-history={
-	owner = UNC
+	history={
+		owner = UNC
 	}
 	provinces={
 		2100 4948 7972 8015 12710 12834 

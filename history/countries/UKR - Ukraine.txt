@@ -47,7 +47,10 @@ set_popularities = {
 	fascism = 30
 	communism = 50
 }
-
+set_politics = {
+	ruling_party = neutrality
+}
+	
 create_country_leader = {
 	name = "Kost Levytsky"
 	desc = ""

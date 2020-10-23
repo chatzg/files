@@ -15,8 +15,8 @@ state={
 		victory_points = {
 			9655 1 
 		}
-		owner = IFC
-		add_core_of = IFC
+		owner = AUS
+		add_core_of = AUS
 
 	}
 

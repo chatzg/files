@@ -17,6 +17,7 @@ state={
 			}
 		}
 		add_core_of = GEN
+		add_core_of = COR
 	}
 
 	provinces={

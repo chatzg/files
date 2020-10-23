@@ -12,9 +12,9 @@ if = {
 add_ideas = {
 	protestant
 	kingdom
-	DEN_outmanoeuvred_by_sweden_6
 	limited_conscription
 	DEN_cattle_crisis
+	SOUND_TOLL
 }
 
 set_research_slots = 3

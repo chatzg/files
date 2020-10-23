@@ -1538,7 +1538,7 @@ focus_tree = {
 	focus = {
 		id = government_reform
 		icon = GFX_goal_generic_demand_territory
-		x = 25
+		x = 24
 		y = 0
 		cost = 10
 
