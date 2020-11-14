@@ -34,6 +34,24 @@ ideas = {
 			}
 		}
 
+		SWE_dealing_with_occupation = {
+
+			picture = SAF_history_of_segregation
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			#picture= 
+			
+			modifier = {
+				resistance_target = -0.15
+				compliance_gain = 0.10
+			}
+		}
+
 		SWE_preparing_closer_union = {
 
 			picture = HUN_treaty_of_triannon

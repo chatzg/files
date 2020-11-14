@@ -8,6 +8,9 @@ state={
 	}
 	history=
 	{
+		victory_points = {
+			11251 1 
+		}
 		owner = SHL
 		buildings = {
 			infrastructure = 8

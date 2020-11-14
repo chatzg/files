@@ -15,3 +15,11 @@ GER_RHINE = {
 	color = rgb { 126 181 173 }
     color_ui = rgb { 126 181 173  }
 }
+PPR = {
+	color = rgb { 250 141 141 }
+	color_ui = rgb { 250 141 141 }
+}
+POL = {
+	color = rgb { 197 92 106 }
+	color_ui = rgb { 255 120 138 }
+}

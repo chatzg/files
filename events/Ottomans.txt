@@ -1,5 +1,98 @@
 add_namespace = ottomans
 
+# sweden requests intervention against russia
+
+country_event = {
+	id = ottomans.2
+	title = ottomans.2.t
+	desc = ottomans.2.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = "Surely, they will be a walkover"
+		SWE = {
+			country_event = {
+				id = ottomans.3
+				days = 5
+			}
+		}
+		create_wargoal = {
+		    type = puppet_wargoal_focus
+		    target = ROOT
+		}
+		add_war_support = 0.05
+	}
+	option = { 
+		name = "Intrigueing request, but we need time!"
+		SWE = {
+			country_event = {
+				id = ottomans.4
+				days = 5
+			}
+		}
+		add_ai_strategy = {
+			type = declare_war
+			id = "SOV"
+			value = 100
+		}
+		add_war_support = 0.05
+	}
+	option = { 
+		name = "We will not break previous treaties!"
+		SWE = {
+			country_event = {
+				id = ottomans.5
+				days = 5
+			}
+		}
+		add_political_power = 50
+	}
+}
+
+country_event = {
+	id = ottomans.3
+	title = ottomans.3.t
+	desc = ottomans.3.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = "A toast to our new friends!"
+		add_political_power = 50
+	}
+}
+
+country_event = {
+	id = ottomans.4
+	title = ottomans.4.t
+	desc = ottomans.4.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = "Let's hope they don't take too long!"
+		add_political_power = 10
+	}
+}
+
+country_event = {
+	id = ottomans.5
+	title = ottomans.5.t
+	desc = ottomans.5.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = "Damn them!"
+		add_political_power = -50
+	}
+}
+
 country_event = {
 	id = ottomans.10
 	title = ottomans.10.t

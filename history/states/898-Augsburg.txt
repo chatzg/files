@@ -11,6 +11,9 @@ state={
 		}
 		owner = AUG
 		add_core_of = AUG
+		victory_points = {
+			9666 3 
+		}
 	}
 	manpower=80874
 	buildings_max_level_factor=1.000

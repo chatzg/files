@@ -1024,6 +1024,57 @@ focus = {
 	}
 }
 
+###
+
+focus = {
+	id = SWE_dethrone_august
+	icon = GFX_focus_depose_august
+	prerequisite = { focus = swedish_politics_8 }
+	x = 0
+	y = 1
+	cost = 10
+	relative_position_id = swedish_politics_8
+
+	available = {
+		has_war_with = POL
+		POL = {
+			surrender_progress > 0.5
+		}
+	}
+	
+	completion_reward = {
+		POL = {
+			start_civil_war = {
+			    ruling_party = neutrality
+			    ideology = aristocracy
+			    size = 0.5
+			    set_cosmetic_tag = PPR
+			}
+			if = {
+			    limit = {
+			        original_tag = POL
+			        has_government = neutrality
+			    }   
+			   	set_cosmetic_tag = POL
+			}
+		}
+		random_other_country = {
+			limit = {
+				original_tag = POL
+				has_government = aristocracy
+			}
+			country_event = generic.5
+			set_popularities = {
+				aristocracy = 40
+				democratic = 17
+				neutrality = 12
+				fascism = 21
+				communism = 10
+			}
+		}
+	}
+}
+
 ######### Focus on Russia
 
 focus = {
@@ -1052,16 +1103,43 @@ focus = {
 		}
 }
 
+focus = {
+	id = SWE_secure_narva
+	icon = GFX_fortification
+	prerequisite = { focus = swedish_politics_10 }
+	x = 0
+	y = 1
+	cost = 5
+	relative_position_id = swedish_politics_10
+
+	available = {
+		controls_state = 191
+	}
+
+	completion_reward = {
+		if = {
+			limit = { controls_state = 191 }
+			add_building_construction = {
+			    type = bunker
+			    level = 5
+			    instant_build = yes
+			    province = 4640
+			}
+		}
+		add_war_support = 0.05
+	}
+}
+
 ####### Great march north
 
 focus = {
 	id = swedish_politics_11
 		icon = GFX_focus_ger_strike_at_the_source
-		prerequisite = { focus = swedish_politics_10 }
-		x = 2
-		y = 2
+		prerequisite = { focus = SWE_secure_narva }
+		x = 0
+		y = 1
 		cost = 10
-		relative_position_id = swedish_politics_7
+		relative_position_id = SWE_secure_narva
 
 	completion_reward = {
 	add_timed_idea = {
@@ -1075,22 +1153,56 @@ focus = {
 
 focus = {
 	id = swedish_politics_12
-		icon = GFX_OTT_Military_Mission
-		prerequisite = { focus = swedish_politics_11 }
-		x = 1
-		y = 3
-		cost = 10
-		relative_position_id = swedish_politics_7
+	icon = GFX_OTT_Military_Mission
+	prerequisite = { focus = swedish_politics_11 focus = SWE_dethrone_august focus = SWE_last_stand}
+	x = -3
+	y = 3
+	cost = 10
+	relative_position_id = swedish_politics_10
 
-		
-
-		available = {
-			has_war_with = SOV
-		}
-
+	available = {
+		has_war_with = SOV
+	}
 	
 	completion_reward = {
 		custom_effect_tooltip = ottoman_aid
+		reverse_add_opinion_modifier = {
+		    target = TUR
+		    modifier = large_increase
+		}
+		add_ai_strategy = {
+			type = befriend
+			id = "TUR"
+			value = 100
+		}
+	}
+}
+
+focus = {
+	id = SWE_request_ottoman_intervention
+	icon = GFX_goal_generic_alliance
+	prerequisite = { focus = swedish_politics_12 }
+	x = -1
+	y = 1
+	cost = 10
+	relative_position_id = swedish_politics_12
+
+	available = {
+		has_war_with = SOV
+		strength_ratio = {
+		    tag = SOV
+		    ratio < 0.5
+		}
+		NOT = { TUR = { has_civil_war = yes } }
+	}
+
+	completion_reward = {
+		TUR = {
+			country_event = {
+				id = ottomans.2
+				days = 5
+			}
+		}
 	}
 }
 
@@ -1099,35 +1211,61 @@ focus = {
 focus = {
 	id = swedish_politics_14
 		icon = GFX_goal_generic_military_deal
-		prerequisite = { focus = swedish_politics_11 }
-		x = 3
+		prerequisite = { focus = swedish_politics_11 focus = SWE_dethrone_august focus = SWE_last_stand}
+		x = -1
 		y = 3
 		cost = 10
-		relative_position_id = swedish_politics_7
+		relative_position_id = swedish_politics_10
 
 		available = {
 			has_war_with = SOV
 		}
 
 		completion_reward = {
-		custom_effect_tooltip = cossack_aid
-	}
-	
+			custom_effect_tooltip = cossack_aid
+			reverse_add_opinion_modifier = {
+			    target = ZAP
+			    modifier = large_increase
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = "TUR"
+				value = 100
+			}
+		}	
+}
+
+focus = {
+	id = SWE_cossack_alliance
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = swedish_politics_14 }
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = swedish_politics_14
+
+		available = {
+		}
+
+		completion_reward = {
+			ZAP = { country_event = generic.5 }
+		}	
 }
 
 focus = {
 	id = SWE_deal_with_occupation
 	icon = GFX_goal_generic_more_territorial_claims
 	prerequisite = { focus = swedish_politics_14 focus = swedish_politics_12 }
-	x = 2
+	x = -2
 	y = 4
 	cost = 10
-	relative_position_id = swedish_politics_7
+	relative_position_id = swedish_politics_10
 
 	available = {
 	}
 
 	completion_reward = {
+		add_ideas = SWE_dealing_with_occupation
 	}
 }
 
@@ -1167,9 +1305,9 @@ focus = {
 		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = SWE_strike_at_denmark }
 		x = 0
-		y = 2
+		y = 1
 		cost = 10
-		relative_position_id = SWE_all_parties_must_end
+		relative_position_id = SWE_strike_at_denmark
 	
 	completion_reward = {
 		add_war_support = 0.05
@@ -1183,9 +1321,9 @@ focus = {
 	prerequisite = { focus = SWE_rally_around_the_flag }
 	mutually_exclusive = { focus = SWE_union_sweden_norway }
 	x = 1
-	y = 3
+	y = 2
 	cost = 10
-	relative_position_id = SWE_all_parties_must_end
+	relative_position_id = SWE_strike_at_denmark
 
 	available = {
 		has_war_with = DEN
@@ -1208,9 +1346,9 @@ focus = {
 	prerequisite = { focus = SWE_rally_around_the_flag }
 	mutually_exclusive = { focus = SWE_keep_denmark_occupied }
 	x = -1
-	y = 3
+	y = 2
 	cost = 10
-	relative_position_id = SWE_all_parties_must_end
+	relative_position_id = SWE_strike_at_denmark
 
 	available = {
 		has_full_control_of_state  = 110
@@ -1382,12 +1520,12 @@ focus = {
 	}
 
 	completion_reward = {
-		limit = {
-			IF = { has_idea = SWE_occupation_of_denmark }
+		if = {
+			limit = { has_idea = SWE_occupation_of_denmark }
 			remove_ideas = SWE_occupation_of_denmark
 		}
-		limit = {
-			IF = { has_idea = SWE_preparing_closer_union }
+		if = {
+			limit = { has_idea = SWE_preparing_closer_union }
 			remove_ideas = SWE_preparing_closer_union
 		}
 		set_cosmetic_tag = SCA_UNIFIED
@@ -1419,7 +1557,7 @@ focus = {
 	icon = GFX_focus_generic_home_defense
 	mutually_exclusive = { focus = SWE_defeat_in_the_northern_war }
 	x = 25
-	y = 7
+	y = 8
 	cost = 2
 	prerequisite = { focus = SWE_deal_with_occupation }
 
@@ -1742,7 +1880,7 @@ focus = {
 	id = SWE_defeat_in_the_northern_war
 	icon = GFX_focus_CZE_german_puppet
 	x = 15
-	y = 7
+	y = 8
 	cost = 10
 	prerequisite = { focus = SWE_deal_with_occupation }
 	mutually_exclusive = { focus = SWE_we_stand_victorious }
@@ -1753,12 +1891,21 @@ focus = {
 	}
 
 	completion_reward = {
+		create_country_leader = {
+			name = "Ulrika Eleonora"
+			picture = "ulrika_eleonora.dds"
+			expire = "1720.1.1"
+			ideology = despotism
+			traits = {
+				defeatist
+			}
+		}
 	}
 }
 
 focus = {
 	id = SWE_path_of_neutrality
-	icon = GFX_goal_generic_demand_territory
+	icon = GFX_goal_generic_neutrality_focus
 	x = -2
 	y = 1
 	cost = 10
@@ -1767,12 +1914,27 @@ focus = {
 	relative_position_id = SWE_defeat_in_the_northern_war
 
 	completion_reward = {
+		add_ideas = neutrality_idea
+	}
+}
+
+focus = {
+	id = SWE_detterence
+	icon = GFX_goal_generic_defence
+	x = 0
+	y = 1
+	cost = 10
+	prerequisite = { focus = SWE_path_of_neutrality }
+	relative_position_id = SWE_path_of_neutrality
+
+	completion_reward = {
+		add_ideas = deterrence
 	}
 }
 
 focus = {
 	id = SWE_swedish_revanchism
-	icon = GFX_goal_generic_demand_territory
+	icon = GFX_goal_generic_attack_allies
 	x = 2
 	y = 1
 	cost = 10
@@ -1781,6 +1943,15 @@ focus = {
 	relative_position_id = SWE_defeat_in_the_northern_war
 
 	completion_reward = {
+		create_country_leader = {
+			name = "Frederick I"
+			picture = "frederick_i.dds"
+			expire = "1720.1.1"
+			ideology = despotism
+			traits = {
+				
+			}
+		}
 	}
 }
 

@@ -3,7 +3,7 @@
 POL_dominance_of_nobles:0 "Dominance of the Nobility"
 POL_dominance_of_nobles_desc:0 "Noblemen completely dominate the country. They pay barely any taxes and are inefficient, instead wasting most of their time partying whilst their serfs starve."
 POL_weakened_nobles:0 "Weakened Nobility"
-POL_conscription_crisis:0 "Conscription Crisis"
+POL_conscription_crisis:0 "Army in Disarray"
 POL_centralization:0 "Centralization of Power"
 POL_liberum_veto:0 "Liberum Veto"
 POL_liberum_veto_desc:0 "The liberum veto was introduced in the Sejm in the 17th century. This gave a veto to any member a the Polish Sejm, a parliament made up of Polish nobles. This effectively paralyzed the parliament, deteriorating the political system of the commonwealth."
@@ -17,6 +17,10 @@ POL_anti_ottoman_pact_member:0 "Anti-Ottoman Pact"
 POL_anti_ottoman_pact_member_desc:0 "All members of this pact are obliged to join their catholic brothers, should they be attacked by the Ottoman Empire."
 POL_align_magnates:0 "Aligned Magnates"
 POL_compensated_nobles:0 "Bribed Nobles"
+disputed_reign:0 "Disputed Reign"
+POL_russian_influence:0 "Russian Interference"
+berend_lehmann:0 "Berend Lehmann"
+court_jew:0 "Court Jew"
 
 #focus tree
 
@@ -175,11 +179,17 @@ POL_defence_of_warsaw:0 "Defence of Warsaw"
 POL_defence_of_warsaw_desc:0 ""
 POL_defensive_focus:0 "Defensive Focus"
 POL_defensive_focus_desc:0 ""
+POL_question_of_absolutism:0 "Question of Absolutism"
+POL_question_of_noble_privileges:0 "Question of Noble Privileges"
+POL_settle_succession_question:0 "Settle Succession Question"
+POL_motion_of_moderate_modernization:0 "Motion of Moderate Modernization"
+
 
 #tooltips
 
 POL_warning_broken_promises:0 "§RWarning! Breaking promises will lead to a widespread revolt!§!"
 POL_must_abolish_within_2_years:0 "§RIf this path is not completed within two years, your nation will suffer severe consequences!§!"
+disputed_reign_tt:0 "§RAs long as this character's legitimacy is low, you are at risk of being challenged by a pretender should a foreign power interfere whilst stability is low.§!"
 
 #events
 
@@ -207,7 +217,7 @@ poland.6.a:0 "The bill passes."
 poland.6.b:0 "One of the Nobles issues his Veto."
 poland.7.t:0 "Bill vetoed"
 poland.7.d:0 "The Nobleman Rafał Leszczyński has called upon his privilege of Liberum veto, individually blocking the bill which seemingly was the only way out of this mess. With Augustus’ legitimacy on a silk thread, the options seem limited."
-poland.7.a:0 "Take Leszczyński out of the picture and do a second reading of the bill! "
+poland.7.a:0 "Take Leszczyński out of the picture!"
 poland.8.t:0 "Outrage over Leszczyński"
 poland.8.d:0 "Unfortunately the sudden disappearance of Rafał Leszczyński has sparked widespread suspicion amongst the magnates in the Sejm. It was not soon after that his body was discovered in a ditch. This scandal has outraged the Szlachta who are now feeling more threatened than ever. Not soon after a bill was passed through the Sejm, demanding the immediate abdication of Augustus on grounds of breaking the laws of the land."
 poland.8.a:0 "Abdication was inevitable. (Abdicates)"
@@ -290,6 +300,8 @@ super_heavy_tank:0 "Winged Hussars"
 
 #decisions
 POL_reform_nation:0 "Abolish the Sejm"
+POL_foreign_influence:0 "Foreign Influence in"
+POL_foreign_influence_desc:0 "Poland has been the victim of internal instability due to the meddeling of surrounding powers who seek to gain increasing influence in the Polish nation. Should one nation dominate too much, then Poland is at risk being reduced to a mere vassal state.\n\n§YInfluence§! of the [SOV.GetFlag]§YRussians§!: [?sov_influence_over_poland|G0]\n\n§YInfluence§! of the [AUS.GetFlag]§YAustrians§!: [?aus_influence_over_poland|G0] \n\n§YInfluence§! of the [SWE.GetFlag]§YSwedes§!: [?swe_influence_over_poland|G0] \n\n§YInfluence§! of the [PRS.GetFlag]§YPrussians§!: [?prs_influence_over_poland|G0]"
 
 #cosmetic
 
@@ -306,5 +318,7 @@ POL_visegrad_democratic_ADJ:0 "Visegrad"
 POL_visegrad_neutrality_ADJ:0 "Visegrad"
 POL_visegrad_communism_ADJ:0 "Visegrad"
 
+#leader
+POLITICS_FREDERICK_AUGUSTUS_DESC:0 "Augustus II the Strong, also known in Saxony as Frederick Augustus I, was Elector of Saxony from 1697, Imperial Vicar and elected King of Poland and Grand Duke of Lithuania in the since 1697. Augustus' great physical strength earned him the nicknames "the Strong", "the Saxon Hercules" and "Iron-Hand". He liked to show that he lived up to his name by breaking horseshoes with his bare hands and engaging in fox tossing by holding the end of his sling with just one finger while two of the strongest men in his court held the other end. He is also notable for fathering a very large number of children. \n\nIn order to be elected King of the Polish–Lithuanian Commonwealth, Augustus converted to Roman Catholicism. As a Catholic, he received the Order of the Golden Fleece from the Holy Roman Emperor. As Elector of Saxony, he is perhaps best known as a patron of the arts and architecture. He established the Saxon capital of Dresden as a major cultural centre, attracting artists from across Europe to his court. Augustus also amassed an impressive art collection and built lavish baroque palaces in Dresden and Warsaw. \n\nIt is feared that his reign will bring troubling times to Poland-Lithuania. Altough he did not win the most votes in the Polish-Lithuanian election, he managed to claim the throne nonetheless with the help of Russia and Austria. It is now feared that his dependency on foreign powers will further deteriorate the political situation in Poland. As August attempts to establish an absolutist rule over Poland, the influence of Russia grows by the day. Now poland prepares on the eve of war against Sweden in a combined effort with the Russians and Danes."
 
 

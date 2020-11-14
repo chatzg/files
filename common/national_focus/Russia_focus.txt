@@ -214,6 +214,11 @@ focus = {
 		}
 		DEN = { country_event = generic.5 }
 		POL = { country_event = generic.5 }
+		add_ai_strategy = {
+		    type = dont_defend_ally_borders
+		    id = POL
+		    value = 400
+		}
 	}
 }
 
@@ -1430,13 +1435,13 @@ focus = {
 		    relation = non_aggression_pact
 		    active = yes
 		}
-		ai_strategy = {
+		add_ai_strategy = {
 			type = ignore
 			id = "CHI"
 			value = 50
 		}
 		CHI = {
-			ai_strategy = {
+			add_ai_strategy = {
 				type = ignore
 				id = "SOV"
 				value = 50

@@ -35,14 +35,13 @@ focus_tree = {
 #}
 
 focus = {
-	id = POL_attack_sweden_test
+	id = POL_found_order_of_the_white_eagle
 	icon = GFX_POL_regency_council_focus
-	x = 10
-	y = 0
+	x = 5
+	y = 5
 	cost = 1
 
 	available = {
-		date > 1700.02.01
 	}
 
 	ai_will_do = { 
@@ -51,12 +50,7 @@ focus = {
 	
 
 	completion_reward = {
-		declare_war_on = {
-		    target = SWE
-		    type = annex_everything
-		}
 	}
-	will_lead_to_war_with = SWE
 }
 
 #KEEP AUGUST TREE
@@ -102,7 +96,7 @@ focus = {
 	id = POL_combat_foreign_influence
 	icon = GFX_POL_Russian_Alliance
 	prerequisite = { focus = POL_foreign_affairs }
-	x = 0
+	x = -2
 	y = 1
 	cost = 10
 	relative_position_id = POL_foreign_affairs
@@ -119,11 +113,11 @@ focus = {
 focus = {
 	id = POL_russian_relations
 	icon = GFX_POL_Russian_Alliance
-	prerequisite = { focus = POL_foreign_affairs }
-	x = -2
+	prerequisite = { focus = POL_combat_foreign_influence }
+	x = 0
 	y = 1
 	cost = 10
-	relative_position_id = POL_foreign_affairs
+	relative_position_id = POL_combat_foreign_influence
 
 	ai_will_do = { 
 		factor = 1
@@ -160,7 +154,7 @@ focus = {
 
 focus = {
 	id = POL_question_of_absolutism
-	icon = GFX_goal_generic_political_pressure
+	icon = GFX_focus_generic_monarchy_2
 	prerequisite = { focus = POL_restructure_poland }
 	x = -4
 	y = 1
@@ -172,17 +166,85 @@ focus = {
 	}
 
 	completion_reward = {
-		add_political_power = 100
+		country_event = {
+			id = poland.2
+			days = 1
+		}
+	}
+}
+
+focus = {
+	id = POL_question_of_noble_privileges
+	icon = GFX_goal_generic_political_pressure
+	prerequisite = { focus = POL_question_of_absolutism }
+	x = -1
+	y = 1
+	cost = 10
+	relative_position_id = POL_question_of_absolutism
+
+	ai_will_do = { 
+		factor = 1
+	}
+
+	completion_reward = {
+		country_event = {
+			id = poland.3
+			days = 1
+		}
+	}
+}
+
+focus = {
+	id = POL_settle_succession_question
+	icon = GFX_focus_generic_self_management
+	prerequisite = { focus = POL_question_of_absolutism }
+	x = 1
+	y = 1
+	cost = 10
+	relative_position_id = POL_question_of_absolutism
+
+	ai_will_do = { 
+		factor = 1
+	}
+
+	completion_reward = {
+		country_event = {
+			id = poland.5
+			days = 1
+		}
+	}
+}
+
+focus = {
+	id = POL_motion_of_moderate_modernization
+	icon = GFX_focus_generic_treaty
+	prerequisite = { focus = POL_settle_succession_question }
+	prerequisite = { focus = POL_question_of_noble_privileges }
+	mutually_exclusive = { focus = POL_reform_thwarted }
+	x = 0
+	y = 2
+	cost = 10
+	relative_position_id = POL_question_of_absolutism
+
+	ai_will_do = { 
+		factor = 1
+	}
+
+	completion_reward = {
+		country_event = {
+			id = poland.6
+			days = 1
+		}
 	}
 }
 
 focus = {
 	id = POL_no_compromise
 	icon = GFX_goal_generic_political_pressure
-	prerequisite = { focus = POL_question_of_absolutism }
+	prerequisite = { focus = POL_motion_of_moderate_modernization }
 	mutually_exclusive = { focus = POL_compromise }
-	x = -2
-	y = 1
+	x = -4
+	y = 3
 	cost = 10
 	relative_position_id = POL_question_of_absolutism
 
@@ -345,16 +407,33 @@ focus = {
 	}
 }
 
+focus = {
+	id = POL_institute_hereditary_monarchy
+	icon = GFX_goal_generic_forceful_treaty
+	prerequisite = { focus = POL_abolish_sejm }
+	x = 0
+	y = 1
+	cost = 10
+	relative_position_id = POL_abolish_sejm
+
+	ai_will_do = { 
+		factor = 1
+	}
+	
+	completion_reward = {
+	}
+}
+
 
 #BALANCE
 
 focus = {
 	id = POL_compromise
 	icon = GFX_goal_generic_major_alliance
-	prerequisite = { focus = POL_question_of_absolutism }
+	prerequisite = { focus = POL_motion_of_moderate_modernization }
 	mutually_exclusive = { focus = POL_no_compromise }
-	x = 2
-	y = 1
+	x = 0
+	y = 3
 	cost = 10
 	relative_position_id = POL_question_of_absolutism
 
@@ -476,6 +555,23 @@ focus = {
 }
 
 focus = {
+	id = POL_comfirm_augustus_election
+	icon = GFX_focus_generic_polish_deal
+	prerequisite = { focus = POL_limit_sejm }
+	x = 0
+	y = 2
+	cost = 10
+	relative_position_id = POL_limit_sejm
+
+	ai_will_do = { 
+		factor = 1
+	}
+	
+	completion_reward = {
+	}
+}
+
+focus = {
 	id = POL_great_betrayal
 	icon = GFX_focus_generic_strike_at_democracy2
 	prerequisite = { focus = POL_russian_relations }
@@ -493,6 +589,28 @@ focus = {
 	}
 }
 
+#reform thwarted
+
+focus = {
+	id = POL_reform_thwarted
+	icon = GFX_goal_generic_major_alliance
+	prerequisite = { focus = POL_question_of_noble_privileges }
+	prerequisite = { focus = POL_settle_succession_question }
+	mutually_exclusive = { focus = POL_motion_of_moderate_modernization }
+	x = 4
+	y = 2
+	cost = 10
+	relative_position_id = POL_question_of_absolutism
+
+	ai_will_do = { 
+		factor = 100
+	}
+
+	completion_reward = {
+		add_political_power = 80
+	}
+}
+
 
 
 #NEW KING TREE
@@ -500,9 +618,9 @@ focus = {
 	id = POL_depose_august
 	icon = GFX_focus_depose_august
 	mutually_exclusive = { focus = POL_restructure_poland }
-	x = 25
+	x = 23
 	y = 0
-	cost = 10
+	cost = 1
 
 	available = {
 	}
@@ -514,8 +632,83 @@ focus = {
 		factor = 1
 	}
 	
-
 	completion_reward = {
+		set_politics = {
+			ruling_party = aristocracy
+		}
+		set_capital = 784
+		start_civil_war = {
+			ruling_party = neutrality
+			ideology = aristocracy
+			size = 0.5
+			capital = 784
+			states = { 868 85 86 98 87 10 90 88 92 97 }
+		}
+		set_cosmetic_tag = PPR
+		set_party_name = { 
+		    ideology = neutrality 
+		    name = "The Sejm"
+		    long_name = "The Sejm"
+		}
+		create_country_leader = {
+			name = "The Sejm"
+			desc = ""
+			picture = "sejm.dds"
+			expire = "1965.1.1"
+			ideology = despotism
+			traits = {			
+			}
+		}
+		create_country_leader = {
+			name = "The Sejm"
+			desc = ""
+			picture = "sejm.dds"
+			expire = "1965.1.1"
+			ideology = nobility
+			traits = {			
+			}
+		}
+		create_country_leader = {
+			name = "The Sejm"
+			desc = ""
+			picture = "sejm.dds"
+			expire = "1965.1.1"
+			ideology = nazism
+			traits = {			
+			}
+		}
+		create_country_leader = {
+			name = "The Sejm"
+			desc = ""
+			picture = "sejm.dds"
+			expire = "1965.1.1"
+			ideology = conservatism
+			traits = {			
+			}
+		}
+		random_other_country = {
+			limit = {
+				original_tag = POL
+				has_government = aristocracy
+			}
+			set_popularities = {
+				aristocracy = 40
+				democratic = 17
+				neutrality = 12
+				fascism = 21
+				communism = 10
+			}
+			create_country_leader = {
+				name = "Frederick Augustus"
+				desc = "POLITICS_FREDERICK_AUGUSTUS_DESC"
+				traits = { disputed_reign }
+				picture = "Saxony_leader.dds"
+				expire = "1965.1.1"
+				ideology = nobility
+			}
+			set_cosmetic_tag = POL
+			set_capital = 10
+		}
 	}
 }
 
@@ -540,6 +733,7 @@ focus = {
 	
 
 	completion_reward = {
+		add_stability = 0.05
 	}
 }
 
@@ -1305,7 +1499,7 @@ focus = {
 focus = {
 	id = POL_claims_in_the_baltic
 	icon = GFX_goal_generic_major_alliance
-	x = 4
+	x = 0
 	y = 1
 	cost = 10
 	prerequisite = { focus = POL_foreign_affairs }
@@ -1318,12 +1512,39 @@ focus = {
 	}
 }
 
+focus = {
+	id = POL_attack_sweden_test
+	icon = GFX_POL_regency_council_focus
+	x = 0
+	y = 1
+	cost = 1
+	prerequisite = { focus = POL_claims_in_the_baltic }
+	relative_position_id = POL_claims_in_the_baltic
+
+	available = {
+		date > 1700.02.01
+	}
+
+	ai_will_do = { 
+		factor = 1000
+	}
+	
+
+	completion_reward = {
+		declare_war_on = {
+		    target = SWE
+		    type = annex_everything
+		}
+	}
+	will_lead_to_war_with = SWE
+}
+
 #SAXONY
 
 focus = {
 	id = POL_saxon_ties
 	icon = GFX_goal_generic_major_alliance
-	x = 2
+	x = 3
 	y = 1
 	cost = 10
 	prerequisite = { focus = POL_foreign_affairs }
@@ -1430,6 +1651,7 @@ focus = {
 		SAX = { is_subject_of = POL }
 		has_capitulated = yes
 		SAX = { has_capitulated = no }
+		SAX = { is_ai = yes }
 	}
 
 	completion_reward = {
@@ -1439,6 +1661,7 @@ focus = {
 		}
 		set_capital = 65
 		add_state_core = 65
+		add_state_core = 884
 	}
 }
 

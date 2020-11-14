@@ -7,7 +7,7 @@ set_research_slots = 3
 
 give_guarantee = ZAP
 
-set_stability = 0.30
+set_stability = 0.40
 set_war_support = .27
 
 # Starting tech
@@ -79,9 +79,12 @@ add_ideas = {
 	POL_dominance_of_nobles
 	catholic
 	limited_exports
-	POL_conscription_crisis
 	POL_sejm
 	kingdom
+	POL_russian_influence
+	berend_lehmann
+	POL_rural_society
+	POL_conscription_crisis
 }
 
 create_country_leader = {
@@ -94,7 +97,8 @@ create_country_leader = {
 
 create_country_leader = {
 	name = "Frederick Augustus"
-	desc = "POLITICS_KURT_SCHUSCHNIGG_DESC"
+	desc = "POLITICS_FREDERICK_AUGUSTUS_DESC"
+	traits = { disputed_reign }
 	picture = "Saxony_leader.dds"
 	expire = "1965.1.1"
 	ideology = despotism

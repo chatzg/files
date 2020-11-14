@@ -1,4 +1,25 @@
 leader_traits = {
+	disputed_reign = {
+		random = no
+		sprite = 13
+		stability_factor = -0.10
+		custom_modifier_tooltip = disputed_reign_tt
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	court_jew = {
+		random = no
+		sprite = 13
+		consumer_goods_factor = 0.05
+		political_power_gain = 0.25
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
 
 	technology_thief = {
 		random = no

@@ -307,7 +307,7 @@ continent = {
 			male = {
 				"gfx/leaders/Asia/asian_leader_1.dds"
 				"gfx/leaders/Asia/asian_leader_2.dds"
-				"gfx/leaders/Asia/Pasian_leader_3.dds"
+				"gfx/leaders/Asia/asian_leader_3.dds"
 				"gfx/leaders/Asia/asian_leader_4.dds"
 				"gfx/leaders/Asia/asian_leader_5.dds"
 			}
@@ -316,7 +316,7 @@ continent = {
 			male = {
 				"gfx/leaders/Asia/asian_leader_1.dds"
 				"gfx/leaders/Asia/asian_leader_2.dds"
-				"gfx/leaders/Asia/Pasian_leader_3.dds"
+				"gfx/leaders/Asia/asian_leader_3.dds"
 				"gfx/leaders/Asia/asian_leader_4.dds"
 				"gfx/leaders/Asia/asian_leader_5.dds"
 			}
@@ -325,7 +325,7 @@ continent = {
 			male = {
 				"gfx/leaders/Asia/asian_leader_1.dds"
 				"gfx/leaders/Asia/asian_leader_2.dds"
-				"gfx/leaders/Asia/Pasian_leader_3.dds"
+				"gfx/leaders/Asia/asian_leader_3.dds"
 				"gfx/leaders/Asia/asian_leader_4.dds"
 				"gfx/leaders/Asia/asian_leader_5.dds"
 			}
@@ -334,7 +334,7 @@ continent = {
 			male = {
 				"gfx/leaders/Asia/asian_leader_1.dds"
 				"gfx/leaders/Asia/asian_leader_2.dds"
-				"gfx/leaders/Asia/Pasian_leader_3.dds"
+				"gfx/leaders/Asia/asian_leader_3.dds"
 				"gfx/leaders/Asia/asian_leader_4.dds"
 				"gfx/leaders/Asia/asian_leader_5.dds"
 			}
@@ -343,7 +343,7 @@ continent = {
 			male = {
 				"gfx/leaders/Asia/asian_leader_1.dds"
 				"gfx/leaders/Asia/asian_leader_2.dds"
-				"gfx/leaders/Asia/Pasian_leader_3.dds"
+				"gfx/leaders/Asia/asian_leader_3.dds"
 				"gfx/leaders/Asia/asian_leader_4.dds"
 				"gfx/leaders/Asia/asian_leader_5.dds"
 			}

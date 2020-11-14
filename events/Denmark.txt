@@ -24,12 +24,20 @@ add_namespace = denmark
 		white_peace = {
 			tag = ENG	
 		}
-		all_allied_country = {
-		   has_war_with = ENG
-		   white_peace = {
-				tag = ENG	
+		if = {
+			limit = {
+				SOV = { has_war_with = ENG }
 			}
+			SOV = { white_peace = { tag = ENG } }
 		}
+
+		if = {
+			limit = {
+				POL = { has_war_with = ENG }
+			}
+			POL = { white_peace = { tag = ENG } }
+		}
+
 		leave_faction = yes
 		add_war_support = -0.4
 
@@ -117,11 +125,25 @@ country_event = {
 	option = {
 		name = "Send an ultimatum"
 		ai_chance = {
-			factor = 50
+			base = 800
+			modifier = {
+				factor = 0
+				NOT = { has_government = neutrality }
+			}
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
 		}
 		DEN = {
 			country_event = {
 				id = denmark.5
+				days = 2
+			}
+		}
+		SWE = {
+			country_event = {
+				id = denmark.10
 				days = 2
 			}
 		}
@@ -130,7 +152,7 @@ country_event = {
 	option = {	
 		name = "It is not our concern"
 		ai_chance = {
-			factor = 1
+			base = 1
 		}
 		add_political_power = -150
 	}

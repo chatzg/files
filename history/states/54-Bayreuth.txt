@@ -11,6 +11,12 @@ state={
 
 		}
 		add_core_of = WRZ
+		victory_points = {
+			11417 5 
+		}
+		victory_points = {
+			9416 3 
+		}
 
 	}
 

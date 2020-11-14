@@ -132,14 +132,11 @@ country_event = {
 
 	option = {
 		name = poland.2.a
-		hidden_effect = { 
-			country_event = { 
-				id = poland.3 
-				days = 30 
-			}
-		}
+		add_political_power = 30
 	}
 }
+
+#noble privegeles question 
 
 country_event = {
 	id = poland.3
@@ -177,14 +174,8 @@ country_event = {
 			factor = 10
 		}
 	}
-	option = {
+	option = { #slow down
 		name = poland.3.c
-		hidden_effect = { 
-			country_event = { 
-				id = poland.5
-				days = 30 
-			}
-		}
 		add_political_power = -50
 		ai_chance = {
 			factor = 10
@@ -201,82 +192,20 @@ country_event = {
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	option = {
+	option = { #execute nobleman
 		name = poland.4.a
-		hidden_effect = { 
-			country_event = { 
-				id = poland.9
-				days = 30 
-			}
-		}
 		add_stability = -0.1
 		ai_chance = {
 			factor = 1
 		}
 	}
 
-	option = {
+	option = { #offer compromise
 		name = poland.4.b
-		hidden_effect = { 
-			country_event = { 
-				id = poland.5
-				days = 30 
-			}
-		}
 		add_political_power = -50
 		add_stability = 0.05
 		ai_chance = {
 			factor = 20
-		}
-	}
-	option = {
-		name = poland.4.c
-		set_country_flag = POL_august_abdicates
-		set_party_name = { 
-		    ideology = neutrality 
-		    name = "The Sejm"
-		    long_name = "The Sejm"
-		}	
-		create_country_leader = {
-			name = "The Sejm"
-			desc = ""
-			picture = "sejm.dds"
-			expire = "1965.1.1"
-			ideology = despotism
-			traits = {			
-			}
-		}
-		create_country_leader = {
-			name = "The Sejm"
-			desc = ""
-			picture = "sejm.dds"
-			expire = "1965.1.1"
-			ideology = nobility
-			traits = {			
-			}
-		}
-		create_country_leader = {
-			name = "The Sejm"
-			desc = ""
-			picture = "sejm.dds"
-			expire = "1965.1.1"
-			ideology = nazism
-			traits = {			
-			}
-		}
-		create_country_leader = {
-			name = "The Sejm"
-			desc = ""
-			picture = "sejm.dds"
-			expire = "1965.1.1"
-			ideology = conservatism
-			traits = {			
-			}
-		}
-		remove_unit_leader = 1300
-		end_puppet = SAX
-		ai_chance = {
-			factor = 1
 		}
 	}
 }
@@ -289,8 +218,8 @@ country_event = {
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	option = {
-		name = poland.5.a
+	option = { #thwarted
+		name = poland.5.a 
 		hidden_effect = { 
 			country_event = { 
 				id = poland.6
@@ -303,7 +232,7 @@ country_event = {
 		}
 	}
 
-	option = {
+	option = { #compromised
 		name = poland.5.b
 		hidden_effect = { 
 			country_event = { 
@@ -319,7 +248,7 @@ country_event = {
 			factor = 20
 		}
 	}
-	option = {
+	option = { #coerced
 		name = poland.5.c
 		add_stability = -0.1
 		hidden_effect = { 
@@ -355,7 +284,7 @@ country_event = {
 		hidden_effect = { 
 			country_event = { 
 				id = poland.7
-				days = 20 
+				days = 1 
 			}
 		}
 		add_political_power = -10
@@ -365,7 +294,7 @@ country_event = {
 	}
 }
 
-country_event = {
+country_event = { #bill vetoed
 	id = poland.7
 	title = poland.7.t
 	desc = poland.7.d
@@ -379,63 +308,6 @@ country_event = {
 			country_event = { 
 				id = poland.8
 				days = 10
-			}
-		}
-	}
-}
-
-country_event = {
-	id = poland.8
-	title = poland.8.t
-	desc = poland.8.d
-	
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	option = {
-		name = poland.8.a
-		remove_unit_leader = 1300
-		end_puppet = SAX
-		set_country_flag = POL_august_abdicates
-		set_party_name = { 
-		    ideology = neutrality 
-		    name = "The Sejm"
-		    long_name = "The Sejm"
-		}
-		create_country_leader = {
-			name = "The Sejm"
-			desc = ""
-			picture = "sejm.dds"
-			expire = "1965.1.1"
-			ideology = despotism
-			traits = {			
-			}
-		}
-		create_country_leader = {
-			name = "The Sejm"
-			desc = ""
-			picture = "sejm.dds"
-			expire = "1965.1.1"
-			ideology = nobility
-			traits = {			
-			}
-		}
-		create_country_leader = {
-			name = "The Sejm"
-			desc = ""
-			picture = "sejm.dds"
-			expire = "1965.1.1"
-			ideology = nazism
-			traits = {			
-			}
-		}
-		create_country_leader = {
-			name = "The Sejm"
-			desc = ""
-			picture = "sejm.dds"
-			expire = "1965.1.1"
-			ideology = conservatism
-			traits = {			
 			}
 		}
 	}

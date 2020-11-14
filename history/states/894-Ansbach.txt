@@ -11,6 +11,12 @@ state={
 		}
 		owner = ANS
 		add_core_of = ANS
+		victory_points = {
+			11529 1
+		}
+		victory_points = {
+			9557 3
+		}
 	}
 	manpower=67987
 	buildings_max_level_factor=1.000

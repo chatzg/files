@@ -58,6 +58,10 @@ SWE_cossack_aid = {
 			ZAP = { country_event = cossack.1 } 
 		}
 
+		ai_will_do = {
+			factor = 10
+		}
+
 		cost = 25
 		days_re_enable = 60
 		fire_only_once = no
@@ -72,6 +76,10 @@ SWE_cossack_aid = {
 			}
 			visible = {
 			has_completed_focus = swedish_politics_14
+			}
+
+			ai_will_do = {
+				factor = 10
 			}
 
 			complete_effect = {	
@@ -94,6 +102,10 @@ SWE_cossack_aid = {
 			has_completed_focus = swedish_politics_14
 			}
 
+			ai_will_do = {
+			factor = 10
+			}
+
 			complete_effect = {	
 				ZAP = { country_event = cossack.3 }
 			}
@@ -113,7 +125,15 @@ SWE_cossack_aid = {
 			has_completed_focus = swedish_politics_14
 			}
 
+			ai_will_do = {
+			factor = 10
+			}	
+
 			complete_effect = {	
+				reverse_add_opinion_modifier = {
+				    target = ZAP
+				    modifier = huge_increase
+				}
 			}
 
 		cost = 25
@@ -122,43 +142,25 @@ SWE_cossack_aid = {
 
 	SWE_Cossack_border_conflict = {
 
-			icon = generic_prepare_civil_war
+		icon = generic_prepare_civil_war
 
-			available = {
-			has_completed_focus = swedish_politics_14
-			}
-			visible = {
-			has_completed_focus = swedish_politics_14
-			}
+		available = {
+		has_completed_focus = swedish_politics_14
+		}
+		visible = {
+		has_completed_focus = swedish_politics_14
+		}
 
-			complete_effect = {	
-				ZAP = { country_event = cossack.4 }
-			}
+		complete_effect = {	
+			ZAP = { country_event = cossack.4 }
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
 
 		cost = 50
 		fire_only_once = yes
-	}
-
-	SWE_cossack_alliance = {
-
-		icon = generic_prepare_civil_war
-	
-		allowed = {
-			tag = SWE
-		}
-		
-		available = {
-			has_completed_focus = swedish_politics_14
-		}
-		visible = {
-			has_completed_focus = swedish_politics_14
-		}
-		
-		complete_effect = {
-			ZAP = { country_event = generic.5 }
-		}
-
-		cost = 150
 	}
 }
 
@@ -175,9 +177,40 @@ SWE_ottoman_aid = {
 			has_completed_focus = swedish_politics_12
 			}
 
-			complete_effect = {	
-				TUR = { country_event = ottomans.2 } 
-			}
+			fixed_random_seed = no
+
+			days_remove = 10
+		    remove_effect = {
+		        random_list = {
+					30 = {
+					}
+					40 = {
+						add_equipment_to_stockpile = {
+						    type = infantry_equipment
+						    amount = 100
+						    producer = TUR
+						}
+					}
+					20 = {
+						add_equipment_to_stockpile = {
+						    type = infantry_equipment
+						    amount = 250
+						    producer = TUR
+						}
+					}
+					10 = {
+						add_equipment_to_stockpile = {
+						    type = infantry_equipment
+						    amount = 1000
+						    producer = TUR
+						}
+					}
+				}
+		    }
+
+			ai_will_do = {
+			factor = 10
+		}
 
 		cost = 25
 		days_re_enable = 60
@@ -195,13 +228,33 @@ SWE_ottoman_aid = {
 		has_completed_focus = swedish_politics_12
 		}
 
-		complete_effect = {	
-			TUR = { country_event = ottomans.3 } 
+		ai_will_do = {
+			factor = 10
 		}
 
-	cost = 25
-	days_re_enable = 60
-	fire_only_once = no
+		fixed_random_seed = no
+
+		days_remove = 10
+	    remove_effect = {
+	        random_list = {
+				30 = {
+					add_manpower = 0
+				}
+				40 = {
+					add_manpower = 1250
+				}
+				20 = {
+					air_experience = 2500
+				}
+				10 = {
+					air_experience = 5000
+				}
+			}
+	    }
+
+		cost = 25
+		days_re_enable = 60
+		fire_only_once = no
 	}
 
 	SWE_ottoman_volunteers = {
@@ -209,60 +262,28 @@ SWE_ottoman_aid = {
 		icon = generic_prepare_civil_war
 
 		available = {
-		has_completed_focus = swedish_politics_12
+			has_completed_focus = swedish_politics_12
 		}
 		visible = {
-		has_completed_focus = swedish_politics_12
+			has_completed_focus = swedish_politics_12
+		}
+
+		ai_will_do = {
+			factor = 10
 		}
 
 		complete_effect = {	
-			TUR = { country_event = ottomans.4 } 
+			TUR = {
+				add_ai_strategy = {
+					type = send_volunteers_desire
+					id = "SWE"
+					value = 1000
+				}
+			}
 		}
 
 	cost = 25
 	days_re_enable = 60
 	fire_only_once = no
 	}
-
-	SWE_ottoman_border_conflict = {
-
-			icon = generic_prepare_civil_war
-
-			available = {
-			has_completed_focus = swedish_politics_12
-			}
-			visible = {
-			has_completed_focus = swedish_politics_12
-			}
-
-			complete_effect = {	
-				TUR = { country_event = ottomans.5 }
-			}
-
-		cost = 50
-		fire_only_once = yes
-	}
-
-	SWE_ottoman_alliance = {
-
-		icon = generic_prepare_civil_war
-	
-		allowed = {
-			tag = SWE
-		}
-		
-		available = {
-			has_completed_focus = swedish_politics_12
-		}
-		visible = {
-			has_completed_focus = swedish_politics_12
-		}
-		
-		complete_effect = {
-			TUR = { country_event = generic.5 }
-		}
-
-		cost = 150
-	}
-
 }

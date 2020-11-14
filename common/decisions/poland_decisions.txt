@@ -25,3 +25,105 @@ political_actions = {
 		}
 	}
 }
+
+POL_foreign_influence = {
+	SOV_increase_influence_over_poland = {	
+		icon = eng_trade_unions_demand
+		allowed = {
+			tag = SOV
+		}
+		available = {
+			has_government = neutrality
+			POL = { has_government = neutrality }
+		}
+		#targets = { POL }
+
+		#target_trigger = {
+		#	FROM = {
+		#		tag = POL
+		#	}
+		#}
+
+		days_remove = 20
+
+		cost = 10
+
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = { var = sov_influence_over_poland value = 10 } 
+
+		POL = {
+			set_variable = { var = sov_influence_over_poland value = SOV.sov_influence_over_poland }
+		#	subtract_from_variable = { var = ger_temp_trade_influence value = #ENG.eng_gateway_to_europe_influence }
+		#	set_variable = { var = eng_temp_trade_influence value = #ENG.eng_gateway_to_europe_influence }
+		#	subtract_from_variable = { var = eng_temp_trade_influence value = #GER.ger_gateway_to_europe_influence }
+		#	add_to_variable = { var = gateway_to_europe_influence_pp_total value = 10 }
+		}
+	}
+	SOV_poland_test = {
+		icon = generic_civil_support
+		available = {
+			original_tag = POL
+		}
+		cost = 10
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+		}
+	}
+
+	AUS_increase_influence_over_poland = {	
+
+		icon = eng_trade_unions_demand
+
+		allowed = { tag = AUS }
+
+		available = {
+			has_government = neutrality
+			POL = { has_government = neutrality }
+		}
+		
+		targets = { POL }
+
+		target_trigger = {
+			FROM = {
+				tag = POL
+			}
+		}
+
+		days_remove = 20
+
+		cost = 10
+
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = { var = aus_influence_over_poland value = 10 } 
+
+		POL = {
+			set_variable = { var = aus_influence_over_poland value = AUS.aus_influence_over_poland }
+			#subtract_from_variable = { var = ger_temp_trade_influence value = #ENG.eng_gateway_to_europe_influence }
+			#set_variable = { var = eng_temp_trade_influence value = #ENG.eng_gateway_to_europe_influence }
+			#subtract_from_variable = { var = eng_temp_trade_influence value = #GER.ger_gateway_to_europe_influence }
+			#add_to_variable = { var = gateway_to_europe_influence_pp_total value = 10 }
+			}
+		}
+	}
+}

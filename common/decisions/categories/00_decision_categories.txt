@@ -5,6 +5,15 @@ propaganda_efforts = {
 
 	}
 }
+POL_foreign_influence = {
+	allowed = {
+		OR = {
+			original_tag = POL
+			original_tag = SOV
+		}
+	}
+}
+
 FRA_religious_troubles = {
 	allowed = {
 		original_tag = FRA

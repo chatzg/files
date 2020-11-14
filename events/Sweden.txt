@@ -90,7 +90,7 @@ country_event = {
 			}
 		}
 		white_peace = SOV
-		add_country_flag = SWE_defeated_by_russia
+		set_country_flag = SWE_defeated_by_russia
 	}
 	option = { #refuse
 		name = sweden.2.b
@@ -142,7 +142,7 @@ country_event = {
 			}
 		}
 		white_peace = SOV
-		add_country_flag = SWE_defeated_by_russia
+		set_country_flag = SWE_defeated_by_russia
 	}
 	option = { #refuse
 		name = sweden.3.b

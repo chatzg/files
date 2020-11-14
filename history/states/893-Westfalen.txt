@@ -11,7 +11,9 @@ state={
 		}
 		owner = MUN
 		add_core_of = MUN
-
+		victory_points = {
+			564 3 
+		}
 	}
 
 	provinces={

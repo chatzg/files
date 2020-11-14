@@ -3,8 +3,8 @@
 #leaders:
 great_war_hero:0 "Military Genius"
 #flags:
-ottoman_aid:0 "This will unlock interactions with the Ottoman Empire."
-cossack_aid:0 "This will unlock interactions with the Zaporozhian Hetmanate."
+ottoman_aid:0 "This will unlock §Ydecisions§! allowing us to interact with §YThe Ottoman Empire.§!"
+cossack_aid:0 "This will unlock §Ydecisions§! allowing us to interact with §YThe Zaporozhian Hetmanate.§!"
 RUS_anti_swedish_pact_WT:0 "Formation of Anti-Swedish Pact"
 SWE_defeated_by_russia:0 "Defeated In Great Northern War"
 
@@ -147,6 +147,12 @@ SWE_expand_merchant_fleets:0 "Expand Merchant Fleets"
 SWE_open_market_economy:0 "Open Market Economy"
 SWE_military_academy:0 "Military Academy"
 SWE_military_academy_desc:0 "Even though we have mastered all disciplines of warfare, we must ensure we do not fall behind on technology."
+SWE_request_ottoman_intervention:0 "Request Ottoman Intervention"
+SWE_request_ottoman_intervention_desc:0 "The enemy of my enemy is my friend. Seeing how we are massively outnumbered, we might be able to appeal to the Ottoman Empire for a full fledged military intervention."
+SWE_secure_narva:0 "Secure Narva"
+SWE_secure_narva_desc:0 "Narva is of the utmost stragetical importance, as it serves as the gateway between Finland and the Baltic. It is imperative we hold on to this settlement."
+SWE_dethrone_august:0 "Dethrone August"
+SWE_dethrone_august_desc:0 "The Pretender king Frederick Augustus of Wettin has chosen to go down a foolish path, and must now pay with his reign. Arrangements have been made with Stanislaus Leszczyński, a powerfull magnate and a friend to the Swedish throne. He has pledged to join us in our war against Russia and lead the Commonwealth to a more prosperous path."
 
 
 #ideas
@@ -220,9 +226,9 @@ denmark.2.b:0 "A lucky coincidence."
 #decisions
 SWE_cossack_aid:0 "Cossack Support"
 SWE_cossack_aid_desc:0 "As we are outnumbered we should seek help of other powers who may benefit from this war. The cossacks will definatly see profit in the conflict with Russia."
-SWE_Cossack_equipment:0 "Ask for Cossack equipment"
+SWE_Cossack_equipment:0 "Request Cossack equipment"
 SWE_Cossack_equipment_desc:0 ""
-SWE_Cossack_manpower:0 "Ask for Cossack men"
+SWE_Cossack_manpower:0 "Request Cossack manpower"
 SWE_Cossack_manpower_desc:0 ""
 SWE_Cossack_volonteers:0 "Invite Cossack volonteers"
 SWE_Cossack_volonteers_desc:0 ""
@@ -234,7 +240,11 @@ SWE_cossack_alliance:0 "Invite Zaporizhia to a formal alliance"
 SWE_cossack_alliance_desc:0 ""
 SWE_arange_an_accident_for_frederick:0 "Arange an Accident for Frederick of Denmark"
 SWE_arange_an_accident_for_frederick_desc:0 "As long as Frederick IV has no heir, the throne of the Danish-Norwegian kingdom is set to pass on to our monarch's wife Sophia Hedwig. Keeping this in mind, a great oppurtunity presents itself of arranging an 'accident' of some sorts in the near future."
-
+SWE_ottoman_aid:0 "Seek Ottoman Support"
+SWE_ottoman_aid_desc:0 "As our nation finds itself in a showdown with the Ottomans' greatest rival, Russia, we might be able to find common ground in our war effort against the Russians through the aid of the Ottomans."
+SWE_ottoman_equipment:0 "Request Turkisk Equipment"
+SWE_ottoman_manpower:0 "Request Turkish Manpower"
+SWE_ottoman_volunteers:0 "Request Turkish Volunteers"
 #cosmetic tags
 
 SWE_NOR_neutrality:0 "Sweden-Norway"

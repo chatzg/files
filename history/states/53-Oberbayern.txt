@@ -12,7 +12,13 @@ state={
 		}
 		add_core_of = BAV
 		victory_points = {
-			9515 3
+			9515 10
+		}
+		victory_points = {
+			9681 1
+		}
+		victory_points = {
+			586 5
 		}
 	}
 
