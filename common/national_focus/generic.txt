@@ -40,7 +40,7 @@ focus_tree = {
 	focus = {
 		id = army_effort
 		icon = GFX_goal_generic_allies_build_infantry
-		x = 2
+		x = 22
 		y = 0
 		cost = 10
 
@@ -217,7 +217,7 @@ focus_tree = {
 	focus = {
 		id = industrial_effort
 		icon = GFX_goal_generic_production
-		x = 14
+		x = 2
 		y = 0
 		cost = 10
 
@@ -1537,8 +1537,8 @@ focus_tree = {
 
 	focus = {
 		id = government_reform
-		icon = GFX_goal_generic_demand_territory
-		x = 24
+		icon = GFX_focus_generic_treaty
+		x = 12
 		y = 0
 		cost = 10
 
@@ -1551,10 +1551,10 @@ focus_tree = {
 
 	focus = {
 		id =  embrace_despotism
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_focus_generic_monarchy_2
 		x = 0
 		y = 1
-		cost = 10
+		cost = 2
 		mutually_exclusive = { focus = embrace_theocracy }
 		mutually_exclusive = { focus = embrace_republicanism }
 
@@ -1580,7 +1580,7 @@ focus_tree = {
 
 	focus = {
 		id =  autocracy
-		icon = GFX_goal_autocracy
+		icon = GFX_goal_continuous_suppression
 		x = 1
 		y = 1
 		cost = 10
@@ -1600,6 +1600,7 @@ focus_tree = {
 		}
 	
 		completion_reward = {
+			add_ideas = autocracy_idea
 		}
 	}
 
@@ -1615,25 +1616,17 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		available = {
-			OR = { 
-				AND = {
-					has_government = fascism
-					fascism > 0.40
-				}
-				AND = {
-					has_government = neutrality
-					neutrality > 0.40
-				}
-			}
+			has_tech = mechanical_computing
 		}
 	
 		completion_reward = {
+			add_political_power = 150
 		}
 	}
 
 	focus = {
 		id =  centralization_effort
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_goal_generic_position_armies
 		x = 0
 		y = 1
 		cost = 10
@@ -1646,6 +1639,7 @@ focus_tree = {
 		}
 	
 		completion_reward = {
+			add_ideas = centralization_of_crownland
 		}
 	}
 
@@ -1671,7 +1665,7 @@ focus_tree = {
 
 	focus = {
 		id =  militaritic_society
-		icon = GFX_goal_aristocracy
+		icon = GFX_goal_generic_military_sphere
 		x = 0
 		y = 1
 		cost = 10
@@ -1691,7 +1685,7 @@ focus_tree = {
 
 	focus = {
 		id =  enligthened_despotism
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_focus_enlightenment
 		x = -1
 		y = 1
 		cost = 10
@@ -1702,25 +1696,21 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		available = {
-			OR = { 
-				has_government  = neutrality
-				has_government  = aristocracy
-				neutrality > 0.50
-				aristocracy > 0.50
-			}
+			has_tech = computing_machine
 		}
 	
 		completion_reward = {
+			add_ideas = enlightened_despotism
 		}
 	}
 
 	focus = {
 		id =  rational_administrations
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_focus_hol_the_foundations_of_defense
 		x = -1
 		y = 1
 		cost = 10
-		prerequisite = { focus = enligthened_despotism focus = focus_oligarchism }
+		prerequisite = { focus = enligthened_despotism focus = focus_oligarchism focus = theocratic_despotism }
 		relative_position_id = enligthened_despotism
 
 		available_if_capitulated = yes
@@ -1735,6 +1725,7 @@ focus_tree = {
 		}
 	
 		completion_reward = {
+			add_ideas = rational_administration
 		}
 	}
 
@@ -1759,10 +1750,10 @@ focus_tree = {
 
 	focus = {
 		id =  embrace_theocracy
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_focus_clergy
 		x = -5
 		y = 1
-		cost = 10
+		cost = 2
 		mutually_exclusive = { focus = embrace_republicanism }
 		mutually_exclusive = { focus = embrace_despotism }
 		prerequisite = { focus = government_reform }
@@ -1786,7 +1777,7 @@ focus_tree = {
 
 	focus = {
 		id =  theocratic_despotism
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_goal_generic_air_doctrine
 		x = 1
 		y = 1
 		cost = 10
@@ -1801,6 +1792,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			add_ideas = theocratic_despotism
 		}
 	}
 
@@ -1810,7 +1802,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 10
-		prerequisite = { focus = theocratic_despotism }
+		prerequisite = { focus = theocratic_despotism focus = religious_order }
 		relative_position_id = theocratic_despotism
 
 		available = {
@@ -1826,7 +1818,7 @@ focus_tree = {
 
 	focus = {
 		id =  partial_secularisation
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_goal_generic_improve_relations
 		x = 0
 		y = 1
 		cost = 10
@@ -1841,12 +1833,14 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			add_political_power = 150
+			add_stability = -0.05
 		}
 	}
 
 	focus = {
 		id =  strenghten_religious_head
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_focus_rom_royal_dictatorship
 		x = -2
 		y = 1
 		cost = 10
@@ -1861,12 +1855,13 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			add_ideas = strenghtened_religious_head
 		}
 	}
 
 	focus = {
 		id =  religious_order
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_goal_generic_CAS
 		x = -1
 		y = 1
 		cost = 10
@@ -1881,6 +1876,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			add_ideas = religious_order
 		}
 	}
 
@@ -1890,7 +1886,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 10
-		prerequisite = { focus = religious_order }
+		prerequisite = { focus = theocratic_despotism focus = religious_order }
 		relative_position_id = religious_order
 
 		available = {
@@ -1909,7 +1905,7 @@ focus_tree = {
 		icon = GFX_goal_republicanism
 		x = 5
 		y = 1
-		cost = 10
+		cost = 5
 		mutually_exclusive = { focus = embrace_theocracy }
 		mutually_exclusive = { focus = embrace_despotism }
 
@@ -1934,7 +1930,7 @@ focus_tree = {
 
 	focus = {
 		id =  focus_oligarchism
-		icon = GFX_focus_generic_support_the_left_right
+		icon = GFX_focus_aristocrats
 		x = -1
 		y = 1
 		cost = 10
@@ -1977,6 +1973,7 @@ focus_tree = {
 		available_if_capitulated = yes		
 
 		completion_reward = {
+			add_country_leader_trait = dictator
 		}
 	}
 
@@ -1995,6 +1992,7 @@ focus_tree = {
 		available_if_capitulated = yes		
 
 		completion_reward = {
+			add_political_power = 150
 		}
 	}
 
@@ -2018,11 +2016,15 @@ focus_tree = {
 		available_if_capitulated = yes		
 
 		completion_reward = {
+			add_ideas = meritocracy
 			set_politics = {
 				ruling_party = democratic
 				elections_allowed = yes
+				last_election = 1699.1.1
+				election_frequency = 4
 			}
 		}
+
 	}
 
 	focus = {
@@ -2063,34 +2065,17 @@ focus_tree = {
 		available_if_capitulated = yes		
 
 		completion_reward = {
-		}
-	}
-
-	focus = {
-		id =  revolutionary_assembly
-		icon = GFX_focus_prc_agrarian_socialism
-		x = 3
-		y = 3
-		cost = 10
-		prerequisite = { focus = republicanism }
-		relative_position_id = embrace_republicanism
-
-		available = {
-		}
-
-		available_if_capitulated = yes		
-
-		completion_reward = {
+			add_ideas = legislative_assembly
 		}
 	}
 
 	focus = {
 		id =  interventionism
-		icon = GFX_focus_prc_agrarian_socialism
+		icon = GFX_goal_generic_special_forces
 		x = 0
 		y = 5
-		cost = 10
-		#prerequisite = { focus = republicanism }
+		cost = 5
+		prerequisite = { focus = strenghten_religious_head focus = partial_secularisation focus = crackdown_on_feudal_elements focus = centralization_effort focus = militaritic_society focus = consolidation_of_power focus = legislative_assembly }
 		relative_position_id = government_reform
 		mutually_exclusive = { focus = realpolitics focus = focus_neutrality}
 
@@ -2100,6 +2085,30 @@ focus_tree = {
 		available_if_capitulated = yes		
 
 		completion_reward = {
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+			}	
+			set_rule = { can_send_volunteers = yes }
+			add_political_power = 150
+		}
+	}
+
+	focus = {
+		id = volunteer_armies
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = interventionism }
+		x = 0
+		y = 1
+		relative_position_id = interventionism
+		cost = 5
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = volunteer_corps_focus
 		}
 	}
 
@@ -2108,8 +2117,8 @@ focus_tree = {
 		icon = GFX_goal_generic_neutrality_focus
 		x = -4
 		y = 5
-		cost = 10
-		#prerequisite = { focus = republicanism }
+		cost = 5
+		prerequisite = { focus = strenghten_religious_head focus = partial_secularisation focus = crackdown_on_feudal_elements focus = centralization_effort focus = militaritic_society focus = consolidation_of_power focus = legislative_assembly }
 		mutually_exclusive = { focus = interventionism focus = realpolitics}
 		relative_position_id = government_reform
 
@@ -2119,16 +2128,40 @@ focus_tree = {
 		available_if_capitulated = yes		
 
 		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = neutrality_idea } }
+				add_ideas = neutrality_idea
+			}
+			add_political_power = 150
+		}
+	}
+
+	focus = {
+		id =  focus_deterrence
+		icon = GFX_goal_generic_defence
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = { focus = focus_neutrality }
+		relative_position_id = focus_neutrality
+
+		available = {
+		}
+
+		available_if_capitulated = yes		
+
+		completion_reward = {
+			add_ideas = deterrence
 		}
 	}
 
 	focus = {
 		id =  realpolitics
-		icon = GFX_focus_prc_agrarian_socialism
+		icon = GFX_goal_generic_forceful_treaty
 		x = 4
 		y = 5
-		cost = 10
-		#prerequisite = { focus = republicanism }
+		cost = 5
+		prerequisite = { focus = strenghten_religious_head focus = partial_secularisation focus = crackdown_on_feudal_elements focus = centralization_effort focus = militaritic_society focus = consolidation_of_power focus = legislative_assembly }
 		relative_position_id = government_reform
 		mutually_exclusive = { focus = interventionism focus = focus_neutrality}
 
@@ -2138,6 +2171,65 @@ focus_tree = {
 		available_if_capitulated = yes		
 
 		completion_reward = {
+			add_ideas = realpolitik
+		}
+	}
+
+	focus = {
+		id =  focus_militarism
+		icon = GFX_focus_generic_military_mission
+		x = 4
+		y = 6
+		cost = 5
+		prerequisite = { focus = realpolitics }
+		relative_position_id = government_reform
+
+		available = {
+		}
+
+		available_if_capitulated = yes		
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+			}			
+			add_ideas = militarism_focus
+			army_experience = 20
+			set_rule = { can_send_volunteers = yes }
+		}
+	}
+
+	focus = {
+		id = why_we_fight
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = volunteer_armies focus = focus_deterrence focus = focus_militarism }
+		available = { 
+			OR = { 
+				threat > 0.75 
+				has_defensive_war = yes 
+			}
+		}
+		continue_if_invalid = yes
+		
+		x = 0
+		y = 2
+		relative_position_id = interventionism
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = why_we_fight_focus
+			custom_effect_tooltip = why_we_fight_effect
+			hidden_effect = {
+				if = {
+					limit = { NOT = { has_idea = neutrality_idea } }
+					set_rule = { can_create_factions = yes }
+				}			
+			}
 		}
 	}
 
@@ -2151,8 +2243,8 @@ focus_tree = {
 	focus = {
 		id = naval_effort
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 8
-		y = 0
+		x = 22
+		y = 4
 		cost = 10
 
 		available_if_capitulated = no
@@ -2441,7 +2533,20 @@ focus_tree = {
 			factor = 1
 		}
 
-		completion_reward = {
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+		
+		completion_reward = {	
+			add_tech_bonus = {
+				name = sub_op_bonus
+				bonus = 1.0
+				uses = 2
+				category = colonial_tech
+			}	
 		}
 	}
 

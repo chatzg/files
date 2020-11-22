@@ -82,7 +82,7 @@ set_convoys = 150
 set_stability = 0.75
 
 create_country_leader = {
-	name = "William III of Orange"
+	name = "William III"
 	desc = "POLITICS_HENDRIKUS_COLJIN_DESC"
 	picture = "England_leader.dds"
 	expire = "1702.3.8"

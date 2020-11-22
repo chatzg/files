@@ -35,13 +35,19 @@ crackdown_on_feudal_elements:0 "Crackdown on Feudal Elements"
 absolutism:0 "Absolutism"
 centralization_effort:0 "Centralization Effort"
 dominance_of_military_class:0 "Dominance of the Military Class"
-militaristic_society:0 "Militaristic Society"
+militaritic_society:0 "Militaristic Society"
 focus_neutrality:0 "Neutrality"
 interventionism:0 "Interventionism"
-
-
+focus_deterrence:0 "Deterrence"
+volunteer_armies:0 "Volunteer Forces"
+focus_militarism:0 "Militaristic State"
 
 #ideas
 militaristic_society:0 "Militaristic Society"
 crackdown_on_feudalism:0 "Crackdown on Feudal Elements"
 realpolitics:0 "Realpolitics"
+centralization_of_crownland:0 "Centralization of Crownland"
+autocracy_idea:0 "Autocracy"
+rational_administration:0 "Rational Administration"
+strenghtened_religious_head:0 "Strenghtened Religious Head"
+strenghtened_religious_head_desc:0 "The religious head enjoys greater power, both temporal and secular."

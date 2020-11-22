@@ -1,5 +1,31 @@
 ideas = {
 	country = {
+		DEN_russo_danish_pact = {
+			allowed = {
+				always = no
+			}
+			picture = Molotov_Ribbentrop_pact
+			removal_cost = -1
+		}
+
+		DEN_danish_swedish_trade_activities = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_naval_manufacturer_1
+
+			removal_cost = -1
+
+			name = DEN_danish_swedish_trade_activities
+
+			cancel = { SWE = { has_war_with = DEN }}
+			
+			modifier = {
+				industrial_capacity_dockyard = 0.1
+			}
+		}
+
 		DEN_outmanoeuvred_by_sweden_6 = {
 			allowed = {
 				always = no

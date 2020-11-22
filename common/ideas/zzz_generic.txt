@@ -22,6 +22,188 @@ ideas = {
 
 	# Special ones that can be applied on other countries through focus system.
 	country = {
+		legislative_assembly = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = aristocracy
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			
+			modifier = {
+				political_advisor_cost_factor = -0.25
+				trade_laws_cost_factor = -0.25
+				mobilization_laws_cost_factor = -0.25
+				economy_cost_factor = -0.25
+				high_command_cost_factor = -0.25
+				army_chief_cost_factor = -0.25
+				navy_chief_cost_factor = -0.25
+			}
+		}
+		strenghtened_religious_head = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = aristocracy
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			
+			modifier = {
+				political_power_gain = 0.15
+			}
+		}
+		theocratic_despotism = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = aristocracy
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			
+			modifier = {
+				political_power_factor = 0.25
+				stability_factor = 0.05
+			}
+		}
+		religious_order = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = aristocracy
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			
+			modifier = {
+				conscription = 0.02
+				training_time_factor = -0.25
+				fascism_drift = 0.03
+			}
+		}
+		autocracy_idea = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = aristocracy
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			
+			modifier = {
+				neutrality_drift = 0.05
+				stability_factor = 0.05
+				war_support_factor = 0.05
+			}
+		}
+		centralization_of_crownland = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = aristocracy
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			
+			modifier = {
+				local_building_slots_factor = 0.10
+				political_power_factor = -0.10
+			}
+		}
+		realpolitik = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = aristocracy
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			
+			modifier = {
+				justify_war_goal_time = -0.25
+				generate_wargoal_tension = -0.25
+				join_faction_tension = -0.20
+			}
+		}
+		meritocracy = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = aristocracy
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			
+			modifier = {
+				political_advisor_cost_factor = -0.50
+			}
+		}
+		rational_administration = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = aristocracy
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			
+			modifier = {
+				political_advisor_cost_factor = -0.15
+				political_power_factor = 0.10
+			}
+		}
 		
 		parliamentarism = {
 			

@@ -10,7 +10,7 @@ state={
 	}
 
 	history={
-		owner = RAJ
+		owner = UNC
 		buildings = {
 			infrastructure = 1
 		}

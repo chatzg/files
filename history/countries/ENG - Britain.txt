@@ -120,7 +120,7 @@ set_popularities = {
 }
 
 create_country_leader = {
-	name = "William of Orange"
+	name = "William I"
 	desc = "POLITICS_WINSTON_CHURCHILL_DESC"
 	picture = "England_leader.dds"
 	expire = "1939.3.19"
@@ -131,7 +131,7 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "William of Orange"
+	name = "William I"
 	desc = "POLITICS_WINSTON_CHURCHILL_DESC"
 	picture = "England_leader.dds"
 	expire = "1939.3.19"

@@ -7,6 +7,9 @@
 colonial_tech:0 "Colonial Expansion Research"
 flag_peace_of_travendal:0 "Signed treaty of Travendal"
 DEN_army_reform_tt:0 "This will unlock decisions to reform our army."
+swe_must_accept_all:0 "§YSweden must accept all political reforms for us to unite the realms.§!"
+rus_must_approve:0 "§YRussia must approve of this pact in order for these agreements to come into effect.§!"
+you_get_second_chance:0 "§RShould our initial advances fail, the§! §YThe Weakness of Sweden§! §Rbranch will become available.§!"
 
 #focus:
 
@@ -87,6 +90,10 @@ danish_volunteer_corps_focus:0 "Danish Auxiliary Corps"
 danish_volunteer_corps_focus_2:0 "Danish Auxiliary Corps"
 DEN_defense_of_denmark:0 "Defend Denmark"
 SWE_dealing_with_occupation:0 "Dealing with Occupation"
+DEN_danish_swedish_trade_activities:0 "Dano-Swedish Trade"
+DEN_danish_swedish_trade_activities_desc:0 "The normalization of relations between Sweden and Denmark has given way to an unprecedented amount of trade between the two states, especially benefitting the productivity of the ports."
+DEN_russo_danish_pact:0 "Russo-Danish Pact"
+DEN_russo_danish_pact_desc:0 "The Russo-Danish pact is an agreement in which Denmark and Russia have agreed to split Sweden between them, whereby Denmark will receive Sweden proper and the German possessions, and Russia will receive Finland and the Baltic."
 
 #events:
 denmark.1.t:0 "Naval powers enforce treaty of Travendal"
@@ -98,6 +105,24 @@ denmark.5.t:0 "England threatens war"
 denmark.5.d:0 "Our rival, England, has deceided they are in the position to enforce a peace between our great nation and the Kingdom of Sweden. They cite the wish to maintain the stability in the region. In reality they are afraid that we may regain our long lost province of Skåne which was unrightfully taken by the Swedes. Whilst it is not certain whether or not they would go through with their plans of military intervention, we should be extremely cautious as they, along with their personal union partner of the Netherlands, hold a vastly superior military and navy."
 denmark.9.t:0 "Allied Navy shells Copenhagen"
 denmark.9.d:0 "Disturbing news! A combined English-Dutch-Swedish fleets has launched a major bombardment in our capital Copenhagen, causing extensive damage. A clear signal for what will happen should we continue our involvement in the war against Sweden."
+denmark.10.t:0 "Denmark renounces claims on Scania"
+denmark.10.d:0 "In an unexpeted way, the Danish king has announced he will renounce all claims on Swedish sovereign territory as a sign of good will and friendship. Reportedly, the Danish sovereign seems to want to establish friendly ties with our king, Charles XII. Altough the future is uncertain, it is a certainty that the renounciation of these claims is a step in the right direction toward cordial relations between our two kingdoms."
+denmark.11.t:0 "Sweden returns favor"
+denmark.11.d:0 "Following our decision to abandon our claims in Scania, Sweden has announced that it too, shall renouce it claims over Danish territory immedialty. Indeed, it would appear that our friendship with Sweden seems to be tightening considerably."
+denmark.12.t:0 "Denmark offers support in return for Scania"
+denmark.12.d:0 "Denmark has promised us aid in our wars to come, if we agree to return their old core state of Scania. The state has been plagued by rebellion for decades now, and seeing how we might have to face a greater foe soon, signing this pact might not be the worst cause of action. However, one should go lightly over the decision to hand over such a large amount of land."
+denmark.13.t:0 "Sweden refuses"
+denmark.13.d:0 "Sweden has refused our proposition. This might potentially set back the normalization of relations for year, but alas, it is so."
+denmark.14.t:0 "Sweden accepts"
+denmark.14.d:0 "The Swedish govnerment has agreed to return the land they had once stolen from us, and in exchange we will provide them with protection in their wars soon to come."
+denmark.15.t:0 "Denmark proposes Kalmar Alliance"
+denmark.15.d:0 "Even though to old Kalmar Union is long gone, its legacy still lives on. After mending the ties between our nations, Denmark has proposed a formal military alliance between our two nations, a Kalmar Alliance. They have stressed it is no policial union in anyway, but merely a tool to ensure both our great nations sovereignty."
+denmark.16.t:0 "Sweden accepts"
+denmark.17.t:0 "Sweden refuses"
+denmark.22.t:0 "Russia honors Russo-Danish Pact"
+denmark.22.d:0 ""
+denmark.23.t:0 "Russia breaks Russo-Danish Pact"
+denmark.23.d:0 ""
 #decisions:
 
 #cosmetic tags:
