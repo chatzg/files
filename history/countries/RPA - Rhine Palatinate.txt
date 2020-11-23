@@ -35,3 +35,14 @@ set_popularities = {
 	neutrality = 30
 	aristocracy = 30
 }
+
+create_country_leader = {
+	name = "Christian II"
+	desc = "POLITICS_REZA_SHAH_PAHLAVI_DESC"
+	picture = "christian_ii.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		#
+	}
+}

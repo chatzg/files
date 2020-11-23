@@ -10,10 +10,10 @@ state={
 			industrial_complex = 1
 		}
 		victory_points = {
-			11305 3 
+			11305 15 
 		}
-		owner = IFC
-		add_core_of = IFC
+		owner = LUB
+		add_core_of = LUB
 	}
 	
 	manpower=34897

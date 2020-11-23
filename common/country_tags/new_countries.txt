@@ -1,3 +1,7 @@
+AAC		= "countries/Aachen.txt"
+LUB		= "countries/Lubeck.txt"
+NUR		= "countries/Nuremberg.txt"
+HAM		= "countries/Hamburg.txt"
 SIL 	= "countries/Silezia.txt"
 KHA 	= "countries/Khalmyk.txt"
 CIR		= "countries/Circassia.txt"

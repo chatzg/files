@@ -1,6 +1,26 @@
 
 #reload countrycolors
 
+NUR = {
+	color = rgb { 219 81 0 }
+	color_ui = rgb { 219 81 0  }	
+}
+
+LUB = {
+	color = rgb { 159 193 217 }
+	color_ui = rgb { 159 193 217  }	
+}
+
+AAC = {
+	color = rgb { 132 16 208 }
+	color_ui = rgb { 132 16 208  }	
+}
+
+HAM = {
+	color = rgb { 212 112 24 }
+	color_ui = rgb { 212 112 24 }	
+}
+
 KHA = {
 	color = rgb { 120 128 128 }
 	color_ui = rgb { 120 128 128 }	

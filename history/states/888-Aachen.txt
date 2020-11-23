@@ -6,14 +6,14 @@ state={
 	}
 	history={
 		victory_points = {
-			9522  5 
+			9522  15 
 		}
 		buildings = {
 			infrastructure = 5
 			industrial_complex = 1
 		}
-		owner = IFC
-		add_core_of = IFC
+		owner = AAC
+		add_core_of = AAC
 	}
 	manpower=41200
 	buildings_max_level_factor=1.000

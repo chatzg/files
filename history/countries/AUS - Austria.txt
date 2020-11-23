@@ -7,6 +7,10 @@ set_research_slots = 3
 set_convoys = 30
 
 #Emperorship
+give_guarantee = NUR
+give_guarantee = HAM
+give_guarantee = LUB
+give_guarantee = AAC
 give_guarantee = SAL
 give_guarantee = LOR
 give_guarantee = LUI

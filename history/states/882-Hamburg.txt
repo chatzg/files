@@ -18,8 +18,8 @@ state={
 			}
 
 		}
-		owner = IFC
-		add_core_of = IFC
+		owner = HAM
+		add_core_of = HAM
 
 	}
 

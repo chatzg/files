@@ -1,7 +1,7 @@
 set_country_flag = HRE_imperial_subject
 
 set_research_slots = 3
-set_capital = 890
+set_capital = 899
 load_oob = Imperial_army
 
 # Starting tech
@@ -36,8 +36,8 @@ set_popularities = {
 }
 
 create_country_leader = {
-	name = "Aachener City Council"
-	picture = "Frankfurt_city_council.dds"
+	name = "Lubeck City Council"
+	picture = "Lubeck_city_council.dds"
 	expire = "1965.1.1"
 	ideology = liberalism
 	traits = {

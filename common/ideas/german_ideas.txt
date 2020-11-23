@@ -1,5 +1,28 @@
 ideas = {
 	country = {
+		GER_imperial_free_city = {
+
+			picture = free_city
+
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			cancel = {
+				any_owned_state = {
+				    is_capital = no
+				}
+			}
+			
+			modifier = {
+				local_building_slots_factor = 0.5
+				production_speed_buildings_factor = 0.1
+				political_power_gain = 0.25
+			}
+		}
 		GER_militarizing_estates = {
 
 			picture = generic_production_bonus

@@ -1,5 +1,25 @@
 ﻿l_english:
 
+IFC:0 "Frankfurt"
+IFC_DEF:0 "Frankfurt"
+IFC_ADJ:0 "Frankfurter"
+
+HAM:0 "Hamburg"
+HAM_DEF:0 "Hamburg"
+HAM_ADJ:0 "Hamburger"
+
+LUB:0 "Lubeck"
+LUB_DEF:0 "Lubeck"
+LUB_ADJ:0 "Lubeckian"
+
+AAC:0 "Aachen"
+AAC_DEF:0 "Aachen"
+AAC_ADJ:0 "Aachener"
+
+NUR:0 "Nuremberg"
+NUR_DEF:0 "Nuremberg"
+NUR_ADJ:0 "Nuremberger"
+
 SIL:0 "Silezia"
 SIL_DEF:0 "Silezia"
 SIL_ADJ:0 "Silezian"
@@ -163,22 +183,6 @@ RPA_democratic_ADJ:0 "Rhenish"
 RPA_aristocracy:0 "Palatinate"
 RPA_aristocracy_DEF:0 "the Palatinate of the Rhine"
 RPA_aristocracy_ADJ:0 "Rhenish"
-
-IFC_neutrality:0 "Imperial Free Cities"
-IFC_neutrality_DEF:0 "the Imperial Free Cities"
-IFC_neutrality_ADJ:0 "Imperial Free-Urban"
-IFC_communism:0 "Imperial Free Cities"
-IFC_communism_DEF:0 "the Imperial Free Cities"
-IFC_communism_ADJ:0 "Imperial Free-Urban"
-IFC_fascism:0 "Imperial Free Cities"
-IFC_fascism_DEF:0 "the Imperial Free Cities"
-IFC_fascism_ADJ:0 "Imperial Free-Urban"
-IFC_democratic:0 "Imperial Free Cities"
-IFC_democratic_DEF:0 "the Imperial Free Cities"
-IFC_democratic_ADJ:0 "Imperial Free-Urban"
-IFC_aristocracy:0 "Imperial Free Cities"
-IFC_aristocracy_DEF:0 "the Imperial Free Cities"
-IFC_aristocracy_ADJ:0 "Imperial Free-Urban"
 
 ANS_neutrality:0 "Ansbach"
 ANS_neutrality_DEF:0 "Ansbach"

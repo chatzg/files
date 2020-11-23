@@ -13,8 +13,8 @@ state={
 			arms_factory = 1
 			industrial_complex = 1
 		}
-		owner = IFC
-		add_core_of = IFC
+		owner = NUR
+		add_core_of = NUR
 	}
 	manpower=47914
 	buildings_max_level_factor=1.000

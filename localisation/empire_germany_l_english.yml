@@ -199,6 +199,8 @@ GER_trade_republic:0 "Trade Republic"
 GER_trade_revenue:0 "Trade Revenues"
 GER_political_dynasties:0 "Political Dynasties"
 GER_divided_church_and_state:0 "Divided Church and State"
+GER_imperial_free_city:0 "Imperial Free City"
+GER_imperial_free_city_desc:0 "This is a free Imperial city that has been granted special rights and privileges by the Emperor himself."
 
 #events
 

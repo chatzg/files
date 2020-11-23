@@ -15,7 +15,8 @@ set_technology = {
 }
 
 add_ideas = {
-	protestant
+	catholic
+	GER_imperial_free_city
 }
 
 give_military_access = AUS
@@ -33,4 +34,14 @@ set_popularities = {
 	communism = 10
 	neutrality = 20
 	aristocracy = 20
+}
+
+create_country_leader = {
+	name = "Ulmer City Council"
+	picture = "Ulm_city_council.dds"
+	expire = "1965.1.1"
+	ideology = liberalism
+	traits = {
+		#
+	}
 }
