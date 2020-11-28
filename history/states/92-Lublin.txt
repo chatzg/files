@@ -1,3 +1,4 @@
+
 state={
 	id=92
 	name="STATE_92"
@@ -14,11 +15,10 @@ state={
 		}
 		add_core_of = POL
 
-
 	}
 
 	provinces={
-		3521 3559 6484 6580 9452 9521 9544 11399 11466 
+		402 524 3521 3559 6484 6580 9452 9521 9544 11399 11466 12562 
 	}
 	manpower=524600
 	buildings_max_level_factor=1.000
