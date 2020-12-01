@@ -8,9 +8,22 @@ state={
 		victory_points = {
 			9279 20 
 		}
+<<<<<<< Updated upstream
 		buildings = {
 			infrastructure = 5
 			industrial_complex = 1
+=======
+		victory_points = {
+			6345 1 
+		}
+		victory_points = {
+			11160 1 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			dockyard = 1
+>>>>>>> Stashed changes
 			9279 = {
 				naval_base = 5
 				coastal_bunker = 1
@@ -18,7 +31,6 @@ state={
 			}
 
 		}
-		add_core_of = SWE
 		add_core_of = DEN
 
 	}
@@ -26,7 +38,13 @@ state={
 	provinces={
 		6120 6345 9279 9300 9362 11160 11376 
 	}
+<<<<<<< Updated upstream
 	manpower=139502
 	buildings_max_level_factor=1.000
 	state_category=town
+=======
+	manpower=247701
+	buildings_max_level_factor=1.000
+	state_category=city
+>>>>>>> Stashed changes
 }

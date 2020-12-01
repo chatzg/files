@@ -109,6 +109,73 @@ ideas = {
 			
 			traits = { popular_figurehead }
 		}
+
+		generic_popular_figurehead = {
+
+			allowed = {
+			}
+
+			picture = artist
+			
+			traits = { popular_figurehead }
+		}
+
+		generic_revolutionairy = {
+			allowed = {
+			}
+
+			picture = merchant
+			
+			traits = { revolutionairy }
+		}
+
+		generic_republican_reformer = {
+
+			allowed = {
+			}
+
+			picture = treasurer
+			
+			traits = { republican_reformer }
+		}
+
+		generic_theocratic_reformer = {
+
+			allowed = {
+			}
+
+			picture = clergyman_3
+			
+			traits = { theocratic_reformer }
+		}
+
+		generic_absolutist_reformer = {
+
+			allowed = {
+			}
+
+			picture = noble
+			
+			traits = { absolutist_reformer }
+		}
+
+		aristocratic_reformer = {
+			allowed = {
+			}
+
+			picture = noble
+			
+			traits = { aristocratic_reformer }
+		}
+
+		generic_old_guard = {
+			allowed = {
+			}
+
+			picture = noble_3
+			
+			traits = { army_chief_old_guard }
+		}	
 	}
 
 	chief_economic_advisor = {
@@ -140,6 +207,26 @@ ideas = {
 			picture = merchant_3
 			
 			traits = { corrupt_treasurer }
+		}
+
+		generic_economic_reformer = {
+
+			allowed = {
+			}
+
+			picture = judge
+			
+			traits = { economic_reformer }
+		}
+
+		generic_protectionist = {
+
+			allowed = {
+			}
+
+			picture = merchant_2
+			
+			traits = { protectionist }
 		}
 	}
 
@@ -184,6 +271,46 @@ ideas = {
 			
 			traits = { backroom_backstabber }
 		}
+
+		generic_military_governor = {
+
+			allowed = {
+			}
+
+			picture = noble_3
+			
+			traits = { military_governor }
+		}
+
+		generic_puppet_master = {
+
+			allowed = {
+				num_subjects > 0
+			}
+
+			available = {
+				num_subjects > 0
+			}
+
+			picture = clergyman_4
+			
+			traits = { puppet_master }
+		}
+
+		generic_independence_advocate = {
+
+			allowed = {
+				is_subject = yes
+			}
+
+			available = {
+				is_subject = yes
+			}
+
+			picture = clergyman_1
+			
+			traits = { independence_advocate }
+		}			
 	}
 
 	spymaster = {
@@ -195,6 +322,49 @@ ideas = {
 			picture = spymaster
 			
 			traits = { technology_thief }
+		}
+
+		generic_master_decryptor = {
+
+			allowed = {
+			}
+
+			picture = inquisitor
+			
+			traits = { master_decryptor }
+		}
+
+		generic_master_encryptor = {
+
+			allowed = {
+			}
+
+			picture = merchant_2
+			
+			traits = { master_encryptor }
+		}
+
+		generic_head_of_intelligence = {
+			allowed = { 
+				has_dlc = "La Resistance"
+				if = {
+					limit = {
+						has_dlc = "Battle for the Bosporus"
+					}
+				}
+			}
+			available = {
+				has_intelligence_agency = yes
+			}
+			traits = { head_of_intelligence }
+
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					has_intelligence_agency = no
+					factor = 0
+				}
+			}
 		}
 	}
 

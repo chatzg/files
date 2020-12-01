@@ -2486,5 +2486,8 @@ spriteTypes = {
 		name = "GFX_focus_clergy"
 		texturefile = "gfx/interface/goals/focus_clergy.tga"
 	}
-	
+	SpriteType = { 
+		name = "GFX_danelaw"
+		texturefile = "gfx/interface/goals/danelaw.tga"
+	}
 }

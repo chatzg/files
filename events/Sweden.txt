@@ -55,7 +55,11 @@ country_event = {
 		name = sweden.1.c
 		add_political_power = -100
 		ai_chance = {
-			factor = 0
+			factor = 1
+			modifier = {
+				factor = 75
+				has_idea = DEN_russo_danish_pact
+			}
 		}
 	}
 }

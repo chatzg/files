@@ -407,36 +407,4 @@ ideas = {
 			}
 		}
 	}
-	political_advisor = {
-		generic_republican_reformer = {
-
-			allowed = {
-			}
-
-			picture = treasurer
-			
-			traits = { republican_reformer }
-		}
-
-		generic_theocratic_reformer = {
-
-			allowed = {
-			}
-
-			picture = inquisitor
-			
-			traits = { theocratic_reformer }
-		}
-
-		generic_absolutist_reformer = {
-
-			allowed = {
-			}
-
-			picture = statesman
-			
-			traits = { absolutist_reformer }
-		}
-
-	}
 }

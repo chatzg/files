@@ -143,7 +143,7 @@ country_event = {
 		}
 		SWE = {
 			country_event = {
-				id = denmark.10
+				id = denmark.30
 				days = 2
 			}
 		}
@@ -621,6 +621,26 @@ country_event = {
 			}
 			OR = {
 				OR = {
+					controls_state = 930
+					any_other_country = {
+						is_in_faction_with = SOV
+						SOV = {
+							is_faction_leader = yes
+						}
+						controls_state = 930
+					}
+				}
+				OR = {
+					controls_state = 931
+					any_other_country = {
+						is_in_faction_with = SOV
+						SOV = {
+							is_faction_leader = yes
+						}
+						controls_state = 931
+					}
+				}
+				OR = {
 					controls_state = 138
 					any_other_country = {
 						is_in_faction_with = SOV
@@ -747,6 +767,36 @@ country_event = {
 				}
 			}
 			DEN = { transfer_state = 138 }
+		}
+		if = {
+			limit = {
+				930 = {
+					OR = {
+						is_controlled_by = SOV
+						any_other_country = {
+							controls_state = 930
+							is_in_faction_with = SOV
+							SOV = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			DEN = { transfer_state = 930 }
+		}
+		if = {
+			limit = {
+				931 = {
+					OR = {
+						is_controlled_by = SOV
+						any_other_country = {
+							controls_state = 931
+							is_in_faction_with = SOV
+							SOV = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			DEN = { transfer_state = 931 }
 		}
 		if = {
 			limit = {
@@ -1253,5 +1303,169 @@ country_event = {
 			    value = 200
 			}
 		}
+	}
+}
+
+#denmark honors pact
+
+country_event = {
+	id = denmark.25
+	title = denmark.25.t
+	desc = denmark.25.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "We always knew we had a friend in Denmark"
+	}
+}
+
+#denmark dishonors pact
+
+country_event = {
+	id = denmark.26
+	title = denmark.26.t
+	desc = denmark.26.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "Traitors!"
+		create_wargoal = {
+			type = annex_everything
+			target = DEN
+		}
+	}
+}
+
+#denmark offer closer union
+
+country_event = {
+	id = denmark.27
+	title = denmark.27.t
+	desc = denmark.27.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "We will not give up sovereignty!"
+		SOV = { country_event = denmark.28 }
+	}
+
+	option = {
+		name = "It is the only way."
+		SOV = { country_event = denmark.29 }
+	}
+}
+
+#sweden aye
+
+country_event = {
+	id = denmark.28
+	title = denmark.28.t
+	desc = denmark.28.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "Damn."
+		complete_national_focus = DEN_a_decentralized_union
+	}
+}
+
+#sweden nay
+
+country_event = {
+	id = denmark.29
+	title = denmark.29.t
+	desc = denmark.29.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "Excellent."
+		set_global_flag = SWE_agrees_to_closer_union
+	}
+}
+
+#england intervenes against denmark note to sweden
+
+country_event = {
+	id = denmark.30
+	title = denmark.30.t
+	desc = denmark.30.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "We do not stand alone after all!"
+	}
+}
+
+#denmark offers peace for scania and gotland
+
+country_event = {
+	id = denmark.31
+	title = denmark.31.t
+	desc = denmark.31.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "We submit."
+		DEN = { transfer_state = 138}
+		DEN = { transfer_state = 930}
+		DEN = { transfer_state = 931}
+		DEN = { transfer_state = 124}
+		white_peace = GER
+		DEN = { leave_faction = yes }
+		set_truce = {
+		    target = DEN
+		    days = 365
+		}
+		DEN = { country_event = denmark.32 }
+	}
+	option = {
+		name = "We will fight them to the death!"
+		add_war_support = 0.05
+		add_political_power = -100
+		DEN = { country_event = denmark.33 }
+	}
+}
+
+#sweden agrees
+
+country_event = {
+	id = denmark.32
+	title = denmark.32.t
+	desc = denmark.32.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "They saw reason at last."
+	}
+}
+
+#sweden disagrees
+
+country_event = {
+	id = denmark.33
+	title = denmark.33.t
+	desc = denmark.33.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "Stubborn fools!"
 	}
 }

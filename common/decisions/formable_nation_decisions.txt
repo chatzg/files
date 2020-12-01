@@ -7,7 +7,7 @@ form_scandinavia_category = {
 		allowed = {
 			OR = {
 				original_tag = NOR
-				original_tag = DEN
+				original_tag = ICE
 			}
 			has_dlc = "Waking the Tiger"
 		}
@@ -44,7 +44,7 @@ form_scandinavia_category = {
 		visible = {
 			OR = {
 				original_tag = NOR
-				original_tag = DEN
+				original_tag = ICE
 			}
 			NOT = { has_global_flag = form_scandinavia_flag }
 		}

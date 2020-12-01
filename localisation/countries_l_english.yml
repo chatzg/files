@@ -1,4 +1,15 @@
 ﻿l_english:
+NAV:0 "Navarra"
+NAV_DEF:0 "Navarra"
+NAV_ADJ:0 "Navarra"
+
+CAT:0 "Catalonia"
+CAT_DEF:0 "Catalonia"
+CAT_ADJ:0 "Catalonia"
+
+ADU:0 "Granada"
+ADU_DEF:0 "Granada"
+ADU_ADJ:0 "Granada"
 
 IFC:0 "Frankfurt"
 IFC_DEF:0 "Frankfurt"

@@ -321,12 +321,13 @@ focus_tree = {
 			has_war_with = SWE
 		}
 
+		will_lead_to_war_with = SWE
+
 		completion_reward = {
 			declare_war_on = {
 			    target = SWE
 			    type = annex_everything
 			}
-			will_lead_to_war_with = SWE
 		}
 	}
 
@@ -451,7 +452,7 @@ focus_tree = {
 			    target = SWE
 			    modifier = large_increase
 			}
-			143 = {
+			138 = {
 				remove_core_of  = DEN
 			}
 		}
@@ -474,7 +475,7 @@ focus_tree = {
 
 	focus = {
 		id = DEN_an_integrated_union
-		icon = GFX_goal_generic_major_alliance
+		icon = GFX_goal_continuous_restrict_freedom
 		x = 1
 		y = 3
 		cost = 5
@@ -488,13 +489,13 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			SWE = { country_event = denmark.27}
 		}
 	}
 
 	focus = {
 		id = DEN_a_decentralized_union
-		icon = GFX_goal_generic_major_alliance
+		icon = GFX_goal_continuous_boost_freedom
 		x = 3
 		y = 3
 		cost = 5
@@ -508,7 +509,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			add_to_tech_sharing_group = kalmar_research
+			SWE = { add_to_tech_sharing_group = kalmar_research }
+			if = {
+				limit = { SHL = { is_in_faction_with = DEN } }
+				SHL = { add_to_tech_sharing_group = kalmar_research }
+			}
 		}
 	}
 
@@ -556,43 +562,71 @@ focus_tree = {
 
 	focus = {
 		id = DEN_economic_integration
-		icon = GFX_goal_generic_major_alliance
+		icon = GFX_focus_generic_the_giant_wakes
 		x = 2
 		y = 4
-		cost = 1
+		cost = 10
 		prerequisite = { focus = DEN_a_decentralized_union focus = DEN_an_integrated_union }
 		relative_position_id = DEN_abandon_revanchism
 
-		completion_reward = {
+		available = {
+			has_political_power > 100
+		}
 
+		completion_reward = {
+			add_political_power = -100
+			add_ideas = DEN_kalmar_economic_integration
 		}
 	}
 
 	focus = {
 		id = DEN_military_integration
-		icon = GFX_goal_generic_major_alliance
+		icon = GFX_focus_generic_little_entente
 		x = 0
 		y = 4
-		cost = 1
+		cost = 10
 		prerequisite = { focus = DEN_a_decentralized_union focus = DEN_an_integrated_union }
 		relative_position_id = DEN_abandon_revanchism
 
-		completion_reward = {
+		available = {
+			has_political_power > 100
+		}
 
+		completion_reward = {
+			add_tech_bonus = {
+			    bonus = 1
+			    uses = 2
+			    category = land_doctrine
+			}
+			army_experience = 15
+			SWE = {
+				add_tech_bonus = {
+			    bonus = 1
+			    uses = 2
+			    category = land_doctrine
+				}
+				army_experience = 15
+			}
+			add_political_power = -100
 		}
 	}
 
 	focus = {
 		id = DEN_diplomatic_integration
-		icon = GFX_goal_generic_major_alliance
+		icon = GFX_focus_generic_treaty
 		x = 4
 		y = 4
-		cost = 1
+		cost = 10
 		prerequisite = { focus = DEN_a_decentralized_union focus = DEN_an_integrated_union }
 		relative_position_id = DEN_abandon_revanchism
 
-		completion_reward = {
+		available = {
+			has_political_power > 100
+		}
 
+		completion_reward = {
+			add_political_power = -100
+			add_ideas = DEN_unification_of_embassies
 		}
 	}
 
@@ -601,7 +635,7 @@ focus_tree = {
 		icon = GFX_goal_generic_major_alliance
 		x = 1
 		y = 5
-		cost = 1
+		cost = 20
 		prerequisite = { focus = DEN_an_integrated_union  }
 		prerequisite = { focus = DEN_military_integration  }
 		prerequisite = { focus = DEN_economic_integration  }
@@ -609,8 +643,29 @@ focus_tree = {
 		relative_position_id = DEN_abandon_revanchism
 		mutually_exclusive = { focus = DEN_make_norway_third_partner}
 
+		available = { 
+			has_global_flag = SWE_agrees_to_closer_union 
+		}
+
 		completion_reward = {
-			custom_effect_tooltip = swe_must_accept_all
+			annex_country = {
+			    target = SWE
+			    transfer_troops = yes
+			}
+			remove_ideas = DEN_unification_of_embassies
+			remove_ideas = DEN_kalmar_economic_integration
+			set_cosmetic_tag = SCA_UNIFIED
+			custom_effect_tooltip = form_country_sweden_coring_states_tt
+			hidden_effect = {
+				124 = { add_core_of = ROOT }
+				138 = { add_core_of = ROOT }
+				139 = { add_core_of = ROOT }
+				140 = { add_core_of = ROOT }
+				141 = { add_core_of = ROOT }
+				38 = { add_core_of = ROOT }
+				666 = { add_core_of = ROOT }
+			}
+			add_ideas = DEN_kalmar_restauration
 		}
 	}
 
@@ -629,6 +684,17 @@ focus_tree = {
 
 		completion_reward = {
 			release_puppet = NOR
+			NOR = {
+				add_ideas = DEN_unification_of_embassies
+				add_ideas = DEN_kalmar_economic_integration
+				add_tech_bonus = {
+			    bonus = 1
+			    uses = 2
+			    category = land_doctrine
+				}
+				army_experience = 15
+			}
+			add_political_power = 150
 		}	
 	}
 
@@ -670,7 +736,7 @@ focus_tree = {
 		icon = GFX_focus_chi_british_cooperation
 		x = 0
 		y = 1
-		cost = 1
+		cost = 10
 		prerequisite = { focus = DEN_licking_our_wounds }
 		relative_position_id = DEN_licking_our_wounds
 
@@ -851,7 +917,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		cost = 5
-		prerequisite = { focus = DEN_licking_our_wounds focus = DEN_peace_for_scania_and_gotland focus = DEN_split_sweden_with_russia}
+		prerequisite = { focus = DEN_licking_our_wounds focus = DEN_peace_for_scania_and_gotland focus = DEN_split_sweden_with_russia focus = DEN_military_integration }
 		relative_position_id = DEN_licking_our_wounds
 
 		completion_reward = {
@@ -870,6 +936,15 @@ focus_tree = {
 		mutually_exclusive = { focus = DEN_support_austria }
 
 		completion_reward = {
+			reverse_add_opinion_modifier = {
+			    target = FRA
+			    modifier = large_increase
+			}
+			send_equipment = {
+			    equipment = infantry_equipment
+			    amount = 2000
+			    target = FRA
+			}
 		}
 	}
 
@@ -884,6 +959,15 @@ focus_tree = {
 		mutually_exclusive = { focus = DEN_support_france }
 
 		completion_reward = {
+			reverse_add_opinion_modifier = {
+			    target = AUS
+			    modifier = large_increase
+			}
+			send_equipment = {
+			    equipment = infantry_equipment
+			    amount = 2000
+			    target = AUS
+			}
 		}
 	}
 
@@ -938,38 +1022,11 @@ focus_tree = {
 
 
 	focus = {
-		id = DEN_initiate_army_reform
-		icon = GFX_focus_generic_military_academy
-		x = 20
-		y = 0
-		cost = 1
-
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = DEN_the_danish_mercenary_expedition
-		icon = GFX_focus_generic_military_academy
-		x = 1
-		y = 1
-		cost = 1
-		prerequisite = { focus = DEN_initiate_army_reform }
-		relative_position_id = DEN_initiate_army_reform
-
-		completion_reward = {
-
-		}
-	}
-
-
-	focus = {
 		id = DEN_bypass_travendal
 		icon = GFX_SWE_conscription
 		x = 2
 		y = 0
-		cost = 1
+		cost = 10
 		prerequisite = { focus = DEN_strike_first }
 		relative_position_id = DEN_treaty_of_travendal
 
@@ -988,13 +1045,23 @@ focus_tree = {
 		icon = GFX_goal_generic_more_territorial_claims
 		x = 3
 		y = 1
-		cost = 1
+		cost = 10
 		mutually_exclusive = { focus = DEN_peace_for_scania_and_gotland }
 		prerequisite = { focus = DEN_bypass_travendal }
 		relative_position_id = DEN_bypass_travendal
 
+		bypass = {
+			owns_state = 124
+			owns_state = 138
+			owns_state = 139
+			owns_state = 140
+			owns_state = 141
+			owns_state = 38
+			owns_state = 666
+		}
 		completion_reward = {
 			custom_effect_tooltip = rus_must_approve
+			SOV = { country_event = denmark.18 }
 		}
 	}
 
@@ -1003,70 +1070,252 @@ focus_tree = {
 		icon = GFX_goal_scandinavia
 		x = 3
 		y = 2
-		cost = 1
+		cost = 10
 		prerequisite = { focus = DEN_split_sweden_with_russia }
 		relative_position_id = DEN_bypass_travendal
 
-		completion_reward = {
+		available = {
+			is_subject = no
+			# Norway
+			custom_trigger_tooltip = {
+				tooltip = form_country_norway_required_states_tt
+				controls_state = 110
+				controls_state = 142
+				controls_state = 143
+				controls_state = 144
+			}
+			# Sweden
+			custom_trigger_tooltip = {
+				tooltip = form_country_sweden_required_states_tt
+				controls_state = 124
+				controls_state = 138
+				controls_state = 139
+				controls_state = 140
+				controls_state = 141
+				controls_state = 38
+				controls_state = 666
+			}
+			# Denmark / European Mainland
+			custom_trigger_tooltip = {
+				tooltip = form_scandinavia_denmark_required_states_tt
+				controls_state = 37
+				controls_state = 99
+			}
+		}
 
+		completion_reward = {
+			set_cosmetic_tag = SCA_UNIFIED
+			custom_effect_tooltip = form_country_sweden_coring_states_tt
+			hidden_effect = {
+				124 = { add_core_of = ROOT }
+				138 = { add_core_of = ROOT }
+				139 = { add_core_of = ROOT }
+				140 = { add_core_of = ROOT }
+				141 = { add_core_of = ROOT }
+				38 = { add_core_of = ROOT }
+				666 = { add_core_of = ROOT }
+			}
 		}
 	}
 
 	focus = {
 		id = DEN_among_the_great_powers
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_goal_generic_alliance
 		x = 3
 		y = 1
-		cost = 1
+		cost = 10
 		prerequisite = { focus = DEN_kalmar_empire focus = DEN_kalmar_union_restored focus = DEN_reintegrate_lost_territories }
 		relative_position_id = DEN_kalmar_empire
 		mutually_exclusive = { focus = DEN_persue_old_glories }
 
 		completion_reward = {
-
+			add_political_power = 150
+			custom_effect_tooltip = why_we_fight_effect
+			hidden_effect = {
+				if = {
+					limit = { NOT = { has_idea = neutrality_idea } }
+					set_rule = { can_create_factions = yes }
+				}			
+			}
 		}
 	}
 
 	focus = {
 		id = DEN_challenge_maritime_powers
-		icon = GFX_goal_generic_demand_territory
-		x = -1
+		icon = GFX_focus_generic_cruiser2
+		x = -2
 		y = 1
-		cost = 1
+		cost = 10
 		prerequisite = { focus = DEN_among_the_great_powers }
 		relative_position_id = DEN_among_the_great_powers
 
 		completion_reward = {
+			add_ideas= DEN_naval_arms_race
+		}
+	}
+	
+	focus = {
+		id = DEN_battle_for_the_north_sea
+		icon = GFX_goal_generic_navy_cruiser
+		x = -2
+		y = 2
+		cost = 10
+		prerequisite = { focus = DEN_challenge_maritime_powers }
+		relative_position_id = DEN_among_the_great_powers
 
+		available = {
+			naval_strength_ratio = {
+			    tag = ENG
+			    ratio = 0.5
+			}
+		}
+
+		will_lead_to_war_with = ENG
+
+		completion_reward = {
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = ENG
+			}
+			add_ideas = DEN_battle_for_the_north_sea
 		}
 	}
 
 	focus = {
-		id = DEN_monopolize_sound_toll_income
-		icon = GFX_goal_generic_demand_territory
+		id = DEN_baltic_security
+		icon = GFX_goal_generic_defence
 		x = 0
-		y = 2
-		cost = 1
+		y = 1
+		cost = 10
 		prerequisite = { focus = DEN_among_the_great_powers }
 		relative_position_id = DEN_among_the_great_powers
 
 		completion_reward = {
-
+			add_state_claim = 899
+			add_state_claim = 61
+			add_state_claim = 62
+			add_state_claim = 63
+			add_state_claim = 85
+			add_state_claim = 868
+			add_state_claim = 763
+			add_state_claim = 188
+			add_state_claim = 190
+			add_state_claim = 12
+			add_state_claim = 13
+			add_state_claim = 191
+			add_state_claim = 869
 		}
+	}
+
+	focus = {
+		id = DEN_monopolize_baltic_grain_exports
+		icon = GFX_goal_grain
+		x = 0
+		y = 2
+		cost = 10
+		prerequisite = { focus = DEN_baltic_security }
+		relative_position_id = DEN_among_the_great_powers
+
+		available = {
+			37 = { is_owned_and_controlled_by = DEN }
+			138 = { is_owned_and_controlled_by = DEN }
+		}
+
+		completion_reward = {
+			add_resource = {
+			    type = oil
+			    amount = 50
+			    state = 37
+			}
+		}
+	}
+
+	focus = {
+		id = DEN_threaten_lubeck
+		icon = GFX_goal_generic_political_pressure
+		x = -2
+		y = 3
+		cost = 10
+		prerequisite = { focus = DEN_monopolize_baltic_grain_exports }
+		relative_position_id = DEN_among_the_great_powers
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = DEN_threaten_hamburg
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 3
+		cost = 10
+		prerequisite = { focus = DEN_monopolize_baltic_grain_exports }
+		relative_position_id = DEN_among_the_great_powers
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = DEN_threaten_mecklenburg
+		icon = GFX_goal_generic_political_pressure
+		x = 2
+		y = 3
+		cost = 10
+		prerequisite = { focus = DEN_monopolize_baltic_grain_exports }
+		relative_position_id = DEN_among_the_great_powers
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = DEN_crush_prussia
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 4
+		cost = 10
+		prerequisite = { focus = DEN_threaten_mecklenburg focus = DEN_threaten_hamburg focus = DEN_threaten_lubeck }
+		relative_position_id = DEN_among_the_great_powers
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = DEN_demand_holstein_allegiance
+		icon = GFX_focus_CZE_german_puppet
+		x = 2
+		y = 1
+		cost = 10
+		prerequisite = { focus = DEN_among_the_great_powers }
+		relative_position_id = DEN_among_the_great_powers
+
+		completion_reward = {
+			puppet = SHL
+			transfer_state = 902
+		}
+
+		will_lead_to_war_with = SOV
 	}
 
 	focus = {
 		id = DEN_secure_eastern_front
 		icon = GFX_goal_generic_demand_territory
-		x = 1
-		y = 1
-		cost = 1
-		prerequisite = { focus = DEN_among_the_great_powers }
+		x = 2
+		y = 2
+		cost = 10
+		prerequisite = { focus = DEN_demand_holstein_allegiance }
 		relative_position_id = DEN_among_the_great_powers
 
 		completion_reward = {
-
+			create_wargoal = {
+		    	type = puppet_wargoal_focus
+		    	target = SOV
+			}
 		}
+
+		will_lead_to_war_with = SOV
 	}
 
 	focus = {
@@ -1074,42 +1323,50 @@ focus_tree = {
 		icon = GFX_goal_generic_dangerous_deal
 		x = 0
 		y = 1
-		cost = 1
+		cost = 10
 		mutually_exclusive = { focus = DEN_split_sweden_with_russia }
 		prerequisite = { focus = DEN_bypass_travendal }
 		relative_position_id = DEN_bypass_travendal
 
-		completion_reward = {
+		available = {
+			controls_state = 138
+			SWE = { surrender_progress > 0.40 }
+		}
 
+		completion_reward = {
+			SWE = { country_event = denmark.31 }
 		}
 	}
 
 	focus = {
 		id = DEN_reintegrate_lost_territories
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_goal_generic_position_armies
 		x = 0
 		y = 2
-		cost = 1
+		cost = 10
 		prerequisite = { focus = DEN_peace_for_scania_and_gotland }
 		relative_position_id = DEN_bypass_travendal
 
 		completion_reward = {
-
+			add_state_core = 930
+			add_state_core = 931
+			add_state_core = 124
 		}
 	}
 
 	focus = {
 		id = DEN_persue_old_glories
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_goal_generic_CAS
 		x = 0
 		y = 3
-		cost = 1
+		cost = 10
 		prerequisite = { focus = DEN_reintegrate_lost_territories }
 		relative_position_id = DEN_bypass_travendal
 		mutually_exclusive = { focus = DEN_among_the_great_powers }
 
 		completion_reward = {
 			create_faction = "North Sea Empire"
+			add_political_power = 150
 		}
 	}
 
@@ -1118,7 +1375,7 @@ focus_tree = {
 		icon = GFX_goal_generic_demand_territory
 		x = 0
 		y = 4
-		cost = 1
+		cost = 10
 		prerequisite = { focus = DEN_persue_old_glories }
 		relative_position_id = DEN_bypass_travendal
 
@@ -1132,7 +1389,7 @@ focus_tree = {
 		icon = GFX_goal_generic_demand_territory
 		x = 0
 		y = 5
-		cost = 1
+		cost = 10
 		prerequisite = { focus = DEN_honour_our_ancestors }
 		relative_position_id = DEN_bypass_travendal
 
@@ -1146,7 +1403,7 @@ focus_tree = {
 		icon = GFX_goal_generic_demand_territory
 		x = 0
 		y = 6
-		cost = 1
+		cost = 10
 		prerequisite = { focus = DEN_shrine_to_odin }
 		relative_position_id = DEN_bypass_travendal
 
@@ -1160,7 +1417,7 @@ focus_tree = {
 		icon = GFX_goal_generic_demand_territory
 		x = 2
 		y = 4
-		cost = 1
+		cost = 10
 		prerequisite = { focus = DEN_persue_old_glories }
 		relative_position_id = DEN_bypass_travendal
 
@@ -1174,7 +1431,7 @@ focus_tree = {
 		icon = GFX_goal_generic_demand_territory
 		x = 2
 		y = 5
-		cost = 1
+		cost = 10
 		prerequisite = { focus = DEN_legacy_of_the_great_adventurers }
 		relative_position_id = DEN_bypass_travendal
 
@@ -1185,10 +1442,10 @@ focus_tree = {
 
 	focus = {
 		id = DEN_raid_baltic_coast
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_focus_generic_coastal_fort
 		x = -2
 		y = 4
-		cost = 1
+		cost = 10
 		prerequisite = { focus = DEN_persue_old_glories }
 		relative_position_id = DEN_bypass_travendal
 
@@ -1202,7 +1459,7 @@ focus_tree = {
 		icon = GFX_goal_generic_demand_territory
 		x = -2
 		y = 5
-		cost = 1
+		cost = 10
 		prerequisite = { focus = DEN_raid_baltic_coast }
 		relative_position_id = DEN_bypass_travendal
 
@@ -1213,10 +1470,10 @@ focus_tree = {
 
 	focus = {
 		id = DEN_restoration_of_the_danelaw
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_danelaw
 		x = -2
 		y = 6
-		cost = 1
+		cost = 10
 		prerequisite = { focus = DEN_raid_north_sea_coast }
 		relative_position_id = DEN_bypass_travendal
 
