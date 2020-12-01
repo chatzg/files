@@ -933,14 +933,10 @@
  STATE_927:1 "Suakin"
  STATE_928:0 "Jeddah"
  STATE_929:0 "Horn of Africa"
-<<<<<<< Updated upstream
  STATE_930:0 "Polack"
- STATE_931:0 "Sūduva"
+ STATE_931:0 "Suduva"
  STATE_932:0 "Pilica"
  STATE_933:0 "Rivne"
  STATE_934:1 "Blekinge"
  STATE_935:1 "Halland"
-=======
- STATE_930:0 "Blekinge"
- STATE_931:0 "Halland"
->>>>>>> Stashed changes
+
