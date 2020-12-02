@@ -1,16 +1,17 @@
+
 state={
 	id=539
 	name="STATE_539"
 
-	impassable = yes
 	history={
-	owner = UNC
+		owner = UNC
+
 	}
 
 	provinces={
-		5139 8207 10948 13210 
+		5139 10948 
 	}
-	manpower=409752
+	manpower=140556
 	buildings_max_level_factor=1.000
 	state_category=pastoral
 }

@@ -1,0 +1,20 @@
+
+state={
+	id=936
+	name="STATE_936"
+	resources={
+		rubber=3.000
+	}
+
+	history={
+		owner = UNC
+
+	}
+
+	provinces={
+		4128 5117 7219 8193 8219 10025 10071 12775 12925 12945 
+	}
+	manpower=848847
+	buildings_max_level_factor=1.000
+	state_category=town
+}

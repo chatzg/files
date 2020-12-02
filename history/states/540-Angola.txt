@@ -6,15 +6,15 @@ state={
 		rubber=1.000
 	}
 
-	impassable = yes
 	history={
-	owner = UNC
+		owner = UNC
+
 	}
 
 	provinces={
-		1552 2126 4735 7548 8054 8219 8248 12391 12981 
+		8248 12981 
 	}
-	manpower=3225000
+	manpower=95284
 	buildings_max_level_factor=1.000
 	state_category=rural
 }

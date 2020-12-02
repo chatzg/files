@@ -1,9 +1,7 @@
+
 state={
 	id=798
 	name="STATE_798"
-	provinces={
-		5158 8138 8202 10966 12958 12985 
-	}
 
 	history={
 		owner = POR
@@ -11,10 +9,16 @@ state={
 			infrastructure = 3
 			5158 = {
 				naval_base = 2
+
 			}
+
 		}
+
 	}
 
+	provinces={
+		5158 8138 8202 10966 12958 12985 
+	}
 	manpower=56200
 	buildings_max_level_factor=1.000
 	state_category=pastoral

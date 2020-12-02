@@ -939,4 +939,9 @@
  STATE_933:0 "Rivne"
  STATE_934:1 "Blekinge"
  STATE_935:1 "Halland"
-
+ STATE_936:1 "Kongo"
+ STATE_937:0 "Songo"
+ STATE_938:0 "Ganguela"
+ STATE_939:0 "Laongo"
+ STATE_940:1 "Chokwe"
+ STATE_941:0 "Dembo Ambuila"
