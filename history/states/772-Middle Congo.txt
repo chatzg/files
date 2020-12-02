@@ -11,11 +11,13 @@ state={
 		add_core_of = GAB
 		buildings = {
 			infrastructure = 1
+
 		}
+
 	}
 
 	provinces={
-		7219 8016 10071 
+		2192 7219 8016 10071 
 	}
 	manpower=746415
 	buildings_max_level_factor=1.000
