@@ -7,12 +7,30 @@ state={
 	}
 
 	history={
-		owner = UNC
+		owner = COG
+		add_core_of = COG
+		victory_points = {
+			12925 10 
+		}
+		victory_points = {
+			7548 1 
+		}
+		victory_points = {
+			10025 1 
+		}
+		victory_points = {
+			12896 1 
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+
+		}
 
 	}
 
 	provinces={
-		4128 5117 7219 8193 8219 10025 10071 12775 12925 12945 
+		4128 5117 8193 8219 10025 12775 12925 12945 
 	}
 	manpower=848847
 	buildings_max_level_factor=1.000

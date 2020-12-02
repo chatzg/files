@@ -1301,7 +1301,7 @@ focus_tree = {
 
 	focus = {
 		id = DEN_secure_eastern_front
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_focus_eng_expose_the_belly_of_the_bear
 		x = 2
 		y = 2
 		cost = 10
@@ -1348,8 +1348,8 @@ focus_tree = {
 		relative_position_id = DEN_bypass_travendal
 
 		completion_reward = {
-			add_state_core = 930
-			add_state_core = 931
+			add_state_core = 934
+			add_state_core = 935
 			add_state_core = 124
 		}
 	}
@@ -1370,52 +1370,11 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = DEN_honour_our_ancestors
-		icon = GFX_goal_generic_demand_territory
-		x = 0
-		y = 4
-		cost = 10
-		prerequisite = { focus = DEN_persue_old_glories }
-		relative_position_id = DEN_bypass_travendal
-
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = DEN_shrine_to_odin
-		icon = GFX_goal_generic_demand_territory
-		x = 0
-		y = 5
-		cost = 10
-		prerequisite = { focus = DEN_honour_our_ancestors }
-		relative_position_id = DEN_bypass_travendal
-
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = DEN_norse_syncreticism
-		icon = GFX_goal_generic_demand_territory
-		x = 0
-		y = 6
-		cost = 10
-		prerequisite = { focus = DEN_shrine_to_odin }
-		relative_position_id = DEN_bypass_travendal
-
-		completion_reward = {
-
-		}
-	}
 
 	focus = {
 		id = DEN_legacy_of_the_great_adventurers
 		icon = GFX_goal_generic_demand_territory
-		x = 2
+		x = -2
 		y = 4
 		cost = 10
 		prerequisite = { focus = DEN_persue_old_glories }
@@ -1429,7 +1388,7 @@ focus_tree = {
 	focus = {
 		id = DEN_adventure_into_russia
 		icon = GFX_goal_generic_demand_territory
-		x = 2
+		x = -2
 		y = 5
 		cost = 10
 		prerequisite = { focus = DEN_legacy_of_the_great_adventurers }
@@ -1441,40 +1400,40 @@ focus_tree = {
 	}
 
 	focus = {
-		id = DEN_raid_baltic_coast
+		id = DEN_raiding_parties
 		icon = GFX_focus_generic_coastal_fort
-		x = -2
+		x = 2
 		y = 4
 		cost = 10
 		prerequisite = { focus = DEN_persue_old_glories }
 		relative_position_id = DEN_bypass_travendal
 
 		completion_reward = {
-
+			add_ideas = DEN_raiding_fleet
 		}
 	}
 
 	focus = {
-		id = DEN_raid_north_sea_coast
+		id = DEN_land_of_invaders
 		icon = GFX_goal_generic_demand_territory
-		x = -2
+		x = 2
 		y = 5
 		cost = 10
-		prerequisite = { focus = DEN_raid_baltic_coast }
+		prerequisite = { focus = DEN_raiding_parties }
 		relative_position_id = DEN_bypass_travendal
 
 		completion_reward = {
-
+			add_ideas = DEN_invasion_specialists
 		}
 	}
 
 	focus = {
 		id = DEN_restoration_of_the_danelaw
 		icon = GFX_danelaw
-		x = -2
+		x = 2
 		y = 6
 		cost = 10
-		prerequisite = { focus = DEN_raid_north_sea_coast }
+		prerequisite = { focus = DEN_land_of_invaders }
 		relative_position_id = DEN_bypass_travendal
 
 		completion_reward = {
@@ -1482,133 +1441,6 @@ focus_tree = {
 		}
 	}
 
-#naval tree
-
-	focus = {
-		id = DEN_naval_effort
-		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 23
-		y = 0
-		cost = 5
-
-		available_if_capitulated = yes
-
-
-		available = {
-			any_state = {
-				is_coastal = yes
-				is_controlled_by = ROOT
-			}
-		}
-
-		complete_tooltip = {
-			navy_experience = 25
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = dockyard
-				level = 1
-				instant_build = yes
-			}
-		}
-		
-		completion_reward = {
-			navy_experience = 25
-			if = {
-				limit = {
-					NOT = {
-						any_owned_state = {
-							dockyard > 0
-							free_building_slots = {
-								building = dockyard
-								size > 0
-								include_locked = yes
-							}
-						}
-					}
-					any_owned_state = {
-						is_coastal = yes
-					}
-				}
-				random_owned_controlled_state = {
-					limit = {
-						is_coastal = yes
-						free_building_slots = {
-							building = dockyard
-							size > 0
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = dockyard
-						level = 1
-						instant_build = yes
-					}
-				}
-				set_country_flag = naval_effort_built
-			}
-			if = {
-				limit = {
-					NOT = { has_country_flag = naval_effort_built }
-					any_owned_state = {
-						dockyard > 0
-						free_building_slots = {
-							building = dockyard
-							size > 0
-							include_locked = yes
-						}
-					}
-				}
-				random_owned_controlled_state = {
-					limit = {
-						dockyard > 0
-						free_building_slots = {
-							building = dockyard
-							size > 0
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = dockyard
-						level = 1
-						instant_build = yes
-					}
-				}
-				set_country_flag = naval_effort_built
-			}
-			if = {
-				limit = {
-					NOT = { has_country_flag = naval_effort_built }
-					NOT = {
-						any_owned_state = {
-							free_building_slots = {
-								building = dockyard
-								size > 0
-								include_locked = yes
-							}
-						}
-					}
-				}
-				random_state = {
-					limit = {
-						controller = { tag = ROOT }
-						free_building_slots = {
-							building = dockyard
-							size > 0
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = dockyard
-						level = 1
-						instant_build = yes
-					}
-				}
-			}			
-		}
-	}
 	focus = {
 		id = DEN_colonial_effort
 		icon = GFX_goal_generic_construct_naval_dockyard
@@ -1705,11 +1537,137 @@ focus_tree = {
 		}
 	}
 
+focus = {
+		id = DEN_naval_effort
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 24
+		y = 0
+		cost = 10
+
+		available_if_capitulated = no
+
+
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		complete_tooltip = {
+			navy_experience = 25
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = dockyard
+				level = 3
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			navy_experience = 25
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							dockyard > 0
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					any_owned_state = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					NOT = {
+						any_owned_state = {
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+				}
+				random_state = {
+					limit = {
+						controller = { tag = ROOT }
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+			}			
+		}
+	}
+	
 	focus = {
-		id = DEN_flexible_navy
+		id = DEN_merchant_navy
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = DEN_naval_effort }
-		mutually_exclusive = { focus = DEN_large_navy }
+		mutually_exclusive = { focus = DEN_fleet_in_being }
 		x = -1
 		y = 1
 		relative_position_id = DEN_naval_effort
@@ -1747,10 +1705,10 @@ focus_tree = {
 	}
 
 	focus = {
-		id = DEN_large_navy
+		id = DEN_fleet_in_being
 		icon = GFX_goal_generic_navy_doctrines_tactics
 		prerequisite = { focus = DEN_naval_effort }
-		mutually_exclusive = { focus = DEN_flexible_navy }
+		mutually_exclusive = { focus = DEN_merchant_navy }
 		x = 1
 		y = 1
 		relative_position_id = DEN_naval_effort
@@ -1784,12 +1742,12 @@ focus_tree = {
 	}
 
 	focus = {
-		id = DEN_submarine_effort
-		icon = GFX_goal_generic_navy_submarine
-		prerequisite = { focus = DEN_flexible_navy }
-		x = 0
+		id = DEN_privateering_effort
+		icon = GFX_pirate_deal
+		prerequisite = { focus = DEN_merchant_navy }
+		x = -1
 		y = 1
-		relative_position_id = DEN_flexible_navy
+		relative_position_id = DEN_merchant_navy
 		cost = 10
 
 		available_if_capitulated = yes
@@ -1820,12 +1778,12 @@ focus_tree = {
 	}
 
 	focus = {
-		id = DEN_cruiser_effort
+		id = DEN_frigate_effort
 		icon = GFX_goal_generic_navy_cruiser
-		prerequisite = { focus = DEN_large_navy focus = DEN_flexible_navy }
-		x = 0
+		prerequisite = { focus = DEN_fleet_in_being focus = DEN_merchant_navy }
+		x = -1
 		y = 1
-		relative_position_id = DEN_large_navy
+		relative_position_id = DEN_fleet_in_being
 		cost = 10
 
 		available_if_capitulated = yes
@@ -1859,10 +1817,10 @@ focus_tree = {
 	focus = {
 		id = DEN_destroyer_effort
 		icon = GFX_goal_generic_navy_anti_submarine
-		prerequisite = { focus = DEN_submarine_effort }
+		prerequisite = { focus = DEN_privateering_effort }
 		x = 0
 		y = 1
-		relative_position_id = DEN_submarine_effort
+		relative_position_id = DEN_privateering_effort
 		cost = 10
 
 		available_if_capitulated = yes
@@ -1891,13 +1849,14 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
 		id = DEN_battleship_effort
 		icon = GFX_goal_generic_navy_battleship
-		prerequisite = { focus = DEN_cruiser_effort }
-		x = 0
+		prerequisite = { focus = DEN_fleet_in_being }
+		x = 1
 		y = 1
-		relative_position_id = DEN_cruiser_effort
+		relative_position_id = DEN_fleet_in_being
 		cost = 10
 
 		available_if_capitulated = yes
@@ -1924,6 +1883,42 @@ focus_tree = {
 				uses = 3
 				category = bb_tech
 				category = shbb_tech
+			}
+		}
+	}
+
+	focus = {
+		id = DEN_battlecruiser_effort
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = DEN_battleship_effort }
+		x = 0
+		y = 1
+		relative_position_id = DEN_battleship_effort
+		cost = 5
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = bc_tech
 			}
 		}
 	}

@@ -621,23 +621,23 @@ country_event = {
 			}
 			OR = {
 				OR = {
-					controls_state = 930
+					controls_state = 934
 					any_other_country = {
 						is_in_faction_with = SOV
 						SOV = {
 							is_faction_leader = yes
 						}
-						controls_state = 930
+						controls_state = 934
 					}
 				}
 				OR = {
-					controls_state = 931
+					controls_state = 935
 					any_other_country = {
 						is_in_faction_with = SOV
 						SOV = {
 							is_faction_leader = yes
 						}
-						controls_state = 931
+						controls_state = 935
 					}
 				}
 				OR = {
@@ -770,33 +770,33 @@ country_event = {
 		}
 		if = {
 			limit = {
-				930 = {
+				934 = {
 					OR = {
 						is_controlled_by = SOV
 						any_other_country = {
-							controls_state = 930
+							controls_state = 934
 							is_in_faction_with = SOV
 							SOV = { is_faction_leader = yes }
 						}
 					}
 				}
 			}
-			DEN = { transfer_state = 930 }
+			DEN = { transfer_state = 934 }
 		}
 		if = {
 			limit = {
-				931 = {
+				935 = {
 					OR = {
 						is_controlled_by = SOV
 						any_other_country = {
-							controls_state = 931
+							controls_state = 935
 							is_in_faction_with = SOV
 							SOV = { is_faction_leader = yes }
 						}
 					}
 				}
 			}
-			DEN = { transfer_state = 931 }
+			DEN = { transfer_state = 935 }
 		}
 		if = {
 			limit = {
@@ -1421,8 +1421,8 @@ country_event = {
 	option = {
 		name = "We submit."
 		DEN = { transfer_state = 138}
-		DEN = { transfer_state = 930}
-		DEN = { transfer_state = 931}
+		DEN = { transfer_state = 934}
+		DEN = { transfer_state = 935}
 		DEN = { transfer_state = 124}
 		white_peace = GER
 		DEN = { leave_faction = yes }

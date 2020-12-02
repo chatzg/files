@@ -6,8 +6,11 @@ resources={
 	}
 
 	history={
-		owner = UNC
-
+		owner = UGA
+		add_core_of = UGA
+		buildings = {
+			infrastructure = 1
+		}
 	}
 
 	provinces={

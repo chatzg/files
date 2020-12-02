@@ -90,6 +90,10 @@ DEN_baltic_security:0 "Baltic Security"
 DEN_monopolize_baltic_grain_exports:0 "Monopolize Baltic Grain Exports"
 DEN_demand_holstein_allegiance:0 "Demand Holstein Allegiance"
 DEN_reintegrate_lost_territories:0 "Reintegrate Lost Territories"
+DEN_raiding_parties:0 "Danish Rading Parties"
+DEN_raiding_parties_desc:0 "Once upon a time, the Danish raiding parties were feared throughout Europe. Now the time has come to once again inspire fear in the hearts of men."
+
+
 
 #ideas:
 DEN_outmanoeuvred_by_sweden:0 "Outmanoeuvred Military"
@@ -106,6 +110,8 @@ DEN_kalmar_economic_integration:0 "Scandinavian Economic Integration"
 DEN_unification_of_embassies:0 "Unification of Embassies"
 DEN_kalmar_restauration:0 "Kalmar Restauration"
 DEN_naval_arms_race:0 "Naval Arms Race"
+DEN_raiding_fleet:0 "Raiding Fleet"
+
 
 #events:
 denmark.1.t:0 "Naval powers enforce treaty of Travendal"

@@ -6,7 +6,7 @@ state={
 		owner = UNC
 
 	}
-
+	impassable = yes
 	provinces={
 		1552 2126 4735 8054 12391 
 	}

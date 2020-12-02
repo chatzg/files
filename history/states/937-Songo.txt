@@ -3,8 +3,17 @@ state={
 	name="STATE_937"
 
 	history={
-		owner = UNC
-
+		owner = RWA
+		add_core_of = RWA
+		victory_points = {
+			10968 3
+		}
+		buildings = {
+			infrastructure = 2
+			10968 = {
+				naval_base = 2
+			}
+		}
 	}
 
 	provinces={

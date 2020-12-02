@@ -2,7 +2,7 @@ state={
 	id=878
 	name="STATE_878"
 	history={
-		owner = POR
+		owner = BRD
 		buildings = {
 			infrastructure = 1
 			2115 = {
@@ -12,7 +12,7 @@ state={
 		victory_points = {
 			2115 1 
 		}
-		add_core_of = ANG
+		add_core_of = BRD
 	}
 	provinces={
 		2115 

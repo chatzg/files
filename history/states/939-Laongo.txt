@@ -3,8 +3,17 @@ state={
 	name="STATE_939"
 
 	history={
-		owner = UNC
-
+		owner = RCG
+		add_core_of = RCG
+		victory_points = {
+			12975 3
+		}
+		buildings = {
+			infrastructure = 2
+			12975 = {
+				naval_base = 2
+			}
+		}
 	}
 
 	provinces={
