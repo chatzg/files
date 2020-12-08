@@ -12,7 +12,8 @@ state={
 		victory_points = {
 			6855 5 
 		}
-		owner = UNC
+		owner = IRO
+		add_core_of = IRO
 
 	}
 	manpower=100

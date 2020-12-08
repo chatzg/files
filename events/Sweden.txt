@@ -473,3 +473,216 @@ country_event = { #Ai Receive Massive buff
 		load_oob = "SWE_extra_troops"
 	}
 }
+
+#the fate of russia
+
+country_event = {
+	id = sweden.13
+	title = sweden.13.t
+	desc = sweden.13.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { 
+		name = "Dethrone Peter and watch the chaos ensue"
+	}
+
+	option = { 
+		name = "Dethrone Peter and set up a Novgorod Puppet"
+	}
+
+	option = { 
+		name = "Seize Karelia, Pskov, and Novgorod"
+		transfer_state = 209
+		transfer_state = 210 
+		transfer_state = 263
+		transfer_state = 244
+		transfer_state = 216
+		transfer_state = 215
+		transfer_state = 213
+		transfer_state = 722
+	}
+
+	option = { 
+		name = "All of Russia belongs to Sweden!"
+	}
+}
+
+#the dethroning of Peter I
+
+country_event = {
+	id = sweden.14
+	title = sweden.14.t
+	desc = sweden.14.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { 
+		name = "Disaster!"
+		kill_country_leader = yes
+		hidden_effect = {
+			country_event = {
+			    id = sweden.15
+			    days = 3
+			}
+		}
+	}
+}
+
+#collapse of the russian state
+
+country_event = {
+	id = sweden.15
+	title = sweden.15.t
+	desc = sweden.15.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { 
+		name = "The end is nigh..."
+		if = {
+		    limit = {
+		        NOT = { country_exists = NOV }
+		    }
+		    release = NOV
+		    NOV = { 
+		    	declare_war_on = {
+				    target = SOV
+				    type = annex_everything
+				}
+		    }
+		    transfer_units_fraction= {
+			    target = NOV
+			    size = 0.2
+			    stockpile_ratio = 0.2
+			    army_ratio = 0.2
+			    navy_ratio = 0.5
+			}
+		}
+		if = {
+			limit = {
+		        NOT = { country_exists = KHA }
+		    }
+		    release = KHA
+		    KHA = { 
+		    	declare_war_on = {
+				    target = SOV
+				    type = annex_everything
+				}
+		    }
+		    transfer_units_fraction= {
+			    target = KHA
+			    size = 0.2
+			    stockpile_ratio = 0.2
+			    army_ratio = 0.2
+			    navy_ratio = 0.5
+			}
+		}
+		if = {
+			limit = {
+		       KHA = { is_subject_of = SOV }
+		    }
+		    end_puppet = KHA
+		    KHA = {
+				leave_faction = yes
+		    }
+		    KHA = { 
+		    	declare_war_on = {
+				    target = SOV
+				    type = annex_everything
+				}
+		    }
+		}
+		
+		KAZ = { 
+	    	declare_war_on = {
+			    target = SOV
+			    type = annex_everything
+			}
+	    }
+	    ZAP = { 
+	    	declare_war_on = {
+			    target = SOV
+			    type = annex_everything
+			}
+	    }
+	    hidden_effect = {
+			country_event = {
+			    id = sweden.18
+			    days = 10
+			}
+		}
+		set_cosmetic_tag = RUS_muscovy
+	}
+}
+
+#a pretender rises!
+
+country_event = {
+	id = sweden.16
+	title = sweden.16.t
+	desc = sweden.16.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { 
+		name = "Jackals! Vultures!"
+		kill_country_leader = yes
+		start_civil_war = {
+		    ruling_party = neutrality
+		    ideology = aristocracy
+		    size = 0.3
+		}
+		hidden_effect = {
+			country_event = {
+			    id = sweden.17
+			    days = 10
+			}
+		}
+	}
+}
+
+#loss of authority in the north
+
+country_event = {
+	id = sweden.18
+	title = sweden.18.t
+	desc = sweden.18.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { 
+		name = "It was wasteland anyways"
+		UNC = {
+			transfer_state = 579
+			transfer_state = 516
+			transfer_state = 644
+			transfer_state = 562
+			transfer_state = 637
+			transfer_state = 574
+			transfer_state = 575
+			transfer_state = 576
+			transfer_state = 577
+			transfer_state = 580
+		}
+		MON = {
+			transfer_state = 563
+			transfer_state = 564
+			declare_war_on = {
+			    target = SOV
+			    type = annex_everything
+			}
+		}
+		 transfer_units_fraction= {
+		    target = MON
+		    size = 0.1
+		    stockpile_ratio = 0.1
+		    army_ratio = 0.1
+		}
+	}
+}

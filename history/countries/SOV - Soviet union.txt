@@ -92,6 +92,7 @@ add_ideas = {
 	RUS_russians_fleeing_serfdom
 	boyar_duma
 	RUS_ottoman_standoff
+	POL_influence_over_poland_3
 }
 
 create_country_leader = {

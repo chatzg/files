@@ -12,7 +12,8 @@ state={
 		victory_points = {
 			11800 15 
 		}
-		owner = UNC
+		owner = IRO
+		add_core_of = IRO
 	}
 	manpower=100
 	buildings_max_level_factor=1.000

@@ -69,18 +69,20 @@ focus = {
 	
 
 	completion_reward = {
-		add_political_power = 100
+		add_stability = 0.05
 	}
 }
 
+#FOREIGN AFFAIRS
+
 focus = {
 	id = POL_foreign_affairs
-	icon = GFX_POL_regency_council_focus
-	x = 4
+	icon = GFX_goal_generic_major_alliance
+	x = 10
 	y = 1
 	cost = 10
 	relative_position_id = POL_restructure_poland
-	prerequisite = { focus = POL_restructure_poland }
+	prerequisite = { focus = POL_restructure_poland focus = POL_depose_august }
 
 	ai_will_do = { 
 		factor = 100
@@ -93,10 +95,11 @@ focus = {
 }
 
 focus = {
-	id = POL_combat_foreign_influence
-	icon = GFX_POL_Russian_Alliance
+	id = POL_seek_swedish_support
+	icon = GFX_goal_sweden
 	prerequisite = { focus = POL_foreign_affairs }
-	x = -2
+	mutually_exclusive = { focus = POL_seek_russian_support }
+	x = -8
 	y = 1
 	cost = 10
 	relative_position_id = POL_foreign_affairs
@@ -105,7 +108,24 @@ focus = {
 		factor = 1
 	}
 	
+	completion_reward = {
+	}
+}
 
+focus = {
+	id = POL_seek_russian_support
+	icon = GFX_POL_Russian_Alliance
+	prerequisite = { focus = POL_foreign_affairs }
+	mutually_exclusive = { focus = POL_seek_swedish_support }
+	x = -6
+	y = 1
+	cost = 10
+	relative_position_id = POL_foreign_affairs
+
+	ai_will_do = { 
+		factor = 1
+	}
+	
 	completion_reward = {
 	}
 }
@@ -113,11 +133,11 @@ focus = {
 focus = {
 	id = POL_russian_relations
 	icon = GFX_POL_Russian_Alliance
-	prerequisite = { focus = POL_combat_foreign_influence }
+	prerequisite = { focus = POL_seek_russian_support }
 	x = 0
 	y = 1
 	cost = 10
-	relative_position_id = POL_combat_foreign_influence
+	relative_position_id = POL_seek_russian_support
 
 	ai_will_do = { 
 		factor = 1
@@ -150,6 +170,731 @@ focus = {
 	}
 }
 
+focus = {
+	id = POL_seek_austrian_support
+	icon = GFX_goal_flag_austria
+	x = 1
+	y = 1
+	cost = 5
+	prerequisite = { focus = POL_foreign_affairs }
+	relative_position_id = POL_foreign_affairs
+
+	available = {
+		ENG = {
+			has_opinion = {
+			    target = POL
+			    value > 49
+			}
+		}
+	}
+	
+	completion_reward = {
+		add_politicaL_power = 50
+		POL_increase_meddling = yes
+		AUS = { POL_increase_foreign_influence = yes }
+	}
+}
+
+focus = {
+	id = POL_purchase_katowice_and_zaolzie
+	icon = GFX_goal_generic_national_unity
+	prerequisite = { focus = POL_seek_austrian_support }
+	x = 2
+	y = 3
+	cost = 10
+	relative_position_id = POL_seek_austrian_support
+
+	ai_will_do = { 
+		factor = 1
+	}
+	
+	completion_reward = {
+		AUS = {
+			country_event = poland.11
+		}
+
+	}
+}
+
+focus = {
+	id = POL_saxon_ties
+	icon = GFX_goal_generic_major_alliance
+	x = -1
+	y = 1
+	cost = 5
+	prerequisite = { focus = POL_foreign_affairs }
+	relative_position_id = POL_foreign_affairs
+
+	available = {
+		SAX = { is_subject_of = POL }
+	}
+
+	completion_reward = {
+		add_opinion_modifier = {
+		    target = SAX
+		    modifier = medium_increase
+		}
+		SAX = {
+			add_opinion_modifier = {
+		    target = POL
+		    modifier = medium_increase
+			}
+		}
+	}
+}
+
+focus = {
+	id = POL_cooperate_with_prussia
+	icon = GFX_focus_crown_of_prussia
+	prerequisite = { focus = POL_saxon_ties }
+	x = 0
+	y = 1
+	cost = 5
+	relative_position_id = POL_saxon_ties
+
+	available = {
+	}
+
+	completion_reward = {
+		give_military_access = PRS
+		PRS = { give_military_access = POL }
+		add_opinion_modifier = {
+		    target = PRS
+		    modifier = large_increase
+		}
+		PRS = {
+			add_opinion_modifier = {
+		    target = POL
+		    modifier = large_increase
+			}
+		}
+	}
+}
+
+focus = {
+	id = POL_deploy_saxons
+	icon = GFX_focus_generic_little_entente
+	prerequisite = { focus = POL_cooperate_with_prussia }
+	prerequisite = { focus = POL_build_up_dresden }
+	x = 0
+	y = 2
+	cost = 5
+	relative_position_id = POL_cooperate_with_prussia
+
+	available = {
+	}
+
+	completion_reward = {
+		add_ideas = POL_deployed_saxons
+	}
+}
+
+focus = {
+	id = POL_develop_saxon_countryside
+	icon = GFX_goal_generic_construct_infrastructure
+	prerequisite = { focus = POL_saxon_ties }
+	x = -2
+	y = 1
+	cost = 10
+	relative_position_id = POL_saxon_ties
+
+	available = {
+		SAX = { is_subject_of = POL }
+	}
+
+	completion_reward = {
+		SAX = { 
+			random_owned_controlled_state = {
+				limit = {									
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+focus = {
+	id = POL_build_up_dresden
+	icon = GFX_goal_generic_construction2
+	prerequisite = { focus = POL_saxon_ties }
+	x = -1
+	y = 2
+	cost = 10
+	relative_position_id = POL_saxon_ties
+
+	available = {
+		SAX = { is_subject_of = POL }
+	}
+
+	completion_reward = {
+		SAX = { 
+			random_owned_controlled_state = {
+				limit = {									
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+focus = {
+	id = POL_relocate_government_to_dresden
+	icon = GFX_goal_generic_position_armies
+	prerequisite = { focus = POL_build_up_dresden }
+	prerequisite = { focus = POL_develop_saxon_countryside }
+	x = -2
+	y = 3
+	cost = 10
+	relative_position_id = POL_saxon_ties
+
+	available = {
+		SAX = { is_subject_of = POL }
+		has_capitulated = yes
+		SAX = { has_capitulated = no }
+		SAX = { is_ai = yes }
+	}
+
+	completion_reward = {
+		annex_country = {
+		    target = SAX
+		    transfer_troops = yes
+		}
+		set_capital = 65
+		add_state_core = 65
+		add_state_core = 884
+	}
+}
+
+focus = {
+	id = POL_seek_english_support
+	icon = GFX_focus_chi_british_cooperation
+	prerequisite = { focus = POL_foreign_affairs }
+	x = 6
+	y = 1
+	cost = 5
+	relative_position_id = POL_foreign_affairs
+
+	ai_will_do = { 
+		factor = 1
+	}
+
+	available = {
+		ENG = {
+			has_opinion = {
+			    target = POL
+			    value > 49
+			}
+		}
+	}
+	
+	completion_reward = {
+		add_politicaL_power = 50
+		POL_increase_meddling = yes
+	}
+}
+
+focus = {
+	id = POL_seek_french_support
+	icon = GFX_goal_fleur_de_lys
+	prerequisite = { focus = POL_foreign_affairs }
+	x = 8
+	y = 1
+	cost = 5
+	relative_position_id = POL_foreign_affairs
+
+	ai_will_do = { 
+		factor = 1
+	}
+
+	available = {
+		FRA = {
+			has_opinion = {
+			    target = POL
+			    value > 49
+			}
+		}
+	}
+	
+	completion_reward = {
+		add_politicaL_power = 50
+		POL_increase_meddling = yes
+	}
+}
+
+focus = {
+	id = POL_embargo_france
+	icon = GFX_goal_generic_trade
+	prerequisite = { focus = POL_seek_english_support }
+	x = -1
+	y = 1
+	cost = 5
+	relative_position_id = POL_seek_english_support
+
+	ai_will_do = { 
+		factor = 1
+	}
+
+	available = {
+	}
+	
+	completion_reward = {
+		FRA = {
+			add_opinion_modifier = { target = POL modifier = embargo }
+			add_opinion_modifier = { target = POL modifier = sanctions_relations } 
+		}
+		add_political_power = 100
+		POL_increase_meddling = yes
+
+	}
+}
+
+focus = {
+	id = POL_support_grand_alliance
+	icon = GFX_goal_generic_special_forces
+	prerequisite = { focus = POL_embargo_france }
+	x = -1
+	y = 1
+	cost = 5
+	relative_position_id = POL_embargo_france
+
+	ai_will_do = { 
+		factor = 1
+	}
+
+	available = {
+		OR = {
+			ENG = { has_war = yes }
+			AUS = { has_war = yes }
+		}
+	}
+	
+	completion_reward = {
+		add_ai_strategy = {
+		    type = send_volunteers_desire
+		    id = AUS
+		    value = 200
+		}
+		add_ai_strategy = {
+		    type = send_volunteers_desire
+		    id = ENG
+		    value = 200
+		}
+		reverse_add_opinion_modifier = {
+		    target = AUS
+		    modifier = large_increase
+		}
+		reverse_add_opinion_modifier = {
+		    target = ENG
+		    modifier = large_increase
+		}
+		reverse_add_opinion_modifier = {
+		    target = FRA
+		    modifier = large_decrease
+		}
+
+		send_equipment = {
+		    equipment = infantry_equipment
+		    amount = 1000
+		    target = AUS
+		}
+		send_equipment = {
+		    equipment = infantry_equipment
+		    amount = 1000
+		    target = ENG
+		}
+		add_ideas = volunteer_corps_focus
+		army_experience = 10
+	}
+}
+
+focus = {
+	id = POL_join_grand_alliance
+	icon = GFX_goal_generic_alliance
+	prerequisite = { focus = POL_support_grand_alliance }
+	x = 0
+	y = 2
+	cost = 5
+	relative_position_id = POL_support_grand_alliance
+
+	ai_will_do = { 
+		factor = 1
+	}
+
+	available = {
+		OR = {
+			ENG = { has_war = yes }
+			AUS = { has_war = yes }
+		}
+		is_in_faction = no
+	}
+	
+	completion_reward = {
+		if = {
+			limit = {
+				AUS = { is_faction_leader = yes }
+			}
+			AUS = { country_event = generic.2 }
+		}
+		if = {
+			limit = {
+				ENG = { is_faction_leader = yes }
+			}
+			ENG = { country_event = generic.2 }
+		}
+	}
+}
+
+focus = {
+	id = POL_english_ship_sale
+	icon = GFX_goal_tripartite_pact
+	prerequisite = { focus = POL_embargo_france }
+	prerequisite = { focus = POL_large_navy }
+	x = 0
+	y = 2
+	cost = 5
+	relative_position_id = POL_embargo_france
+
+	ai_will_do = { 
+		factor = 1
+	}
+
+	available = {
+		ENG = {
+			has_opinion = {
+			    target = POL
+			    value > 49
+			}
+		}
+	}
+	
+	completion_reward = {
+		ENG = {
+			transfer_ship = {
+			    type = destroyer
+			    prefer_name = "HMS Campbell"
+			    target = POL
+			}
+		}
+		give_resource_rights = { receiver = ENG state = 204 }
+	}
+}
+
+focus = {
+	id = POL_naval_investment
+	icon = GFX_goal_generic_construct_naval_dockyard
+	prerequisite = { focus = POL_seek_french_support focus = POL_seek_english_support }
+	x = -1
+	y = 1
+	cost = 10
+	relative_position_id = POL_seek_french_support
+
+	ai_will_do = { 
+		factor = 1
+	}
+
+	available = {
+	}
+	
+	completion_reward = {
+		random_owned_controlled_state = {
+			limit = {									
+				free_building_slots = {
+					building = dockyard
+					size > 2
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = dockyard
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+
+focus = {
+	id = POL_train_polish_marines
+	icon = GFX_goal_generic_amphibious_assault
+	prerequisite = { focus = POL_naval_investment }
+	x = 0
+	y = 2
+	cost = 5
+	relative_position_id = POL_naval_investment
+
+	ai_will_do = { 
+		factor = 1
+	}
+
+	available = {
+	}
+	
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = POL_support_french_war_effort
+	icon = GFX_goal_generic_small_arms
+	prerequisite = { focus = POL_seek_french_support }
+	x = 1
+	y = 1
+	relative_position_id = POL_seek_french_support
+	cost = 5
+
+	available = { 
+		NOT = { has_completed_focus = POL_embargo_france } 
+		FRA = {
+			has_opinion = {
+			    target = POL
+			    value > 49
+			}
+		}
+		FRA = { has_war = yes }
+	}
+
+	available_if_capitulated = no
+	completion_reward = {
+		add_ai_strategy = {
+		    type = send_volunteers_desire
+		    id = FRA
+		    value = 200
+		}
+		reverse_add_opinion_modifier = {
+		    target = FRA
+		    modifier = large_increase
+		}
+		reverse_add_opinion_modifier = {
+		    target = ENG
+		    modifier = large_decrease
+		}
+
+		send_equipment = {
+		    equipment = infantry_equipment
+		    amount = 2000
+		    target = FRA
+		}
+		add_ideas = volunteer_corps_focus
+		army_experience = 10
+	}
+}
+
+focus = {
+	id = POL_flexible_navy
+	icon = GFX_pirate_deal
+	prerequisite = { focus = POL_seek_french_support }
+	mutually_exclusive = { focus = POL_large_navy }
+	x = 0
+	y = 2
+	relative_position_id = POL_seek_french_support
+	cost = 5
+
+	available_if_capitulated = yes
+	available = {
+		FRA = {
+			has_opinion = {
+			    target = POL
+			    value > 49
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			all_owned_state = {
+				OR = {
+					is_coastal = no
+					dockyard < 1
+				}
+			}
+		}
+	}
+
+	completion_reward = {
+		navy_experience = 25
+		add_tech_bonus = {
+			name = sub_op_bonus
+			bonus = 1.0
+			uses = 2
+			technology = convoy_interdiction_ti
+			technology = unrestricted_submarine_warfare
+			technology = wolfpacks
+			technology = advanced_submarine_warfare
+			technology = combined_operations_raiding
+		}
+	}
+}
+
+focus = {
+	id = POL_privateer_effort
+	icon = GFX_pirates
+	prerequisite = { focus = POL_flexible_navy }
+	x = 0
+	y = 2
+	relative_position_id = POL_flexible_navy
+	cost = 5
+
+	available_if_capitulated = yes
+	available = {
+		FRA = {
+			has_opinion = {
+			    target = POL
+			    value > 49
+			}
+		}
+	}
+
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			all_owned_state = {
+				OR = {
+					is_coastal = no
+					dockyard < 1
+				}
+			}
+		}
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = ss_bonus
+			bonus = 1.0
+			ahead_reduction = 2
+			uses = 3
+			category = ss_tech
+		}
+	}
+}
+
+focus = {
+	id = POL_sell_convoys_to_france
+	icon = GFX_goal_generic_build_navy
+	prerequisite = { focus = POL_flexible_navy }
+	prerequisite = { focus = POL_support_french_war_effort }
+	x = 1
+	y = 1
+	relative_position_id = POL_flexible_navy
+	cost = 5
+
+	available = {
+		FRA = {
+			has_opinion = {
+			    target = POL
+			    value > 49
+			}
+		}
+	}
+
+	available_if_capitulated = yes
+	completion_reward = {
+		send_equipment = {
+		    equipment = convoy
+		    amount = 25
+		    target = FRA
+		}
+		add_offsite_building = { type = industrial_complex level = 2 }
+	}
+}
+
+focus = {
+	id = POL_large_navy
+	icon = GFX_goal_generic_navy_doctrines_tactics
+	prerequisite = { focus = POL_seek_english_support }
+	mutually_exclusive = { focus = POL_flexible_navy }
+	x = 0
+	y = 2
+	relative_position_id = POL_seek_english_support
+	cost = 5
+
+	available_if_capitulated = yes
+
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			all_owned_state = {
+				OR = {
+					is_coastal = no
+					dockyard < 1
+				}
+			}
+		}
+	}
+
+	completion_reward = {
+		navy_experience = 25
+		add_tech_bonus = {
+			name = fleet_in_being_bonus
+			bonus = 1.0
+			uses = 2
+			category = fleet_in_being_tree
+		}
+	}
+}
+
+focus = {
+	id = POL_man_o_war_effort
+	icon = GFX_goal_generic_navy_battleship
+	prerequisite = { focus = POL_large_navy }
+	x = 0
+	y = 2
+	relative_position_id = POL_large_navy
+	cost = 5
+
+	available_if_capitulated = yes
+
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			all_owned_state = {
+				OR = {
+					is_coastal = no
+					dockyard < 1
+				}
+			}
+		}
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = capital_ships_bonus
+			bonus = 1.0
+			ahead_reduction = 2
+			uses = 3
+			category = bb_tech
+			category = shbb_tech
+		}
+	}
+}
+
 #ABSOLUTISM
 
 focus = {
@@ -158,7 +903,7 @@ focus = {
 	prerequisite = { focus = POL_restructure_poland }
 	x = -4
 	y = 1
-	cost = 10
+	cost = 5
 	relative_position_id = POL_restructure_poland
 
 	ai_will_do = { 
@@ -179,7 +924,7 @@ focus = {
 	prerequisite = { focus = POL_question_of_absolutism }
 	x = -1
 	y = 1
-	cost = 10
+	cost = 5
 	relative_position_id = POL_question_of_absolutism
 
 	ai_will_do = { 
@@ -200,7 +945,7 @@ focus = {
 	prerequisite = { focus = POL_question_of_absolutism }
 	x = 1
 	y = 1
-	cost = 10
+	cost = 5
 	relative_position_id = POL_question_of_absolutism
 
 	ai_will_do = { 
@@ -223,7 +968,7 @@ focus = {
 	mutually_exclusive = { focus = POL_reform_thwarted }
 	x = 0
 	y = 2
-	cost = 10
+	cost = 5
 	relative_position_id = POL_question_of_absolutism
 
 	ai_will_do = { 
@@ -574,11 +1319,17 @@ focus = {
 focus = {
 	id = POL_great_betrayal
 	icon = GFX_focus_generic_strike_at_democracy2
-	prerequisite = { focus = POL_russian_relations }
-	x = 0
-	y = 1
+	prerequisite = { focus = POL_seek_austrian_support focus = POL_cooperate_with_prussia}
+	x = -1
+	y = 4
 	cost = 10
-	relative_position_id = POL_russian_relations
+	relative_position_id = POL_seek_austrian_support
+
+	available = { 
+		SOV = {
+			has_completed_focus = RUS_betray_poland
+		}
+	}
 
 	ai_will_do = { 
 		factor = 1
@@ -618,7 +1369,7 @@ focus = {
 	id = POL_depose_august
 	icon = GFX_focus_depose_august
 	mutually_exclusive = { focus = POL_restructure_poland }
-	x = 23
+	x = 31
 	y = 0
 	cost = 1
 
@@ -769,7 +1520,7 @@ focus = {
 	prerequisite = { focus = POL_stabilize_the_country }
 	relative_position_id = POL_depose_august
 	mutually_exclusive = { focus = POL_the_end_of_kings}
-	x = -4
+	x = 0
 	y = 2
 	cost = 0
 
@@ -833,29 +1584,9 @@ focus = {
 }
 
 focus = {
-	id = POL_request_silezia
-	icon = GFX_goal_generic_national_unity
-	prerequisite = { focus = POL_habsburg_candidate }
-	x = -1
-	y = 1
-	cost = 10
-	relative_position_id = POL_habsburg_candidate
-
-	ai_will_do = { 
-		factor = 1
-	}
-	
-	completion_reward = {
-		AUS = {
-			country_event = poland.11
-		}
-	}
-}
-
-focus = {
 	id = POL_support_austria
 	icon = GFX_goal_generic_alliance
-	prerequisite = { focus = POL_request_silezia }
+	prerequisite = { focus = POL_habsburg_candidate }
 	x = -1
 	y = 2
 	cost = 10
@@ -1498,23 +2229,24 @@ focus = {
 
 focus = {
 	id = POL_claims_in_the_baltic
-	icon = GFX_goal_generic_major_alliance
-	x = 0
-	y = 1
-	cost = 10
-	prerequisite = { focus = POL_foreign_affairs }
-	relative_position_id = POL_foreign_affairs
+	icon = GFX_goal_generic_territory_or_war
+	x = 1
+	y = 2
+	cost = 4
+	prerequisite = { focus = POL_seek_russian_support }
+	relative_position_id = POL_seek_russian_support
 
 	available = {
 	}
 
 	completion_reward = {
+		add_state_claim = 12
 	}
 }
 
 focus = {
 	id = POL_attack_sweden_test
-	icon = GFX_POL_regency_council_focus
+	icon = GFX_goal_sweden
 	x = 0
 	y = 1
 	cost = 1
@@ -1539,137 +2271,11 @@ focus = {
 	will_lead_to_war_with = SWE
 }
 
-#SAXONY
-
-focus = {
-	id = POL_saxon_ties
-	icon = GFX_goal_generic_major_alliance
-	x = 3
-	y = 1
-	cost = 10
-	prerequisite = { focus = POL_foreign_affairs }
-	relative_position_id = POL_foreign_affairs
-
-	available = {
-		SAX = { is_subject_of = POL }
-	}
-
-	completion_reward = {
-		add_opinion_modifier = {
-		    target = SAX
-		    modifier = medium_increase
-		}
-		SAX = {
-			add_opinion_modifier = {
-		    target = POL
-		    modifier = medium_increase
-			}
-		}
-		give_military_access = PRS
-		PRS = { give_military_access = POL }
-	}
-}
-
-focus = {
-	id = POL_develop_saxon_countryside
-	icon = GFX_goal_generic_construct_infrastructure
-	prerequisite = { focus = POL_saxon_ties }
-	x = -1
-	y = 1
-	cost = 10
-	relative_position_id = POL_saxon_ties
-
-	available = {
-		SAX = { is_subject_of = POL }
-	}
-
-	completion_reward = {
-		SAX = { 
-			random_owned_controlled_state = {
-				limit = {									
-					free_building_slots = {
-						building = infrastructure
-						size > 0
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-	}
-}
-
-focus = {
-	id = POL_build_up_dresden
-	icon = GFX_goal_generic_construction2
-	prerequisite = { focus = POL_saxon_ties }
-	x = 1
-	y = 1
-	cost = 10
-	relative_position_id = POL_saxon_ties
-
-	available = {
-		SAX = { is_subject_of = POL }
-	}
-
-	completion_reward = {
-		SAX = { 
-			random_owned_controlled_state = {
-				limit = {									
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-	}
-}
-
-focus = {
-	id = POL_relocate_government_to_dresden
-	icon = GFX_goal_generic_position_armies
-	prerequisite = { focus = POL_saxon_ties }
-	x = 0
-	y = 2
-	cost = 10
-	relative_position_id = POL_saxon_ties
-
-	available = {
-		SAX = { is_subject_of = POL }
-		has_capitulated = yes
-		SAX = { has_capitulated = no }
-		SAX = { is_ai = yes }
-	}
-
-	completion_reward = {
-		annex_country = {
-		    target = SAX
-		    transfer_troops = yes
-		}
-		set_capital = 65
-		add_state_core = 65
-		add_state_core = 884
-	}
-}
-
 focus = {
 	id = POL_rural_economy
 	icon = GFX_goal_generic_production
-	x = 33
-	y = 0
+	x = 7
+	y = 8
 	cost = 10
 
 	completion_reward = {
@@ -2029,8 +2635,8 @@ focus = {
 focus = {
 	id = POL_military_economy
 	icon = GFX_goal_generic_axis_build_infantry
-	x = 39
-	y = 0
+	x = 13
+	y = 8
 	cost = 10
 
 	completion_reward = {
@@ -2245,8 +2851,8 @@ focus = {
 focus = {
 	id = POL_reorganise_the_army
 	icon = GFX_focus_generic_military_academy
-	x = 48
-	y = 0
+	x = 21
+	y = 8
 	cost = 10
 
 	completion_reward = {

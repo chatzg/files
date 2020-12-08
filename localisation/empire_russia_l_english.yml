@@ -289,3 +289,9 @@ russia.15.t:0 "[From.GetName] refuses to revoke guarantee"
 russia.15.d:0 "[From.GetName] has refused to drop its guarantee on Zaporozhia, vowing to protect the rogue state should we move in to attack it. It is clear they won't allow us any territorial expansion out of pure misprizal, even if it is for the greater good."
 russia.16.t:0 "Treaty of Constantinople"
 russia.16.d:0 "After more then a year of negotiating following the treaty of Karlowitz between the Ottomans and the Holy League, the Tsardom of Russia and the Ottoman Empire have agreed on a truce set to expire in thirty years. The sultan has to recognize Russia's possession of the Azov area, including Asov and the newly built fortresses of Taganrog, Pavlovsk, and Mius. Russia dropped her claims to the Kerch Strait, but is henceforth relieved from paying annual tribute to the Crimean Khanate, which it has paid since the occupation of Muscovy by the Golden Horde. he fortresses along the Dnieper river, razed by Russian forces, will be returned to the Ottoman Empire. The lower Dniepr area, south of the Zaporozhian Sich, and the area between Perekop and Miuskiy Gorodok are declared a demilitarized zone. The sultan has asserted that his subordinates, the Crimean Tatars, will not attack Russia; in turn, the tsar has promised that his subordinates, the Don Cossacks and Zaporozhian Cossacks, will not attack the Ottoman Empire. \n \nBoth parties have also agreed not to build any fortifications along the border. The Ottoman empire has also promised to free Russian prisoners of war. The Sultan has further agreed free passage for Russian pilgrims to the Holy land and a Russian diplomatic representation in Constantinople."
+
+#cosmetic
+
+RUS_muscovy:0 "Muscovy"
+RUS_muscovy_DEF:0 "Muscovy"
+RUS_muscovy_ADJ:0 "Muscovite"

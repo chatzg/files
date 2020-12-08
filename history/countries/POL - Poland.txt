@@ -81,10 +81,10 @@ add_ideas = {
 	limited_exports
 	POL_sejm
 	kingdom
-	POL_russian_influence
 	berend_lehmann
 	POL_rural_society
 	POL_conscription_crisis
+	POL_foreign_meddling_4
 }
 
 create_country_leader = {

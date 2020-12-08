@@ -10,6 +10,9 @@ POL_foreign_influence = {
 		OR = {
 			original_tag = POL
 			original_tag = SOV
+			original_tag = AUS
+			original_tag = SWE
+			original_tag = PRS
 		}
 	}
 }

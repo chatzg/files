@@ -13,15 +13,15 @@ country_event = {
 
 	
 	fire_only_once = yes
-		trigger = {
-			tag = SPR
-			AND = {
-				date > 1700.11.1	
-				}
-		}
+	trigger = {
+		tag = SPR
+		AND = {
+			date > 1700.11.1	
+			}
+	}
 	mean_time_to_happen = {
     days = 0
-		}
+	}
 	option = {
 		custom_effect_tooltip = france.20.a_tt
 		set_country_flag = france_de_gaulle

@@ -11,7 +11,7 @@ state={
 	}
 
 	history={
-		owner = PRU
+		owner = MEX
 		buildings = {
 			infrastructure = 3
 			arms_factory = 1
@@ -25,7 +25,7 @@ state={
 			}
 		}
 		add_core_of = COL
-		add_core_of = PRU
+		add_core_of = MEX
 		victory_points = {
 			8113 5 
 		}

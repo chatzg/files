@@ -1037,8 +1037,11 @@ focus = {
 
 	available = {
 		has_war_with = POL
-		POL = {
-			surrender_progress > 0.5
+		OR = {	
+			POL = {
+				surrender_progress > 0.5
+			}
+			is_ai = yes
 		}
 	}
 	
@@ -1266,6 +1269,27 @@ focus = {
 
 	completion_reward = {
 		add_ideas = SWE_dealing_with_occupation
+	}
+}
+
+focus = {
+	id = SWE_dismantle_russia
+	icon = GFX_goal_generic_more_territorial_claims
+	prerequisite = { focus = SWE_deal_with_occupation }
+	x = -2
+	y = 5
+	cost = 10
+	relative_position_id = swedish_politics_10
+
+	available = {
+		219 = {
+			is_controlled_by  = SWE
+		}
+		SOV = { surrender_progress > 0.5 }
+	}
+
+	completion_reward = {
+		country_event = sweden.13
 	}
 }
 
@@ -1557,7 +1581,7 @@ focus = {
 	icon = GFX_focus_generic_home_defense
 	mutually_exclusive = { focus = SWE_defeat_in_the_northern_war }
 	x = 25
-	y = 8
+	y = 9
 	cost = 2
 	prerequisite = { focus = SWE_deal_with_occupation }
 
@@ -1880,7 +1904,7 @@ focus = {
 	id = SWE_defeat_in_the_northern_war
 	icon = GFX_focus_CZE_german_puppet
 	x = 15
-	y = 8
+	y = 9
 	cost = 10
 	prerequisite = { focus = SWE_deal_with_occupation }
 	mutually_exclusive = { focus = SWE_we_stand_victorious }

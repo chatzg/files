@@ -490,9 +490,8 @@ country_event = {
 
 	option = {
 		POL = {
-			transfer_state = 66
-			transfer_state = 67
 			transfer_state = 762
+			transfer_state = 72
 			add_opinion_modifier = {
 			    target = AUS
 			    modifier = large_increase
@@ -503,6 +502,7 @@ country_event = {
 				value = 200
 			}
 		}
+		add_offsite_building = { type = industrial_complex level = 2 }
 		add_opinion_modifier = {
 		    target = POL
 		    modifier = large_increase
@@ -587,6 +587,10 @@ country_event = {
 
 	option = {
 		name = poland.12.a
+		add_timed_idea = {
+		    idea = POL_recent_transaction
+		    days = 180
+		}
 	}
 }
 #refused
@@ -792,7 +796,6 @@ country_event = {
 	title = poland.22.t
 	desc = poland.22.d
 
-	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
@@ -838,7 +841,6 @@ country_event = {
 	title = poland.23.t
 	desc = poland.23.d
 
-	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
@@ -874,7 +876,6 @@ country_event = {
 	title = poland.24.t
 	desc = poland.24.d
 
-	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
@@ -910,7 +911,6 @@ country_event = {
 	title = poland.25.t
 	desc = poland.25.d
 
-	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
@@ -923,10 +923,78 @@ country_event = {
 	title = poland.26.t
 	desc = poland.26.d
 
-	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
 		name = poland.26.a
+	}
+}
+
+#karlowitz return of Podolia
+
+country_event = {
+	id = poland.27
+	title = poland.27.t
+	desc = poland.27.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Welcome home!"
+		transfer_state = 198
+		add_stability = 0.05
+	}
+}
+
+#an oppurtunity in Sweden
+
+country_event = {
+	id = poland.28
+	title = poland.28.t
+	desc = poland.28.d
+	
+	fire_only_once = yes
+	trigger = {
+		tag = POL
+		AND = {
+		date > 1700.02.01	
+		}
+		OR = {
+			is_in_faction_with = DEN
+			is_in_faction_with = SOV
+		}
+	}
+	mean_time_to_happen = {
+    days = 10
+	}
+
+	option = {
+		name = "This will strenghten my rule!"
+		add_war_support = 0.15
+		add_popularity = {
+		    ideology = neutrality
+		    popularity = 0.05
+		}
+		add_ideas = POL_rallying_behind_the_king
+		declare_war_on = {
+		    target = SWE
+		    type = annex_everything
+		}
+		if = {
+			limit = {
+				LAT = { is_subject_of = POL }
+			}
+			LAT = {
+				declare_war_on = {
+				    target = SWE
+				    type = annex_everything
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "We are not ready for war."
+		add_political_power = 50
 	}
 }

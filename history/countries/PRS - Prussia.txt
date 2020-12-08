@@ -13,6 +13,7 @@ give_guarantee = IFC
 add_ideas = {
 	protestant
 	extensive_conscription
+	POL_influence_over_poland_1
 }
 
 # Starting tech

@@ -1,5 +1,306 @@
 ideas = {
 	country = {
+		POL_recent_transaction = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			picture = the_great_depression
+
+			modifier = {
+				consumer_goods_factor = 0.10
+			}
+		}
+		POL_deployed_saxons = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			picture = generic_manpower_bonus
+
+			modifier = {
+				conscription = 0.02
+				root_out_resistance_effectiveness_factor = 0.1
+			}
+		}
+		POL_rallying_behind_the_king = {
+			allowed = {
+				always = no
+			}
+
+			name = POL_rallying_behind_the_king
+
+			removal_cost = -1
+			picture = ast_abandon_the_westminster_system
+
+			cancel = { surrender_progress > 0.05 }
+
+			modifier = {
+				stability_weekly = 0.005
+				neutrality_drift = 0.05
+			}
+		}
+		POL_influence_over_poland_6 = {
+			allowed = {
+				always = no
+			}
+
+			name = POL_influence_over_poland
+
+			removal_cost = -1
+			picture = chi_wargaming_division
+
+			modifier = {
+				political_power_gain = 0.30
+			}
+			targeted_modifier = { 
+				tag = POL 
+				attack_bonus_against = 0.6 
+			}
+		}
+		POL_influence_over_poland_5 = {
+			allowed = {
+				always = no
+			}
+
+			name = POL_influence_over_poland
+
+			removal_cost = -1
+			picture = chi_wargaming_division
+
+			modifier = {
+				political_power_gain = 0.25
+			}
+			targeted_modifier = { 
+				tag = POL 
+				attack_bonus_against = 0.5 
+			}
+		}
+		POL_influence_over_poland_4 = {
+			allowed = {
+				always = no
+			}
+
+			name = POL_influence_over_poland
+
+			removal_cost = -1
+			picture = chi_wargaming_division
+
+			modifier = {
+				political_power_gain = 0.20
+			}
+			targeted_modifier = { 
+				tag = POL 
+				attack_bonus_against = 0.4 
+			}
+		}
+		POL_influence_over_poland_3 = {
+			allowed = {
+				always = no
+			}
+
+			name = POL_influence_over_poland
+
+			removal_cost = -1
+			picture = chi_wargaming_division
+
+			modifier = {
+				political_power_gain = 0.15
+			}
+			targeted_modifier = { 
+				tag = POL 
+				attack_bonus_against = 0.3 
+			}
+		}
+		POL_influence_over_poland_2 = {
+			allowed = {
+				always = no
+			}
+
+			name = POL_influence_over_poland
+
+			removal_cost = -1
+			picture = chi_wargaming_division
+
+			modifier = {
+				political_power_gain = 0.10
+			}
+			targeted_modifier = { 
+				tag = POL 
+				attack_bonus_against = 0.2 
+			}
+		}
+		POL_influence_over_poland_1 = {
+			allowed = {
+				always = no
+			}
+
+			name = POL_influence_over_poland
+
+			removal_cost = -1
+			picture = chi_wargaming_division
+
+			modifier = {
+				political_power_gain = 0.05
+			}
+			targeted_modifier = { 
+				tag = POL 
+				attack_bonus_against = 0.1 
+			}
+		}
+		POL_foreign_meddling_10 = {
+			allowed = {
+				always = no
+			}
+
+			name = POL_foreign_meddling
+
+			removal_cost = -1
+			picture = chi_wargaming_division
+
+			modifier = {
+				political_power_gain = -0.30
+				stability_factor = -0.30
+			}
+		}
+		POL_foreign_meddling_9 = {
+			allowed = {
+				always = no
+			}
+
+			name = POL_foreign_meddling
+
+			removal_cost = -1
+			picture = chi_wargaming_division
+
+			modifier = {
+				political_power_gain = -0.27
+				stability_factor = -0.27
+			}
+		}
+		POL_foreign_meddling_8 = {
+			allowed = {
+				always = no
+			}
+
+			name = POL_foreign_meddling
+
+			removal_cost = -1
+			picture = chi_wargaming_division
+
+			modifier = {
+				political_power_gain = -0.24
+				stability_factor = -0.24
+			}
+		}
+		POL_foreign_meddling_7 = {
+			allowed = {
+				always = no
+			}
+
+			name = POL_foreign_meddling
+
+			removal_cost = -1
+			picture = chi_wargaming_division
+
+			modifier = {
+				political_power_gain = -0.21
+				stability_factor = -0.21
+			}
+		}
+		POL_foreign_meddling_6 = {
+			allowed = {
+				always = no
+			}
+
+			name = POL_foreign_meddling
+
+			removal_cost = -1
+			picture = chi_wargaming_division
+
+			modifier = {
+				political_power_gain = -0.18
+				stability_factor = -0.18
+			}
+		}
+		POL_foreign_meddling_5 = {
+			allowed = {
+				always = no
+			}
+
+			name = POL_foreign_meddling
+
+			removal_cost = -1
+			picture = chi_wargaming_division
+
+			modifier = {
+				political_power_gain = -0.15
+				stability_factor = -0.15
+			}
+		}
+		POL_foreign_meddling_4 = {
+			allowed = {
+				always = no
+			}
+
+			name = POL_foreign_meddling
+
+			removal_cost = -1
+			picture = chi_wargaming_division
+
+			modifier = {
+				political_power_gain = -0.12
+				stability_factor = -0.12
+			}
+		}
+		POL_foreign_meddling_3 = {
+			allowed = {
+				always = no
+			}
+
+			name = POL_foreign_meddling
+
+			removal_cost = -1
+			picture = chi_wargaming_division
+
+			modifier = {
+				political_power_gain = -0.09
+				stability_factor = -0.09
+			}
+		}
+		POL_foreign_meddling_2 = {
+			allowed = {
+				always = no
+			}
+
+			name = POL_foreign_meddling
+
+			removal_cost = -1
+			picture = chi_wargaming_division
+
+			modifier = {
+				political_power_gain = -0.06
+				stability_factor = -0.06
+			}
+		}
+		POL_foreign_meddling_1 = {
+			allowed = {
+				always = no
+			}
+
+			name = POL_foreign_meddling
+
+			removal_cost = -1
+			picture = chi_wargaming_division
+
+			modifier = {
+				political_power_gain = -0.03
+				stability_factor = -0.03
+			}
+		}
+
 		POL_liberum_veto = {
 			allowed = {
 				always = no
@@ -111,7 +412,7 @@ ideas = {
 
 			modifier = {
 				political_power_factor = -0.25
-				stability_factor = 0.05
+				stability_factor = 0.15
 			}
 		}
 
@@ -214,23 +515,7 @@ ideas = {
 				conversion_cost_civ_to_mil_factor = -0.2
 			}
 		}
-		POL_russian_influence = {
-			allowed = {
-				always = no
-			}
-
-			picture = "[FROM.OVERLORD.GetFlag]"
-			removal_cost = -1
-
-			modifier = {
-				political_power_gain = -0.05
-			}
-			targeted_modifier = { 
-				tag = SOV
-				attack_bonus_against = -0.10
-				defense_bonus_against = -0.10
-			}
-		}
+		
 		POL_rural_society = {
 			allowed = {
 				always = no
