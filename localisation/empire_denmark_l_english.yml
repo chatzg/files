@@ -16,7 +16,7 @@ kalmar_research_desc:0 "A joint research effort of Scandinavia to promote innova
 #focus:
 
 DEN_danish_age_of_absolutism:0 "Danish Age of Absolutism"
-DEN_danish_age_of_absolutism_desc:0 "Under the rule of Christian V, absolutism reached its peak in Denmark"
+DEN_danish_age_of_absolutism_desc:0 "Under the rule of Christian V, absolutism reached its peak in Denmark."
 DEN_rebuilding_the_nation:0 "Rebuilding the Nation"
 DEN_adressing_the_cattle_crisis:0 "Adressing the Cattle Crisis"
 DEN_concentrate_capital:0 "Concentrate Capital"
@@ -28,6 +28,7 @@ DEN_strike_first:0 "Strike First"
 DEN_abandon_revanchism:0 "Abandon Revanchism"
 DEN_open_ports_for_swedish_trade:0 "Open Ports for Swedish Trade"
 DEN_joint_ownership_of_sound_toll:0 "Joint Ownership of Sound Tolls"
+DEN_joint_ownership_of_sound_toll_desc:0 "If we can sign an agreement with Sweden to tighten our grip on both sides of the Øresund strait, we will be able to double the tax rates. In return, we'll see to it that Sweden gets parts of the profits."
 DEN_guarantees_for_territories:0 "Guarantees for Territories"
 DEN_drop_claims_on_scania:0 "Drop Claims on Scania"
 DEN_alliance_of_kalmar:0 "Alliance of Kalmar"
@@ -92,9 +93,28 @@ DEN_demand_holstein_allegiance:0 "Demand Holstein Allegiance"
 DEN_reintegrate_lost_territories:0 "Reintegrate Lost Territories"
 DEN_raiding_parties:0 "Danish Rading Parties"
 DEN_raiding_parties_desc:0 "Once upon a time, the Danish raiding parties were feared throughout Europe. Now the time has come to once again inspire fear in the hearts of men."
-
-
-
+DEN_crush_england:0 "Crush England"
+DEN_southern_thrust:0 "Southern Thrust"
+DEN_land_of_invaders:0 "The Great Invaders"
+DEN_seize_holstein:0 "Seize Holstein"
+DEN_sack_paris:0 "Sack Paris"
+DEN_threaten_lubeck:0 "Threaten Lubeck"
+DEN_threaten_hamburg:0 "Threaten Hamburg"
+DEN_threaten_mecklenburg:0 "Threaten Mecklenburg"
+DEN_crush_prussia:0 "Crush Prussia"
+DEN_merchant_navy:0 "Merchant Navy"
+DEN_privateering_effort:0 "Privateering Effort"
+DEN_frigate_effort:0 "Frigate Effort"
+DEN_conquest_of_paradise:0 "Conquest of Paradise"
+DEN_battleship_effort:0 "Man-of-War Effort"
+DEN_battlecruiser_effort:0 "Ship of the Line Models"
+DEN_destroyer_effort:0 "Pirate Hunting Investment"
+DEN_naval_effort:0 "Naval Effort"
+DEN_institutional_advancement:0 "Institutional Advancement"
+DEN_persue_absolutism:0 "Persue Absolutism"
+DEN_dawn_of_the_englightenment:0 "Dawn of the Englightenment"
+DEN_extra_research_slot:0 "Extra Research Slot"
+DEN_administrative_institutionalization:0 "Administrative Institutionalization"
 #ideas:
 DEN_outmanoeuvred_by_sweden:0 "Outmanoeuvred Military"
 DEN_cattle_crisis:0 "Cattle Crisis"
@@ -111,7 +131,9 @@ DEN_unification_of_embassies:0 "Unification of Embassies"
 DEN_kalmar_restauration:0 "Kalmar Restauration"
 DEN_naval_arms_race:0 "Naval Arms Race"
 DEN_raiding_fleet:0 "Raiding Fleet"
-
+DEN_invasion_specialists:0 "Expert Invaders"
+DEN_additional_sound_toll_dues:0 "Additional Sound Toll Dues"
+DEN_additional_sound_toll_dues_desc:0 "An agreement with Sweden has allowed for Denmark to increase their grip on the Danish belts, increasing the toll prices significantly. The treaty stands, as long as Denmark agrees to share its profits."
 
 #events:
 denmark.1.t:0 "Naval powers enforce treaty of Travendal"
@@ -173,5 +195,9 @@ denmark.33.d:0 ""
 #decisions:
 
 #cosmetic tags:
+
+DEN_north_sea_empire:0 "North Sea Empire"
+DEN_north_sea_empire_DEF:0 "the North Sea Empire"
+DEN_north_sea_empire_ADJ:0 "Danish"
 
 #tooltips:

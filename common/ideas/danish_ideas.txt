@@ -1,5 +1,37 @@
 ideas = {
 	country = {
+
+		DEN_additional_sound_toll_dues = {
+			allowed = {
+				always = no
+			}
+
+			picture = HUN_treaty_of_triannon
+
+			removal_cost = -1
+
+			cancel = { has_war_with = SWE }
+			
+			modifier = {
+				consumer_goods_factor = -0.04
+			}
+		}
+		
+		DEN_legacy_of_the_great_adventurers = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_reserve_divisions
+
+			removal_cost = -1
+
+			
+			modifier = {
+				war_support_weekly = 0.005
+					army_attack_factor = 0.1
+			}
+		}
 		DEN_naval_arms_race = {
 			allowed = {
 				always = no
