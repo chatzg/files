@@ -1,11 +1,19 @@
 ﻿capital = 941
 
+oob = "UGA_1699"
+
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
+	tech_mountaineers = 1
 }
 
 set_convoys = 0
+
+add_ideas = {
+	extensive_conscription
+	catholic
+}
 
 set_politics = {
 	ruling_party = neutrality
@@ -18,4 +26,9 @@ set_popularities = {
 	fascism = 15
 	communism = 5
 	neutrality = 25
+}
+
+declare_war_on = {
+	target = ANG
+	type = annex_everything
 }

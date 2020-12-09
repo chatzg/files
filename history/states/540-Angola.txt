@@ -9,9 +9,7 @@ state={
 	history={
 		owner = ANG
 		add_core_of = ANG
-		victory_points = {
-			8248 5
-		}
+		
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
@@ -24,7 +22,7 @@ state={
 	provinces={
 		8248 12981 
 	}
-	manpower=95284
+	manpower=195284
 	buildings_max_level_factor=1.000
 	state_category=rural
 }

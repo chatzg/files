@@ -2,15 +2,14 @@ state={
 	id=770
 	name="STATE_770"
 
-	impassable = yes
-
 	provinces={
 		2255 12908 12986 13209 
 	}
 	history={
-	owner = UNC
+	owner = MLW
 	}
-	manpower=1603975
+	add_core_of = MLW
+	manpower=430487
 	buildings_max_level_factor=1.000
 	state_category=pastoral
 }
