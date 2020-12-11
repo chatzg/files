@@ -1,6 +1,11 @@
 
 #reload countrycolors
 
+LIT = {
+	color = rgb { 126 45 123 }
+	color_ui = rgb { 126 45 123 }	
+}
+
 NUR = {
 	color = rgb { 219 81 0 }
 	color_ui = rgb { 219 81 0  }	

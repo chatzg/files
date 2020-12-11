@@ -1,5 +1,25 @@
 ideas = {
 	country = {
+			
+		POL_foreign_military_advisors = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			picture = generic_war_preparation
+
+			modifier = {
+				experience_gain_army = 0.05
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+			research_bonus = {
+				land_doctrine = 0.10
+			}
+		}
 		POL_recent_transaction = {
 			allowed = {
 				always = no
@@ -8,6 +28,10 @@ ideas = {
 			removal_cost = -1
 			picture = the_great_depression
 
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
 			modifier = {
 				consumer_goods_factor = 0.10
 			}
@@ -15,6 +39,9 @@ ideas = {
 		POL_deployed_saxons = {
 			allowed = {
 				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
 			}
 
 			removal_cost = -1
@@ -28,6 +55,9 @@ ideas = {
 		POL_rallying_behind_the_king = {
 			allowed = {
 				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
 			}
 
 			name = POL_rallying_behind_the_king
@@ -157,6 +187,10 @@ ideas = {
 
 			name = POL_foreign_meddling
 
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
 			removal_cost = -1
 			picture = chi_wargaming_division
 
@@ -171,6 +205,10 @@ ideas = {
 			}
 
 			name = POL_foreign_meddling
+
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
 
 			removal_cost = -1
 			picture = chi_wargaming_division
@@ -187,6 +225,10 @@ ideas = {
 
 			name = POL_foreign_meddling
 
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
 			removal_cost = -1
 			picture = chi_wargaming_division
 
@@ -201,6 +243,10 @@ ideas = {
 			}
 
 			name = POL_foreign_meddling
+
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
 
 			removal_cost = -1
 			picture = chi_wargaming_division
@@ -217,6 +263,10 @@ ideas = {
 
 			name = POL_foreign_meddling
 
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
 			removal_cost = -1
 			picture = chi_wargaming_division
 
@@ -231,6 +281,10 @@ ideas = {
 			}
 
 			name = POL_foreign_meddling
+
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
 
 			removal_cost = -1
 			picture = chi_wargaming_division
@@ -247,6 +301,10 @@ ideas = {
 
 			name = POL_foreign_meddling
 
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
 			removal_cost = -1
 			picture = chi_wargaming_division
 
@@ -261,6 +319,10 @@ ideas = {
 			}
 
 			name = POL_foreign_meddling
+
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
 
 			removal_cost = -1
 			picture = chi_wargaming_division
@@ -277,6 +339,10 @@ ideas = {
 
 			name = POL_foreign_meddling
 
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
 			removal_cost = -1
 			picture = chi_wargaming_division
 
@@ -291,6 +357,10 @@ ideas = {
 			}
 
 			name = POL_foreign_meddling
+
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
 
 			removal_cost = -1
 			picture = chi_wargaming_division
@@ -309,6 +379,10 @@ ideas = {
 			removal_cost = -1
 
 			picture = generic_disjointed_gov
+
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
 			
 			modifier = {
 				stability_factor = -0.20
@@ -325,6 +399,10 @@ ideas = {
 			}
 
 			removal_cost = -1
+
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
 
 			picture = generic_disjointed_gov
 			
@@ -346,6 +424,10 @@ ideas = {
 
 			picture = ROM_king_carol_ii_hedonist
 
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
 			modifier = {
 				production_speed_buildings_factor = -0.2
 				industrial_capacity_factory = -0.2
@@ -362,6 +444,10 @@ ideas = {
 
 			picture = ROM_king_carol_ii_hedonist
 
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
 			modifier = {
 				production_speed_buildings_factor = -0.1
 				industrial_capacity_factory = -0.1
@@ -375,6 +461,10 @@ ideas = {
 			}
 
 			removal_cost = -1
+
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
 
 			picture = ROM_king_carol_ii_hedonist
 
@@ -394,6 +484,10 @@ ideas = {
 
 			picture = generic_army_problems
 
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
 			modifier = {
 				minimum_training_level = -0.1
 				mobilization_speed = -0.1	
@@ -410,6 +504,9 @@ ideas = {
 
 			picture = generic_pp_unity_bonus
 
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
 			modifier = {
 				political_power_factor = -0.25
 				stability_factor = 0.15
@@ -423,11 +520,15 @@ ideas = {
 
 			removal_cost = -1
 
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
 			picture = generic_pp_unity_bonus
 
 			modifier = {
 				political_power_factor = -0.10
-				stability_factor = 0.05
+				stability_factor = 0.15
 			}
 		}
 
@@ -437,6 +538,10 @@ ideas = {
 			}
 
 			removal_cost = -1
+
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
 
 			picture = generic_pp_unity_bonus
 
@@ -452,6 +557,10 @@ ideas = {
 			}
 
 			removal_cost = -1
+
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
 
 			cancel = { neutrality < 0.1 }
 
@@ -470,6 +579,10 @@ ideas = {
 
 			cancel = { neutrality < 0.1 }
 
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
 			picture = raj_marginalized_muslim_community_angry
 
 			modifier = {
@@ -483,6 +596,10 @@ ideas = {
 
 			picture = generic_volunteer_expedition_bonus
 
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
 			removal_cost = -1
 
 			modifier = {
@@ -495,6 +612,10 @@ ideas = {
 			}
 
 			picture = ROM_king_carol_ii_hedonist
+
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
 
 			removal_cost = -1
 
@@ -511,6 +632,10 @@ ideas = {
 			picture = generic_central_management
 			removal_cost = -1
 
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
 			modifier = {
 				conversion_cost_civ_to_mil_factor = -0.2
 			}
@@ -521,6 +646,10 @@ ideas = {
 				always = no
 			}
 			removal_cost = -1
+
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
 
 			picture = generic_agrarian_society
 
@@ -533,14 +662,58 @@ ideas = {
 			}
 		}
 	}
+	navy_chief = {
+		jan_baert = { 
+
+			picture = trader
+			
+			traits = { navy_chief_commerce_raiding_3 }
+		}
+	}
+
+	chief_diplomatic_advisor = {
+		melchior_de_polignac = { 
+
+			picture = clergyman_1
+			
+			traits = { backroom_backstabber }
+		}
+	}
+	
+	political_advisor = {
+		cardinal_radziejowski = { 
+
+			picture = clergyman_4
+			
+			traits = { cardinal_in_administration }
+		}
+	}
+
 	chief_economic_advisor = {
 		berend_lehmann = {
-
+			available = {
+				has_country_leader = {
+				    name = "Frederick Augustus"
+				    ruling_only = yes
+				}
+			}
+			cancel = { 
+				NOT = {
+					has_country_leader = {
+					    name = "Frederick Augustus"
+					    ruling_only = yes
+					}
+				}
+			}
 			allowed = {
 				has_country_leader = {
 				    name = "Frederick Augustus"
 				    ruling_only = yes
 				}
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality 
 			}
 
 			picture = merchant_3

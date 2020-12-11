@@ -1496,7 +1496,7 @@ focus_tree = {
 
 		bypass = {
 			OR = {
-				PRS = { exists = 0 }
+				PRS = { exists = no }
 				PRS = { is_puppet_of = DEN }
 				has_war_with = PRS
 			}
@@ -1631,7 +1631,7 @@ focus_tree = {
 
 		bypass = {
 			OR = {
-				SHL = { exists = 0 }
+				SHL = { exists = no }
 				SHL = { is_puppet_of = DEN }
 				has_war_with = SHL
 			}
@@ -1665,7 +1665,7 @@ focus_tree = {
 
 		bypass = {
 			OR = {
-				SOV = { exists = 0 }
+				SOV = { exists = no }
 				SOV = { is_puppet_of = DEN }
 				has_war_with = SOV
 			}
@@ -1697,7 +1697,7 @@ focus_tree = {
 
 		bypass = {
 			OR = {
-				POL = { exists = 0 }
+				POL = { exists = no }
 				POL = { is_puppet_of = DEN }
 				has_war_with = POL
 			}
@@ -1757,7 +1757,7 @@ focus_tree = {
 
 		bypass = {
 			OR = {
-				ENG = { exists = 0 }
+				ENG = { exists = no }
 				ENG = { is_puppet_of = DEN }
 				has_war_with = ENG
 			}
@@ -1835,7 +1835,7 @@ focus_tree = {
 
 		bypass = {
 			OR = {
-				FRA = { exists = 0 }
+				FRA = { exists = no }
 				FRA = { is_puppet_of = DEN }
 				has_war_with = FRA
 			}

@@ -35,5 +35,17 @@ set_politics = {
 set_popularities = {
 	democratic = 20
 	communism = 10
-	neutrality = 70
+	aristocracy = 30
+	neutrality = 40
+}
+
+create_country_leader = {
+	name = "Ayuka Khan"
+	desc = ""
+	picture = "asian_leader_3.dds"
+	expire = "1953.3.1"
+	ideology = despotism
+	traits = {
+		
+	}
 }

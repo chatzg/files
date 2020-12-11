@@ -110,16 +110,6 @@ ideas = {
 			traits = { popular_figurehead }
 		}
 
-		generic_popular_figurehead = {
-
-			allowed = {
-			}
-
-			picture = artist
-			
-			traits = { popular_figurehead }
-		}
-
 		generic_revolutionairy = {
 			allowed = {
 			}
@@ -264,7 +254,8 @@ ideas = {
 
 		generic_backroom_backstabber = {
 
-			allowed = {
+			visible = { 
+				NOT = { original_tag = POL }
 			}
 
 			picture = clergyman_1

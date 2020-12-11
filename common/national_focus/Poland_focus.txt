@@ -59,17 +59,21 @@ focus = {
 	id = POL_restructure_poland
 	icon = GFX_POL_regency_council_focus
 	mutually_exclusive = { focus = POL_depose_august }
-	x = 5
+	x = 6
 	y = 0
 	cost = 10
 
 	ai_will_do = { 
 		factor = 100
 	}
-	
 
 	completion_reward = {
 		add_stability = 0.05
+		add_ai_strategy = {
+		    type = befriend
+		    id = SOV
+		    value = 200
+		}
 	}
 }
 
@@ -78,10 +82,9 @@ focus = {
 focus = {
 	id = POL_foreign_affairs
 	icon = GFX_goal_generic_major_alliance
-	x = 10
+	x = 24
 	y = 1
 	cost = 10
-	relative_position_id = POL_restructure_poland
 	prerequisite = { focus = POL_restructure_poland focus = POL_depose_august }
 
 	ai_will_do = { 
@@ -91,6 +94,23 @@ focus = {
 
 	completion_reward = {
 		add_political_power = 100
+		add_ai_strategy = {
+		    type = befriend
+		    id = AUS
+		    value = 50
+		}
+
+		add_ai_strategy = {
+		    type = befriend
+		    id = ENG
+		    value = 50
+		}
+
+		add_ai_strategy = {
+		    type = befriend
+		    id = FRA
+		    value = 50
+		}
 	}
 }
 
@@ -108,7 +128,104 @@ focus = {
 		factor = 1
 	}
 	
+	available = {
+		SWE = {
+			has_opinion = {
+			    target = POL
+			    value > 49
+			}
+		}
+	}
+	
 	completion_reward = {
+		add_opinion_modifier = {
+		    target = SWE
+		    modifier = large_increase
+		}
+		SWE = {
+			add_opinion_modifier = {
+		    target = POL
+		    modifier = large_increase
+			}
+		}
+		add_politicaL_power = 50
+		POL_increase_meddling = yes
+		SWE = { POL_increase_foreign_influence = yes }
+	}
+}
+
+focus = {
+	id = POL_strenghten_swedish_ties
+	icon = GFX_goal_generic_improve_relations
+	x = -1
+	y = 1
+	cost = 5
+	prerequisite = {  focus = POL_seek_swedish_support }
+	relative_position_id = POL_seek_swedish_support
+
+	available = {
+	}
+
+	completion_reward = {
+		POL_increase_meddling = yes
+		SWE = { POL_increase_foreign_influence = yes }
+		add_political_power = 100
+		diplomatic_relation = {
+		    country = SWE
+		    relation = non_aggression_pact
+		    active = yes
+		}
+	}
+}
+
+focus = {
+	id = POL_placeholder_1
+	icon = GFX
+	x = 0
+	y = 2
+	cost = 5
+	prerequisite = {  focus = POL_seek_swedish_support }
+	prerequisite = {  focus = POL_strenghten_swedish_ties }
+	relative_position_id = POL_seek_swedish_support
+
+	available = {
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = POL_placeholder_3
+	icon = GFX
+	x = -1
+	y = 1
+	cost = 5
+	prerequisite = {  focus = POL_strenghten_swedish_ties}
+	relative_position_id = POL_strenghten_swedish_ties
+
+	available = {
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = POL_invite_military_advisors
+	icon = GFX_focus_generic_military_academy
+	x = 1
+	y = 1
+	cost = 5
+	prerequisite = { focus = POL_seek_russian_support focus = POL_seek_swedish_support }
+	relative_position_id = POL_seek_swedish_support
+
+	available = {
+	}
+
+	completion_reward = {
+		POL_increase_meddling = yes
+		add_ideas = POL_foreign_military_advisors
 	}
 }
 
@@ -125,25 +242,16 @@ focus = {
 	ai_will_do = { 
 		factor = 1
 	}
-	
-	completion_reward = {
-	}
-}
 
-focus = {
-	id = POL_russian_relations
-	icon = GFX_POL_Russian_Alliance
-	prerequisite = { focus = POL_seek_russian_support }
-	x = 0
-	y = 1
-	cost = 10
-	relative_position_id = POL_seek_russian_support
-
-	ai_will_do = { 
-		factor = 1
+	available = {
+		SOV = {
+			has_opinion = {
+			    target = POL
+			    value > 49
+			}
+		}
 	}
 	
-
 	completion_reward = {
 		add_opinion_modifier = {
 		    target = SOV
@@ -155,20 +263,95 @@ focus = {
 		    modifier = large_increase
 			}
 		}
-		add_ai_strategy = {
-		    type = alliance
-		    id = SOV
-		    value = 200
-		}
-		SOV = {
-			add_ai_strategy = {
-		    type = alliance
-		    id = POL
-		    value = 200
-			}
-		}
+		add_politicaL_power = 100
+		POL_increase_meddling = yes
+		SOV = { POL_increase_foreign_influence = yes }
 	}
 }
+
+focus = {
+	id = POL_enforce_peace_with_russian_troops
+	icon = GFX_goal_generic_political_pressure
+	x = 1
+	y = 1
+	cost = 5
+	prerequisite = { focus = POL_seek_russian_support }
+	relative_position_id = POL_seek_russian_support
+
+	available = {
+	}
+
+	completion_reward = {
+		add_stability = 0.10
+		POL_increase_meddling = yes
+		SOV = { POL_increase_foreign_influence = yes }	
+		add_political_power = 25
+	}
+}
+
+focus = {
+	id = POL_treaty_of_prebrazhnskoya
+	icon = GFX_goal_generic_alliance
+	x = 0
+	y = 2
+	cost = 5
+	prerequisite = { focus = POL_enforce_peace_with_russian_troops focus = POL_claims_in_the_baltic}
+	relative_position_id = POL_enforce_peace_with_russian_troops
+
+	available = {
+	}
+
+	completion_reward = {
+		add_war_support = 0.10
+	}
+}
+
+focus = {
+	id = POL_claims_in_the_baltic
+	icon = GFX_goal_generic_territory_or_war
+	x = 0
+	y = 2
+	cost = 4
+	prerequisite = { focus = POL_seek_russian_support }
+	relative_position_id = POL_seek_russian_support
+
+	available = {
+	}
+
+	completion_reward = {
+		add_state_claim = 12
+	}
+}
+
+focus = {
+	id = POL_attack_sweden_test
+	icon = GFX_goal_sweden
+	x = 0
+	y = 2
+	cost = 5
+	prerequisite = { focus = POL_claims_in_the_baltic }
+	prerequisite = { focus = POL_treaty_of_prebrazhnskoya }
+	
+	relative_position_id = POL_claims_in_the_baltic
+
+	available = {
+		date > 1700.02.01
+	}
+
+	ai_will_do = { 
+		factor = 1000
+	}
+	
+
+	completion_reward = {
+		declare_war_on = {
+		    target = SWE
+		    type = annex_everything
+		}
+	}
+	will_lead_to_war_with = SWE
+}
+
 
 focus = {
 	id = POL_seek_austrian_support
@@ -180,7 +363,7 @@ focus = {
 	relative_position_id = POL_foreign_affairs
 
 	available = {
-		ENG = {
+		AUS = {
 			has_opinion = {
 			    target = POL
 			    value > 49
@@ -196,13 +379,40 @@ focus = {
 }
 
 focus = {
+	id = POL_support_charles
+	icon = GFX_goal_charles_III
+	prerequisite = { focus = POL_seek_austrian_support }
+	x = 2
+	y = 1
+	cost = 5
+	relative_position_id = POL_seek_austrian_support
+
+	ai_will_do = { 
+		factor = 1
+	}
+	
+	completion_reward = {
+		add_politicaL_power = 50
+		add_threat = 2
+		AUS = {
+			add_opinion_modifier = {
+		    target = POL
+		    modifier = large_increase
+			}
+		}
+		add_war_support = 0.05
+	}
+}
+
+focus = {
 	id = POL_purchase_katowice_and_zaolzie
 	icon = GFX_goal_generic_national_unity
-	prerequisite = { focus = POL_seek_austrian_support }
+	prerequisite = { focus = POL_support_charles }
 	x = 2
 	y = 3
 	cost = 10
 	relative_position_id = POL_seek_austrian_support
+	prerequisite = { focus = POL_placeholder_6 }
 
 	ai_will_do = { 
 		factor = 1
@@ -213,6 +423,58 @@ focus = {
 			country_event = poland.11
 		}
 
+	}
+}
+
+focus = {
+	id = POL_placeholder_5
+	icon = GFX
+	prerequisite = { focus = POL_seek_austrian_support }
+	x = 0
+	y = 1
+	cost = 10
+	relative_position_id = POL_seek_austrian_support
+
+	ai_will_do = { 
+		factor = 1
+	}
+	
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = POL_placeholder_6
+	icon = GFX
+	prerequisite = { focus = POL_seek_austrian_support }
+	x = 1
+	y = 2
+	cost = 10
+	relative_position_id = POL_seek_austrian_support
+
+	ai_will_do = { 
+		factor = 1
+	}
+	
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = POL_placeholder_7
+	icon = GFX
+	prerequisite = { focus = POL_placeholder_5 }
+	prerequisite = { focus = POL_placeholder_6 }
+	x = 0
+	y = 3
+	cost = 10
+	relative_position_id = POL_seek_austrian_support
+
+	ai_will_do = { 
+		factor = 1
+	}
+	
+	completion_reward = {
 	}
 }
 
@@ -472,6 +734,7 @@ focus = {
 	id = POL_support_grand_alliance
 	icon = GFX_goal_generic_special_forces
 	prerequisite = { focus = POL_embargo_france }
+	prerequisite = { focus = POL_support_charles }
 	x = -1
 	y = 1
 	cost = 5
@@ -901,7 +1164,7 @@ focus = {
 	id = POL_question_of_absolutism
 	icon = GFX_focus_generic_monarchy_2
 	prerequisite = { focus = POL_restructure_poland }
-	x = -4
+	x = 0
 	y = 1
 	cost = 5
 	relative_position_id = POL_restructure_poland
@@ -1369,9 +1632,9 @@ focus = {
 	id = POL_depose_august
 	icon = GFX_focus_depose_august
 	mutually_exclusive = { focus = POL_restructure_poland }
-	x = 31
+	x = 42
 	y = 0
-	cost = 1
+	cost = 10
 
 	available = {
 	}
@@ -1391,7 +1654,7 @@ focus = {
 		start_civil_war = {
 			ruling_party = neutrality
 			ideology = aristocracy
-			size = 0.5
+			size = 0.45
 			capital = 784
 			states = { 868 85 86 98 87 10 90 88 92 97 }
 		}
@@ -1437,42 +1700,72 @@ focus = {
 			traits = {			
 			}
 		}
-		random_other_country = {
-			limit = {
-				original_tag = POL
-				has_government = aristocracy
+		hidden_effect = {
+			add_ideas = {
+				POL_liberum_veto
+				POL_dominance_of_nobles
+				catholic
+				limited_exports
+				POL_sejm
+				kingdom
+				berend_lehmann
+				POL_rural_society
+				POL_conscription_crisis
+				POL_foreign_meddling_4
 			}
-			set_popularities = {
-				aristocracy = 40
-				democratic = 17
-				neutrality = 12
-				fascism = 21
-				communism = 10
+		    random_other_country = {
+				limit = {
+					original_tag = POL
+					has_government = aristocracy
+				}
+				set_popularities = {
+					aristocracy = 40
+					democratic = 17
+					neutrality = 12
+					fascism = 21
+					communism = 10
+				}
+				create_country_leader = {
+					name = "Frederick Augustus"
+					desc = "POLITICS_FREDERICK_AUGUSTUS_DESC"
+					traits = { disputed_reign }
+					picture = "Saxony_leader.dds"
+					expire = "1965.1.1"
+					ideology = nobility
+				}
+				set_cosmetic_tag = POL
+				set_capital = 10
+				load_focus_tree = { tree = Polish_focus keep_completed = no }
+				complete_national_focus = POL_restructure_poland
+				add_ideas = {
+					POL_liberum_veto
+					POL_dominance_of_nobles
+					catholic
+					limited_exports
+					POL_sejm
+					kingdom
+					berend_lehmann
+					POL_rural_society
+					POL_conscription_crisis
+					POL_foreign_meddling_4
+				}
 			}
-			create_country_leader = {
-				name = "Frederick Augustus"
-				desc = "POLITICS_FREDERICK_AUGUSTUS_DESC"
-				traits = { disputed_reign }
-				picture = "Saxony_leader.dds"
-				expire = "1965.1.1"
-				ideology = nobility
-			}
-			set_cosmetic_tag = POL
-			set_capital = 10
 		}
+		
 	}
 }
 
 focus = {
 	id = POL_stabilize_the_country
-	icon = GFX_focus_plc_commonwealth_king
+	icon = GFX_goal_generic_neutrality_focus
 	prerequisite = { focus = POL_depose_august }
 	relative_position_id = POL_depose_august
 	x = 0
 	y = 1
-	cost = 0
+	cost = 5
 
 	available = {
+		has_civil_war = no
 	}
 
 	bypass = {
@@ -1491,7 +1784,7 @@ focus = {
 
 focus = {
 	id = POL_the_end_of_kings
-	icon = GFX_focus_plc_commonwealth_king
+	icon = GFX_focus_rom_abdicate
 	prerequisite = { focus = POL_stabilize_the_country }
 	relative_position_id = POL_depose_august
 	mutually_exclusive = { focus = POL_elect_new_king}
@@ -1516,7 +1809,7 @@ focus = {
 
 focus = {
 	id = POL_elect_new_king
-	icon = GFX_focus_plc_commonwealth_king
+	icon = GFX_focus_generic_monarchy_2
 	prerequisite = { focus = POL_stabilize_the_country }
 	relative_position_id = POL_depose_august
 	mutually_exclusive = { focus = POL_the_end_of_kings}
@@ -1536,12 +1829,13 @@ focus = {
 	
 
 	completion_reward = {
+		set_cosmetic_tag = POL
 	}
 }
 
 focus = {
 	id = POL_habsburg_candidate
-	icon = GFX_focus_pol_austrian_king
+	icon = GFX_focus_plc_commonwealth_king
 	prerequisite = { focus = POL_elect_new_king }
 	mutually_exclusive = { focus = POL_french_candidate }
 	mutually_exclusive = { focus = POL_polish_candidate }
@@ -1584,6 +1878,49 @@ focus = {
 }
 
 focus = {
+	id = POL_dynastic_succession
+	icon = GFX_focus_hol_the_foundations_of_defense
+	prerequisite = { focus = POL_habsburg_candidate }
+	x = 1
+	y = 1
+	cost = 10
+	relative_position_id = POL_habsburg_candidate
+
+	ai_will_do = { 
+		factor = 1
+	}
+
+	completion_reward = {
+		add_political_power = 120
+	}
+}
+
+focus = {
+	id = POL_claim_moldovan_throne
+	icon = GFX_goal_generic_alliance
+	prerequisite = { focus = POL_habsburg_candidate }
+	x = 0
+	y = 5
+	cost = 10
+	relative_position_id = POL_habsburg_candidate
+
+	ai_will_do = { 
+		factor = 1
+	}
+
+	available = {
+		AUS = { has_war_with = FRA }
+	}
+	
+	completion_reward = {
+		create_wargoal = {
+		    type = puppet_wargoal_focus
+		    target = FRA
+		}
+	}
+}
+
+focus = {
 	id = POL_support_austria
 	icon = GFX_goal_generic_alliance
 	prerequisite = { focus = POL_habsburg_candidate }
@@ -1609,10 +1946,30 @@ focus = {
 }
 
 focus = {
+	id = POL_root_out_conti_supporters
+	icon = GFX
+	prerequisite = { focus = POL_sign_the_pacta_conventa focus = POL_dynastic_succession}
+	x = 2
+	y = 2
+	cost = 10
+	relative_position_id = POL_habsburg_candidate
+
+	ai_will_do = { 
+		factor = 1
+	}
+	available = {
+	}
+	
+	completion_reward = {
+		remove_ideas_with_trait = cardinal_in_administration
+	}
+}
+
+focus = {
 	id = POL_anti_ottoman_defensive_pact
 	icon = GFX_goal_flag_ottoman
 	prerequisite = { focus = POL_habsburg_candidate }
-	x = 1
+	x = -1	
 	y = 1
 	cost = 10
 	relative_position_id = POL_habsburg_candidate
@@ -1664,7 +2021,7 @@ focus = {
 	icon = GFX_POL_polish_crusade
 	prerequisite = { focus = POL_secure_eastern_flank }
 	prerequisite = { focus = POL_support_austria }
-	x = 0
+	x = 1
 	y = 3
 	cost = 10
 	relative_position_id = POL_habsburg_candidate
@@ -1688,7 +2045,7 @@ focus = {
 	prerequisite = { focus = POL_elect_new_king}
 	mutually_exclusive = { focus = POL_habsburg_candidate }
 	mutually_exclusive = { focus = POL_polish_candidate }
-	x = -4
+	x = -6
 	y = 1
 	cost = 5
 	relative_position_id = POL_elect_new_king
@@ -1699,7 +2056,7 @@ focus = {
 
 	completion_reward = {
 		create_country_leader = {
-			name = "François Louis de Bourbon"
+			name = "François Louis de Conti"
 			desc = ""
 			picture = "francois_louis.dds"
 			expire = "1965.1.1"
@@ -1713,17 +2070,133 @@ focus = {
 		    name = "House of Bourbon"
 		    long_name = "House of Bourbon"
 		}
+		add_opinion_modifier = {
+		    target = FRA
+		    modifier = dynastic_ties
+		}
+		FRA = {
+			add_opinion_modifier = {
+		    target = POL
+		    modifier = dynastic_ties
+			}
+		}
+	}
+}
+
+focus = {
+	id = POL_appoint_new_government
+	icon = GFX_focus_generic_self_management
+	prerequisite = { focus = POL_french_candidate}
+	x = 1
+	y = 1
+	cost = 10
+	relative_position_id = POL_french_candidate
+
+	ai_will_do = { 
+		factor = 1
+	}
+
+	completion_reward = {
+		country_event = poland.29
+	}
+}
+
+focus = {
+	id = POL_reform_the_state
+	icon = GFX
+	prerequisite = { focus = POL_appoint_new_government}
+	x = 0
+	y = 1
+	cost = 10
+	relative_position_id = POL_appoint_new_government
+
+	ai_will_do = { 
+		factor = 1
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = POL_devolve_poland
+	icon = GFX
+	prerequisite = { focus = POL_reform_the_state}
+	mutually_exclusive = { focus = POL_centralize_poland }
+	x = 2
+	y = 2
+	cost = 10
+	relative_position_id = POL_appoint_new_government
+
+	ai_will_do = { 
+		factor = 1
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = POL_centralize_poland
+	icon = GFX
+	prerequisite = { focus = POL_reform_the_state}
+	prerequisite = { focus = POL_french_military_support}
+	mutually_exclusive = { focus = POL_devolve_poland }
+	x = -1
+	y = 2
+	cost = 10
+	relative_position_id = POL_appoint_new_government
+
+	ai_will_do = { 
+		factor = 1
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = POL_secure_the_state
+	icon = GFX_goal_demand_sudetenland
+	prerequisite = { focus = POL_french_candidate}
+	x = -1
+	y = 1
+	cost = 10
+	relative_position_id = POL_french_candidate
+
+	ai_will_do = { 
+		factor = 1
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = POL_french_military_support
+	icon = GFX_focus_focus_fra_orleans_restoration
+	prerequisite = { focus = POL_secure_the_state}
+	x = -1
+	y = 2
+	cost = 10
+	relative_position_id = POL_french_candidate
+
+	ai_will_do = { 
+		factor = 1
+	}
+
+	completion_reward = {
 	}
 }
 
 focus = {
 	id = POL_polish_versailles
 	icon = GFX_Versailles
-	prerequisite = { focus = POL_french_candidate}
-	x = -1
+	prerequisite = { focus = POL_centralize_poland}
+	x = 0
 	y = 1
 	cost = 10
-	relative_position_id = POL_french_candidate
+	relative_position_id = POL_centralize_poland
 
 	ai_will_do = { 
 		factor = 1
@@ -1741,10 +2214,28 @@ focus = {
 	id = POL_bind_sejm
 	icon = GFX_focus_generic_polish_deal
 	prerequisite = { focus = POL_polish_versailles}
-	x = -1
-	y = 2
+	x = 0
+	y = 1
 	cost = 10
-	relative_position_id = POL_french_candidate
+	relative_position_id = POL_polish_versailles
+
+	ai_will_do = { 
+		factor = 1
+	}
+
+	completion_reward = {
+		remove_ideas = POL_dominance_of_nobles
+	}
+}
+
+focus = {
+	id = POL_reorganise_the_sejm
+	icon = GFX_focus_generic_treaty
+	prerequisite = { focus = POL_bind_sejm}
+	x = 1
+	y = 1
+	cost = 10
+	relative_position_id = POL_bind_sejm
 
 	ai_will_do = { 
 		factor = 1
@@ -1759,11 +2250,12 @@ focus = {
 }
 
 focus = {
-	id = POL_support_bourbon_cause
-	icon = GFX_goal_fleur_de_lys
-	prerequisite = { focus = POL_french_candidate}
-	x = 1
-	y = 1
+	id = POL_support_philips_claim
+	icon = GFX_goal_philip_V
+	prerequisite = { focus = POL_french_military_support }
+	prerequisite = { focus = POL_sell_convoys_to_france }
+	x = -2
+	y = 3
 	cost = 10
 	relative_position_id = POL_french_candidate
 
@@ -1788,11 +2280,11 @@ focus = {
 focus = {
 	id = POL_intervene_against_austria
 	icon = GFX_goal_flag_austria
-	prerequisite = { focus = POL_support_bourbon_cause}
-	x = 1
-	y = 2
+	prerequisite = { focus = POL_support_philips_claim}
+	x = 0
+	y = 1
 	cost = 10
-	relative_position_id = POL_french_candidate
+	relative_position_id = POL_support_philips_claim
 
 	ai_will_do = { 
 		factor = 1
@@ -1827,9 +2319,8 @@ focus = {
 	id = POL_visegrad_empire
 	icon = GFX_visegrad
 	prerequisite = { focus = POL_intervene_against_austria}	
-	prerequisite = { focus = POL_bind_sejm}
-	x = 0
-	y = 3
+	x = -2
+	y = 5
 	cost = 10
 	relative_position_id = POL_french_candidate
 
@@ -1877,8 +2368,8 @@ focus = {
 	icon = GFX_goal_bourbon
 	prerequisite = { focus = POL_visegrad_empire}
 	mutually_exclusive = { focus = POL_a_new_sphere}	
-	x = -1
-	y = 4
+	x = -3
+	y = 6
 	cost = 10
 	relative_position_id = POL_french_candidate
 
@@ -1917,8 +2408,8 @@ focus = {
 	icon = GFX_goal_generic_alliance
 	prerequisite = { focus = POL_visegrad_empire}	
 	mutually_exclusive = { focus = POL_true_to_france}
-	x = 1
-	y = 4
+	x = -1
+	y = 6
 	cost = 10
 	relative_position_id = POL_french_candidate
 
@@ -1940,7 +2431,7 @@ focus = {
 	prerequisite = { focus = POL_elect_new_king }
 	mutually_exclusive = { focus = POL_habsburg_candidate }
 	mutually_exclusive = { focus = POL_french_candidate }
-	x = 4
+	x = 6
 	y = 1
 	cost = 5
 	relative_position_id = POL_elect_new_king
@@ -1969,7 +2460,7 @@ focus = {
 }
 
 focus = {
-	id = POL_comfirm_szlachta_privileges
+	id = POL_sign_the_pacta_conventa
 	icon = GFX_focus_hol_the_foundations_of_defense
 	prerequisite = { focus = POL_polish_candidate }
 	x = -1
@@ -1987,11 +2478,29 @@ focus = {
 }
 
 focus = {
+	id = POL_comfirm_szlachta_privileges
+	icon = GFX_focus_hol_the_foundations_of_defense
+	prerequisite = { focus = POL_polish_candidate }
+	x = 0
+	y = 2
+	cost = 10
+	relative_position_id = POL_polish_candidate
+
+	ai_will_do = { 
+		factor = 1
+	}
+
+	completion_reward = {
+		add_stability = 0.15
+	}
+}
+
+focus = {
 	id = POL_align_magnates
 	icon = GFX_goal_generic_major_alliance
-	prerequisite = { focus = POL_comfirm_szlachta_privileges }
+	prerequisite = { focus = POL_sign_the_pacta_conventa }
 	x = -1
-	y = 2
+	y = 3
 	cost = 10
 	relative_position_id = POL_polish_candidate
 
@@ -2008,7 +2517,7 @@ focus = {
 	id = POL_russia_is_the_greater_threat
 	icon = GFX_focus_eng_expose_the_belly_of_the_bear
 	prerequisite = { focus = POL_polish_candidate }
-	x = 1
+	x = 2
 	y = 1
 	cost = 10
 	relative_position_id = POL_polish_candidate
@@ -2065,7 +2574,7 @@ focus = {
 	icon = GFX_goal_generic_position_armies
 	prerequisite = { focus = POL_align_sweden focus = POL_align_magnates}
 	x = 0
-	y = 3
+	y = 4
 	cost = 10
 	relative_position_id = POL_polish_candidate
 
@@ -2226,50 +2735,6 @@ focus = {
 #	}
 #}
 
-
-focus = {
-	id = POL_claims_in_the_baltic
-	icon = GFX_goal_generic_territory_or_war
-	x = 1
-	y = 2
-	cost = 4
-	prerequisite = { focus = POL_seek_russian_support }
-	relative_position_id = POL_seek_russian_support
-
-	available = {
-	}
-
-	completion_reward = {
-		add_state_claim = 12
-	}
-}
-
-focus = {
-	id = POL_attack_sweden_test
-	icon = GFX_goal_sweden
-	x = 0
-	y = 1
-	cost = 1
-	prerequisite = { focus = POL_claims_in_the_baltic }
-	relative_position_id = POL_claims_in_the_baltic
-
-	available = {
-		date > 1700.02.01
-	}
-
-	ai_will_do = { 
-		factor = 1000
-	}
-	
-
-	completion_reward = {
-		declare_war_on = {
-		    target = SWE
-		    type = annex_everything
-		}
-	}
-	will_lead_to_war_with = SWE
-}
 
 focus = {
 	id = POL_rural_economy

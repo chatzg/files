@@ -998,3 +998,24 @@ country_event = {
 		add_political_power = 50
 	}
 }
+
+#francois-louis' government
+
+country_event = {
+	id = poland.29
+	title = poland.29.t
+	desc = poland.29.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "The will make excellent ministers"
+		add_ideas = { 
+			melchior_de_polignac
+			cardinal_radziejowski
+			jan_baert
+			generic_protectionist
+		}
+		add_political_power = -150
+	}
+}
