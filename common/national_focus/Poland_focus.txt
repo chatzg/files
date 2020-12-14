@@ -1603,6 +1603,128 @@ focus = {
 	}
 }
 
+#push back foreign influence
+
+focus = {
+	id = POL_crack_down_on_foreign_influence
+	icon = GFX
+	prerequisite = { focus = POL_great_betrayal focus = POL_attack_sweden_test focus = POL_join_grand_alliance focus = POL_support_philips_claim }
+	x = 0
+	y = 6
+	cost = 10
+	relative_position_id = POL_foreign_affairs
+
+	ai_will_do = { 
+		factor = 1
+	}
+	
+	available = {
+	}
+	
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = POL_expell_swedish_ambassadors
+	icon = GFX
+	prerequisite = { focus = POL_crack_down_on_foreign_influence }
+	x = 1
+	y = 1
+	cost = 10
+	relative_position_id = POL_crack_down_on_foreign_influence
+
+	ai_will_do = { 
+		factor = 1
+	}
+	
+	available = {
+	}
+	
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = POL_expell_russian_ambassadors
+	icon = GFX
+	prerequisite = { focus = POL_crack_down_on_foreign_influence }
+	x = 3
+	y = 1
+	cost = 10
+	relative_position_id = POL_crack_down_on_foreign_influence
+
+	ai_will_do = { 
+		factor = 1
+	}
+	
+	available = {
+	}
+	
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = POL_expell_austrian_ambassadors
+	icon = GFX
+	prerequisite = { focus = POL_crack_down_on_foreign_influence }
+	x = -1
+	y = 1
+	cost = 10
+	relative_position_id = POL_crack_down_on_foreign_influence
+
+	ai_will_do = { 
+		factor = 1
+	}
+	
+	available = {
+	}
+	
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = POL_expell_prussian_ambassadors
+	icon = GFX
+	prerequisite = { focus = POL_crack_down_on_foreign_influence }
+	x = -3
+	y = 1
+	cost = 10
+	relative_position_id = POL_crack_down_on_foreign_influence
+
+	ai_will_do = { 
+		factor = 1
+	}
+	
+	available = {
+	}
+	
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = POL_take_back_control
+	icon = GFX
+	prerequisite = { focus = POL_crack_down_on_foreign_influence }
+	x = 0
+	y = 2
+	cost = 10
+	relative_position_id = POL_crack_down_on_foreign_influence
+
+	ai_will_do = { 
+		factor = 1
+	}
+	
+	available = {
+	}
+	
+	completion_reward = {
+	}
+}
+
 #reform thwarted
 
 focus = {
@@ -1782,37 +1904,37 @@ focus = {
 }
 
 
-focus = {
-	id = POL_the_end_of_kings
-	icon = GFX_focus_rom_abdicate
-	prerequisite = { focus = POL_stabilize_the_country }
-	relative_position_id = POL_depose_august
-	mutually_exclusive = { focus = POL_elect_new_king}
-	x = 4
-	y = 2
-	cost = 0
-
-	available = {
-	}
-
-	bypass = {
-	}
-
-	ai_will_do = { 
-		factor = 1
-	}
-	
-
-	completion_reward = {
-	}
-}
+#focus = {
+#	id = POL_the_end_of_kings
+#	icon = GFX_focus_rom_abdicate
+##	prerequisite = { focus = POL_stabilize_the_country }
+#	relative_position_id = POL_depose_august
+#	mutually_exclusive = { focus = POL_elect_new_king}
+#	x = 4
+#	y = 2
+#	cost = 0
+#
+#	available = {
+#	}
+#
+#	bypass = {
+#	}
+#
+#	ai_will_do = { 
+#		factor = 1
+#	}
+#	
+#
+#	completion_reward = {
+#	}
+#}
 
 focus = {
 	id = POL_elect_new_king
 	icon = GFX_focus_generic_monarchy_2
 	prerequisite = { focus = POL_stabilize_the_country }
 	relative_position_id = POL_depose_august
-	mutually_exclusive = { focus = POL_the_end_of_kings}
+	#mutually_exclusive = { focus = POL_the_end_of_kings}
 	x = 0
 	y = 2
 	cost = 0
@@ -1878,8 +2000,51 @@ focus = {
 }
 
 focus = {
-	id = POL_dynastic_succession
+	id = POL_silezian_ties
 	icon = GFX_focus_hol_the_foundations_of_defense
+	prerequisite = { focus = POL_habsburg_candidate }
+	x = -1
+	y = 1
+	cost = 10
+	relative_position_id = POL_habsburg_candidate
+
+	ai_will_do = { 
+		factor = 1
+	}
+
+	completion_reward = {
+		add_offsite_building = { type = arms_factory level = 1 }
+		add_offsite_building = { type = industrial_complex level = 1 }
+		if = {
+			limit = { AUS = { owns_state = 66 }}
+			POL_increase_meddling = yes
+			AUS = { POL_increase_foreign_influence = yes }
+		}
+	}
+}
+
+focus = {
+	id = POL_saviors_of_catholicism
+	icon = GFX_focus_generic_home_defense
+	prerequisite = { focus = POL_silezian_ties }
+	prerequisite = { focus = POL_dynastic_succession }
+	x = 0
+	y = 1
+	cost = 10
+	relative_position_id = POL_silezian_ties
+
+	ai_will_do = { 
+		factor = 1
+	}
+	
+	completion_reward = {
+		add_ideas = FRA_defender_of_the_faith
+	}
+}
+
+focus = {
+	id = POL_dynastic_succession
+	icon = GFX_focus_generic_royal_wedding
 	prerequisite = { focus = POL_habsburg_candidate }
 	x = 1
 	y = 1
@@ -1896,38 +2061,44 @@ focus = {
 }
 
 focus = {
-	id = POL_claim_moldovan_throne
-	icon = GFX_goal_generic_alliance
-	prerequisite = { focus = POL_habsburg_candidate }
+	id = POL_sobieskis_1st_veteran_regiment
+	icon = GFX_POL_winged_hussars
+	prerequisite = { focus = POL_dynastic_succession }
 	x = 0
-	y = 5
+	y = 1
 	cost = 10
-	relative_position_id = POL_habsburg_candidate
+	relative_position_id = POL_dynastic_succession
 
-	ai_will_do = { 
-		factor = 1
-	}
-
-	available = {
-		AUS = { has_war_with = FRA }
-	}
-	
 	completion_reward = {
-		create_wargoal = {
-		    type = puppet_wargoal_focus
-		    target = FRA
+		10 = { create_unit = {
+    		division = "name = \"Sobieski's 1st Veteran Regiment\" division_template = \"Winged Hussars\" start_experience_factor = 0.5 start_equipment_factor = 1"
+    		owner = POL
+			}
+		}
+		set_technology = {
+		    super_heavy_tank  = 1
+		}
+		division_template = {
+			name = "Winged Hussars" 
+
+			regiments = {
+				super_heavy_armor = { x = 0 y = 0 }
+				super_heavy_armor = { x = 0 y = 1 }
+				super_heavy_armor = { x = 1 y = 0 }
+				super_heavy_armor = { x = 1 y = 1 }
+			}
 		}
 	}
 }
 
 focus = {
-	id = POL_support_austria
+	id = POL_claim_moldovan_throne
 	icon = GFX_goal_generic_alliance
-	prerequisite = { focus = POL_habsburg_candidate }
-	x = -1
+	prerequisite = { focus = POL_secure_eastern_flank }
+	x = 0
 	y = 2
 	cost = 10
-	relative_position_id = POL_habsburg_candidate
+	relative_position_id = POL_secure_eastern_flank
 
 	ai_will_do = { 
 		factor = 1
@@ -1947,9 +2118,9 @@ focus = {
 
 focus = {
 	id = POL_root_out_conti_supporters
-	icon = GFX
+	icon = GFX_goal_continuous_restrict_freedom
 	prerequisite = { focus = POL_sign_the_pacta_conventa focus = POL_dynastic_succession}
-	x = 2
+	x = 3
 	y = 2
 	cost = 10
 	relative_position_id = POL_habsburg_candidate
@@ -1968,11 +2139,13 @@ focus = {
 focus = {
 	id = POL_anti_ottoman_defensive_pact
 	icon = GFX_goal_flag_ottoman
-	prerequisite = { focus = POL_habsburg_candidate }
-	x = -1	
-	y = 1
+	prerequisite = { focus = POL_sobieskis_1st_veteran_regiment }
+	prerequisite = { focus = POL_saviors_of_catholicism }
+	
+	x = 0	
+	y = 2
 	cost = 10
-	relative_position_id = POL_habsburg_candidate
+	relative_position_id = POL_sobieskis_1st_veteran_regiment
 
 	ai_will_do = { 
 		factor = 1
@@ -2001,11 +2174,11 @@ focus = {
 focus = {
 	id = POL_secure_eastern_flank
 	icon = GFX_focus_russia_place_in_the_world
-	prerequisite = { focus = POL_anti_ottoman_defensive_pact }
+	prerequisite = { focus = POL_sobieskis_1st_veteran_regiment }
 	x = 1
-	y = 2
+	y = 1
 	cost = 10
-	relative_position_id = POL_habsburg_candidate
+	relative_position_id = POL_sobieskis_1st_veteran_regiment
 
 	ai_will_do = { 
 		factor = 1
@@ -2017,12 +2190,55 @@ focus = {
 }
 
 focus = {
+	id = POL_the_kings_court
+	icon = GFX_focus_rom_royal_dictatorship
+	prerequisite = { focus = POL_sobieskis_1st_veteran_regiment }
+	prerequisite = { focus = POL_saviors_of_catholicism }
+	prerequisite = { focus = POL_root_out_conti_supporters }
+	mutually_exclusive = { focus = POL_devolve_poland }
+	x = 0
+	y = 3
+	cost = 10
+	relative_position_id = POL_habsburg_candidate
+
+	ai_will_do = { 
+		factor = 1
+	}
+	
+	completion_reward = {
+		add_ideas = GER_noble_council
+	}
+}
+
+focus = {
+	id = POL_pay_of_the_nobles
+	icon = GFX_money
+	prerequisite = { focus = POL_the_kings_court }
+	x = 0
+	y = 2
+	cost = 10
+	relative_position_id = POL_the_kings_court
+
+	ai_will_do = { 
+		factor = 1
+	}
+	
+	completion_reward = {
+		remove_ideas = POL_dominance_of_nobles
+		add_timed_idea = {
+		    idea = POL_compensated_nobles
+		    days = 180
+		}
+	}
+}
+
+focus = {
 	id = POL_the_tenth_crusade
 	icon = GFX_POL_polish_crusade
 	prerequisite = { focus = POL_secure_eastern_flank }
-	prerequisite = { focus = POL_support_austria }
+	prerequisite = { focus = POL_claim_moldovan_throne }
 	x = 1
-	y = 3
+	y = 6
 	cost = 10
 	relative_position_id = POL_habsburg_candidate
 
@@ -2120,9 +2336,10 @@ focus = {
 
 focus = {
 	id = POL_devolve_poland
-	icon = GFX
-	prerequisite = { focus = POL_reform_the_state}
+	icon = GFX_focus_generic_concessions
+	prerequisite = { focus = POL_reform_the_state focus = POL_saviors_of_catholicism }
 	mutually_exclusive = { focus = POL_centralize_poland }
+	mutually_exclusive = { focus = POL_the_kings_court }	
 	x = 2
 	y = 2
 	cost = 10
@@ -2137,8 +2354,45 @@ focus = {
 }
 
 focus = {
-	id = POL_centralize_poland
+	id = POL_autonomous_lithuania
 	icon = GFX
+	prerequisite = { focus = POL_devolve_poland}
+	mutually_exclusive = { focus = POL_devolved_lithuania }
+	x = 1
+	y = 1
+	cost = 10
+	relative_position_id = POL_devolve_poland
+
+	ai_will_do = { 
+		factor = 1
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = POL_devolved_lithuania
+	icon = GFX
+	prerequisite = { focus = POL_devolve_poland}
+	mutually_exclusive = { focus = POL_autonomous_lithuania }
+	
+	x = -1
+	y = 1
+	cost = 10
+	relative_position_id = POL_devolve_poland
+
+	ai_will_do = { 
+		factor = 1
+	}
+
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = POL_centralize_poland
+	icon = GFX_goal_generic_demand_territory
 	prerequisite = { focus = POL_reform_the_state}
 	prerequisite = { focus = POL_french_military_support}
 	mutually_exclusive = { focus = POL_devolve_poland }
@@ -2152,6 +2406,10 @@ focus = {
 	}
 
 	completion_reward = {
+		add_timed_idea = {
+			idea = POL_centralization
+			days = 360
+		}
 	}
 }
 
@@ -2203,9 +2461,9 @@ focus = {
 	}
 
 	completion_reward = {
-		add_timed_idea = {
-			idea = POL_centralization
-			days = 360
+		add_popularity = {
+		    ideology = neutrality
+		    popularity = 0.10
 		}
 	}
 }
@@ -2219,6 +2477,10 @@ focus = {
 	cost = 10
 	relative_position_id = POL_polish_versailles
 
+	available = {
+		neutrality > 0.3
+	}
+
 	ai_will_do = { 
 		factor = 1
 	}
@@ -2231,8 +2493,8 @@ focus = {
 focus = {
 	id = POL_reorganise_the_sejm
 	icon = GFX_focus_generic_treaty
-	prerequisite = { focus = POL_bind_sejm}
-	x = 1
+	prerequisite = { focus = POL_bind_sejm focus = POL_pay_of_the_nobles}
+	x = 3
 	y = 1
 	cost = 10
 	relative_position_id = POL_bind_sejm
@@ -2461,7 +2723,7 @@ focus = {
 
 focus = {
 	id = POL_sign_the_pacta_conventa
-	icon = GFX_focus_hol_the_foundations_of_defense
+	icon = GFX_focus_rom_handle_king
 	prerequisite = { focus = POL_polish_candidate }
 	x = -1
 	y = 1
@@ -2555,7 +2817,7 @@ focus = {
 	id = POL_align_sweden
 	icon =  GFX_goal_sweden
 	prerequisite = { focus = POL_russia_is_the_greater_threat }
-	x = 1
+	x = 2
 	y = 2
 	cost = 10
 	relative_position_id = POL_polish_candidate
@@ -2739,8 +3001,8 @@ focus = {
 focus = {
 	id = POL_rural_economy
 	icon = GFX_goal_generic_production
-	x = 7
-	y = 8
+	x = 12
+	y = 5
 	cost = 10
 
 	completion_reward = {
@@ -3100,8 +3362,8 @@ focus = {
 focus = {
 	id = POL_military_economy
 	icon = GFX_goal_generic_axis_build_infantry
-	x = 13
-	y = 8
+	x = 22
+	y = 12
 	cost = 10
 
 	completion_reward = {
@@ -3316,8 +3578,8 @@ focus = {
 focus = {
 	id = POL_reorganise_the_army
 	icon = GFX_focus_generic_military_academy
-	x = 21
-	y = 8
+	x = 30
+	y = 12
 	cost = 10
 
 	completion_reward = {
@@ -3461,56 +3723,13 @@ focus = {
 	}
 }
 
-focus = {
-	id = POL_when_the_winged_hussars_arrived
-	icon = GFX_POL_winged_hussars
-	prerequisite = { focus = POL_legacy_of_jan_iii_sobieski }
-	x = 2
-	y = 1
-	cost = 10
-	relative_position_id = POL_legacy_of_jan_iii_sobieski
 
-	completion_reward = {
-		set_technology = {
-		    super_heavy_tank  = 1
-		}
-		division_template = {
-			name = "Winged Hussars" 
-
-			regiments = {
-				super_heavy_armor = { x = 0 y = 0 }
-				super_heavy_armor = { x = 0 y = 1 }
-				super_heavy_armor = { x = 1 y = 0 }
-				super_heavy_armor = { x = 1 y = 1 }
-			}
-		}
-	}
-}
-
-focus = {
-	id = POL_sobieskis_1st_veteran_regiment
-	icon = GFX_focus_eng_organise_the_blackshirts
-	prerequisite = { focus = POL_when_the_winged_hussars_arrived }
-	x = 2
-	y = 2
-	cost = 10
-	relative_position_id = POL_legacy_of_jan_iii_sobieski
-
-	completion_reward = {
-		10 = { create_unit = {
-    		division = "name = \"Sobieski's 1st Veteran Regiment\" division_template = \"Winged Hussars\" start_experience_factor = 0.5 start_equipment_factor = 1"
-    		owner = POL
-			}
-		}
-	}
-}
 
 focus = {
 	id = POL_winged_scourge
 	icon = GFX_goal_POL_hussars
-	prerequisite = { focus = POL_sobieskis_1st_veteran_regiment }
 	prerequisite = { focus = POL_division_expansion }
-	x = 1
+	x = 0
 	y = 3
 	cost = 10
 	relative_position_id = POL_legacy_of_jan_iii_sobieski
@@ -3535,5 +3754,27 @@ focus = {
 
 	completion_reward = {
 		remove_ideas = POL_conscription_crisis
+	}
+}
+
+focus = {
+	id = POL_dismantle_golden_liberties
+	icon = GFX_focus_generic_treaty
+	prerequisite = { focus = POL_reorganise_the_sejm focus = POL_institute_hereditary_monarchy }
+	prerequisite = { focus = POL_take_back_control }
+	x = 0
+	y = 9
+	cost = 10
+	relative_position_id = POL_foreign_affairs
+
+	ai_will_do = { 
+		factor = 1
+	}
+
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = POL_sejm
+     		add_idea = POL_weakened_sejm
+		}
 	}
 }

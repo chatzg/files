@@ -4,8 +4,6 @@ oob = "MAL_1936"
 
 set_research_slots = 3
 
-# Starting tech
-# clone of UK
 set_technology = {
 	infantry_weapons = 1
 	
@@ -48,58 +46,14 @@ if = {
 }
 set_convoys = 25
 
-if = {
-	limit = { has_dlc = "Together for Victory" }
-
-	add_to_tech_sharing_group = commonwealth_research
+set_politics = {
+	ruling_party = neutrality
+	elections_allowed = no
 }
-
 set_popularities = {
-	democratic = 33
-	communism = 33
-	neutrality = 34
-}
-
-create_country_leader = {
-	name = "Onn Jaafar"
-	desc = ""
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_democracy.dds"
-	expire = "1953.3.1"
-	ideology = conservatism
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Shenton Thomas"
-	desc = ""
-	picture = "GFX_portrait_malaya_shenton_thomas"
-	expire = "1953.3.1"
-	ideology = conservatism
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Lai Teck"
-	desc = ""
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_1.dds"
-	expire = "1953.3.1"
-	ideology = marxism
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Ibrahim Hj Yaacob" #this guy supported Japanese during the war, and was imprisoned for it, could be made fascist?
-	desc = ""
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_fascism.dds"
-	expire = "1953.3.1"
-	ideology = moderatism
-	traits = {
-		
-	}
+	democratic = 14
+	neutrality = 27
+	aristocracy = 39
+	fascism = 16
+	communism = 4
 }

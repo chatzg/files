@@ -56,9 +56,6 @@ on_actions  = {
 				set_variable = {
 					colonise_time = 150
 				}
-				country_event = {
-					id = colonisation.7
-				}
 			}
 		}
 	}

@@ -293,12 +293,12 @@ ITA = {
 	color_ui = rgb { 87 165 82 }
 }
 ROM = {
-	color = rgb { 200 100 31 }
-	color_ui = rgb { 200 100 31 }
+	color = rgb { 215 196 72 }
+	color_ui = rgb { 255 255 120 }
 }
 MOL = {
-	color = rgb { 200 100 31 }
-	color_ui = rgb { 200 100 31 }
+	color = rgb { 200 141 71 }
+	color_ui = rgb {  200 141 71  }
 }
 YUG = {
 	color = rgb { 72 73 126 }

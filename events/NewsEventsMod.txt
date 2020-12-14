@@ -1,5 +1,26 @@
 ﻿add_namespace = mod
 
+country_event = {
+	id = mod.0
+	title = mod.0.t
+	desc = mod.0.d
+	picture = GFX_report_event_empire_startup
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Let the adventure begin!"
+	}
+	option = {
+		name = "How do I colonize?"
+		country_event = {
+			id = colonisation.7
+		}
+	}
+}
+
 # Death of the Spanish King
 news_event = {
 	id = mod.1
@@ -466,3 +487,4 @@ news_event = {
 		name = mod.22.c
 	}
 }
+

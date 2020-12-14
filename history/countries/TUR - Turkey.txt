@@ -11,6 +11,8 @@ if = {
 
 give_guarantee = ZAP
 give_guarantee = CRO
+give_guarantee = MOL
+give_guarantee = ROM
 
 set_research_slots = 2
 
@@ -57,16 +59,6 @@ if = {
 	}
 	set_autonomy = {
 		target = ALG
-		autonomous_state = autonomy_dominion
-		freedom_level = 0.4
-	}
-	set_autonomy = {
-		target = MOL
-		autonomous_state = autonomy_dominion
-		freedom_level = 0.4
-	}
-	set_autonomy = {
-		target = ROM
 		autonomous_state = autonomy_dominion
 		freedom_level = 0.4
 	}

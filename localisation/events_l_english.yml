@@ -2338,7 +2338,8 @@
  usa.401.a:0 "Beggars can't be choosers."
 
  ###########################
-
+ mod.0.t:0 "Welcome to Hearts of Iron IV: Empire!"
+ mod.0.d:0 "Welcome to the 0.3 version of Hearts of Iron IV: Empire, featuring the Great Northern War and the War of the Spanish Succession. The mod has no official end-date, but the game should last for about as long as you have content in your focus tree and beyond. This mod has deliberatly chosen not to implement or rework any major mechanics, with the sole exception of the colonization mechanics which are completly optional for the player to mess around with. In the current version, there is not yet an option to toggle historical versus ahistorical ai, so expect many different outcomes and experiences whilst playing different nations."
  mod.1.t:0 "The death of Charles II of Spain"
  mod.1.d:0 "Toward the end of his life, Charles II’s fragile health deteriorated. He died on 1 November 1700, five days before his 39th birthday. Because Charles had no sons, it was decided that his empire was to be divided between Austria and France. It remains to be seen whether or not this agreement will be honoured."
  mod.2.t:0 "Philip V crowned king of Spain"
@@ -2478,10 +2479,7 @@ cossack.6.a:0 "Unfortunate indeed."
 #ottomans.7.d:0 "We have received the unfortunate news that the Ottoman Sultan did not deem our proposal favorable. Is this what they call friendship?"
 #ottomans.7.a:0 "Unfortunate indeed."
 
-russia.1.t:0 "Russia occupies the Crimea"
-russia.1.d:0 "Taking advantage of our current weakness, the Russian government has moved troops into the Crimea. Our garrisons were quickly overrun and the Crimea is now firmly in the hands of Russia. How shall we respond, my Sultan?"
-russia.1.a:0 "It cannot be helped, we will compensate the loss of land eslewhere."
-russia.1.b:0 "We shall have war!"
+
 
 
 

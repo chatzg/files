@@ -1,9 +1,11 @@
 on_actions  = {
 	on_startup = {
 		effect = {
-			if = {
-				limit = { tag = SWE }
-				country_event = { id = sweden.0 }
+			every_country = { 
+				limit = { is_ai = no }
+				country_event = { 
+					id = mod.0 
+				}
 			}
 		}
 	}

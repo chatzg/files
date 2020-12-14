@@ -2158,5 +2158,12 @@ spriteTypes = {
 		name = "GFX_news_event_northern_war"
 		texturefile = "gfx/event_pictures/news_event_northern_war.dds"
 	}
-	
+	spriteType = {
+		name = "GFX_report_event_colonialism"
+		texturefile = "gfx/event_pictures/report_event_colonialism.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_empire_startup"
+		texturefile = "gfx/event_pictures/report_event_empire_startup.dds"
+	}	
 }

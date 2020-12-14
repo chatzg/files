@@ -501,7 +501,7 @@ country_event = {
 	id = colonisation.7
 	title = "Colonisation"
 	desc = Colonisation.7.desc
-	picture = GFX_report_event_african_soldiers
+	picture = GFX_report_event_colonialism
 
 	
 	fire_only_once = no 
@@ -509,9 +509,7 @@ country_event = {
 	
 	
 	option = {
-		name = "Ok, now let me play"
-		
-			
+		name = "Ok, now let me play"				
 		
 	}
 }

@@ -137,7 +137,7 @@ focus = {
 
 focus = {
 	id = RUS_southern_direction
-	icon =  GFX_focus_usa_focus_on_asia
+	icon =  GFX_focus_generic_black_sea_focus
 	x = 0
 	y = 2
 	cost = 2

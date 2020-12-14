@@ -244,6 +244,19 @@ POL_support_philips_claim:0 "Support Philip's Claim"
 POL_centralize_poland:0 "Centralize the Commonwealth"
 POL_devolve_poland:0 "Devolve the Commonwealth"
 POL_reorganise_the_sejm:0 "Reorganise the Sejm"
+POL_saviors_of_catholicism:0 "Savior of Catholicism"
+POL_saviors_of_catholicism_desc:0 "When the king's father Jan Sobieksi lifted the siege of Vienna in 1683 by the Ottomans, and effectively routed their army, he was hailed as the savior of Catholicism. We will embrace this legacy, and keep standing up for the Catholic church."
+POL_the_kings_court:0 "The Kings Court"
+POL_the_kings_court_desc:0 "A loyal privy council shall stand by the king to guide him in leading the nation."
+POL_pay_of_the_nobles:0 "Pay of the Nobles"
+POL_pay_of_the_nobles_desc:0 "The nobility has always disliked the Sobieksis because of their enormous popularity among the other classes of society, fearing the king will abolish their ancient privileges. Luckily, they are easily bought..."
+POL_silezian_ties:0 "Silezian Ties"
+POL_silezian_ties_desc:0 "James Louis Sobieski is not only the king of Poland, but also prince of Oława in Silezia. He can harness this wealth to support his endeavours in the Commonwealth."
+POL_claim_moldovan_throne:0 "Claim Moldovan Throne"
+POL_claim_moldovan_throne_desc:0 "The Throne of Moldavia righteously belongs to Sobieksi! Succesfully launching an invasion will make it difficult for the Ottomans to intervene."
+POL_root_out_conti_supporters:0 "Root out Conti Supporters"
+POL_root_out_conti_supporters_desc:0 "The prince of Conti has gained a large amount of support during the last two elections"
+
 
 #tooltips
 

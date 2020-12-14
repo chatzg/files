@@ -18,14 +18,17 @@ set_politics = {
 	elections_allowed = no
 }
 set_popularities = {
-	neutrality = 100
+	democratic = 10
+	fascism = 5
+	communism = 5
+	neutrality = 40
+	aristocracy = 40
 }
 
 create_country_leader = {
-	name = "Imam Yahya"
-	desc = "POLITICS_IMAM_YAHYA_DESC"
-	picture = "GFX_portrait_yemen_imam_yahya"
-	expire = "1965.1.1"
+	name = "Muhammad al-Mahdi"
+	desc = ""
+	picture = "gfx/leaders/Muslim/portrait_muslim_leader_4.dds"
 	ideology = despotism
 	traits = {
 		#

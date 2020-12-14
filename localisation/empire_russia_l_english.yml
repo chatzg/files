@@ -248,6 +248,10 @@ RUS_ottoman_standoff:0 "Standoff with the Ottomans"
 RUS_ottoman_standoff_desc:0 "Whilst there has been a ceasefire for a few months, the tsardom of Russia and Ottoman empire are still officialy in a state of war with eachother. As long as the Ottoman threat exists, Russia might find it difficult engaging wars on other fronts."
 
 #events
+russia.1.t:0 "Russia occupies the Crimea"
+russia.1.d:0 "Taking advantage of our current weakness, the Russian government has moved troops into the Crimea. Our garrisons were quickly overrun and the Crimea is now firmly in the hands of Russia. How shall we respond, my Sultan?"
+russia.1.a:0 "It cannot be helped, we will compensate the loss of land eslewhere."
+russia.1.b:0 "We shall have war!"
 russia.2.t:0 "Russia Demands Vassalization"
 russia.2.d:0 "After a long period of instability and de facto independence of our cossack state, the Russian bear has finally turned its attention to us. They demand the immediate cessation of the current situation, instead offering us a semi-autonomous vassal status. Whilst it is quite appearant they aim to annex us completely, the only alternative is a war of which the odds are severely against us."
 russia.2.a:0 "We Accept"
