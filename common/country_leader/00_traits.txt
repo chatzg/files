@@ -1,4 +1,28 @@
 leader_traits = {
+	likes_sweden = {
+		random = no
+		ai_strategy = {
+			type = befriend
+			id = "SWE"			
+			value = 200
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	likes_russia = {
+		random = no
+		ai_strategy = {
+			type = befriend
+			id = "SOV"			
+			value = 200
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	cardinal_in_administration = {
 		random = yes
 		sprite = 13

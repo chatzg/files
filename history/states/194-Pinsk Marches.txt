@@ -4,6 +4,10 @@ state={
 	name="STATE_194" # Mozyr
 	manpower = 184632
 	
+	resources={
+		oil=6
+	}
+
 	state_category = rural
 
 	history={

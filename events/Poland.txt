@@ -1019,3 +1019,18 @@ country_event = {
 		add_political_power = -150
 	}
 }
+
+#foreign influence weakens administration
+
+country_event = {
+	id = poland.30
+	title = poland.30.t
+	desc = poland.30.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Curses!"
+		POL_increase_meddling = yes
+	}
+}

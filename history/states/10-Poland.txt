@@ -3,6 +3,13 @@ state={
 	id=10
 	name="STATE_10"
 
+	resources={
+		steel=5.000
+		oil=7.000
+		aluminium=12
+		rubber=8
+	}
+
 	history={
 		owner = POL
 		victory_points = {

@@ -3,6 +3,10 @@ state={
 	id=5
 	name="STATE_5"
 
+	resources={
+		aluminium=8
+	}
+
 	history={
 		owner = PRS
 		controller = PRS

@@ -1,3 +1,7 @@
+TSC_SPR_subject = {
+	color = rgb { 229 182 4 }
+	color_ui = rgb { 229 182 4 }
+}
 TUR_jan = {
    	color = rgb { 171 190 152 }
 	color_ui = rgb { 171 190 152 }

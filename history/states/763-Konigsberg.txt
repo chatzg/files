@@ -5,6 +5,10 @@ state={
 	manpower = 340234
 	state_category = city
 
+	resources={
+		steel=5
+	}
+
 	history={
 		owner = PRS
 		controller = PRS

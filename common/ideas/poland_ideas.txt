@@ -72,6 +72,7 @@ ideas = {
 				neutrality_drift = 0.05
 			}
 		}
+		
 		POL_influence_over_poland_6 = {
 			allowed = {
 				always = no
@@ -684,6 +685,8 @@ ideas = {
 		cardinal_radziejowski = { 
 
 			picture = clergyman_4
+
+			visible = { original_tag = POL }
 			
 			traits = { cardinal_in_administration }
 		}

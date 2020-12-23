@@ -47,6 +47,9 @@ cardinal_in_administration:0 "Cardinal in Administration"
 cardinal_radziejowski:0 "Michał Stefan Radziejowski"
 jan_baert:0 "Jan Baert"
 melchior_de_polignac:0 "Melchior de Polignac"
+likes_russia:0 "Likes Russia"
+likes_sweden:0 "Likes Sweden"
+
 
 #focus tree
 
@@ -255,7 +258,36 @@ POL_silezian_ties_desc:0 "James Louis Sobieski is not only the king of Poland, b
 POL_claim_moldovan_throne:0 "Claim Moldovan Throne"
 POL_claim_moldovan_throne_desc:0 "The Throne of Moldavia righteously belongs to Sobieksi! Succesfully launching an invasion will make it difficult for the Ottomans to intervene."
 POL_root_out_conti_supporters:0 "Root out Conti Supporters"
-POL_root_out_conti_supporters_desc:0 "The prince of Conti has gained a large amount of support during the last two elections"
+POL_root_out_conti_supporters_desc:0 "The prince of Conti has gained a large amount of support during the last two elections, and has many loyalists still in"
+POL_dynastic_succession:0 "Dynastic Succession"
+POL_sign_the_pacta_conventa:0 "Sign the Pacta Conventa"
+POL_sign_the_pacta_conventa_desc:0 "The Polish nobility will only come to terms with their new king once he agrees to respecting the Golden Liberties, so we shall do as such."
+POL_the_kings_new_regalia:0 "The Kings New Regalia"
+POL_the_kings_new_regalia_desc:0 "The pretender Augustus has stolen the regalia and has taken them back to Saxony. To avoid unnecessary conflict we should create new regalia."
+POL_guarantee_religious_freedoms:0 "Guarantee Religious Freedoms"
+POL_guarantee_religious_freedoms_desc:0 "We should secure the religious freedoms to please the subjects of our nation."
+POL_the_latvia_transaction:0 "The Latvia Transaction"
+POL_that_what_is_ours:0 "That What is Ours"
+POL_the_white_eagle_rises:0 "The White Eagle Rises"
+POL_deal_with_prussia:0 "Deal with Prussia"
+POL_expell_prussian_ambassadors:0 "Expell Prussian Ambassdors"
+POL_expell_prussian_ambassadors_desc:0 "The Ambassadors of Prussia have been infiltrating our administrations for far too long and they must be expelled, untill we can fix the issue of foreign influence in our nation."
+POL_expell_austrian_ambassadors:0 "Expell Austrian Ambassdors"
+POL_expell_prussian_ambassadors_desc:0 "The Ambassadors of Austria have been infiltrating our administrations for far too long and they must be expelled, untill we can fix the issue of foreign influence in our nation."
+POL_expell_russian_ambassadors:0 "Expell Russian Ambassdors"
+POL_expell_russian_ambassadors_desc:0 "The Ambassadors of Russia have been infiltrating our administrations for far too long and they must be expelled, untill we can fix the issue of foreign influence in our nation."
+POL_expell_swedish_ambassadors:0 "Expell Swedish Ambassdors"
+POL_expell_swedish_ambassadors_desc:0 "The Ambassadors of Sweden have been infiltrating our administrations for far too long and they must be expelled, untill we can fix the issue of foreign influence in our nation."
+POL_strenghten_swedish_ties:0 "Strenghten Swedish Ties"
+POL_strenghten_swedish_ties_desc:0 "Our friendship with Sweden has proved to be instrumental in the past in countering the Russian threat. We should reprise our good relations as a detterent for other nations who would seek to antagonize us."
+POL_carolean_support_in_domestic_affairs:0 "Carolean Support in Domestic Affairs"
+POL_carolean_support_in_domestic_affairs_desc:0 "Poland-Lithiania is historically a difficult country to govern, as many of the szlachta oppose our reign. With the help of Charles XII, we will keep them in line!"
+POL_attract_swedish_arms_industry:0 "Attract Swedish Arms Industry"
+POL_attract_swedish_arms_industry_desc:0 "The highly militarist state of Sweden produces more weapons then it has men to fire them. We should attract Swedish manufacturors to support our economy."
+POL_condemn_kurucs:0 "Condemn The Kurucs"
+POL_condemn_kurucs_desc:0 "The Kurucs are a faction of revolting Hungarians opposes to the Habsburg emperor. A firm condemnation will send a signal to seperatis movements throughout Europe, as well as improve our relations with Austria."
+POL_support_charles:0 "Support Charles of Austria"
+POL_support_charles_desc:0 "As the question of the Spanish succession looms over Europe, we shall seek to support the claims of Charles, who is best fit to sit upon the Spanish throne."
 
 
 #tooltips
@@ -263,7 +295,15 @@ POL_root_out_conti_supporters_desc:0 "The prince of Conti has gained a large amo
 POL_warning_broken_promises:0 "§RWarning! Breaking promises will lead to a widespread revolt!§!"
 POL_must_abolish_within_2_years:0 "§RIf this path is not completed within two years, your nation will suffer severe consequences!§!"
 disputed_reign_tt:0 "§RAs long as this character's legitimacy is low, you are at risk of being challenged by a pretender should a foreign power interfere whilst stability is low.§!"
-
+swe_has_not_too_much_control:0 "[SWE.GetFlag]§YSweden§! must have at most 15% influence over our country."
+rus_has_not_too_much_control:0 "[SOV.GetFlag]§YRussia§! must have at most 15% influence over our country."
+aus_has_not_too_much_control:0 "[AUS.GetFlag]§YAustria§! must have at most 15% influence over our country."
+prs_has_not_too_much_control:0 "[PRS.GetFlag]§YPrussia§! must have at most 15% influence over our country."
+block_russian_influence:0 "[SOV.GetFlag]§YRussia§! will no longer have the decisions to increase their influence over Poland."
+block_russian_influence_prs:0 "[PRS.GetFlag]§YPrussia§! will no longer have the decisions to increase their influence over Poland."
+block_russian_influence_aus:0 "[AUS.GetFlag]§YAustria§! will no longer have the decisions to increase their influence over Poland."
+block_russian_influence_swe:0 "[SWE.GetFlag]§YSweden§! will no longer have the decisions to increase their influence over Poland."
+expelled_ambassadors:0 "Recently Expelled Ambassadors"
 #events
 
 poland.2.t:0 "The Question of Absolutism in the Commonwealth"
@@ -327,49 +367,42 @@ poland.17.a:0 "Yes, the infidels must be destroyed!"
 poland.17.b:0 "No, crusades are part of the past."
 poland.18.t:0 "Call to arms against Ottomans"
 poland.19.t:0 "[From.GetName] Refuses to join the pact."
+poland.19.d:0 "The Cowardly nation, [From.GetName], has abandoned us and betrayed the anti-Otoman pact."
+poland.19.a:0 "Traitors, of the Catholic faith."
 poland.20.d:0 "[From.GetName] has honored the Anti-Ottoman pact. Soon their forces will join us in battle."
 poland.20.a:0 "Good to hear."
 poland.20.t:0 "[From.GetName] joins the Anti-Ottoman pact."
-poland.19.d:0 "The Cowardly nation, [From.GetName], has abandoned us and betrayed the anti-Otoman pact."
-poland.19.a:0 "Traitors, of the Catholic faith."
-
 poland.21.t:0 "Call pact members to arms"
 poland.21.d:0 "As we are in a war against the Ottomans, we should call upon the members of our pact!"
 poland.21.a:0 "Let us hope they honor the pact."
-
 poland.22.t:0 "Western guarantee for territories?"
 poland.22.d:0 "With Russia mobilizing against us, we are vastly outnumbered and vulnerable on all sides. If we could secure a guarantee from the western powers however in return for some territories, we might be able to reclaim new lands in the east and devastate the enemy in the west."
 poland.22.a:0 "Ask Prussia for a gurantee in return for Danzig and Poznan."
 poland.22.b:0 "Ask Austria a guarantee in return for Galicia."
 poland.22.c:0 "We need the help of both Prussia and Austria."
 poland.22.e:0 "We don't need any allies!"
-
 poland.23.t:0 "Poland offers territories for a guarantee"
 poland.23.d:0 "The Polish nation has approached us with an interesting deal. They would be willing to give up the territories of Poznan, Danzig and Warmia, in return for a defensive alliance against Russia."
 poland.23.a:0 "We accept!"
 poland.23.b:0 "We should not antagonize Russia."
-
 poland.24.t:0 "Poland offers territories for a guarantee"
 poland.24.d:0 "The Polish nation has approached us with an interesting deal. They would be willing to give up the region of Galicia, in return for a defensive alliance against Russia."
 poland.24.a:0 "We accept!"
 poland.24.b:0 "We should not antagonize Russia."
- 
 poland.25.t:0 "[From.GetName] accepts"
 poland.25.d:0 "[From.GetName] has accepted to join our defensive alliance against Russia. We will seek strenght in numbers."
 poland.25.a:0 "A relief."
-
 poland.26.t:0 "[From.GetName] refuses"
 poland.26.d:0 "[From.GetName] has refused our deal. We stand alone."
 poland.26.a:0 "Alone indeed."
-
 poland.27.t:0 "Treaty of Karlowitz"
 poland.27.d:0 "Following the signing of a peace treaty in Sremski Karlovci, the war between the Holy League and the Ottoman empire has officially come to a close. As we have valliantly participated in the war, we have also received some of the spoils of war and we finally see the return of the province of Podolia."
-
 poland.28.t:0 "The Vulnerability of Sweden"
 poland.28.d:0 "Following the treaty of Preobrazhenskoye signed between us, Russia, and Denmark, in which we have agreed to simultaneously attack Sweden, the oppurtunity has presented itself. As the Swedes start to suspect something, we should launch a suprise attack before they realise our intent and re-arm. As we and our allies vastly outnumber the Swedes, it should be a particulary easy victory. On top of that, the Commonwealth is in dire need of a military victory, for they may finally start rallying behind their one and true king."
-
 poland.29.t:0 "Forming a government"
 poland.29.d:0 "Poland is still a medieval state in a lot of ways. The way of governing is very unlike the French system of ministers and ministries. With the knowledge imported from France, we will build a rational admistration, with the purpose of reforming Poland in a modern state after the example of France. Their will be 5 key ministries: The ministry of domestic affairs, the ministry of finance, the ministry of foreign affairs, the ministry of war and the ministry of the navy.\n \nThere are many suitable candidates who have the favor of the king. Cardinal Michał Stefan Radziejowski, who had orginally proclaimed Conti as king of Poland all the way back in 1697, will be rewarded with the post of prime minister. Melchior de Polignac, a key figure in the election campaign of Conti shall be made minister of foreign affairs, whilst the famous Dutch privateer will become the head of the naval forces. Other posts are yet to be filled in, but these figures will certainly do a fine job at modernizing a state in dire need of a new direction."
+poland.30.t:0 "Foreign Influence Weakens Administration"
+poland.30.d:0 "A recent attempt of foreign ambassadors to further infiltrate our administrations and tighten their grip on our country has resulted in a loss of control over parts of government, damaging our nations ability to act on all sorts of political decisions."
 
 #flags
 

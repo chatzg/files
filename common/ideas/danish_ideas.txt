@@ -194,7 +194,7 @@ ideas = {
 			modifier = {
 				army_org_factor = -0.30
 				join_faction_tension = 0.60
-				ai_join_ally_desire_factor = -500
+				ai_join_ally_desire_factor = -1000
 			}
 			research_bonus = {
 				land_doctrine = -0.60
@@ -219,7 +219,7 @@ ideas = {
 			modifier = {
 				army_org_factor = -0.25
 				join_faction_tension = 0.60
-				ai_join_ally_desire_factor = -500
+				ai_join_ally_desire_factor = -1000
 			}
 			research_bonus = {
 				land_doctrine = -0.50
@@ -244,7 +244,7 @@ ideas = {
 			modifier = {
 				army_org_factor = -0.20
 				join_faction_tension = 0.60
-				ai_join_ally_desire_factor = -500
+				ai_join_ally_desire_factor = -1000
 			}
 			research_bonus = {
 				land_doctrine = -0.40
@@ -270,7 +270,7 @@ ideas = {
 				army_org_factor = -0.15
 				
 				join_faction_tension = 0.60
-				ai_join_ally_desire_factor = -500
+				ai_join_ally_desire_factor = -1000
 			}
 			research_bonus = {
 					land_doctrine = -0.30
@@ -296,7 +296,7 @@ ideas = {
 				army_org_factor = -0.10
 				
 				join_faction_tension = 0.60
-				ai_join_ally_desire_factor = -500
+				ai_join_ally_desire_factor = -1000
 			}
 			research_bonus = {
 					land_doctrine = -0.20
@@ -322,7 +322,7 @@ ideas = {
 				army_org_factor = -0.04
 				
 				join_faction_tension = 0.60
-				ai_join_ally_desire_factor = -500
+				ai_join_ally_desire_factor = -1000
 			}
 			research_bonus = {
 					land_doctrine = -0.10

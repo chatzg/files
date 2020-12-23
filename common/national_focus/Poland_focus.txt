@@ -179,8 +179,8 @@ focus = {
 }
 
 focus = {
-	id = POL_placeholder_1
-	icon = GFX
+	id = POL_attract_swedish_arms_industry
+	icon = GFX_goal_generic_construct_mil_factory
 	x = 0
 	y = 2
 	cost = 5
@@ -188,16 +188,47 @@ focus = {
 	prerequisite = {  focus = POL_strenghten_swedish_ties }
 	relative_position_id = POL_seek_swedish_support
 
-	available = {
-	}
+	available_if_capitulated = no
 
 	completion_reward = {
+		POL_increase_meddling = yes
+		SWE = { POL_increase_foreign_influence = yes }
+		random_owned_controlled_state = {
+			limit = {									
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {									
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
 	}
 }
 
 focus = {
-	id = POL_placeholder_3
-	icon = GFX
+	id = POL_carolean_support_in_domestic_affairs
+	icon = GFX_SWE_karl_xii
 	x = -1
 	y = 1
 	cost = 5
@@ -208,6 +239,10 @@ focus = {
 	}
 
 	completion_reward = {
+		add_stability = 0.10
+		POL_increase_meddling = yes
+		SWE = { POL_increase_foreign_influence = yes }	
+		add_political_power = 25
 	}
 }
 
@@ -427,8 +462,8 @@ focus = {
 }
 
 focus = {
-	id = POL_placeholder_5
-	icon = GFX
+	id = POL_condemn_kurucs
+	icon = GFX_focus_YUG_banovina_of_croatia
 	prerequisite = { focus = POL_seek_austrian_support }
 	x = 0
 	y = 1
@@ -440,6 +475,11 @@ focus = {
 	}
 	
 	completion_reward = {
+		reverse_add_opinion_modifier = {
+		    target = AUS
+		    modifier = large_increase
+		}
+		add_stability = 0.05
 	}
 }
 
@@ -463,7 +503,7 @@ focus = {
 focus = {
 	id = POL_placeholder_7
 	icon = GFX
-	prerequisite = { focus = POL_placeholder_5 }
+	prerequisite = { focus = POL_condemn_kurucs }
 	prerequisite = { focus = POL_placeholder_6 }
 	x = 0
 	y = 3
@@ -1622,16 +1662,18 @@ focus = {
 	}
 	
 	completion_reward = {
+		POL_increase_meddling = yes
+		POL_increase_meddling = yes
 	}
 }
 
 focus = {
 	id = POL_expell_swedish_ambassadors
-	icon = GFX
+	icon = GFX_focus_eng_concessions_to_the_trade_unions
 	prerequisite = { focus = POL_crack_down_on_foreign_influence }
 	x = 1
 	y = 1
-	cost = 10
+	cost = 5
 	relative_position_id = POL_crack_down_on_foreign_influence
 
 	ai_will_do = { 
@@ -1639,19 +1681,44 @@ focus = {
 	}
 	
 	available = {
+		custom_trigger_tooltip = {
+			tooltip = swe_has_not_too_much_control
+			NOT = {
+				SWE = {
+					OR = {
+						has_idea = POL_influence_over_poland_6 
+						has_idea = POL_influence_over_poland_5 
+						has_idea = POL_influence_over_poland_4 
+						has_idea = POL_influence_over_poland_3 
+						has_idea = POL_influence_over_poland_2
+					}
+				}
+			}
+		}
 	}
 	
 	completion_reward = {
+		if = {
+			limit = {
+				SWE = { has_idea = POL_influence_over_poland_1 }
+			}
+			SWE = { POL_decrease_foreign_influence = yes }
+		}
+		custom_effect_tooltip = block_russian_influence_swe
+		reverse_add_opinion_modifier = {
+		    target = SWE
+		    modifier = expelled_ambassadors
+		}
 	}
 }
 
 focus = {
 	id = POL_expell_russian_ambassadors
-	icon = GFX
+	icon = GFX_focus_eng_concessions_to_the_trade_unions
 	prerequisite = { focus = POL_crack_down_on_foreign_influence }
 	x = 3
 	y = 1
-	cost = 10
+	cost = 5
 	relative_position_id = POL_crack_down_on_foreign_influence
 
 	ai_will_do = { 
@@ -1659,19 +1726,44 @@ focus = {
 	}
 	
 	available = {
+		custom_trigger_tooltip = {
+			tooltip = rus_has_not_too_much_control
+			NOT = {
+				SOV = {
+					OR = {
+						has_idea = POL_influence_over_poland_6 
+						has_idea = POL_influence_over_poland_5 
+						has_idea = POL_influence_over_poland_4 
+						has_idea = POL_influence_over_poland_3 
+						has_idea = POL_influence_over_poland_2 
+					}
+				}
+			}
+		}
 	}
 	
 	completion_reward = {
+		if = {
+			limit = {
+				SOV = { has_idea = POL_influence_over_poland_1 }
+			}
+			SOV = { POL_decrease_foreign_influence = yes }
+		}
+		custom_effect_tooltip = block_russian_influence
+		reverse_add_opinion_modifier = {
+		    target = SOV
+		    modifier = expelled_ambassadors
+		}
 	}
 }
 
 focus = {
 	id = POL_expell_austrian_ambassadors
-	icon = GFX
+	icon = GFX_focus_eng_concessions_to_the_trade_unions
 	prerequisite = { focus = POL_crack_down_on_foreign_influence }
 	x = -1
 	y = 1
-	cost = 10
+	cost = 5
 	relative_position_id = POL_crack_down_on_foreign_influence
 
 	ai_will_do = { 
@@ -1679,19 +1771,44 @@ focus = {
 	}
 	
 	available = {
+		custom_trigger_tooltip = {
+			tooltip = aus_has_not_too_much_control
+			NOT = {
+				AUS = {
+					OR = {
+						has_idea = POL_influence_over_poland_6 
+						has_idea = POL_influence_over_poland_5 
+						has_idea = POL_influence_over_poland_4 
+						has_idea = POL_influence_over_poland_3 
+						has_idea = POL_influence_over_poland_2 
+					}
+				}
+			}
+		}
 	}
 	
 	completion_reward = {
+		if = {
+			limit = {
+				AUS = { has_idea = POL_influence_over_poland_1 }
+			}
+			AUS = { POL_decrease_foreign_influence = yes }
+		}
+		custom_effect_tooltip = block_russian_influence_aus
+		reverse_add_opinion_modifier = {
+		    target = AUS
+		    modifier = expelled_ambassadors
+		}
 	}
 }
 
 focus = {
 	id = POL_expell_prussian_ambassadors
-	icon = GFX
+	icon = GFX_focus_eng_concessions_to_the_trade_unions
 	prerequisite = { focus = POL_crack_down_on_foreign_influence }
 	x = -3
 	y = 1
-	cost = 10
+	cost = 5
 	relative_position_id = POL_crack_down_on_foreign_influence
 
 	ai_will_do = { 
@@ -1699,16 +1816,44 @@ focus = {
 	}
 	
 	available = {
+		custom_trigger_tooltip = {
+			tooltip = prs_has_not_too_much_control
+			NOT = {
+				PRS = {
+					OR = {
+						has_idea = POL_influence_over_poland_6 
+						has_idea = POL_influence_over_poland_5 
+						has_idea = POL_influence_over_poland_4 
+						has_idea = POL_influence_over_poland_3 
+						has_idea = POL_influence_over_poland_2
+					}
+				}
+			}
+		}
 	}
 	
 	completion_reward = {
+		if = {
+			limit = {
+				PRS = { has_idea = POL_influence_over_poland_1 }
+			}
+			PRS = { POL_decrease_foreign_influence = yes }
+		}
+		custom_effect_tooltip = block_russian_influence_prs
+		reverse_add_opinion_modifier = {
+		    target = PRS
+		    modifier = expelled_ambassadors
+		}
 	}
 }
 
 focus = {
 	id = POL_take_back_control
-	icon = GFX
-	prerequisite = { focus = POL_crack_down_on_foreign_influence }
+	icon = GFX_focus_rom_royal_dictatorship
+	prerequisite = { focus = POL_expell_prussian_ambassadors }
+	prerequisite = { focus = POL_expell_russian_ambassadors }
+	prerequisite = { focus = POL_expell_austrian_ambassadors }
+	prerequisite = { focus = POL_expell_swedish_ambassadors }
 	x = 0
 	y = 2
 	cost = 10
@@ -1722,6 +1867,77 @@ focus = {
 	}
 	
 	completion_reward = {
+		if = {
+			limit = {
+				has_idea = POL_foreign_meddling_1
+			}
+			remove_ideas = POL_foreign_meddling_1
+		}
+		if = {
+			limit = {
+				has_idea = POL_foreign_meddling_2
+			}
+			remove_ideas = POL_foreign_meddling_2
+		}
+		if = {
+			limit = {
+				has_idea = POL_foreign_meddling_3
+			}
+			remove_ideas = POL_foreign_meddling_3
+		}
+		if = {
+			limit = {
+				has_idea = POL_foreign_meddling_4
+			}
+			remove_ideas = POL_foreign_meddling_4
+		}
+		if = {
+			limit = {
+				has_idea = POL_foreign_meddling_5
+			}
+			remove_ideas = POL_foreign_meddling_5
+		}
+		if = {
+			limit = {
+				has_idea = POL_foreign_meddling_6
+			}
+			remove_ideas = POL_foreign_meddling_6
+		}
+		add_political_power = 150
+	}
+}
+
+focus = {
+	id = POL_seize_back_eastern_resources
+	icon = GFX_goal_grain
+	prerequisite = { focus = POL_expell_russian_ambassadors }
+	x = 2
+	y = 2
+	cost = 10
+	relative_position_id = POL_crack_down_on_foreign_influence
+
+	ai_will_do = { 
+		factor = 1
+	}
+	
+	available = {
+	}
+	
+	completion_reward = {
+		SOV = { 
+			remove_resource_rights = 206 
+			remove_resource_rights = 194 
+			remove_resource_rights = 241 
+			remove_resource_rights = 933 
+			remove_resource_rights = 202 
+			remove_resource_rights = 201 
+			remove_resource_rights = 199 
+			add_ai_strategy = {
+			    type = antagonize
+			    id = POL
+			    value = 1000
+			}
+		}
 	}
 }
 
@@ -1972,14 +2188,18 @@ focus = {
 	
 	completion_reward = {
 		create_country_leader = {
-			name = "Karel V von Lothringen"
+			name = "James Louis I"
 			desc = ""
-			picture = "karl_von_lotrhingen.dds"
+			picture = "james_louis_sobieski.dds"
 			expire = "1965.1.1"
 			ideology = despotism
-			traits = {
-				
+			traits = {			
 			}
+		}
+		set_party_name = { 
+		    ideology = neutrality 
+		    name = "House Sobieski"
+		    long_name = "House of Sobieski"
 		}
 		add_opinion_modifier = {
 		    target = AUS
@@ -1990,11 +2210,6 @@ focus = {
 		    target = POL
 		    modifier = dynastic_ties
 			}
-		}
-		set_party_name = { 
-		    ideology = neutrality 
-		    name = "House of Lothringen"
-		    long_name = "House of Lothringen"
 		}
 	}
 }
@@ -2094,7 +2309,7 @@ focus = {
 focus = {
 	id = POL_claim_moldovan_throne
 	icon = GFX_goal_generic_alliance
-	prerequisite = { focus = POL_secure_eastern_flank }
+	prerequisite = { focus = POL_secure_eastern_flank focus = POL_reintegrate_eastern_territories}
 	x = 0
 	y = 2
 	cost = 10
@@ -2245,10 +2460,16 @@ focus = {
 	ai_will_do = { 
 		factor = 1
 	}
+
+	available = {
+		has_army_manpower = {
+    		size > 150000
+    	}
+	}
 	
 	completion_reward = {
 		create_wargoal = {
-		    type = annex_everything
+		    type = liberate_wargoal
 		    target = TUR
 		}
 		create_faction = "Tenth Crusade"
@@ -2272,7 +2493,7 @@ focus = {
 
 	completion_reward = {
 		create_country_leader = {
-			name = "François Louis de Conti"
+			name = "François Louis I de Conti"
 			desc = ""
 			picture = "francois_louis.dds"
 			expire = "1965.1.1"
@@ -2319,7 +2540,7 @@ focus = {
 
 focus = {
 	id = POL_reform_the_state
-	icon = GFX
+	icon = GFX_focus_eng_concessions_to_the_trade_unions
 	prerequisite = { focus = POL_appoint_new_government}
 	x = 0
 	y = 1
@@ -2704,17 +2925,18 @@ focus = {
 
 	completion_reward = {
 		create_country_leader = {
-			name = "Stanislaw I Leszczyński"
+			name = "Stanislaw I"
 			desc = ""
 			picture = "Stanislaw.dds"
 			expire = "1965.1.1"
 			ideology = despotism
-			traits = {			
+			traits = {	
+				likes_sweden		
 			}
 		}
 		set_party_name = { 
 		    ideology = neutrality 
-		    name = "House of Leszczyński"
+		    name = "House Leszczyński"
 		    long_name = "House of Leszczyński"
 		}
 	}
@@ -2740,10 +2962,10 @@ focus = {
 }
 
 focus = {
-	id = POL_comfirm_szlachta_privileges
-	icon = GFX_focus_hol_the_foundations_of_defense
-	prerequisite = { focus = POL_polish_candidate }
-	x = 0
+	id = POL_align_magnates
+	icon = GFX_goal_generic_major_alliance
+	prerequisite = { focus = POL_sign_the_pacta_conventa }
+	x = -1
 	y = 2
 	cost = 10
 	relative_position_id = POL_polish_candidate
@@ -2753,18 +2975,23 @@ focus = {
 	}
 
 	completion_reward = {
-		add_stability = 0.15
+		add_ideas = POL_align_magnates
+		add_timed_idea = {
+		    idea = POL_compensated_nobles
+		    days = 180
+		}
 	}
 }
 
 focus = {
-	id = POL_align_magnates
-	icon = GFX_goal_generic_major_alliance
-	prerequisite = { focus = POL_sign_the_pacta_conventa }
+	id = POL_the_kings_new_regalia
+	icon = GFX_focus_hun_elect_a_king
+	prerequisite = { focus = POL_align_magnates }
+	prerequisite = { focus = POL_root_out_conti_supporters }
 	x = -1
-	y = 3
+	y = 1
 	cost = 10
-	relative_position_id = POL_polish_candidate
+	relative_position_id = POL_align_magnates
 
 	ai_will_do = { 
 		factor = 1
@@ -2772,6 +2999,75 @@ focus = {
 
 	completion_reward = {
 		add_ideas = POL_align_magnates
+		add_timed_idea = {
+		    idea = POL_compensated_nobles
+		    days = 180
+		}
+	}
+}
+
+focus = {
+	id = POL_guarantee_religious_freedoms
+	icon = GFX_goal_generic_neutrality_focus
+	prerequisite = { focus = POL_the_kings_new_regalia }
+	x = 0
+	y = 1
+	cost = 10
+	relative_position_id = POL_the_kings_new_regalia
+
+	ai_will_do = { 
+		factor = 1
+	}
+
+	completion_reward = {
+		add_stability = 0.10
+	}
+}
+
+focus = {
+	id = POL_the_white_eagle_rises
+	icon = GFX_POL_regency_council_focus
+	prerequisite = { focus = POL_guarantee_religious_freedoms focus = POL_reintegrate_eastern_territories focus = POL_the_latvia_transaction}
+	x = 2
+	y = 1
+	cost = 10
+	relative_position_id = POL_guarantee_religious_freedoms
+
+	ai_will_do = { 
+		factor = 1
+	}
+
+	completion_reward = {
+		add_war_support = 0.15
+	}
+}
+
+focus = {
+	id = POL_deal_with_prussia
+	icon = GFX_focus_crown_of_prussia
+	prerequisite = { focus = POL_the_white_eagle_rises }
+	prerequisite = { focus = POL_claim_moldovan_throne }
+	x = 0
+	y = 2
+	cost = 10
+	relative_position_id = POL_guarantee_religious_freedoms
+
+	ai_will_do = { 
+	}
+
+	available = {
+		NOT = { has_war = yes }
+	}
+
+	completion_reward = {
+		add_state_claim = 5
+		add_state_claim = 763
+		add_state_claim = 188
+		create_wargoal = {
+		    type = take_claimed_state
+		    id = 5
+		    target = PRS
+		}
 	}
 }
 
@@ -2779,9 +3075,9 @@ focus = {
 	id = POL_russia_is_the_greater_threat
 	icon = GFX_focus_eng_expose_the_belly_of_the_bear
 	prerequisite = { focus = POL_polish_candidate }
-	x = 2
+	x = 1
 	y = 1
-	cost = 10
+	cost = 5
 	relative_position_id = POL_polish_candidate
 
 	ai_will_do = { 
@@ -2817,9 +3113,9 @@ focus = {
 	id = POL_align_sweden
 	icon =  GFX_goal_sweden
 	prerequisite = { focus = POL_russia_is_the_greater_threat }
-	x = 2
+	x = 1
 	y = 2
-	cost = 10
+	cost = 5
 	relative_position_id = POL_polish_candidate
 
 	ai_will_do = { 
@@ -2832,33 +3128,94 @@ focus = {
 }
 
 focus = {
+	id = POL_that_what_is_ours
+	icon =  GFX_goal_generic_more_territorial_claims
+	prerequisite = { focus = POL_align_sweden }
+	x = 1
+	y = 1
+	cost = 5
+	relative_position_id = POL_align_sweden
+
+	ai_will_do = { 
+		factor = 1
+	}
+
+	completion_reward = {
+		add_state_claim = 221
+		add_state_claim = 242
+		add_state_core = 205
+		add_state_claim = 210
+		add_state_core = 207
+		add_state_claim = 930
+		add_state_claim = 243
+		add_state_claim = 224
+		add_state_claim = 193
+		add_state_claim = 792
+		add_state_claim = 259
+		add_state_claim = 225
+		add_war_support = 0.05
+	}
+}
+
+focus = {
+	id = POL_the_latvia_transaction
+	icon = GFX_goal_generic_national_unity
+	prerequisite = { focus = POL_align_sweden }
+	prerequisite = { focus = POL_align_magnates }
+	x = -1
+	y = 1
+	cost = 20
+	relative_position_id = POL_align_sweden
+
+	ai_will_do = { 
+		factor = 1
+	}
+	available = {		
+	}
+	completion_reward = {
+	}
+}
+
+focus = {
 	id = POL_reintegrate_eastern_territories
 	icon = GFX_goal_generic_position_armies
-	prerequisite = { focus = POL_align_sweden focus = POL_align_magnates}
+	prerequisite = { focus = POL_that_what_is_ours }
 	x = 0
-	y = 4
-	cost = 10
-	relative_position_id = POL_polish_candidate
+	y = 1
+	cost = 20
+	relative_position_id = POL_that_what_is_ours
 
 	ai_will_do = { 
 		factor = 1
 	}
 	available = {
+		controls_state = 205
+		controls_state = 221
+		controls_state = 242
 		controls_state = 243
+		controls_state = 930
 		controls_state = 224
 		controls_state = 193
 		controls_state = 792
 		controls_state = 259
 		controls_state = 225
-		
+		controls_state = 210
+		add_state_core = 207
 	}
 	completion_reward = {
+		add_state_core = 221
+		add_state_core = 205
+		add_state_core = 242
 		add_state_core = 243
+		add_state_core = 930
+		add_state_core = 210
 		add_state_core = 224
 		add_state_core = 193
 		add_state_core = 792
 		add_state_core = 259
 		add_state_core = 225
+		add_state_core = 207
+		add_political_power = -300
 	}
 }
 

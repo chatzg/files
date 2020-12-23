@@ -9,4 +9,40 @@ on_actions  = {
 			}
 		}
 	}
+
+	on_startup = {
+		effect = {
+			#polish resource rights prussia
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				PRS = {
+					give_resource_rights = { receiver = POL state = 5 }
+					give_resource_rights = { receiver = POL state = 763 }
+				}
+			}
+        }
+	}
+
+	on_startup = {
+		effect = {
+			#russian resource rights poland
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				POL = {
+					give_resource_rights = { receiver = SOV state = 206 }
+					give_resource_rights = { receiver = SOV state = 194 }
+					give_resource_rights = { receiver = SOV state = 241 }
+					give_resource_rights = { receiver = SOV state = 933 }
+					give_resource_rights = { receiver = SOV state = 202 }
+					give_resource_rights = { receiver = SOV state = 201 }
+					give_resource_rights = { receiver = SOV state = 199 }
+				}
+			}
+        }
+	}
 }
+

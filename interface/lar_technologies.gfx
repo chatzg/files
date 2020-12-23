@@ -1,0 +1,17 @@
+spriteTypes = {
+
+	# technologies we need to override in DLC go in this file
+	
+	### scout_planes
+
+
+	SpriteType = {
+		name = "GFX_scout_plane1_medium"
+		texturefile = "gfx/interface/technologies/generic_scout_plane_1.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_scout_plane2_medium"
+		texturefile = "gfx/interface/technologies/generic_scout_plane_2.dds"
+	}
+}

@@ -1034,4 +1034,9 @@ opinion_modifiers = {
 		value = -50
 		decay = 1
 	}
+	expelled_ambassadors = {
+		value = -100
+		decay = 1
+	}
+
 }	

@@ -172,18 +172,18 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = SAV_fortification_effort_tt
-			hidden_effect = {
-				every_state = {
-					set_building_level = {
-						type = bunker
-						level = 5
-						province = {
-							all_provinces = yes
-							limit_to_border = yes
-						}
-					}
-				}
-			}
+			#hidden_effect = {
+			#	every_state = {
+			#		set_building_level = {
+			#			type = bunker
+			#			level = 5
+			#			province = {
+			#				all_provinces = yes
+			#				limit_to_border = yes
+			#			}
+			#		}
+			#	}
+			#}
 		}
 	}
 	focus = {
@@ -829,12 +829,7 @@ create_country_leader = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			annex_country = {
-			    target = GEN
-			    transfer_troops = yes
-			}
-			add_state_core = 1
-			add_state_core = 796
+			create_wargoal = { type = annex_everything target = GEN }
 		}
 	}
 	focus = {
@@ -894,11 +889,7 @@ create_country_leader = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			annex_country = {
-			    target = TUS
-			    transfer_troops = yes
-			}
-			add_state_core = 162
+			create_wargoal = { type = annex_everything target = GEN }
 		}
 	}
 	focus = {

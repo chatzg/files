@@ -155,8 +155,8 @@ PRM = {
 	color_ui = rgb { 255 243 118 }
 }
 TSC = {
-	color = rgb { 229 182 4 }
-	color_ui = rgb { 229 182 4 }
+	color = rgb { 148 148 148 }
+	color_ui = rgb { 148 148 148 }
 }
 SRD = {
 	color = rgb { 253 204 21 }
@@ -164,8 +164,8 @@ SRD = {
 }
 
 LOM = {
-	color = rgb { 229 182 4 }
-	color_ui = rgb { 229 182 4 }
+	color = rgb { 159 111 111 }
+	color_ui = rgb {  159 111 111 }
 }
 
 ARA = {

@@ -29,7 +29,7 @@ political_actions = {
 POL_foreign_influence = {
 	POL_infiltrate_poland = {
 		cost = 25
-		days_remove = 120
+		days_remove = 90
 		visible = {
 			OR = {	
 				tag = AUS
@@ -38,8 +38,36 @@ POL_foreign_influence = {
 				tag = SOV
 			}
 		}
+		ai_will_do = {
+			factor = 5
+		}
 		available = {
             POL = { exists = yes }
+            hidden_trigger = { NOT = { has_idea = POL_influence_over_poland_6 } }
+            if = {
+            	limit = {
+            		original_tag = PRS
+            	}
+            	NOT = { POL = { has_completed_focus = POL_expell_prussian_ambassadors }}
+            }
+            if = {
+            	limit = {
+            		original_tag = AUS
+            	}
+            	NOT = { POL = { has_completed_focus = POL_expell_austrian_ambassadors }}
+            }
+            if = {
+            	limit = {
+            		original_tag = SOV
+            	}
+            	NOT = { POL = { has_completed_focus = POL_expell_russian_ambassadors }}
+            }
+            if = {
+            	limit = {
+            		original_tag = SWE
+            	}
+            	NOT = { POL = { has_completed_focus = POL_expell_swedish_ambassadors }}
+            }
         }
 		modifier = {
 			political_power_cost = 0.10
@@ -54,7 +82,7 @@ POL_foreign_influence = {
 					POL_increase_foreign_influence = yes
 				}
 				50 = {
-					POL = { POL_increase_meddling = yes }
+					POL = { country_event = poland.30 }
 					POL_increase_foreign_influence = yes
 				}
 			}
@@ -69,6 +97,9 @@ POL_foreign_influence = {
 		available = {
             tag = POL
         }
+        ai_will_do = {
+			factor = 10
+		}
 		modifier = {
 			political_power_cost = 0.05
 		}
