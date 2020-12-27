@@ -162,6 +162,12 @@ country_event = {
 
 	option = {
 		name = poland.3.b
+		hidden_effect = { 
+			country_event = { 
+				id = poland.5
+				days = 30 
+			}
+		}
 		add_political_power = -10
 		custom_effect_tooltip = POL_warning_broken_promises
 		ai_chance = {
@@ -189,7 +195,6 @@ country_event = {
 	option = { #execute nobleman
 		name = poland.4.a
 		add_stability = -0.1
-		add_political_power = 50
 		ai_chance = {
 			factor = 1
 		}
@@ -215,6 +220,12 @@ country_event = {
 
 	option = { #thwarted
 		name = poland.5.a 
+		hidden_effect = { 
+			country_event = { 
+				id = poland.6
+				days = 30 
+			}
+		}
 		add_political_power = -50
 		ai_chance = {
 			factor = 20
@@ -223,6 +234,12 @@ country_event = {
 
 	option = { #compromised
 		name = poland.5.b
+		hidden_effect = { 
+			country_event = { 
+				id = poland.6
+				days = 30 
+			}
+		}
 		add_timed_idea = {
 		    idea = POL_compensated_nobles
 		    days = 90
@@ -260,7 +277,6 @@ country_event = {
 		ai_chance = {
 			factor = 20
 		}
-		set_country_flag = pol_bill_has_passed
 	}
 
 	option = {
@@ -288,7 +304,177 @@ country_event = { #bill vetoed
 
 	option = {
 		name = poland.7.a
-		set_country_flag = pol_bill_was_vetoed
+		hidden_effect = { 
+			country_event = { 
+				id = poland.8
+				days = 10
+			}
+		}
+	}
+}
+
+country_event = {
+	id = poland.9
+	title = poland.9.t
+	desc = poland.9.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = poland.9.a
+		remove_unit_leader = 1300
+		end_puppet = SAX
+		set_country_flag = POL_august_dead
+		kill_country_leader = yes
+		SAX = { kill_country_leader = yes }
+		set_party_name = { 
+		    ideology = neutrality 
+		    name = "The Sejm"
+		    long_name = "The Sejm"
+		}
+		create_country_leader = {
+			name = "The Sejm"
+			desc = ""
+			picture = "sejm.dds"
+			expire = "1965.1.1"
+			ideology = despotism
+			traits = {			
+			}
+		}
+		create_country_leader = {
+			name = "The Sejm"
+			desc = ""
+			picture = "sejm.dds"
+			expire = "1965.1.1"
+			ideology = nobility
+			traits = {			
+			}
+		}
+		create_country_leader = {
+			name = "The Sejm"
+			desc = ""
+			picture = "sejm.dds"
+			expire = "1965.1.1"
+			ideology = nazism
+			traits = {			
+			}
+		}
+		create_country_leader = {
+			name = "The Sejm"
+			desc = ""
+			picture = "sejm.dds"
+			expire = "1965.1.1"
+			ideology = conservatism
+			traits = {			
+			}
+		}
+	}
+}
+
+country_event = {
+	id = poland.10
+	title = poland.10.t
+	desc = poland.10.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = poland.10.a
+		remove_unit_leader = 1300
+		end_puppet = SAX
+		set_country_flag = POL_noble_coup
+		set_party_name = { 
+		    ideology = neutrality 
+		    name = "The Sejm"
+		    long_name = "The Sejm"
+		}
+		create_country_leader = {
+			name = "The Sejm"
+			desc = ""
+			picture = "sejm.dds"
+			expire = "1965.1.1"
+			ideology = despotism
+			traits = {			
+			}
+		}
+		create_country_leader = {
+			name = "The Sejm"
+			desc = ""
+			picture = "sejm.dds"
+			expire = "1965.1.1"
+			ideology = nobility
+			traits = {			
+			}
+		}
+		create_country_leader = {
+			name = "The Sejm"
+			desc = ""
+			picture = "sejm.dds"
+			expire = "1965.1.1"
+			ideology = nazism
+			traits = {			
+			}
+		}
+		create_country_leader = {
+			name = "The Sejm"
+			desc = ""
+			picture = "sejm.dds"
+			expire = "1965.1.1"
+			ideology = conservatism
+			traits = {			
+			}
+		}
+	}
+	option = {
+		name = poland.10.b
+		set_country_flag = POL_august_dead
+		remove_unit_leader = 1300
+		end_puppet = SAX
+		kill_country_leader = yes
+		SAX = { kill_country_leader = yes }
+		set_party_name = { 
+		    ideology = neutrality 
+		    name = "The Sejm"
+		    long_name = "The Sejm"
+		}
+		create_country_leader = {
+			name = "The Sejm"
+			desc = ""
+			picture = "sejm.dds"
+			expire = "1965.1.1"
+			ideology = despotism
+			traits = {			
+			}
+		}
+		create_country_leader = {
+			name = "The Sejm"
+			desc = ""
+			picture = "sejm.dds"
+			expire = "1965.1.1"
+			ideology = nobility
+			traits = {			
+			}
+		}
+		create_country_leader = {
+			name = "The Sejm"
+			desc = ""
+			picture = "sejm.dds"
+			expire = "1965.1.1"
+			ideology = nazism
+			traits = {			
+			}
+		}
+		create_country_leader = {
+			name = "The Sejm"
+			desc = ""
+			picture = "sejm.dds"
+			expire = "1965.1.1"
+			ideology = conservatism
+			traits = {			
+			}
+		}
 	}
 }
 
