@@ -1,18 +1,17 @@
+
 state={
 	id=545
-	
-	state_category = pastoral
-	
 	name="STATE_545"
 
 	history={
 		owner = ZIM
+
 	}
-	add_core_of = ZIM
 
 	provinces={
-		1874 2151 2216 4851 7842 10929
+		2216 10929 
 	}
 	manpower=325604
 	buildings_max_level_factor=1.000
+	state_category=pastoral
 }

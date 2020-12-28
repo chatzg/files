@@ -1,9 +1,9 @@
 
 #reload countrycolors
 
-LIT = {
-	color = rgb { 126 45 123 }
-	color_ui = rgb { 126 45 123 }	
+TZN = {
+	color = rgb { 63 108 116 }
+	color_ui = rgb { 63 108 116  }	
 }
 
 NUR = {
@@ -91,8 +91,8 @@ IFC = {
 	color_ui = rgb { 141 141 141 }	
 }
 MAI = {
-	color = rgb { 36 225 7 }
-	color_ui = rgb { 36 225 7 }	
+	color = rgb { 198 152 77 }
+	color_ui = rgb { 198 152 77}	
 }
 RPA = {
 	color = rgb { 71 71 255 }
@@ -273,8 +273,8 @@ AUS = {
 	color_ui = rgb { 255 255 255 }
 }
 LIT = {
-	color = rgb { 219 219 119 }
-	color_ui = rgb { 255 255 155 }
+	color = rgb { 126 45 123 }
+	color_ui = rgb { 126 45 123 }	
 }
 EST = {
 	color = rgb { 50 135 175 }
@@ -688,8 +688,8 @@ ZIM = {
 	color_ui = rgb { 7 7 239 }
 }
 BOT = {
-	color = rgb { 11 132 112 }
-	color_ui = rgb { 11 132 112 }
+	color = rgb { 83 42 3 }
+	color_ui = rgb { 83 42 3  }
 }
 PAK = {
 	color = rgb { 21 38 66 }

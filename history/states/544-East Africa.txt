@@ -3,15 +3,17 @@ state={
 	id=544
 	name="STATE_544"
 
- 	impassable = yes
+	history={
+		owner = POR
+		buildings = {
+			infrastructure = 1
+		}
+	}
 
 	provinces={
-		2120 2159 2180 2193 2217 5155 5177 5212 8245 10972 12935 12950 
+		2120 2193 5155 5212 8245 12935 
 	}
-	history={
-	owner = UNC
-	}
-	manpower=4125000
+	manpower=45601
 	buildings_max_level_factor=1.000
 	state_category=rural
 }
